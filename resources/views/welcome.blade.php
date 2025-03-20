@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en-US" class><head>
+<!DOCTYPE html>
+<html lang="en-US" class>
+<head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
@@ -6,162 +8,645 @@
     <meta name="theme-color" content="#cf000f">
     <title>Arnaldo Tomo - Desenvolvedor Full Stack</title>
     <meta name="robots" content="max-image-preview:large">
-    <style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
- <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <style>
+        img:is([sizes="auto"i], [sizes^="auto,"i]) {
+            contain-intrinsic-size: 3000px 1500px
+        }
 
+    </style>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style id="global-styles-inline-css" type="text/css">
-:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--first: #cf000f;--wp--preset--color--gray: #7d7d7d;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 28px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--huge: 38px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
-:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
-:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
-</style>
+        :root {
+            --wp--preset--aspect-ratio--square: 1;
+            --wp--preset--aspect-ratio--4-3: 4/3;
+            --wp--preset--aspect-ratio--3-4: 3/4;
+            --wp--preset--aspect-ratio--3-2: 3/2;
+            --wp--preset--aspect-ratio--2-3: 2/3;
+            --wp--preset--aspect-ratio--16-9: 16/9;
+            --wp--preset--aspect-ratio--9-16: 9/16;
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--color--first: #cf000f;
+            --wp--preset--color--gray: #7d7d7d;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--font-size--small: 14px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 28px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--font-size--normal: 16px;
+            --wp--preset--font-size--huge: 38px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        :where(.is-layout-grid) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .is-layout-flex> :is(*, div) {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        .is-layout-grid> :is(*, div) {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :root :where(.wp-block-pullquote) {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+
+    </style>
     <link rel="stylesheet" id="contact-form-7-css" href="css/styles.css" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-theme-style-css" href="css/style_1.css" type="text/css"
-        media="all">
+    <link rel="stylesheet" id="vlt-theme-style-css" href="css/style_1.css" type="text/css" media="all">
     <link rel="stylesheet" id="vlt-gilroy-font-css" href="css/style.css" type="text/css" media="all">
     <link rel="stylesheet" id="LineIcons-css" href="css/LineIcons.css" type="text/css" media="all">
-    <link rel="stylesheet" id="bootstrap-css" href="css/bootstrap.min.css" type="text/css"
-        media="all">
+    <link rel="stylesheet" id="bootstrap-css" href="css/bootstrap.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="animate-css" href="css/animate.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="animsition-css" href="css/animsition.min.css" type="text/css"
-        media="all">
-    <link rel="stylesheet" id="fancybox-css" href="css/jquery.fancybox.min.css" type="text/css"
-        media="all">
-    <link rel="stylesheet" id="pagepiling-css" href="css/jquery.pagepiling.min.css" type="text/css"
-        media="all">
+    <link rel="stylesheet" id="animsition-css" href="css/animsition.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="fancybox-css" href="css/jquery.fancybox.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="pagepiling-css" href="css/jquery.pagepiling.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="superfish-css" href="css/superfish.css" type="text/css" media="all">
     <link rel="stylesheet" id="swiper-css" href="css/swiper.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-main-css-css" href="css/vlt-main.min.css" type="text/css"
-        media="all">
-    <link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css" type="text/css"
-        media="all">
-    <link rel="stylesheet" id="elementor-frontend-css" href="css/frontend.min.css" type="text/css"
-        media="all">
-    <link rel="stylesheet" id="elementor-post-7-css" href="css/post-7.css" type="text/css"
-        media="all">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><script
-        type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
+    <link rel="stylesheet" id="vlt-main-css-css" href="css/vlt-main.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" href="css/frontend.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-post-7-css" href="css/post-7.css" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
     <script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" id="simple-likes-public-js-js-extra">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-</script>
+    </script>
     <script type="text/javascript" src="js/post-like.min.js" id="simple-likes-public-js-js"></script>
 
     <meta name="generator" content="Elementor 3.26.3; settings: css_print_method-external, google_font-enabled, font_display-swap">
-    <style
-        type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+    </style>
     <style>
-            .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
-            .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+        .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+        .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+            background-image: none !important;
+        }
+
+        @media screen and (max-height: 1024px) {
+
+            .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+            .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
                 background-image: none !important;
             }
-            @media screen and (max-height: 1024px) {
-                .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
-                .e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
-                    background-image: none !important;
-                }
-            }
-            @media screen and (max-height: 640px) {
-                .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
-                .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
-                    background-image: none !important;
-                }
-            }
-        </style>
-    <style
-        id="kirki-inline-styles">body{background:#161616;background-color:#161616;background-repeat:no-repeat;background-position:center center;background-attachment:scroll;font-family:Gilroy;font-size:1rem;font-weight:400;letter-spacing:0px;line-height:1.8;text-transform:none;color:#7d7d7d;-webkit-background-size:cover;-moz-background-size:cover;-ms-background-size:cover;-o-background-size:cover;background-size:cover;}:root{--p1:#cf000f;--pf:Gilroy;}::selection{color:#ffffff!important;background-color:#cf000f!important;}::-moz-selection{color:#ffffff!important;background-color:#cf000f!important;}::-webkit-scrollbar{background-color:#161616;width:5px;}::-webkit-scrollbar-thumb{background-color:#cf000f;}.vlt-header .vlt-navbar-logo img{height:23px;}h1, .h1{font-family:Gilroy;font-size:5rem;font-weight:400;letter-spacing:0px;line-height:1.1;text-transform:none;color:#ffffff;}h2, .h2{font-family:Gilroy;font-size:4rem;font-weight:400;letter-spacing:0px;line-height:1.1;text-transform:none;color:#ffffff;}h3, .h3{font-family:Gilroy;font-size:3.125rem;font-weight:400;letter-spacing:0px;line-height:1.35;text-transform:none;color:#ffffff;}h4, .h4{font-family:Gilroy;font-size:1.75rem;font-weight:400;letter-spacing:0px;line-height:1.5;text-transform:none;color:#ffffff;}h5, .h5{font-family:Gilroy;font-size:1.375rem;font-weight:400;letter-spacing:0px;line-height:1.5;text-transform:none;color:#ffffff;}h6, .h6{font-family:Gilroy;font-size:.9375rem;font-weight:400;letter-spacing:1px;line-height:1.1;text-transform:uppercase;color:#ffffff;}blockquote{font-family:Gilroy;font-size:1.25rem;font-weight:700;letter-spacing:0px;line-height:1.8;text-transform:none;color:#ffffff;}.vlt-btn{font-family:Gilroy;font-size:.75rem;font-weight:400;letter-spacing:0px;line-height:1.1;text-transform:uppercase;}input[type="text"], input[type="date"], input[type="email"], input[type="password"], input[type="tel"], input[type="url"], input[type="search"], input[type="number"], textarea, select{font-family:Gilroy;font-size:1rem;font-weight:400;line-height:1.8;text-transform:none;color:#ffffff;}label{font-weight:400;}</style></head>
+        }
 
-<body
-    class="home page-template page-template-template-fullpage-slider page-template-template-fullpage-slider-php page page-id-48 wp-embed-responsive no-mobile animsition elementor-default elementor-kit-7 elementor-page elementor-page-48">
+        @media screen and (max-height: 640px) {
 
-    <div class="vlt-fixed-socials"><a class="vlt-social-icon vlt-social-icon--style-1" href="#"
-            target="_blank"><i class="lnir-facebook-filled"></i></a><a
-            class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
-                class="lnir-twitter-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1"
-            href="#" target="_blank"><i class="lnir-instagram"></i></a></div>
+            .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+            .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+                background-image: none !important;
+            }
+        }
+
+    </style>
+    <style id="kirki-inline-styles">
+        body {
+            background: #161616;
+            background-color: #161616;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: scroll;
+            font-family: Gilroy;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 1.8;
+            text-transform: none;
+            color: #7d7d7d;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -ms-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        :root {
+            --p1: #cf000f;
+            --pf: Gilroy;
+        }
+
+        ::selection {
+            color: #ffffff !important;
+            background-color: #cf000f !important;
+        }
+
+        ::-moz-selection {
+            color: #ffffff !important;
+            background-color: #cf000f !important;
+        }
+
+        ::-webkit-scrollbar {
+            background-color: #161616;
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #cf000f;
+        }
+
+        .vlt-header .vlt-navbar-logo img {
+            height: 23px;
+        }
+
+        h1,
+        .h1 {
+            font-family: Gilroy;
+            font-size: 5rem;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 1.1;
+            text-transform: none;
+            color: #ffffff;
+        }
+
+        h2,
+        .h2 {
+            font-family: Gilroy;
+            font-size: 4rem;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 1.1;
+            text-transform: none;
+            color: #ffffff;
+        }
+
+        h3,
+        .h3 {
+            font-family: Gilroy;
+            font-size: 3.125rem;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 1.35;
+            text-transform: none;
+            color: #ffffff;
+        }
+
+        h4,
+        .h4 {
+            font-family: Gilroy;
+            font-size: 1.75rem;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 1.5;
+            text-transform: none;
+            color: #ffffff;
+        }
+
+        h5,
+        .h5 {
+            font-family: Gilroy;
+            font-size: 1.375rem;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 1.5;
+            text-transform: none;
+            color: #ffffff;
+        }
+
+        h6,
+        .h6 {
+            font-family: Gilroy;
+            font-size: .9375rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        blockquote {
+            font-family: Gilroy;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0px;
+            line-height: 1.8;
+            text-transform: none;
+            color: #ffffff;
+        }
+
+        .vlt-btn {
+            font-family: Gilroy;
+            font-size: .75rem;
+            font-weight: 400;
+            letter-spacing: 0px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="search"],
+        input[type="number"],
+        textarea,
+        select {
+            font-family: Gilroy;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.8;
+            text-transform: none;
+            color: #ffffff;
+        }
+
+        label {
+            font-weight: 400;
+        }
+
+    </style>
+</head>
+
+<body class="home page-template page-template-template-fullpage-slider page-template-template-fullpage-slider-php page page-id-48 wp-embed-responsive no-mobile animsition elementor-default elementor-kit-7 elementor-page elementor-page-48">
+
+    <div class="vlt-fixed-socials"><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-twitter-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-instagram"></i></a></div>
+    {{-- header.blade.php - com links atualizados --}}
     <header class="vlt-header">
-
         <div class="vlt-navbar vlt-navbar--main vlt-navbar--transparent vlt-navbar--sticky">
-
             <div class="vlt-navbar-background"></div>
-
             <div class="vlt-navbar-inner">
-
                 <div class="vlt-navbar-inner--left">
-
-                    <a href="/" >
-                        <img src="images/logo.webp" width="200px" alt="Gilber" class="black">
+                    <a href="/{{ app()->getLocale() }}">
+                        <img src="{{ asset('images/logo.webp') }}" width="200px" alt="Arnaldo Tomo" class="black">
                     </a>
-                    <!-- .vlt-navbar-logo -->
-
                 </div>
-
                 <div class="vlt-navbar-inner--center">
-
                     <div class="container">
-
                         <nav class="vlt-default-menu__navigation">
-
-                            <ul id="menu-onepage-menu" class="sf-menu sf-menu-onepage"><li id="menu-item-30"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"
-                                    data-menuanchor="Home"><a href="#Home">Home</a></li>
-                                <li id="menu-item-31"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"
-                                    data-menuanchor="About"><a href="#About">About</a></li>
-                                <li id="menu-item-32"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"
-                                    data-menuanchor="Projects"><a href="#Projects">Projects</a></li>
-                                <li id="menu-item-33"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"
-                                    data-menuanchor="Education"><a href="#Education">Education</a></li>
-                                <li id="menu-item-34"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"
-                                    data-menuanchor="Testimonials"><a href="#Testimonials">Testimonials</a></li>
-                                <li id="menu-item-35"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"
-                                    data-menuanchor="Partners"><a href="#Partners">Partners</a></li>
-                                <li id="menu-item-36"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"
-                                    data-menuanchor="Blog"><a href="#Blog">Blog</a></li>
-                                <li id="menu-item-37"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"
-                                    data-menuanchor="Contact"><a href="#Contact">Contact</a></li>
+                            <ul id="menu-onepage-menu" class="sf-menu sf-menu-onepage">
+                                <li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30" data-menuanchor="Home">
+                                    <a href="#Home">{{ __('menu.home') }}</a>
+                                </li>
+                                <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31" data-menuanchor="About">
+                                    <a href="#About">{{ __('menu.about') }}</a>
+                                </li>
+                                <li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32" data-menuanchor="Projects">
+                                    <a href="#Projects">{{ __('menu.projects') }}</a>
+                                </li>
+                                <li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" data-menuanchor="Education">
+                                    <a href="#Education">{{ __('menu.education') }}</a>
+                                </li>
+                                <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34" data-menuanchor="Testimonials">
+                                    <a href="#Testimonials">{{ __('menu.testimonials') }}</a>
+                                </li>
+                                <li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35" data-menuanchor="Partners">
+                                    <a href="#Partners">{{ __('menu.partners') }}</a>
+                                </li>
+                                <li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" data-menuanchor="Blog">
+                                    <a href="#Blog">{{ __('menu.blog') }}</a>
+                                </li>
+                                <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" data-menuanchor="Contact">
+                                    <a href="#Contact">{{ __('menu.contact') }}</a>
+                                </li>
                             </ul>
                         </nav>
-
                     </div>
-
                 </div>
-
                 <div class="vlt-navbar-inner--right">
-
                     <div class="d-flex align-items-center">
-
-                        <nav class="vlt-navbar-contacts"><ul id="menu-navbar-menu" class="menu"><li id="menu-item-12"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a
-                                        href="tel:+258846474687">(+258) 84 6474 687</a></li>
-                            </ul></nav>
+                        {{-- Seletor de idioma atualizado --}}
+                        <div class="language-switcher">
+                            @foreach(config('app.available_locales') as $localeCode => $languageName)
+                            <a href="{{ url($localeCode) }}" class="lang-link {{ app()->getLocale() == $localeCode ? 'active' : '' }}" title="{{ $languageName }}">
+                                {{ strtoupper($localeCode) }}
+                            </a>
+                            @endforeach
+                        </div>
+                        <nav class="vlt-navbar-contacts">
+                            <ul id="menu-navbar-menu" class="menu">
+                                <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12">
+                                    <a href="tel:+258846474687">(+258) 84 6474 687</a>
+                                </li>
+                            </ul>
+                        </nav>
                         <a class="vlt-menu-burger js-offcanvas-menu-open" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"
-                                stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6"
-                                    x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round">
+                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="3" y1="18" x2="21" y2="18"></line>
+                            </svg>
                         </a>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </header>
-    <!-- .vlt-header -->
+
+    @include('components.hackher')
+
+    @include('components.toaste')
+
+    @include('components.privacidade')
+
 
     <div class="vlt-offcanvas-menu">
 
@@ -174,9 +659,10 @@
             <!-- /.vlt-language-switcher -->
 
             <a class="vlt-menu-burger vlt-menu-burger--opened js-offcanvas-menu-close" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-                    stroke-linecap="square" stroke-linejoin="round" stroke-width="2"
-                    viewBox="0 0 24 24"><defs></defs><path d="M18 6L6 18M6 6l12 12"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                    <defs></defs>
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
             </a>
             <!-- /.vlt-menu-burger -->
 
@@ -185,23 +671,15 @@
 
         <nav class="vlt-offcanvas-menu__navigation">
 
-            <ul id="menu-onepage-menu-1" class="sf-menu sf-menu-onepage"><li
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"
-                    data-menuanchor="Home"><a href="#Home">Home</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"
-                    data-menuanchor="About"><a href="#About">About</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"
-                    data-menuanchor="Projects"><a href="#Projects">Projects</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"
-                    data-menuanchor="Education"><a href="#Education">Education</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"
-                    data-menuanchor="Testimonials"><a href="#Testimonials">Testimonials</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"
-                    data-menuanchor="Partners"><a href="#Partners">Partners</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"
-                    data-menuanchor="Blog"><a href="#Blog">Blog</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"
-                    data-menuanchor="Contact"><a href="#Contact">Contact</a></li>
+            <ul id="menu-onepage-menu-1" class="sf-menu sf-menu-onepage">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30" data-menuanchor="Home"><a href="#Home">Home</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31" data-menuanchor="About"><a href="#About">About</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32" data-menuanchor="Projects"><a href="#Projects">Projects</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" data-menuanchor="Education"><a href="#Education">Education</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34" data-menuanchor="Testimonials"><a href="#Testimonials">Testimonials</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35" data-menuanchor="Partners"><a href="#Partners">Partners</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" data-menuanchor="Blog"><a href="#Blog">Blog</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" data-menuanchor="Contact"><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
         <!-- /.vlt-offcanvas-menu__navigation -->
@@ -210,16 +688,14 @@
 
             <div class="vlt-offcanvas-menu__socials">
 
-                <a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
-                        class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1"
-                    href="#" target="_blank"><i class="lnir-twitter-original"></i></a><a
-                    class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
-                        class="lnir-instagram"></i></a>
+                <a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-twitter-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-instagram"></i></a>
             </div>
             <!-- /.vlt-offcanvas-menu__socials -->
 
-            <div class="vlt-offcanvas-menu__copyright"><p>© 2020 Copiright.<br>All rights
-                    reserved.</p></div>
+            <div class="vlt-offcanvas-menu__copyright">
+                <p>© 2020 Copiright.<br>All rights
+                    reserved.</p>
+            </div>
             <!-- /.vlt-offcanvas-menu__copyright -->
 
         </div>
@@ -252,74 +728,48 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="28" class="elementor elementor-28">
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-ac63f0c elementor-section-boxed elementor-section-height-default"
-                                    data-id="ac63f0c" data-element_type="section" data-settings="{"
-                                    background_background":"classic"}"="">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-ac63f0c elementor-section-boxed elementor-section-height-default" data-id="ac63f0c" data-element_type="section" data-settings="{" background_background":"classic"}"="">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8001a0a"
-                                            data-id="8001a0a" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8001a0a" data-id="8001a0a" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="elementor-element elementor-element-95bd625 elementor-widget elementor-widget-spacer"
-                                                    data-id="95bd625" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-95bd625 elementor-widget elementor-widget-spacer" data-id="95bd625" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                        
-                                                <div
-                                                    class="elementor-element elementor-element-2f01fb8 elementor-widget elementor-widget-spacer"
-                                                    data-id="2f01fb8" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+
+                                                <div class="elementor-element elementor-element-2f01fb8 elementor-widget elementor-widget-spacer" data-id="2f01fb8" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            
-                                                <div
-                                                    class="elementor-element elementor-element-d219f36 elementor-widget elementor-widget-spacer"
-                                                    data-id="d219f36" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+
+                                                <div class="elementor-element elementor-element-d219f36 elementor-widget elementor-widget-spacer" data-id="d219f36" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-81c1dfc elementor-widget elementor-widget-html"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="81c1dfc"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-81c1dfc elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="81c1dfc" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
                                                     <div class="elementor-widget-container">
                                                         <h1 class="vlt-large-heading text-uppercase" style="font-size: 5.8rem;">Software <br> <span class="has-accent-color">engineer.</span></h1>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-6bdbcfa elementor-widget elementor-widget-spacer"
-                                                    data-id="6bdbcfa" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-6bdbcfa elementor-widget elementor-widget-spacer" data-id="6bdbcfa" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-6d17e11 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="6d17e11"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="text-editor.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-6d17e11 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="6d17e11" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        Especializado em Laravel e React Native, desenvolvo soluções tecnológicas inovadoras para empresas, ONGs.</div>
+                                                        Não apenas construo aplicações - crio soluções que geram resultados reais.</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -348,184 +798,293 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="26" class="elementor elementor-26">
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-d4666b1 elementor-section-content-bottom elementor-section-boxed elementor-section-height-default"
-                                    data-id="d4666b1" data-element_type="section">
-                                    <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b93b97a"
-                                            data-id="b93b97a" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-e295291 elementor-widget__width-initial elementor-widget elementor-widget-vlt-experience-block"
-                                                    data-animation-name="fadeInUpSm" style data-id="e295291" data-element_type="widget"
-                                                    data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-experience-block.default">
-                                                    <div class="elementor-widget-container">
+                                <!-- Seção de experiência atualizada -->
+                                <section class="experience-section">
+                                    <div class="blur-background"></div>
+                                    <div class="container">
+                                        <!-- Grid principal: Sobre + Contador -->
+                                        <div class="experience-grid">
+                                            <!-- Coluna de texto/sobre mim -->
+                                            <div class="about-column">
+                                                <h2 class="section-title">Sobre Mim</h2>
+                                                <div class="about-content">
+                                                    <p>Engenheiro de software que transforma conceitos em código. Desenvolvo soluções inovadoras que resolvem problemas reais para empresas e ONGs em Moçambique.</p>
+                                                    <p>Especializado em criar experiências digitais completas, do backend ao frontend, com foco em performance e usabilidade.</p>
+                                                </div>
+                                            </div>
 
-                                                        <div class="vlt-experience-block">
-
-                                                            <span class="vlt-experience-block__number">9<span
-                                                                    class="has-accent-color">.</span></span>
-
-                                                            <h5 class="vlt-experience-block__title">Years<br>
-                                                                Experience<br>
-                                                                Working</h5>
-
+                                            <!-- Coluna do contador criativo -->
+                                            <div class="counter-column">
+                                                <div class="experience-counter">
+                                                    <div class="counter-digits">
+                                                        <div class="digit-container">
+                                                            <span class="digit">7</span>
                                                         </div>
-
+                                                    </div>
+                                                    <div class="counter-details">
+                                                        <div class="counter-separator">
+                                                            <span></span>
+                                                        </div>
+                                                        <div class="counter-labels">
+                                                            <span class="counter-label">Anos</span>
+                                                            <span class="counter-value">Experiência</span>
+                                                            <span class="counter-sublabel">Desenvolvendo</span>
+                                                            <span class="counter-sublabel">Soluções</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div
-                                            class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4c35aa2"
-                                            data-id="4c35aa2" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-70539dc elementor-widget elementor-widget-heading"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="70539dc"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Great Experience</h3>
-                                                    </div>
+
+                                        <!-- Stack Tecnológico -->
+                                        <div class="tech-stack-section">
+                                            <h3 class="tech-stack-title">Stack Tecnológico</h3>
+
+                                            <div class="tech-categories">
+                                                <div class="category-tabs">
+                                                    <button class="tab-button active" data-tab="backend">Backend</button>
+                                                    <button class="tab-button" data-tab="frontend">Frontend</button>
+                                                    <button class="tab-button" data-tab="mobile">Mobile</button>
+                                                    <button class="tab-button" data-tab="design">Design & DevOps</button>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-3bb21c8 elementor-widget elementor-widget-spacer"
-                                                    data-id="3bb21c8" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-0d42d09 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="0d42d09"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container">
-                                                        Fill appear wont may make moveth signs. Fourth. Good own. Green youre moveth us,
-                                                        lesser. </div>
-                                                </div>
-                                                <div
-                                                    class="elementor-element elementor-element-d85c0d8 elementor-widget elementor-widget-spacer"
-                                                    data-id="d85c0d8" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-b8c8799 elementor-widget elementor-widget-vlt-progress-bar"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="b8c8799"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-progress-bar.default">
-                                                    <div class="elementor-widget-container">
 
-                                                        <div class="vlt-progress-bar" data-final-value="70" data-animation-speed="1000">
-
-                                                            <h5 class="vlt-progress-bar__title">
-
-                                                                Web Design
-                                                                <span class="counter"></span>
-
-                                                            </h5>
-
-                                                            <div class="vlt-progress-bar__bar">
-
-                                                                <span></span>
-
+                                                <div class="tech-tabs-content">
+                                                    <!-- Backend Tab -->
+                                                    <div class="tab-content active" id="backend-tab">
+                                                        <div class="tech-cards">
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" alt="Laravel">
+                                                                </div>
+                                                                <h5>Laravel</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                </div>
                                                             </div>
 
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="elementor-element elementor-element-c5962fe elementor-widget elementor-widget-spacer"
-                                                    data-id="c5962fe" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-d7f48c5 elementor-widget elementor-widget-vlt-progress-bar"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 400ms;" data-id="d7f48c5"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-progress-bar.default">
-                                                    <div class="elementor-widget-container">
-
-                                                        <div class="vlt-progress-bar" data-final-value="85" data-animation-speed="1000">
-
-                                                            <h5 class="vlt-progress-bar__title">
-
-                                                                Figma
-                                                                <span class="counter"></span>
-
-                                                            </h5>
-
-                                                            <div class="vlt-progress-bar__bar">
-
-                                                                <span></span>
-
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/mysql-6.svg" alt="MySQL">
+                                                                </div>
+                                                                <h5>MySQL</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
                                                             </div>
 
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="elementor-element elementor-element-07d37c5 elementor-widget elementor-widget-spacer"
-                                                    data-id="07d37c5" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-5f9bb73 elementor-widget elementor-widget-vlt-progress-bar"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 500ms;" data-id="5f9bb73"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-progress-bar.default">
-                                                    <div class="elementor-widget-container">
-
-                                                        <div class="vlt-progress-bar" data-final-value="90" data-animation-speed="1000">
-
-                                                            <h5 class="vlt-progress-bar__title">
-
-                                                                WordPress
-                                                                <span class="counter"></span>
-
-                                                            </h5>
-
-                                                            <div class="vlt-progress-bar__bar">
-
-                                                                <span></span>
-
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js">
+                                                                </div>
+                                                                <h5>Node.js</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
                                                             </div>
 
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python">
+                                                                </div>
+                                                                <h5>Python</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                    <span class="dot"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                    </div>
 
+                                                    <!-- Frontend Tab -->
+                                                    <div class="tab-content" id="frontend-tab">
+                                                        <div class="tech-cards">
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React">
+                                                                </div>
+                                                                <h5>React</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript">
+                                                                </div>
+                                                                <h5>JavaScript</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS">
+                                                                </div>
+                                                                <h5>Tailwind CSS</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="Bootstrap">
+                                                                </div>
+                                                                <h5>Bootstrap</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Mobile Tab -->
+                                                    <div class="tab-content" id="mobile-tab">
+                                                        <div class="tech-cards">
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/react-native-1.svg" alt="React Native">
+                                                                </div>
+                                                                <h5>React Native</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/flutter.svg" alt="Flutter">
+                                                                </div>
+                                                                <h5>Flutter</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                    <span class="dot"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/swift-15.svg" alt="Swift">
+                                                                </div>
+                                                                <h5>Swift</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                    <span class="dot"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Design & DevOps Tab -->
+                                                    <div class="tab-content" id="design-tab">
+                                                        <div class="tech-cards">
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/figma-5.svg" alt="Figma">
+                                                                </div>
+                                                                <h5>Figma</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git">
+                                                                </div>
+                                                                <h5>Git</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker">
+                                                                </div>
+                                                                <h5>Docker</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="tech-card">
+                                                                <div class="tech-icon">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="Firebase">
+                                                                </div>
+                                                                <h5>Firebase</h5>
+                                                                <div class="tech-dots">
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot filled"></span>
+                                                                    <span class="dot"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </section>
+
+
                             </div>
 
                         </div>
@@ -552,29 +1111,18 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="24" class="elementor elementor-24">
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-d20eac0 elementor-section-boxed elementor-section-height-default"
-                                    data-id="d20eac0" data-element_type="section">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-d20eac0 elementor-section-boxed elementor-section-height-default" data-id="d20eac0" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7dcd8a4"
-                                            data-id="7dcd8a4" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7dcd8a4" data-id="7dcd8a4" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="elementor-element elementor-element-6ba92a3 elementor-widget elementor-widget-spacer"
-                                                    data-id="6ba92a3" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-6ba92a3 elementor-widget elementor-widget-spacer" data-id="6ba92a3" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-dca4088 elementor-widget elementor-widget-vlt-portfolio-slider"
-                                                    data-animation-name="fadeInUpSm" style data-id="dca4088" data-element_type="widget"
-                                                    data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-portfolio-slider.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-dca4088 elementor-widget elementor-widget-vlt-portfolio-slider" data-animation-name="fadeInUpSm" style data-id="dca4088" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-portfolio-slider.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-portfolio-slider" data-navigation-anchor=".vlt-portfolio-controls">
@@ -585,9 +1133,7 @@
 
                                                                     <div class="swiper-slide">
 
-                                                                        <article
-                                                                            class="vlt-project post-59 portfolio type-portfolio status-publish has-post-thumbnail hentry"
-                                                                            data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-01.jpg">
+                                                                        <article class="vlt-project post-59 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-01.jpg">
 
                                                                             <h3 class="vlt-project-title">Watch<span class="has-accent-color">.</span></h3>
 
@@ -598,9 +1144,7 @@
 
                                                                             </div>
 
-                                                                            <a class="vlt-btn vlt-btn--primary vlt-btn--md"
-                                                                                href="https://gasinforest.com/wordpress/gilber/?portfolio=watch"
-                                                                                target="_self">See Project</a>
+                                                                            <a class="vlt-btn vlt-btn--primary vlt-btn--md" href="https://gasinforest.com/wordpress/gilber/?portfolio=watch" target="_self">See Project</a>
 
                                                                         </article>
 
@@ -608,12 +1152,9 @@
 
                                                                     <div class="swiper-slide">
 
-                                                                        <article
-                                                                            class="vlt-project post-63 portfolio type-portfolio status-publish has-post-thumbnail hentry"
-                                                                            data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-02.jpg">
+                                                                        <article class="vlt-project post-63 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-02.jpg">
 
-                                                                            <h3 class="vlt-project-title">The Bottle<span
-                                                                                    class="has-accent-color">.</span></h3>
+                                                                            <h3 class="vlt-project-title">The Bottle<span class="has-accent-color">.</span></h3>
 
                                                                             <div class="vlt-project-excerpt">
 
@@ -623,9 +1164,7 @@
 
                                                                             </div>
 
-                                                                            <a class="vlt-btn vlt-btn--primary vlt-btn--md"
-                                                                                href="https://gasinforest.com/wordpress/gilber/?portfolio=the-bottle"
-                                                                                target="_self">See Project</a>
+                                                                            <a class="vlt-btn vlt-btn--primary vlt-btn--md" href="https://gasinforest.com/wordpress/gilber/?portfolio=the-bottle" target="_self">See Project</a>
 
                                                                         </article>
 
@@ -633,9 +1172,7 @@
 
                                                                     <div class="swiper-slide">
 
-                                                                        <article
-                                                                            class="vlt-project post-64 portfolio type-portfolio status-publish has-post-thumbnail hentry"
-                                                                            data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-03.jpg">
+                                                                        <article class="vlt-project post-64 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-03.jpg">
 
                                                                             <h3 class="vlt-project-title">Aesop<span class="has-accent-color">.</span></h3>
 
@@ -647,9 +1184,7 @@
 
                                                                             </div>
 
-                                                                            <a class="vlt-btn vlt-btn--primary vlt-btn--md"
-                                                                                href="https://gasinforest.com/wordpress/gilber/?portfolio=aesop"
-                                                                                target="_self">See Project</a>
+                                                                            <a class="vlt-btn vlt-btn--primary vlt-btn--md" href="https://gasinforest.com/wordpress/gilber/?portfolio=aesop" target="_self">See Project</a>
 
                                                                         </article>
 
@@ -663,22 +1198,14 @@
 
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-f4906ce elementor-widget elementor-widget-spacer"
-                                                    data-id="f4906ce" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-f4906ce elementor-widget elementor-widget-spacer" data-id="f4906ce" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-761e3fb vlt-portfolio-controls elementor-widget elementor-widget-vlt-slider-controls"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="761e3fb"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-slider-controls.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-761e3fb vlt-portfolio-controls elementor-widget elementor-widget-vlt-slider-controls" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="761e3fb" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-1">
@@ -689,30 +1216,26 @@
 
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-5f262fd vlt-portfolio-controls elementor-absolute elementor-widget elementor-widget-vlt-slider-controls"
-                                                    data-id="5f262fd" data-element_type="widget" data-settings="{"
-                                                    _position":"absolute","vlt_animated_widget_animation":"none"}"=""
-                                                    data-widget_type="vlt-slider-controls.default">
+                                                <div class="elementor-element elementor-element-5f262fd vlt-portfolio-controls elementor-absolute elementor-widget elementor-widget-vlt-slider-controls" data-id="5f262fd" data-element_type="widget" data-settings="{" _position":"absolute","vlt_animated_widget_animation":"none"}"="" data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-2">
 
                                                             <div class="vlt-swiper-button-prev">
 
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 45"><defs></defs><path fill="currentColor" fill-rule="evenodd"
-                                                                        d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z"
-                                                                        clip-rule="evenodd"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 45">
+                                                                    <defs></defs>
+                                                                    <path fill="currentColor" fill-rule="evenodd" d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z" clip-rule="evenodd"></path>
+                                                                </svg>
 
                                                             </div>
 
                                                             <div class="vlt-swiper-button-next">
 
-                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 24 45"><defs></defs><path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z"
-                                                                        fill="currentColor"></path></svg>
+                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 45">
+                                                                    <defs></defs>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z" fill="currentColor"></path>
+                                                                </svg>
 
                                                             </div>
 
@@ -747,18 +1270,11 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="22" class="elementor elementor-22">
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-f357390 elementor-section-boxed elementor-section-height-default"
-                                    data-id="f357390" data-element_type="section">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-f357390 elementor-section-boxed elementor-section-height-default" data-id="f357390" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1de251a"
-                                            data-id="1de251a" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1de251a" data-id="1de251a" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="elementor-element elementor-element-d3ea8ed elementor-widget elementor-widget-spacer"
-                                                    data-id="d3ea8ed" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-d3ea8ed elementor-widget elementor-widget-spacer" data-id="d3ea8ed" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
@@ -769,33 +1285,21 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-7e459fc elementor-section-content-middle elementor-section-boxed elementor-section-height-default"
-                                    data-id="7e459fc" data-element_type="section">
+
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-7e459fc elementor-section-content-middle elementor-section-boxed elementor-section-height-default" data-id="7e459fc" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-482f790"
-                                            data-id="482f790" data-element_type="column">
+                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-482f790" data-id="482f790" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-43eb7ac elementor-widget elementor-widget-heading"
-                                                    data-animation-name="fadeInUpSm" style data-id="43eb7ac" data-element_type="widget"
-                                                    data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-43eb7ac elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="43eb7ac" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Education</h3> </div>
+                                                        <h3 class="elementor-heading-title elementor-size-default">Education</h3>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div
-                                            class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1799464"
-                                            data-id="1799464" data-element_type="column">
+                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1799464" data-id="1799464" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-35978a8 elementor-widget elementor-widget-vlt-button"
-                                                    data-animation-name="fadeInUpSm" style data-id="35978a8" data-element_type="widget"
-                                                    data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-button.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-35978a8 elementor-widget elementor-widget-vlt-button" data-animation-name="fadeInUpSm" style data-id="35978a8" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-button.default">
                                                     <div class="elementor-widget-container">
 
                                                         <a class="vlt-btn vlt-btn--primary" role="button" href="#">
@@ -809,30 +1313,19 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-8bf7a06 elementor-section-boxed elementor-section-height-default"
-                                    data-id="8bf7a06" data-element_type="section">
+
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-8bf7a06 elementor-section-boxed elementor-section-height-default" data-id="8bf7a06" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a5bcbde"
-                                            data-id="a5bcbde" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a5bcbde" data-id="a5bcbde" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="elementor-element elementor-element-d7ea4be elementor-widget elementor-widget-spacer"
-                                                    data-id="d7ea4be" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-d7ea4be elementor-widget elementor-widget-spacer" data-id="d7ea4be" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-67e92c9 elementor-widget elementor-widget-vlt-timeline-slider"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="67e92c9"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-timeline-slider.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-67e92c9 elementor-widget elementor-widget-vlt-timeline-slider" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="67e92c9" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-timeline-slider.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-timeline-slider" data-navigation-anchor=".vlt-timeline-anchor">
@@ -841,78 +1334,156 @@
 
                                                                 <div class="swiper-wrapper">
 
-                                                                    <div class="swiper-slide"><div class="vlt-timeline-item"><div class="row"><div
-                                                                                    class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49"
-                                                                                        src="images/behance.png" class="attachment-full size-full" alt></div><div
-                                                                                    class="col-xl-4"><div class="vlt-timeline-item__date">2019 - 2020</div><h5
-                                                                                        class="vlt-timeline-item__title">Behance</h5></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__text"><p>Which firmament dominion first rule and
+                                                                    <div class="swiper-slide">
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/behance.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2019 - 2020</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Behance</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Which firmament dominion first rule and
                                                                                             tree. The seas he i were cattle Under living. It may beast every forth
-                                                                                            place.</p></div></div></div></div><div class="vlt-timeline-item"><div
-                                                                                class="row"><div class="col-xl-4"><img loading="lazy" decoding="async"
-                                                                                        width="78" height="78" src="images/envato.png"
-                                                                                        class="attachment-full size-full" alt></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__date">2017 - 2018</div><h5
-                                                                                        class="vlt-timeline-item__title">Envato</h5></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__text"><p>Rule bearing whales. Created gathering
+                                                                                            place.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/envato.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2017 - 2018</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Envato</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Rule bearing whales. Created gathering
                                                                                             blessed, sixth likeness male. Over were which you'll so be make moveth made
-                                                                                            saw above.</p></div></div></div></div><div class="vlt-timeline-item"><div
-                                                                                class="row"><div class="col-xl-4"><img loading="lazy" decoding="async"
-                                                                                        width="78" height="64" src="images/twitter.png"
-                                                                                        class="attachment-full size-full" alt></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__date">2015 - 2018</div><h5
-                                                                                        class="vlt-timeline-item__title">Twitter</h5></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__text"><p>Firmament itself rule their evening, which
+                                                                                            saw above.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/twitter.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2015 - 2018</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Twitter</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Firmament itself rule their evening, which
                                                                                             moved very night so great them cattle bearing and gathered forth had whose
-                                                                                            bearing.</p></div></div></div></div></div><div class="swiper-slide"><div
-                                                                            class="vlt-timeline-item"><div class="row"><div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async" width="79" height="49"
-                                                                                        src="images/behance.png" class="attachment-full size-full" alt></div><div
-                                                                                    class="col-xl-4"><div class="vlt-timeline-item__date">2019 - 2020</div><h5
-                                                                                        class="vlt-timeline-item__title">Behance</h5></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__text"><p>Which firmament dominion first rule and
+                                                                                            bearing.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/behance.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2019 - 2020</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Behance</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Which firmament dominion first rule and
                                                                                             tree. The seas he i were cattle Under living. It may beast every forth
-                                                                                            place.</p></div></div></div></div><div class="vlt-timeline-item"><div
-                                                                                class="row"><div class="col-xl-4"><img loading="lazy" decoding="async"
-                                                                                        width="78" height="78" src="images/envato.png"
-                                                                                        class="attachment-full size-full" alt></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__date">2017 - 2018</div><h5
-                                                                                        class="vlt-timeline-item__title">Envato</h5></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__text"><p>Rule bearing whales. Created gathering
+                                                                                            place.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/envato.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2017 - 2018</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Envato</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Rule bearing whales. Created gathering
                                                                                             blessed, sixth likeness male. Over were which you'll so be make moveth made
-                                                                                            saw above.</p></div></div></div></div><div class="vlt-timeline-item"><div
-                                                                                class="row"><div class="col-xl-4"><img loading="lazy" decoding="async"
-                                                                                        width="78" height="64" src="images/twitter.png"
-                                                                                        class="attachment-full size-full" alt></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__date">2015 - 2018</div><h5
-                                                                                        class="vlt-timeline-item__title">Twitter</h5></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__text"><p>Firmament itself rule their evening, which
+                                                                                            saw above.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/twitter.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2015 - 2018</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Twitter</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Firmament itself rule their evening, which
                                                                                             moved very night so great them cattle bearing and gathered forth had whose
-                                                                                            bearing.</p></div></div></div></div></div><div class="swiper-slide"><div
-                                                                            class="vlt-timeline-item"><div class="row"><div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async" width="79" height="49"
-                                                                                        src="images/behance.png" class="attachment-full size-full" alt></div><div
-                                                                                    class="col-xl-4"><div class="vlt-timeline-item__date">2019 - 2020</div><h5
-                                                                                        class="vlt-timeline-item__title">Behance</h5></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__text"><p>Which firmament dominion first rule and
+                                                                                            bearing.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/behance.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2019 - 2020</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Behance</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Which firmament dominion first rule and
                                                                                             tree. The seas he i were cattle Under living. It may beast every forth
-                                                                                            place.</p></div></div></div></div><div class="vlt-timeline-item"><div
-                                                                                class="row"><div class="col-xl-4"><img loading="lazy" decoding="async"
-                                                                                        width="78" height="78" src="images/envato.png"
-                                                                                        class="attachment-full size-full" alt></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__date">2017 - 2018</div><h5
-                                                                                        class="vlt-timeline-item__title">Envato</h5></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__text"><p>Rule bearing whales. Created gathering
+                                                                                            place.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/envato.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2017 - 2018</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Envato</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Rule bearing whales. Created gathering
                                                                                             blessed, sixth likeness male. Over were which you'll so be make moveth made
-                                                                                            saw above.</p></div></div></div></div><div class="vlt-timeline-item"><div
-                                                                                class="row"><div class="col-xl-4"><img loading="lazy" decoding="async"
-                                                                                        width="78" height="64" src="images/twitter.png"
-                                                                                        class="attachment-full size-full" alt></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__date">2015 - 2018</div><h5
-                                                                                        class="vlt-timeline-item__title">Twitter</h5></div><div class="col-xl-4"><div
-                                                                                        class="vlt-timeline-item__text"><p>Firmament itself rule their evening, which
+                                                                                            saw above.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/twitter.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2015 - 2018</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Twitter</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Firmament itself rule their evening, which
                                                                                             moved very night so great them cattle bearing and gathered forth had whose
-                                                                                            bearing.</p></div></div></div></div></div>
+                                                                                            bearing.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
 
                                                             </div>
@@ -921,22 +1492,14 @@
 
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-f152810 elementor-widget elementor-widget-spacer"
-                                                    data-id="f152810" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-f152810 elementor-widget elementor-widget-spacer" data-id="f152810" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-c3f0bc0 vlt-timeline-anchor elementor-widget elementor-widget-vlt-slider-controls"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="c3f0bc0"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-slider-controls.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-c3f0bc0 vlt-timeline-anchor elementor-widget elementor-widget-vlt-slider-controls" data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="c3f0bc0" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-1">
@@ -947,30 +1510,26 @@
 
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-d445609 vlt-timeline-anchor elementor-absolute elementor-widget elementor-widget-vlt-slider-controls"
-                                                    data-id="d445609" data-element_type="widget" data-settings="{"
-                                                    _position":"absolute","vlt_animated_widget_animation":"none"}"=""
-                                                    data-widget_type="vlt-slider-controls.default">
+                                                <div class="elementor-element elementor-element-d445609 vlt-timeline-anchor elementor-absolute elementor-widget elementor-widget-vlt-slider-controls" data-id="d445609" data-element_type="widget" data-settings="{" _position":"absolute","vlt_animated_widget_animation":"none"}"="" data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-2">
 
                                                             <div class="vlt-swiper-button-prev">
 
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 45"><defs></defs><path fill="currentColor" fill-rule="evenodd"
-                                                                        d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z"
-                                                                        clip-rule="evenodd"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 45">
+                                                                    <defs></defs>
+                                                                    <path fill="currentColor" fill-rule="evenodd" d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z" clip-rule="evenodd"></path>
+                                                                </svg>
 
                                                             </div>
 
                                                             <div class="vlt-swiper-button-next">
 
-                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 24 45"><defs></defs><path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z"
-                                                                        fill="currentColor"></path></svg>
+                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 45">
+                                                                    <defs></defs>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z" fill="currentColor"></path>
+                                                                </svg>
 
                                                             </div>
 
@@ -982,6 +1541,7 @@
                                         </div>
                                     </div>
                                 </section>
+
                             </div>
 
                         </div>
@@ -1012,86 +1572,83 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="20" class="elementor elementor-20">
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-d38a1fa elementor-section-content-bottom elementor-section-boxed elementor-section-height-default"
-                                    data-id="d38a1fa" data-element_type="section">
+
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-d38a1fa elementor-section-content-bottom elementor-section-boxed elementor-section-height-default" data-id="d38a1fa" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d87e80d"
-                                            data-id="d87e80d" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d87e80d" data-id="d87e80d" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-8eb0c0f elementor-widget elementor-widget-html"
-                                                    data-animation-name="fadeInUpSm" style data-id="8eb0c0f" data-element_type="widget"
-                                                    data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="html.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-8eb0c0f elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style data-id="8eb0c0f" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
                                                     <div class="elementor-widget-container">
-                                                        <div class="has-accent-color"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                viewBox="0 0 75 75" style="height: 75px;"><defs></defs><path fill="currentColor"
-                                                                    d="M25 0C16.9271 0 10.7422 2.14844 6.44531 6.44531 2.14844 10.7422 0 16.9271 0 25v50h31.25V25H12.5c0-4.4271.9766-7.6172 2.9297-9.5703C17.3828 13.4766 20.5729 12.5 25 12.5V0zm43.75 0c-8.0729 0-14.2578 2.14844-18.5547 6.44531C45.8984 10.7422 43.75 16.9271 43.75 25v50H75V25H56.25c0-4.4271.9766-7.6172 2.9297-9.5703C61.1328 13.4766 64.3229 12.5 68.75 12.5V0z"></path></svg>
-                                                        </div> </div>
+                                                        <div class="has-accent-color"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" style="height: 75px;">
+                                                                <defs></defs>
+                                                                <path fill="currentColor" d="M25 0C16.9271 0 10.7422 2.14844 6.44531 6.44531 2.14844 10.7422 0 16.9271 0 25v50h31.25V25H12.5c0-4.4271.9766-7.6172 2.9297-9.5703C17.3828 13.4766 20.5729 12.5 25 12.5V0zm43.75 0c-8.0729 0-14.2578 2.14844-18.5547 6.44531C45.8984 10.7422 43.75 16.9271 43.75 25v50H75V25H56.25c0-4.4271.9766-7.6172 2.9297-9.5703C61.1328 13.4766 64.3229 12.5 68.75 12.5V0z"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-c03f097 elementor-widget elementor-widget-spacer"
-                                                    data-id="c03f097" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-c03f097 elementor-widget elementor-widget-spacer" data-id="c03f097" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-2faa764 elementor-widget elementor-widget-heading"
-                                                    data-animation-name="fadeInUpSm" style data-id="2faa764" data-element_type="widget"
-                                                    data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-2faa764 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="2faa764" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
                                                         <h3 class="elementor-heading-title elementor-size-default">Creative & dedicated is
-                                                            things that gilber studio brings for your business.</h3> </div>
+                                                            things that gilber studio brings for your business.</h3>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div
-                                            class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f183c9b"
-                                            data-id="f183c9b" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f183c9b" data-id="f183c9b" data-element_type="column">
                                             <div class="elementor-widget-wrap">
                                             </div>
                                         </div>
-                                        <div
-                                            class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-039d35e"
-                                            data-id="039d35e" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-039d35e" data-id="039d35e" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-372930a elementor-widget elementor-widget-vlt-testimonial-slider"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="372930a"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-testimonial-slider.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-372930a elementor-widget elementor-widget-vlt-testimonial-slider" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="372930a" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-testimonial-slider.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <div class="vlt-testimonial-slider"
-                                                            data-navigation-anchor=".vlt-testimonial-controls">
+                                                        <div class="vlt-testimonial-slider" data-navigation-anchor=".vlt-testimonial-controls">
 
                                                             <div class="swiper-container swiper">
 
                                                                 <div class="swiper-wrapper">
 
-                                                                    <div class="swiper-slide"><div class="vlt-testimonial"><div
-                                                                                class="vlt-testimonial__text">"Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let."</div><div
-                                                                                class="vlt-testimonial__meta"><h5 class="vlt-testimonial__name">Dwight
-                                                                                    Schrute</h5><div class="vlt-testimonial__function">The
-                                                                                    Office</div></div></div></div><div class="swiper-slide"><div
-                                                                            class="vlt-testimonial"><div
-                                                                                class="vlt-testimonial__text">"Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let."</div><div
-                                                                                class="vlt-testimonial__meta"><h5 class="vlt-testimonial__name">Paul &
-                                                                                    Amanda</h5><div class="vlt-testimonial__function">Envato
-                                                                                    Studio</div></div></div></div><div class="swiper-slide"><div
-                                                                            class="vlt-testimonial"><div
-                                                                                class="vlt-testimonial__text">"Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let."</div><div
-                                                                                class="vlt-testimonial__meta"><h5 class="vlt-testimonial__name">Ramsay
-                                                                                    Bolton</h5><div class="vlt-testimonial__function">Apple
-                                                                                    Inc</div></div></div></div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="vlt-testimonial">
+                                                                            <div class="vlt-testimonial__text">"Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let."</div>
+                                                                            <div class="vlt-testimonial__meta">
+                                                                                <h5 class="vlt-testimonial__name">Dwight
+                                                                                    Schrute</h5>
+                                                                                <div class="vlt-testimonial__function">The
+                                                                                    Office</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="vlt-testimonial">
+                                                                            <div class="vlt-testimonial__text">"Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let."</div>
+                                                                            <div class="vlt-testimonial__meta">
+                                                                                <h5 class="vlt-testimonial__name">Paul &
+                                                                                    Amanda</h5>
+                                                                                <div class="vlt-testimonial__function">Envato
+                                                                                    Studio</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="vlt-testimonial">
+                                                                            <div class="vlt-testimonial__text">"Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let."</div>
+                                                                            <div class="vlt-testimonial__meta">
+                                                                                <h5 class="vlt-testimonial__name">Ramsay
+                                                                                    Bolton</h5>
+                                                                                <div class="vlt-testimonial__function">Apple
+                                                                                    Inc</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
 
                                                             </div>
@@ -1100,41 +1657,33 @@
 
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-6d71bd5 elementor-widget elementor-widget-spacer"
-                                                    data-id="6d71bd5" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-6d71bd5 elementor-widget elementor-widget-spacer" data-id="6d71bd5" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-3c9168c vlt-testimonial-controls elementor-widget elementor-widget-vlt-slider-controls"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="3c9168c"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-slider-controls.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-3c9168c vlt-testimonial-controls elementor-widget elementor-widget-vlt-slider-controls" data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="3c9168c" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-1">
 
                                                             <div class="vlt-swiper-button-prev">
 
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 45"><defs></defs><path fill="currentColor" fill-rule="evenodd"
-                                                                        d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z"
-                                                                        clip-rule="evenodd"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 45">
+                                                                    <defs></defs>
+                                                                    <path fill="currentColor" fill-rule="evenodd" d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z" clip-rule="evenodd"></path>
+                                                                </svg>
 
                                                             </div>
 
                                                             <div class="vlt-swiper-button-next">
 
-                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 24 45"><defs></defs><path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z"
-                                                                        fill="currentColor"></path></svg>
+                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 45">
+                                                                    <defs></defs>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z" fill="currentColor"></path>
+                                                                </svg>
 
                                                             </div>
 
@@ -1146,6 +1695,7 @@
                                         </div>
                                     </div>
                                 </section>
+
                             </div>
 
                         </div>
@@ -1169,88 +1719,65 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="18" class="elementor elementor-18">
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-6176c09 elementor-section-boxed elementor-section-height-default"
-                                    data-id="6176c09" data-element_type="section">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-6176c09 elementor-section-boxed elementor-section-height-default" data-id="6176c09" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-19ab3da"
-                                            data-id="19ab3da" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-19ab3da" data-id="19ab3da" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-283aeea elementor-widget elementor-widget-heading"
-                                                    data-animation-name="fadeInUpSm" style data-id="283aeea" data-element_type="widget"
-                                                    data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-283aeea elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="283aeea" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Partners</h3> </div>
+                                                        <h3 class="elementor-heading-title elementor-size-default">Partners</h3>
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-0fa1c67 elementor-widget elementor-widget-spacer"
-                                                    data-id="0fa1c67" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-0fa1c67 elementor-widget elementor-widget-spacer" data-id="0fa1c67" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-96f0656 elementor-widget elementor-widget-vlt-partners"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="96f0656"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-partners.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-96f0656 elementor-widget elementor-widget-vlt-partners" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="96f0656" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-partners.default">
                                                     <div class="elementor-widget-container">
 
                                                         <ul class="vlt-partners">
 
                                                             <li>
 
-                                                                <img loading="lazy" decoding="async" width="118" height="47"
-                                                                    src="images/logo-01.png" class="attachment-full size-full" alt>
+                                                                <img loading="lazy" decoding="async" width="118" height="47" src="images/logo-01.png" class="attachment-full size-full" alt>
                                                             </li>
 
                                                             <li>
 
-                                                                <img loading="lazy" decoding="async" width="140" height="68"
-                                                                    src="images/logo-02.png" class="attachment-full size-full" alt>
+                                                                <img loading="lazy" decoding="async" width="140" height="68" src="images/logo-02.png" class="attachment-full size-full" alt>
                                                             </li>
 
                                                             <li>
 
-                                                                <img loading="lazy" decoding="async" width="151" height="45"
-                                                                    src="images/logo-03.png" class="attachment-full size-full" alt>
+                                                                <img loading="lazy" decoding="async" width="151" height="45" src="images/logo-03.png" class="attachment-full size-full" alt>
                                                             </li>
 
                                                             <li>
 
-                                                                <img loading="lazy" decoding="async" width="126" height="32"
-                                                                    src="images/logo-04.png" class="attachment-full size-full" alt>
+                                                                <img loading="lazy" decoding="async" width="126" height="32" src="images/logo-04.png" class="attachment-full size-full" alt>
                                                             </li>
 
                                                             <li>
 
-                                                                <img loading="lazy" decoding="async" width="134" height="66"
-                                                                    src="images/logo-05.png" class="attachment-full size-full" alt>
+                                                                <img loading="lazy" decoding="async" width="134" height="66" src="images/logo-05.png" class="attachment-full size-full" alt>
                                                             </li>
 
                                                             <li>
 
-                                                                <img loading="lazy" decoding="async" width="135" height="54"
-                                                                    src="images/logo-06.png" class="attachment-full size-full" alt>
+                                                                <img loading="lazy" decoding="async" width="135" height="54" src="images/logo-06.png" class="attachment-full size-full" alt>
                                                             </li>
 
                                                             <li>
 
-                                                                <img loading="lazy" decoding="async" width="144" height="33"
-                                                                    src="images/logo-07.png" class="attachment-full size-full" alt>
+                                                                <img loading="lazy" decoding="async" width="144" height="33" src="images/logo-07.png" class="attachment-full size-full" alt>
                                                             </li>
 
                                                             <li>
 
-                                                                <img loading="lazy" decoding="async" width="103" height="42"
-                                                                    src="images/logo-08.png" class="attachment-full size-full" alt>
+                                                                <img loading="lazy" decoding="async" width="103" height="42" src="images/logo-08.png" class="attachment-full size-full" alt>
                                                             </li>
 
                                                         </ul>
@@ -1284,26 +1811,16 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="16" class="elementor elementor-16">
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-6be2200 elementor-section-boxed elementor-section-height-default"
-                                    data-id="6be2200" data-element_type="section">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-6be2200 elementor-section-boxed elementor-section-height-default" data-id="6be2200" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-834ce09"
-                                            data-id="834ce09" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-834ce09" data-id="834ce09" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-fd50be2 elementor-widget elementor-widget-heading"
-                                                    data-animation-name="fadeInUpSm" style data-id="fd50be2" data-element_type="widget"
-                                                    data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-fd50be2 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="fd50be2" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Recent news</h3> </div>
+                                                        <h3 class="elementor-heading-title elementor-size-default">Recent news</h3>
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-60c9163 elementor-widget elementor-widget-spacer"
-                                                    data-id="60c9163" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-60c9163 elementor-widget elementor-widget-spacer" data-id="60c9163" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
@@ -1314,24 +1831,14 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-730389d elementor-section-boxed elementor-section-height-default"
-                                    data-id="730389d" data-element_type="section">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-730389d elementor-section-boxed elementor-section-height-default" data-id="730389d" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f1aef9c"
-                                            data-id="f1aef9c" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f1aef9c" data-id="f1aef9c" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-5482c3c elementor-widget elementor-widget-vlt-single-post"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="5482c3c"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-single-post.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-5482c3c elementor-widget elementor-widget-vlt-single-post" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="5482c3c" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-single-post.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <article
-                                                            class="vlt-post vlt-post--masonry post-52 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
+                                                        <article class="vlt-post vlt-post--masonry post-52 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
 
                                                             <div class="vlt-post-border">
                                                                 <span class="top"></span>
@@ -1342,9 +1849,7 @@
 
                                                             <div class="vlt-post-media">
 
-                                                                <img loading="lazy" decoding="async" width="800" height="432"
-                                                                    src="images/single-post-03.jpg"
-                                                                    class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image" alt>
+                                                                <img loading="lazy" decoding="async" width="800" height="432" src="images/single-post-03.jpg" class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image" alt>
                                                             </div>
                                                             <!-- /.vlt-post-thumbnail -->
 
@@ -1359,11 +1864,11 @@
                                                                     </div>
                                                                     <!-- /.vlt-post-meta -->
                                                                     <h3 class="vlt-post-title">
-                                                                        <a
-                                                                            href="https://gasinforest.com/wordpress/gilber/secrets-of-the-serpents/">Secrets
+                                                                        <a href="https://gasinforest.com/wordpress/gilber/secrets-of-the-serpents/">Secrets
                                                                             of the Serpents</a>
                                                                     </h3>
-                                                                    <!-- /.vlt-post-title --> </header>
+                                                                    <!-- /.vlt-post-title -->
+                                                                </header>
                                                                 <!-- /.vlt-post-header -->
 
                                                                 <div class="vlt-post-excerpt">
@@ -1374,13 +1879,13 @@
 
                                                                 <footer class="vlt-post-footer">
 
-                                                                    <a class="vlt-read-more-link"
-                                                                        href="https://gasinforest.com/wordpress/gilber/secrets-of-the-serpents/">Read
-                                                                        More<svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                                                                            viewBox="0 0 16 8"><defs></defs><path
-                                                                                d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z"
-                                                                                fill="currentColor"></path></svg></a>
-                                                                    <!-- /.vlt-read-more-link --> </footer>
+                                                                    <a class="vlt-read-more-link" href="https://gasinforest.com/wordpress/gilber/secrets-of-the-serpents/">Read
+                                                                        More<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 8">
+                                                                            <defs></defs>
+                                                                            <path d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z" fill="currentColor"></path>
+                                                                        </svg></a>
+                                                                    <!-- /.vlt-read-more-link -->
+                                                                </footer>
                                                                 <!-- /.vlt-post-footer -->
 
                                                             </div>
@@ -1393,20 +1898,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div
-                                            class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a7b9f24"
-                                            data-id="a7b9f24" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a7b9f24" data-id="a7b9f24" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-772e13e elementor-widget elementor-widget-vlt-single-post"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="772e13e"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-single-post.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-772e13e elementor-widget elementor-widget-vlt-single-post" data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="772e13e" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-single-post.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <article
-                                                            class="vlt-post vlt-post--masonry post-54 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
+                                                        <article class="vlt-post vlt-post--masonry post-54 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
 
                                                             <div class="vlt-post-border">
                                                                 <span class="top"></span>
@@ -1417,9 +1914,7 @@
 
                                                             <div class="vlt-post-media">
 
-                                                                <img loading="lazy" decoding="async" width="800" height="432"
-                                                                    src="images/single-post-02.jpg"
-                                                                    class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image" alt>
+                                                                <img loading="lazy" decoding="async" width="800" height="432" src="images/single-post-02.jpg" class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image" alt>
                                                             </div>
                                                             <!-- /.vlt-post-thumbnail -->
 
@@ -1437,7 +1932,8 @@
                                                                         <a href="https://gasinforest.com/wordpress/gilber/the-stone-of-the-flames/">The
                                                                             Stone of the Flames</a>
                                                                     </h3>
-                                                                    <!-- /.vlt-post-title --> </header>
+                                                                    <!-- /.vlt-post-title -->
+                                                                </header>
                                                                 <!-- /.vlt-post-header -->
 
                                                                 <div class="vlt-post-excerpt">
@@ -1448,13 +1944,13 @@
 
                                                                 <footer class="vlt-post-footer">
 
-                                                                    <a class="vlt-read-more-link"
-                                                                        href="https://gasinforest.com/wordpress/gilber/the-stone-of-the-flames/">Read
-                                                                        More<svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                                                                            viewBox="0 0 16 8"><defs></defs><path
-                                                                                d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z"
-                                                                                fill="currentColor"></path></svg></a>
-                                                                    <!-- /.vlt-read-more-link --> </footer>
+                                                                    <a class="vlt-read-more-link" href="https://gasinforest.com/wordpress/gilber/the-stone-of-the-flames/">Read
+                                                                        More<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 8">
+                                                                            <defs></defs>
+                                                                            <path d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z" fill="currentColor"></path>
+                                                                        </svg></a>
+                                                                    <!-- /.vlt-read-more-link -->
+                                                                </footer>
                                                                 <!-- /.vlt-post-footer -->
 
                                                             </div>
@@ -1467,20 +1963,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div
-                                            class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c569992"
-                                            data-id="c569992" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c569992" data-id="c569992" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-07bd1ec elementor-widget elementor-widget-vlt-single-post"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="07bd1ec"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-single-post.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-07bd1ec elementor-widget elementor-widget-vlt-single-post" data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="07bd1ec" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-single-post.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <article
-                                                            class="vlt-post vlt-post--masonry post-57 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
+                                                        <article class="vlt-post vlt-post--masonry post-57 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
 
                                                             <div class="vlt-post-border">
                                                                 <span class="top"></span>
@@ -1491,9 +1979,7 @@
 
                                                             <div class="vlt-post-media">
 
-                                                                <img loading="lazy" decoding="async" width="800" height="366"
-                                                                    src="images/single-post-01.jpg"
-                                                                    class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image" alt>
+                                                                <img loading="lazy" decoding="async" width="800" height="366" src="images/single-post-01.jpg" class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image" alt>
                                                             </div>
                                                             <!-- /.vlt-post-thumbnail -->
 
@@ -1511,7 +1997,8 @@
                                                                         <a href="https://gasinforest.com/wordpress/gilber/scent-in-the-voyages/">Scent in
                                                                             the Voyages</a>
                                                                     </h3>
-                                                                    <!-- /.vlt-post-title --> </header>
+                                                                    <!-- /.vlt-post-title -->
+                                                                </header>
                                                                 <!-- /.vlt-post-header -->
 
                                                                 <div class="vlt-post-excerpt">
@@ -1522,13 +2009,13 @@
 
                                                                 <footer class="vlt-post-footer">
 
-                                                                    <a class="vlt-read-more-link"
-                                                                        href="https://gasinforest.com/wordpress/gilber/scent-in-the-voyages/">Read
-                                                                        More<svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                                                                            viewBox="0 0 16 8"><defs></defs><path
-                                                                                d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z"
-                                                                                fill="currentColor"></path></svg></a>
-                                                                    <!-- /.vlt-read-more-link --> </footer>
+                                                                    <a class="vlt-read-more-link" href="https://gasinforest.com/wordpress/gilber/scent-in-the-voyages/">Read
+                                                                        More<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 8">
+                                                                            <defs></defs>
+                                                                            <path d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z" fill="currentColor"></path>
+                                                                        </svg></a>
+                                                                    <!-- /.vlt-read-more-link -->
+                                                                </footer>
                                                                 <!-- /.vlt-post-footer -->
 
                                                             </div>
@@ -1573,136 +2060,85 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="14" class="elementor elementor-14">
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-7040837 elementor-section-boxed elementor-section-height-default"
-                                    data-id="7040837" data-element_type="section">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-7040837 elementor-section-boxed elementor-section-height-default" data-id="7040837" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div
-                                            class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f531030"
-                                            data-id="f531030" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f531030" data-id="f531030" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-37183cd elementor-widget elementor-widget-heading"
-                                                    data-animation-name="fadeInUpSm" style data-id="37183cd" data-element_type="widget"
-                                                    data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-37183cd elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="37183cd" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Contact</h3> </div>
+                                                        <h3 class="elementor-heading-title elementor-size-default">Contact</h3>
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-8f5411f elementor-widget elementor-widget-spacer"
-                                                    data-id="8f5411f" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-8f5411f elementor-widget elementor-widget-spacer" data-id="8f5411f" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-2113bd3 elementor-widget elementor-widget-text-editor"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="2113bd3"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="text-editor.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-2113bd3 elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="2113bd3" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
                                                         Youll called for yielding male, so lights Stars abundantly, is their. </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-384fa45 elementor-widget elementor-widget-spacer"
-                                                    data-id="384fa45" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-384fa45 elementor-widget elementor-widget-spacer" data-id="384fa45" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-49f9886 elementor-widget elementor-widget-html"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="49f9886"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-49f9886 elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="49f9886" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
                                                     <div class="elementor-widget-container">
-                                                        <address>27 Queen St, New York USA</address> </div>
+                                                        <address>27 Queen St, New York USA</address>
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-f53ef89 elementor-widget elementor-widget-text-editor"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 400ms;" data-id="f53ef89"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="text-editor.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-f53ef89 elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 400ms;" data-id="f53ef89" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
                                                         <a href="tel:+72126742510">+7 (212) 674-25-10</a> </div>
                                                 </div>
-                                                <div
-                                                    class="elementor-element elementor-element-b615013 elementor-widget elementor-widget-spacer"
-                                                    data-id="b615013" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-b615013 elementor-widget elementor-widget-spacer" data-id="b615013" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-03f231b elementor-widget elementor-widget-text-editor"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 500ms;" data-id="03f231b"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="text-editor.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-03f231b elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 500ms;" data-id="03f231b" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
                                                         <a href="mailto:gilber.design@gmail.com">gilber.design@gmail.com</a> </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div
-                                            class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0115a12"
-                                            data-id="0115a12" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0115a12" data-id="0115a12" data-element_type="column">
                                             <div class="elementor-widget-wrap">
                                             </div>
                                         </div>
-                                        <div
-                                            class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9ebccc3"
-                                            data-id="9ebccc3" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9ebccc3" data-id="9ebccc3" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-a08e302 elementor-widget elementor-widget-heading"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 600ms;" data-id="a08e302"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-a08e302 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style=" --animate-delay: 600ms;" data-id="a08e302" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
                                                         <h4 class="elementor-heading-title elementor-size-default">Let's grab a coffee and
-                                                            jump on conversation <span class="has-accent-color">chat with me.</span></h4> </div>
+                                                            jump on conversation <span class="has-accent-color">chat with me.</span></h4>
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-3326f20 elementor-widget elementor-widget-spacer"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="3326f20"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="spacer.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-3326f20 elementor-widget elementor-widget-spacer" data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="3326f20" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="vlt-animate-element elementor-element elementor-element-061dfff elementor-widget elementor-widget-vlt-contact-form-7"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="061dfff"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-contact-form-7.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-061dfff elementor-widget elementor-widget-vlt-contact-form-7" data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="061dfff" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-contact-form-7.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-contact-form-7">
 
-                                                            <div class="wpcf7 no-js" id="wpcf7-f184-o1" lang="en-US" dir="ltr"
-                                                                data-wpcf7-id="184">
-                                                                <div class="screen-reader-response"><p role="status" aria-live="polite"
-                                                                        aria-atomic="true"></p> <ul></ul></div>
-                                                                <form action="/wordpress/gilber/#wpcf7-f184-o1" method="post"
-                                                                    class="wpcf7-form init demo" aria-label="Contact form" novalidate="novalidate"
-                                                                    data-status="init">
+                                                            <div class="wpcf7 no-js" id="wpcf7-f184-o1" lang="en-US" dir="ltr" data-wpcf7-id="184">
+                                                                <div class="screen-reader-response">
+                                                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                                                    <ul></ul>
+                                                                </div>
+                                                                <form action="/wordpress/gilber/#wpcf7-f184-o1" method="post" class="wpcf7-form init demo" aria-label="Contact form" novalidate="novalidate" data-status="init">
                                                                     <div style="display: none;">
                                                                         <input type="hidden" name="_wpcf7" value="184">
                                                                         <input type="hidden" name="_wpcf7_version" value="6.0.2">
@@ -1712,27 +2148,17 @@
                                                                         <input type="hidden" name="_wpcf7_posted_data_hash" value>
                                                                     </div>
                                                                     <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40"
-                                                                                maxlength="400"
-                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                aria-required="true" aria-invalid="false" placeholder="Your Name" value
-                                                                                type="text" name="your-name"></span>
+                                                                        <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name" value type="text" name="your-name"></span>
                                                                     </div>
                                                                     <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40"
-                                                                                maxlength="400"
-                                                                                class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                                                aria-required="true" aria-invalid="false" placeholder="Your Email" value
-                                                                                type="email" name="your-email"></span>
+                                                                        <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email" value type="email" name="your-email"></span>
                                                                     </div>
                                                                     <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea
-                                                                                cols="40" rows="4" maxlength="2000" class="wpcf7-form-control wpcf7-textarea"
-                                                                                aria-invalid="false" placeholder="Message"
-                                                                                name="your-message"></textarea></span>
+                                                                        <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="4" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message" name="your-message"></textarea></span>
                                                                     </div>
                                                                     <button class="wpcf7-form-control wpcf7-submit vlt-btn vlt-btn--primary">Contact
-                                                                        Me</button><div class="wpcf7-response-output" aria-hidden="true"></div>
+                                                                        Me</button>
+                                                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
                                                                 </form>
                                                             </div>
 
@@ -1768,7 +2194,7 @@
 
         <div class="vlt-footer-copyright">
 
-            <p>© Arnaldo Tomo. {{ now() }}</p>
+            <p>© Arnaldo Tomo.</p>
         </div>
         <!-- /.vlt-footer-copyright -->
 
@@ -1776,31 +2202,34 @@
     <!-- /.vlt-footer -->
 
     <script type="text/javascript">
-            const lazyloadRunObserver = () => {
-                const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
-                const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
-                    entries.forEach( ( entry ) => {
-                        if ( entry.isIntersecting ) {
-                            let lazyloadBackground = entry.target;
-                            if( lazyloadBackground ) {
-                                lazyloadBackground.classList.add( 'e-lazyloaded' );
-                            }
-                            lazyloadBackgroundObserver.unobserve( entry.target );
+        const lazyloadRunObserver = () => {
+            const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
+            const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        let lazyloadBackground = entry.target;
+                        if (lazyloadBackground) {
+                            lazyloadBackground.classList.add('e-lazyloaded');
                         }
-                    });
-                }, { rootMargin: '200px 0px 200px 0px' } );
-                lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
-                    lazyloadBackgroundObserver.observe( lazyloadBackground );
-                } );
-            };
-            const events = [
-                'DOMContentLoaded',
-                'elementor/lazyload/observe',
-            ];
-            events.forEach( ( event ) => {
-                document.addEventListener( event, lazyloadRunObserver );
-            } );
-        </script>
+                        lazyloadBackgroundObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                rootMargin: '200px 0px 200px 0px'
+            });
+            lazyloadBackgrounds.forEach((lazyloadBackground) => {
+                lazyloadBackgroundObserver.observe(lazyloadBackground);
+            });
+        };
+        const events = [
+            'DOMContentLoaded'
+            , 'elementor/lazyload/observe'
+        , ];
+        events.forEach((event) => {
+            document.addEventListener(event, lazyloadRunObserver);
+        });
+
+    </script>
     <link rel="stylesheet" id="elementor-post-28-css" href="css/post-28.css" type="text/css" media="all">
     <link rel="stylesheet" id="widget-spacer-css" href="css/widget-spacer.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="widget-heading-css" href="css/widget-heading.min.css" type="text/css" media="all">
@@ -1836,18 +2265,139 @@
     <script type="text/javascript" src="js/vlt-controllers.min.js" id="vlt-controllers-js"></script>
     <script type="text/javascript" id="gt_widget_script_80322897-js-before">
 
-</script><script src="js/float.js" data-no-optimize="1" data-no-minify="1"
-        data-gt-orig-url="/wordpress/gilber/" data-gt-orig-domain="gasinforest.com"
-        data-gt-widget-id="80322897" defer></script><script type="text/javascript"
-        src="js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
-    <script type="text/javascript" src="js/frontend-modules.min.js"
-        id="elementor-frontend-modules-js"></script>
+    </script>
+    <script src="js/float.js" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/wordpress/gilber/" data-gt-orig-domain="gasinforest.com" data-gt-widget-id="80322897" defer></script>
+    <script type="text/javascript" src="js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
+    <script type="text/javascript" src="js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
     <script type="text/javascript" src="js/core.min.js" id="jquery-ui-core-js"></script>
     <script type="text/javascript" id="elementor-frontend-js-before">
-/* <![CDATA[ */
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.26.3","is_static":false,"experimentalFeatures":{"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_onboarding":true,"e_css_smooth_scroll":true,"home_screen":true,"link-in-bio":true,"floating-buttons":true,"launchpad-checklist":true},"urls":{"assets":"https:\/\/gasinforest.com\/wordpress\/gilber\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/gasinforest.com\/wordpress\/gilber\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/gasinforest.com\/wordpress\/gilber\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"f2dba40a39"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":48,"title":"Gilber%20%E2%80%93%20Personal%20CV%2FResume%20WordPress%20Theme","excerpt":"","featuredImage":false}};
-/* ]]> */
-</script>
+        /* <![CDATA[ */
+        var elementorFrontendConfig = {
+            "environmentMode": {
+                "edit": false
+                , "wpPreview": false
+                , "isScriptDebug": false
+            }
+            , "i18n": {
+                "shareOnFacebook": "Share on Facebook"
+                , "shareOnTwitter": "Share on Twitter"
+                , "pinIt": "Pin it"
+                , "download": "Download"
+                , "downloadImage": "Download image"
+                , "fullscreen": "Fullscreen"
+                , "zoom": "Zoom"
+                , "share": "Share"
+                , "playVideo": "Play Video"
+                , "previous": "Previous"
+                , "next": "Next"
+                , "close": "Close"
+                , "a11yCarouselPrevSlideMessage": "Previous slide"
+                , "a11yCarouselNextSlideMessage": "Next slide"
+                , "a11yCarouselFirstSlideMessage": "This is the first slide"
+                , "a11yCarouselLastSlideMessage": "This is the last slide"
+                , "a11yCarouselPaginationBulletMessage": "Go to slide"
+            }
+            , "is_rtl": false
+            , "breakpoints": {
+                "xs": 0
+                , "sm": 480
+                , "md": 768
+                , "lg": 1025
+                , "xl": 1440
+                , "xxl": 1600
+            }
+            , "responsive": {
+                "breakpoints": {
+                    "mobile": {
+                        "label": "Mobile Portrait"
+                        , "value": 767
+                        , "default_value": 767
+                        , "direction": "max"
+                        , "is_enabled": true
+                    }
+                    , "mobile_extra": {
+                        "label": "Mobile Landscape"
+                        , "value": 880
+                        , "default_value": 880
+                        , "direction": "max"
+                        , "is_enabled": false
+                    }
+                    , "tablet": {
+                        "label": "Tablet Portrait"
+                        , "value": 1024
+                        , "default_value": 1024
+                        , "direction": "max"
+                        , "is_enabled": true
+                    }
+                    , "tablet_extra": {
+                        "label": "Tablet Landscape"
+                        , "value": 1200
+                        , "default_value": 1200
+                        , "direction": "max"
+                        , "is_enabled": false
+                    }
+                    , "laptop": {
+                        "label": "Laptop"
+                        , "value": 1366
+                        , "default_value": 1366
+                        , "direction": "max"
+                        , "is_enabled": false
+                    }
+                    , "widescreen": {
+                        "label": "Widescreen"
+                        , "value": 2400
+                        , "default_value": 2400
+                        , "direction": "min"
+                        , "is_enabled": false
+                    }
+                }
+                , "hasCustomBreakpoints": false
+            }
+            , "version": "3.26.3"
+            , "is_static": false
+            , "experimentalFeatures": {
+                "e_swiper_latest": true
+                , "e_nested_atomic_repeaters": true
+                , "e_onboarding": true
+                , "e_css_smooth_scroll": true
+                , "home_screen": true
+                , "link-in-bio": true
+                , "floating-buttons": true
+                , "launchpad-checklist": true
+            }
+            , "urls": {
+                "assets": "https:\/\/gasinforest.com\/wordpress\/gilber\/wp-content\/plugins\/elementor\/assets\/"
+                , "ajaxurl": "https:\/\/gasinforest.com\/wordpress\/gilber\/wp-admin\/admin-ajax.php"
+                , "uploadUrl": "https:\/\/gasinforest.com\/wordpress\/gilber\/wp-content\/uploads"
+            }
+            , "nonces": {
+                "floatingButtonsClickTracking": "f2dba40a39"
+            }
+            , "swiperClass": "swiper"
+            , "settings": {
+                "page": []
+                , "editorPreferences": []
+            }
+            , "kit": {
+                "active_breakpoints": ["viewport_mobile", "viewport_tablet"]
+                , "lightbox_enable_counter": "yes"
+                , "lightbox_enable_fullscreen": "yes"
+                , "lightbox_enable_zoom": "yes"
+                , "lightbox_enable_share": "yes"
+                , "lightbox_title_src": "title"
+                , "lightbox_description_src": "description"
+            }
+            , "post": {
+                "id": 48
+                , "title": "Gilber%20%E2%80%93%20Personal%20CV%2FResume%20WordPress%20Theme"
+                , "excerpt": ""
+                , "featuredImage": false
+            }
+        };
+        /* ]]> */
+
+    </script>
     <script type="text/javascript" src="js/frontend.min.js" id="elementor-frontend-js"></script>
 
-</body></html>
+</body>
+</html>

@@ -52,6 +52,11 @@ return [
     |
     */
 
+    'available_locales' => [
+        'en' => 'English',
+        'pt' => 'Português',
+        // Add more languages as needed
+    ],
     'url' => env('APP_URL', 'http://localhost'),
 
     /*

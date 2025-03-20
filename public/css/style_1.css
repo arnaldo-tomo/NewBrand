@@ -1,0 +1,68 @@
+/*!
+Theme Name: Gilber
+Theme URI: https://gasinforest.com/wordpress/gilber/
+Author: paul_tf
+Author URI: https://themeforest.net/user/paul_tf
+Description: Gilber is a carefully crafted flexible, powerful and high performance CV/Resume WordPress Theme for personal and corporate use. We designed it by focusing on functionality and ease of use for both sides: the Visitor and the WordPress Admin.
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gilber
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+/* WordPress API Elements */
+
+.wp-caption {
+	max-width: 100%;
+	margin: 30px 0;
+	font-size: 16px;
+	font-style: italic;
+	text-align: center;
+}
+
+.wp-caption p,
+.wp-caption-text {
+	margin: 0;
+	margin-top: 5px;
+}
+
+.wp-caption-text,
+.sticky,
+.gallery-caption,
+.bypostauthor,
+.screen-reader-text {
+	visibility: visible;
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+.aligncenter {
+	display: block;
+	margin: 30px auto;
+}
+
+
+
+.alignright {
+	float: right;
+	margin: 10px 0 10px 30px;
+}
+
+.alignleft {
+	float: left;
+	margin: 10px 30px 10px 0;
+}

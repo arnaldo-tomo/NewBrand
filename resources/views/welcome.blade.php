@@ -1337,32 +1337,28 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/behance.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" style="border-radius: 5px" src="images/ucm.jpg" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2019 - 2020</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Behance</h5>
+                                                                                    <div class="vlt-timeline-item__date">2019 - 2023</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Universidade Católica de Moçambique</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Which firmament dominion first rule and
-                                                                                            tree. The seas he i were cattle Under living. It may beast every forth
-                                                                                            place.</p>
+                                                                                        <p>Licenciatura em Engenharia Informática com especialização em desenvolvimento de software, sistemas de informação e redes de computadores.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/envato.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/phy1.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2017 - 2018</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Envato</h5>
+                                                                                    <div class="vlt-timeline-item__date">2023 - 2023</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Python Essentials</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Rule bearing whales. Created gathering
-                                                                                            blessed, sixth likeness male. Over were which you'll so be make moveth made
-                                                                                            saw above.</p>
+                                                                                        <p>Python Essentials 1 & 2 pela Cisco Networking Academy, cobrindo fundamentos de programação Python, estruturas de dados, e desenvolvimento de aplicações.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -2061,115 +2057,116 @@
 
                             <div data-elementor-type="wp-post" data-elementor-id="14" class="elementor elementor-14">
                                 <section class="elementor-section elementor-top-section elementor-element elementor-element-7040837 elementor-section-boxed elementor-section-height-default" data-id="7040837" data-element_type="section">
-                                    <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f531030" data-id="f531030" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-37183cd elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="37183cd" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Contact</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-8f5411f elementor-widget elementor-widget-spacer" data-id="8f5411f" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-2113bd3 elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="2113bd3" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container">
-                                                        Youll called for yielding male, so lights Stars abundantly, is their. </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-384fa45 elementor-widget elementor-widget-spacer" data-id="384fa45" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-49f9886 elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="49f9886" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
-                                                    <div class="elementor-widget-container">
-                                                        <address>27 Queen St, New York USA</address>
-                                                    </div>
-                                                </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-f53ef89 elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 400ms;" data-id="f53ef89" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container">
-                                                        <a href="tel:+72126742510">+7 (212) 674-25-10</a> </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-b615013 elementor-widget elementor-widget-spacer" data-id="b615013" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-03f231b elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 500ms;" data-id="03f231b" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container">
-                                                        <a href="mailto:gilber.design@gmail.com">gilber.design@gmail.com</a> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0115a12" data-id="0115a12" data-element_type="column">
-                                            <div class="elementor-widget-wrap">
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9ebccc3" data-id="9ebccc3" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-a08e302 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style=" --animate-delay: 600ms;" data-id="a08e302" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h4 class="elementor-heading-title elementor-size-default">Let's grab a coffee and
-                                                            jump on conversation <span class="has-accent-color">chat with me.</span></h4>
-                                                    </div>
-                                                </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-3326f20 elementor-widget elementor-widget-spacer" data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="3326f20" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-061dfff elementor-widget elementor-widget-vlt-contact-form-7" data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="061dfff" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-contact-form-7.default">
-                                                    <div class="elementor-widget-container">
+    <div class="elementor-container elementor-column-gap-extended">
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f531030" data-id="f531030" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="vlt-animate-element elementor-element elementor-element-37183cd elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="37183cd" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                        <h3 class="elementor-heading-title elementor-size-default">Contato</h3>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-8f5411f elementor-widget elementor-widget-spacer" data-id="8f5411f" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                            <div class="elementor-spacer-inner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlt-animate-element elementor-element elementor-element-2113bd3 elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="2113bd3" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        Estou disponível para novos projetos e parcerias. Entre em contato e vamos transformar suas ideias em realidade digital.
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-384fa45 elementor-widget elementor-widget-spacer" data-id="384fa45" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                            <div class="elementor-spacer-inner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlt-animate-element elementor-element elementor-element-49f9886 elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="49f9886" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
+                    <div class="elementor-widget-container">
+                        <address>Maputo, Moçambique</address>
+                    </div>
+                </div>
+                <div class="vlt-animate-element elementor-element elementor-element-f53ef89 elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 400ms;" data-id="f53ef89" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <a href="tel:+258846474687">+258 84 647 4687</a>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-b615013 elementor-widget elementor-widget-spacer" data-id="b615013" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                            <div class="elementor-spacer-inner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlt-animate-element elementor-element elementor-element-03f231b elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 500ms;" data-id="03f231b" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <a href="mailto:arnaldotomo@gmail.com">arnaldotomo@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0115a12" data-id="0115a12" data-element_type="column">
+            <div class="elementor-widget-wrap">
+            </div>
+        </div>
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9ebccc3" data-id="9ebccc3" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="vlt-animate-element elementor-element elementor-element-a08e302 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style=" --animate-delay: 600ms;" data-id="a08e302" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                        <h4 class="elementor-heading-title elementor-size-default">Vamos conversar sobre seu próximo projeto? <span class="has-accent-color">Fale comigo.</span></h4>
+                    </div>
+                </div>
+                <div class="vlt-animate-element elementor-element elementor-element-3326f20 elementor-widget elementor-widget-spacer" data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="3326f20" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                            <div class="elementor-spacer-inner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vlt-animate-element elementor-element elementor-element-061dfff elementor-widget elementor-widget-vlt-contact-form-7" data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="061dfff" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-contact-form-7.default">
+                    <div class="elementor-widget-container">
 
-                                                        <div class="vlt-contact-form-7">
+                        <div class="vlt-contact-form-7">
 
-                                                            <div class="wpcf7 no-js" id="wpcf7-f184-o1" lang="en-US" dir="ltr" data-wpcf7-id="184">
-                                                                <div class="screen-reader-response">
-                                                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                                                    <ul></ul>
-                                                                </div>
-                                                                <form action="/wordpress/gilber/#wpcf7-f184-o1" method="post" class="wpcf7-form init demo" aria-label="Contact form" novalidate="novalidate" data-status="init">
-                                                                    <div style="display: none;">
-                                                                        <input type="hidden" name="_wpcf7" value="184">
-                                                                        <input type="hidden" name="_wpcf7_version" value="6.0.2">
-                                                                        <input type="hidden" name="_wpcf7_locale" value="en_US">
-                                                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f184-o1">
-                                                                        <input type="hidden" name="_wpcf7_container_post" value="0">
-                                                                        <input type="hidden" name="_wpcf7_posted_data_hash" value>
-                                                                    </div>
-                                                                    <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name" value type="text" name="your-name"></span>
-                                                                    </div>
-                                                                    <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email" value type="email" name="your-email"></span>
-                                                                    </div>
-                                                                    <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="4" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message" name="your-message"></textarea></span>
-                                                                    </div>
-                                                                    <button class="wpcf7-form-control wpcf7-submit vlt-btn vlt-btn--primary">Contact
-                                                                        Me</button>
-                                                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                                                </form>
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="wpcf7 no-js" id="wpcf7-f184-o1" lang="en-US" dir="ltr" data-wpcf7-id="184">
+                                <div class="screen-reader-response">
+                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                    <ul></ul>
+                                </div>
+                                <form action="/wordpress/gilber/#wpcf7-f184-o1" method="post" class="wpcf7-form init demo" aria-label="Contact form" novalidate="novalidate" data-status="init">
+                                    <div style="display: none;">
+                                        <input type="hidden" name="_wpcf7" value="184">
+                                        <input type="hidden" name="_wpcf7_version" value="6.0.2">
+                                        <input type="hidden" name="_wpcf7_locale" value="en_US">
+                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f184-o1">
+                                        <input type="hidden" name="_wpcf7_container_post" value="0">
+                                        <input type="hidden" name="_wpcf7_posted_data_hash" value>
                                     </div>
-                                </section>
+                                    <div class="vlt-form-group">
+                                        <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Seu Nome" value type="text" name="your-name"></span>
+                                    </div>
+                                    <div class="vlt-form-group">
+                                        <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Seu Email" value type="email" name="your-email"></span>
+                                    </div>
+                                    <div class="vlt-form-group">
+                                        <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="4" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Mensagem" name="your-message"></textarea></span>
+                                    </div>
+                                    <button class="wpcf7-form-control wpcf7-submit vlt-btn vlt-btn--primary">Enviar Mensagem</button>
+                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
                             </div>
 
                         </div>

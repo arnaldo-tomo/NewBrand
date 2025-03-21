@@ -868,7 +868,7 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/mysql-6.svg" alt="MySQL">
+                                                                    <img src="images/mysql.png" alt="MySQL">
                                                                 </div>
                                                                 <h5>MySQL</h5>
                                                                 <div class="tech-dots">
@@ -1004,9 +1004,9 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/swift-15.svg" alt="Swift">
+                                                                    <img src="https://images.icon-icons.com/2389/PNG/512/expo_logo_icon_145293.png" alt="Swift">
                                                                 </div>
-                                                                <h5>Swift</h5>
+                                                                <h5>Expo</h5>
                                                                 <div class="tech-dots">
                                                                     <span class="dot filled"></span>
                                                                     <span class="dot filled"></span>
@@ -1023,7 +1023,7 @@
                                                         <div class="tech-cards">
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/figma-5.svg" alt="Figma">
+                                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
                                                                 </div>
                                                                 <h5>Figma</h5>
                                                                 <div class="tech-dots">
@@ -1365,16 +1365,14 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/twitter.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/cyber.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2015 - 2018</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Twitter</h5>
+                                                                                    <div class="vlt-timeline-item__date">2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Cyber Threat Management</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Firmament itself rule their evening, which
-                                                                                            moved very night so great them cattle bearing and gathered forth had whose
-                                                                                            bearing.</p>
+                                                                                        <p>Gestão de ameaças cibernéticas, análise de riscos, estratégias de mitigação e resposta a incidentes de segurança em ambientes digitais.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1383,23 +1381,97 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/behance.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/data.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2019 - 2020</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Behance</h5>
+                                                                                    <div class="vlt-timeline-item__date">2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Introduction to Data Science</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Which firmament dominion first rule and
-                                                                                            tree. The seas he i were cattle Under living. It may beast every forth
-                                                                                            place.</p>
+                                                                                        <p>Fundamentos de ciência de dados, análise estatística, visualização de dados e introdução a técnicas de machine learning para extrair insights valiosos.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/envato.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/EndpointSecurity.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2014</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Endpoint Security</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Proteção de dispositivos finais contra ameaças cibernéticas, implementação de políticas de segurança e gerenciamento de vulnerabilidades em endpoints.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/hacher.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Ethical Hacker</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Técnicas éticas de hacking, identificação de vulnerabilidades, testes de penetração e métodos de proteção de sistemas contra invasões maliciosas.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/I2CS__1_.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Introdução à Cibersegurança</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Princípios básicos de segurança cibernética, identificação de ameaças digitais, técnicas de proteção de dados e melhores práticas para segurança online.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/Intro2IoT.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2019</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Introduction to IoT</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Conceitos fundamentais da Internet das Coisas, arquitetura de sistemas IoT, protocolos de comunicação e desenvolvimento de soluções conectadas.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/js1.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">JavaScript Essentials</h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__text">
+                                                                                        <p>Fundamentos de JavaScript, desenvolvimento web front-end, manipulação do DOM e criação de aplicações web interativas e dinâmicas.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="swiper-slide">
+                                                                     
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/js2.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__date">2017 - 2018</div>
                                                                                     <h5 class="vlt-timeline-item__title">Envato</h5>
@@ -1415,71 +1487,65 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/twitter.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/network.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2015 - 2018</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Twitter</h5>
+                                                                                    <div class="vlt-timeline-item__date">2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Network Defense</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Firmament itself rule their evening, which
-                                                                                            moved very night so great them cattle bearing and gathered forth had whose
-                                                                                            bearing.</p>
+                                                                                        <p>Estratégias e técnicas para proteger redes contra ataques, detecção de intrusões, configuração de firewalls e proteção da infraestrutura de rede.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/behance.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/NetworkDefense_v1_091721.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2019 - 2020</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Behance</h5>
+                                                                                    <div class="vlt-timeline-item__date">2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Network Defense</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Which firmament dominion first rule and
-                                                                                            tree. The seas he i were cattle Under living. It may beast every forth
-                                                                                            place.</p>
+                                                                                        <p>Estratégias e técnicas para proteger redes contra ataques, detecção de intrusões, configuração de firewalls e proteção da infraestrutura de rede.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/envato.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/phy2.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2017 - 2018</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Envato</h5>
+                                                                                    <div class="vlt-timeline-item__date">2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Python Essentials</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Rule bearing whales. Created gathering
-                                                                                            blessed, sixth likeness male. Over were which you'll so be make moveth made
-                                                                                            saw above.</p>
+                                                                                        <p>Programação em Python, estruturas de dados, funções, orientação a objetos e desenvolvimento de aplicações práticas com uma das linguagens mais populares.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/twitter.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/safay.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2015 - 2018</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Twitter</h5>
+                                                                                    <div class="vlt-timeline-item__date">2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">Digital Safety and Security Awareness</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Firmament itself rule their evening, which
-                                                                                            moved very night so great them cattle bearing and gathered forth had whose
-                                                                                            bearing.</p>
+                                                                                        <p>Conceitos e práticas de segurança digital, proteção de dados pessoais, privacidade online e medidas de prevenção contra ameaças digitais modernas.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    
                                                                 </div>
 
                                                             </div>

@@ -329,7 +329,7 @@
             <div class="vlt-navbar-inner">
                 <div class="vlt-navbar-inner--left">
                     <a href="/{{ app()->getLocale() }}">
-                        <img src="{{ asset('images/logo.webp') }}" width="200px" alt="Arnaldo Tomo" class="black">
+                        <img src="{{ asset('images/brandwhite.webp') }}" width="200px" alt="Arnaldo Tomo" class="black">
                     </a>
                 </div>
                 <div class="vlt-navbar-inner--center">
@@ -2600,7 +2600,7 @@
 
                         <div class="vlt-section__ken-burn-background">
 
-                            <img src="images/contact.jpg" alt="background" loading="lazy">
+                            <img src="images/contact.png" alt="background" loading="lazy">
 
                         </div>
                         <!-- /.vlt-section__ken-burn-background -->

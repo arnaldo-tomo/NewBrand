@@ -18,8 +18,11 @@ Route::group([
     Route::get('/', function () {
         return view('welcome');
     })->name('home');
-    
-    // Adicione suas outras rotas aqui
+     
+    Route::get('/blog', function () {
+        return view('blog');
+    })->name('blog');
+
 });
 
 // Rota para mudar de idioma

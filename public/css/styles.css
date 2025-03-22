@@ -1806,3 +1806,149 @@ form.submitting .wpcf7-spinner {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Texto Princ */
+
+.small-heading {
+    font-size: 5rem !important;
+    letter-spacing: -3px; /* Reduz espaço entre as letras */
+    margin: -20px 0; /* Ajusta espaçamento superior e inferior */
+    padding: 0; /* Remove padding extra */
+    line-height: -50; /* Ajusta altura da linha */
+  }
+  
+  @media (max-width: 768px) {
+    .small-heading {
+      font-size: 3rem !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .small-heading {
+      font-size: 5rem !important;
+    }
+  }
+  
+
+
+  /* comentarios */
+  /* Estilos adicionais para a seção de testemunhos */
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    flex-shrink: 0;
+    border: 2px solid #00b8d4;
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-info {
+    flex: 1;
+}
+
+.vlt-testimonial__name {
+    margin: 0 0 0px;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.vlt-testimonial__name a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+.vlt-testimonial__name a:hover {
+    color: #00b8d4;
+}
+
+.vlt-testimonial__function {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    /* margin-bottom: 50%; */
+}
+
+.linkedin-icon {
+    margin-left: auto;
+}
+
+.linkedin-icon a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 119, 181, 0.1);
+    color: #0077b5;
+    transition: all 0.3s ease;
+}
+
+.linkedin-icon a:hover {
+    background-color: #0077b5;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.vlt-testimonial__text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    padding-top: 5px;
+}
+
+.vlt-testimonial__text::before {
+    content: '"';
+    font-size: 60px;
+    line-height: 1;
+    font-family: Georgia, serif;
+    color: rgba(0, 184, 212, 0.2);
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    z-index: -1;
+}
+  /* comentarios */
+
+
+
+.nado{
+    flex: auto;
+    display: flex;
+}
+  
+.hore{
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.hore::after{
+    content: '"';
+    font-size: 60px;
+    line-height: 30;
+    font-family: Georgia, serif;
+    color: rgba(0, 184, 212, 0.2);
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    z-index: -1;
+}

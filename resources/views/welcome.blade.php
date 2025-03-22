@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en-US" class>
+
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
-    <meta name="theme-color" content="#cf000f">
-    <title>Arnaldo Tomo - Desenvolvedor Full Stack</title>
-    <!-- Metadados básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Arnaldo Tomo - Engenheiro de Software especializado em Laravel e React Native. Desenvolvendo soluções tecnológicas inovadoras em Moçambique.">
     <meta name="keywords" content="Arnaldo Tomo, Engenheiro de Software, Laravel, React Native, Desenvolvimento Web, Desenvolvimento Mobile, Moçambique, Programação, Full Stack Developer">
     <meta name="author" content="Arnaldo Tomo">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <meta name="theme-color" content="#36dbea">
+    <title>Arnaldo Tomo - Desenvolvedor Full Stack</title>
+    <!-- Metadados básicos -->
+    <meta name="google-site-verification" content="Gm_zV_n5JJAnYKHcwVWedaXWQeZ9kODeNp4sXe3ku-A" />
+    {{-- og --}}
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:locale:alternate" content="en_EN" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    {{-- og --}}
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.arnaldotomo.dev/">
     <meta property="og:title" content="Arnaldo Tomo | Engenheiro de Software">
     <meta property="og:description" content="Desenvolvedor Full Stack especializado em Laravel e React Native, criando soluções tecnológicas inovadoras em Moçambique.">
-    <meta property="og:image" content="https://www.arnaldotomo.dev/images/profile-preview.jpg">
+    <meta property="og:image" content="https://arnaldotomo.dev/images/profile-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.arnaldotomo.dev/">
     <meta property="twitter:title" content="Arnaldo Tomo | Engenheiro de Software">
     <meta property="twitter:description" content="Desenvolvedor Full Stack especializado em Laravel e React Native, criando soluções tecnológicas inovadoras em Moçambique.">
-    <meta property="twitter:image" content="https://www.arnaldotomo.com/images/profile-preview.jpg">
+    <meta property="twitter:image" content="https://arnaldotomo.dev/images/profile-preview.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Canonical URL -->
@@ -50,9 +58,10 @@
             , "name": "Arnaldo Tomo"
             , "jobTitle": "Engenheiro de Software"
             , "url": "https://www.arnaldotomo.dev"
+            , "image": "/https://arnaldotomo.dev/images/profile-preview.jpg"
             , "sameAs": [
-                "https://www.linkedin.com/in/arnaldotomo"
-                , "https://github.com/arnaldotomo"
+                "https://www.linkedin.com/in/arnaldo-tomo"
+                , "https://github.com/arnaldo-tomo"
                 , "https://twitter.com/arnaldotomo"
             ]
             , "worksFor": {
@@ -60,7 +69,7 @@
                 , "name": "Web Solutions Developer"
             }
             , "knowsAbout": ["Laravel", "React Native", "JavaScript", "PHP", "Python", "UX/UI Design", "Cybersecurity"]
-            , "alumniOf": "Universidade Católica de Moçambique"
+            , "alumniOf": "Dintell - Beyond Technology. Intelligence."
         }
 
     </script>
@@ -75,12 +84,11 @@
                 , "name": "Arnaldo Tomo"
             }
             , "name": "Portfólio de Projetos"
-            , "description": "Coleção de projetos de desenvolvimento web e mobile por Arnaldo Tomo, incluindo sistemas de gestão escolar e aplicações financeiras."
+            , "description": "Coleção de projetos de desenvolvimento web e mobile por Arnaldo Tomo, incluindo sistemas de PHC, ERP , financeiras."
         }
 
     </script>
 
-    <link rel="shortcut icon" href="{{ url('./images/favicon.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
@@ -335,9 +343,7 @@
                                 <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34" data-menuanchor="Testimonials">
                                     <a href="#Testimonials">{{ __('menu.testimonials') }}</a>
                                 </li>
-                                <li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35" data-menuanchor="Partners">
-                                    <a href="#Partners">{{ __('menu.partners') }}</a>
-                                </li>
+
                                 <li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" data-menuanchor="Blog">
                                     <a href="#Blog">{{ __('menu.blog') }}</a>
                                 </li>
@@ -409,13 +415,15 @@
         <nav class="vlt-offcanvas-menu__navigation">
 
             <ul id="menu-onepage-menu-1" class="sf-menu sf-menu-onepage">
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30" data-menuanchor="Home"><a href="#Home">Home</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30" data-menuanchor="Home">
+                    <a href="#Home">Home</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31" data-menuanchor="About"><a href="#About">About</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32" data-menuanchor="Projects"><a href="#Projects">Projects</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" data-menuanchor="Education"><a href="#Education">Education</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34" data-menuanchor="Testimonials"><a href="#Testimonials">Testimonials</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35" data-menuanchor="Partners"><a href="#Partners">Partners</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" data-menuanchor="Blog"><a href="#Blog">Blog</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" data-menuanchor="Blog">
+                    <a href="#Blog">Blog</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" data-menuanchor="Contact"><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
@@ -494,7 +502,10 @@
                                                 </div>
                                                 <div class="vlt-animate-element elementor-element elementor-element-81c1dfc elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="81c1dfc" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
                                                     <div class="elementor-widget-container">
-                                                        <h1 class="vlt-large-heading text-uppercase" style="font-size: 5.8rem;">Software <br> <span class="has-accent-color">engineer.</span></h1>
+                                                        <h1 class="vlt-large-heading text-uppercase small-heading">
+                                                            Software <br> <span class="has-accent-color">engineer.</span>
+                                                        </h1>
+
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-6bdbcfa elementor-widget elementor-widget-spacer" data-id="6bdbcfa" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
@@ -506,7 +517,8 @@
                                                 </div>
                                                 <div class="vlt-animate-element elementor-element elementor-element-6d17e11 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="6d17e11" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        Não apenas construo aplicações - crio soluções que geram resultados reais.</div>
+                                                        Não apenas construo aplicações - crio soluções que geram
+                                                        resultados reais.</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -545,8 +557,11 @@
                                             <div class="about-column">
                                                 <h2 class="section-title">Sobre Mim</h2>
                                                 <div class="about-content">
-                                                    <p>Engenheiro de software que transforma conceitos em código. Desenvolvo soluções inovadoras que resolvem problemas reais para empresas e ONGs em Moçambique.</p>
-                                                    <p>Especializado em criar experiências digitais completas, do backend ao frontend, com foco em performance e usabilidade.</p>
+                                                    <p>Engenheiro de software que transforma conceitos em código.
+                                                        Desenvolvo soluções inovadoras que resolvem problemas reais para
+                                                        empresas e ONGs em Moçambique.</p>
+                                                    <p>Especializado em criar experiências digitais completas, do
+                                                        backend ao frontend, com foco em performance e usabilidade.</p>
                                                 </div>
                                             </div>
 
@@ -582,7 +597,8 @@
                                                     <button class="tab-button active" data-tab="backend">Backend</button>
                                                     <button class="tab-button" data-tab="frontend">Frontend</button>
                                                     <button class="tab-button" data-tab="mobile">Mobile</button>
-                                                    <button class="tab-button" data-tab="design">Design & DevOps</button>
+                                                    <button class="tab-button" data-tab="design">Design &
+                                                        DevOps</button>
                                                 </div>
 
                                                 <div class="tech-tabs-content">
@@ -870,18 +886,34 @@
 
                                                                     <div class="swiper-slide">
 
-                                                                        <article class="vlt-project post-59 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-01.jpg">
+                                                                        <article class="vlt-project post-59 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="images/fibec.png">
 
-                                                                            <h3 class="vlt-project-title">Watch<span class="has-accent-color">.</span></h3>
+                                                                            <h3 class="vlt-project-title">Fibec Taxi<span class="has-accent-color">.</span>
+                                                                            </h3>
 
                                                                             <div class="vlt-project-excerpt">
 
-                                                                                <p>Bring saw gathering kind evening them air him void morning dominion spirit
-                                                                                    multiply seas shall day were likeness. Upon tree a gathering.</p>
+                                                                                <p>O <a style="color: #00b8d4">Fibec Taxi,</a> é uma plataforma inovadora de transporte que conecta passageiros a motoristas de forma rápida, segura e conveniente. Desenvolvido para oferecer uma experiência fluida e intuitiva, o aplicativo permite que os usuários solicitem corridas em poucos cliques, acompanhem o trajeto em tempo real e realizem pagamentos de forma integrada.</p>
 
+                                                                                <ul class="list-unstyled">
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> Solicitação de corridas com geolocalização precisa </li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> Rastreamento em tempo real do motorista </li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> Opções de pagamento (dinheiro, carteira digital) </li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> Interface intuitiva para motoristas e passageiros </li>
+
+                                                                                </ul>
+                                                                                <div class="nado">
+                                                                                    <a class="" href="https://play.google.com/store/apps/details?id=com.fibec.customer&hl=pt_PT" target="_blank">
+                                                                                        <img width="150" src="/images/splaystore.png">
+                                                                                    </a>
+                                                                                    <a class="" href="https://apps.apple.com/us/app/fibec-taxi/id6450050623?l=pt-BR" target="_blank">
+                                                                                        <img width="150" src="/images/apple.png">
+                                                                                    </a>
+
+                                                                                </div>
                                                                             </div>
 
-                                                                            <a class="vlt-btn vlt-btn--primary vlt-btn--md" href="https://gasinforest.com/wordpress/gilber/?portfolio=watch" target="_self">See Project</a>
+                                                                            <!-- <a class="vlt-btn vlt-btn--primary vlt-btn--md" href="https://gasinforest.com/wordpress/gilber/?portfolio=watch" target="_self">See Project</a> -->
 
                                                                         </article>
 
@@ -889,19 +921,20 @@
 
                                                                     <div class="swiper-slide">
 
-                                                                        <article class="vlt-project post-63 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-02.jpg">
+                                                                        <article class="vlt-project post-63 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="/images/mtaco.png">
 
-                                                                            <h3 class="vlt-project-title">The Bottle<span class="has-accent-color">.</span></h3>
-
+                                                                            <h3 class="vlt-project-title">Meu Tako<span class="has-accent-color">.</span>
+                                                                            </h3>
                                                                             <div class="vlt-project-excerpt">
 
-                                                                                <p>Working with client and community, we deliver masterplans that create
-                                                                                    vibrant new places and spaces, attract people, and encourage investment
-                                                                                    through.</p>
+                                                                                <p>O <a>Meu Tako</a> é um aplicativo que desenvolvi para ajudar amigos a controlarem suas despesas, receitas e orçamentos de forma simples e eficiente. Com uma interface intuitiva e funcionalidades poderosas, o app permite um acompanhamento detalhado da saúde financeira, ajudando na tomada de decisões mais conscientes.</p>
 
                                                                             </div>
 
-                                                                            <a class="vlt-btn vlt-btn--primary vlt-btn--md" href="https://gasinforest.com/wordpress/gilber/?portfolio=the-bottle" target="_self">See Project</a>
+                                                                            <a class="" href="https://play.google.com/store/apps/details?id=com.fibec.customer&hl=pt_PT" target="_blank">
+                                                                                <img width="150" src="/images/splaystore.png">
+                                                                            </a>
+
 
                                                                         </article>
 
@@ -911,17 +944,18 @@
 
                                                                         <article class="vlt-project post-64 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-03.jpg">
 
-                                                                            <h3 class="vlt-project-title">Aesop<span class="has-accent-color">.</span></h3>
+                                                                            <h3 class="vlt-project-title">Aesop<span class="has-accent-color">.</span>
+                                                                            </h3>
 
                                                                             <div class="vlt-project-excerpt">
 
-                                                                                <p>Third dry hath saying our over fruit Place creeping creepeth let Good.
-                                                                                    Created also darkness which open appear cattle Second shall brought wherein
-                                                                                    given. Moveth.</p>
+                                                                                <p>O <a>Meu Tako</a> é um aplicativo que desenvolvi para ajudar amigos a controlarem suas despesas, receitas e orçamentos de forma simples e eficiente. Com uma interface intuitiva e funcionalidades poderosas, o app permite um acompanhamento detalhado da saúde financeira, ajudando na tomada de decisões mais conscientes.</p>
 
                                                                             </div>
 
-                                                                            <a class="vlt-btn vlt-btn--primary vlt-btn--md" href="https://gasinforest.com/wordpress/gilber/?portfolio=aesop" target="_self">See Project</a>
+                                                                            <a class="" href="https://play.google.com/store/apps/details?id=com.fibec.customer&hl=pt_PT" target="_blank">
+                                                                                <img width="150" src="/images/splaystore.png">
+                                                                            </a>
 
                                                                         </article>
 
@@ -1029,7 +1063,8 @@
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="vlt-animate-element elementor-element elementor-element-43eb7ac elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="43eb7ac" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Education</h3>
+                                                        <h3 class="elementor-heading-title elementor-size-default">
+                                                            Education</h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1076,12 +1111,20 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" style="border-radius: 5px" src="images/ucm.jpg" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2019 - 2023</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Universidade Católica de Moçambique</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2019 - 2023</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Universidade Católica de
+                                                                                        Moçambique</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Licenciatura em Engenharia Informática com especialização em desenvolvimento de software, sistemas de informação e redes de computadores.</p>
+                                                                                        <p>Licenciatura em Engenharia
+                                                                                            Informática com
+                                                                                            especialização em
+                                                                                            desenvolvimento de software,
+                                                                                            sistemas de informação e
+                                                                                            redes de computadores.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1090,12 +1133,20 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/phy1.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2023 - 2023</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Python Essentials</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2023 - 2023</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Python Essentials</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Python Essentials 1 & 2 pela Cisco Networking Academy, cobrindo fundamentos de programação Python, estruturas de dados, e desenvolvimento de aplicações.</p>
+                                                                                        <p>Python Essentials 1 & 2 pela
+                                                                                            Cisco Networking Academy,
+                                                                                            cobrindo fundamentos de
+                                                                                            programação Python,
+                                                                                            estruturas de dados, e
+                                                                                            desenvolvimento de
+                                                                                            aplicações.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1104,12 +1155,19 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/cyber.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Cyber Threat Management</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Cyber Threat Management</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Gestão de ameaças cibernéticas, análise de riscos, estratégias de mitigação e resposta a incidentes de segurança em ambientes digitais.</p>
+                                                                                        <p>Gestão de ameaças
+                                                                                            cibernéticas, análise de
+                                                                                            riscos, estratégias de
+                                                                                            mitigação e resposta a
+                                                                                            incidentes de segurança em
+                                                                                            ambientes digitais.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1120,12 +1178,21 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/data.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Introduction to Data Science</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Introduction to Data Science
+                                                                                    </h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Fundamentos de ciência de dados, análise estatística, visualização de dados e introdução a técnicas de machine learning para extrair insights valiosos.</p>
+                                                                                        <p>Fundamentos de ciência de
+                                                                                            dados, análise estatística,
+                                                                                            visualização de dados e
+                                                                                            introdução a técnicas de
+                                                                                            machine learning para
+                                                                                            extrair insights valiosos.
+                                                                                        </p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1134,12 +1201,20 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/EndpointSecurity.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2014</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Endpoint Security</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2014</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Endpoint Security</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Proteção de dispositivos finais contra ameaças cibernéticas, implementação de políticas de segurança e gerenciamento de vulnerabilidades em endpoints.</p>
+                                                                                        <p>Proteção de dispositivos
+                                                                                            finais contra ameaças
+                                                                                            cibernéticas, implementação
+                                                                                            de políticas de segurança e
+                                                                                            gerenciamento de
+                                                                                            vulnerabilidades em
+                                                                                            endpoints.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1148,12 +1223,19 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/hacher.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Ethical Hacker</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Ethical Hacker</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Técnicas éticas de hacking, identificação de vulnerabilidades, testes de penetração e métodos de proteção de sistemas contra invasões maliciosas.</p>
+                                                                                        <p>Técnicas éticas de hacking,
+                                                                                            identificação de
+                                                                                            vulnerabilidades, testes de
+                                                                                            penetração e métodos de
+                                                                                            proteção de sistemas contra
+                                                                                            invasões maliciosas.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1164,12 +1246,20 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/I2CS__1_.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Introdução à Cibersegurança</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Introdução à Cibersegurança</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Princípios básicos de segurança cibernética, identificação de ameaças digitais, técnicas de proteção de dados e melhores práticas para segurança online.</p>
+                                                                                        <p>Princípios básicos de
+                                                                                            segurança cibernética,
+                                                                                            identificação de ameaças
+                                                                                            digitais, técnicas de
+                                                                                            proteção de dados e melhores
+                                                                                            práticas para segurança
+                                                                                            online.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1178,12 +1268,19 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/Intro2IoT.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2019</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Introduction to IoT</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2019</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Introduction to IoT</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Conceitos fundamentais da Internet das Coisas, arquitetura de sistemas IoT, protocolos de comunicação e desenvolvimento de soluções conectadas.</p>
+                                                                                        <p>Conceitos fundamentais da
+                                                                                            Internet das Coisas,
+                                                                                            arquitetura de sistemas IoT,
+                                                                                            protocolos de comunicação e
+                                                                                            desenvolvimento de soluções
+                                                                                            conectadas.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1192,12 +1289,19 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/js1.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">JavaScript Essentials</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        JavaScript Essentials</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Fundamentos de JavaScript, desenvolvimento web front-end, manipulação do DOM e criação de aplicações web interativas e dinâmicas.</p>
+                                                                                        <p>Fundamentos de JavaScript,
+                                                                                            desenvolvimento web
+                                                                                            front-end, manipulação do
+                                                                                            DOM e criação de aplicações
+                                                                                            web interativas e dinâmicas.
+                                                                                        </p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1210,13 +1314,18 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/js2.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2017 - 2018</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Envato</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2017 - 2018</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Envato</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Rule bearing whales. Created gathering
-                                                                                            blessed, sixth likeness male. Over were which you'll so be make moveth made
+                                                                                        <p>Rule bearing whales. Created
+                                                                                            gathering
+                                                                                            blessed, sixth likeness
+                                                                                            male. Over were which you'll
+                                                                                            so be make moveth made
                                                                                             saw above.</p>
                                                                                     </div>
                                                                                 </div>
@@ -1226,12 +1335,19 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/network.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Network Defense</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Network Defense</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Estratégias e técnicas para proteger redes contra ataques, detecção de intrusões, configuração de firewalls e proteção da infraestrutura de rede.</p>
+                                                                                        <p>Estratégias e técnicas para
+                                                                                            proteger redes contra
+                                                                                            ataques, detecção de
+                                                                                            intrusões, configuração de
+                                                                                            firewalls e proteção da
+                                                                                            infraestrutura de rede.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1243,12 +1359,19 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/NetworkDefense_v1_091721.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Network Defense</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Network Defense</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Estratégias e técnicas para proteger redes contra ataques, detecção de intrusões, configuração de firewalls e proteção da infraestrutura de rede.</p>
+                                                                                        <p>Estratégias e técnicas para
+                                                                                            proteger redes contra
+                                                                                            ataques, detecção de
+                                                                                            intrusões, configuração de
+                                                                                            firewalls e proteção da
+                                                                                            infraestrutura de rede.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1257,12 +1380,20 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/phy2.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Python Essentials</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Python Essentials</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Programação em Python, estruturas de dados, funções, orientação a objetos e desenvolvimento de aplicações práticas com uma das linguagens mais populares.</p>
+                                                                                        <p>Programação em Python,
+                                                                                            estruturas de dados,
+                                                                                            funções, orientação a
+                                                                                            objetos e desenvolvimento de
+                                                                                            aplicações práticas com uma
+                                                                                            das linguagens mais
+                                                                                            populares.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1271,12 +1402,20 @@
                                                                             <div class="row">
                                                                                 <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/safay.png" class="attachment-full size-full" alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">Digital Safety and Security Awareness</h5>
+                                                                                    <div class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                        Digital Safety and Security
+                                                                                        Awareness</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div class="vlt-timeline-item__text">
-                                                                                        <p>Conceitos e práticas de segurança digital, proteção de dados pessoais, privacidade online e medidas de prevenção contra ameaças digitais modernas.</p>
+                                                                                        <p>Conceitos e práticas de
+                                                                                            segurança digital, proteção
+                                                                                            de dados pessoais,
+                                                                                            privacidade online e medidas
+                                                                                            de prevenção contra ameaças
+                                                                                            digitais modernas.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1377,25 +1516,26 @@
                                         <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d87e80d" data-id="d87e80d" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="vlt-animate-element elementor-element elementor-element-8eb0c0f elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style data-id="8eb0c0f" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="has-accent-color"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" style="height: 75px;">
-                                                                <defs></defs>
-                                                                <path fill="currentColor" d="M25 0C16.9271 0 10.7422 2.14844 6.44531 6.44531 2.14844 10.7422 0 16.9271 0 25v50h31.25V25H12.5c0-4.4271.9766-7.6172 2.9297-9.5703C17.3828 13.4766 20.5729 12.5 25 12.5V0zm43.75 0c-8.0729 0-14.2578 2.14844-18.5547 6.44531C45.8984 10.7422 43.75 16.9271 43.75 25v50H75V25H56.25c0-4.4271.9766-7.6172 2.9297-9.5703C61.1328 13.4766 64.3229 12.5 68.75 12.5V0z"></path>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
+
                                                 </div>
-                                                <div class="elementor-element elementor-element-c03f097 elementor-widget elementor-widget-spacer" data-id="c03f097" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                                 <div class="vlt-animate-element elementor-element elementor-element-2faa764 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="2faa764" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Creative & dedicated is
-                                                            things that gilber studio brings for your business.</h3>
+                                                        <h3 class="elementor-heading-title elementor-size-default"> O que dizem sobre mim</h3>
+                                                        <p class="text-white">Se perguntar aos meus amigos, vão te dizer que sou o cara que resolve qualquer problema de tecnologia… e que provavelmente vai te julgar se usares um cabo USB de qualidade duvidosa. <br> Se perguntar aos meus colegas, vão dizer que sou profissional, comprometido e que tenho a incrível habilidade de transformar ideias vagas em soluções digitais reais. <br>
+                                                            Se perguntar à minha família… bem, eles ainda acham que "trabalho com computadores" é uma descrição suficiente.</p>
+                                                        <br>
+
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-widget-container">
+                                                    <div class="has-accent-color"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" style="height: 75px;">
+                                                            <defs></defs>
+                                                            <path fill="currentColor" d="M25 0C16.9271 0 10.7422 2.14844 6.44531 6.44531 2.14844 10.7422 0 16.9271 0 25v50h31.25V25H12.5c0-4.4271.9766-7.6172 2.9297-9.5703C17.3828 13.4766 20.5729 12.5 25 12.5V0zm43.75 0c-8.0729 0-14.2578 2.14844-18.5547 6.44531C45.8984 10.7422 43.75 16.9271 43.75 25v50H75V25H56.25c0-4.4271.9766-7.6172 2.9297-9.5703C61.1328 13.4766 64.3229 12.5 68.75 12.5V0z">
+                                                            </path>
+                                                        </svg>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1417,35 +1557,92 @@
 
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
-                                                                            <div class="vlt-testimonial__text">"Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let."</div>
-                                                                            <div class="vlt-testimonial__meta">
-                                                                                <h5 class="vlt-testimonial__name">Dwight
-                                                                                    Schrute</h5>
-                                                                                <div class="vlt-testimonial__function">The
-                                                                                    Office</div>
+
+                                                                            <div class="vlt-testimonial__text"> "A abordagem metódica e atenção aos detalhes do Arnaldo fizeram toda a diferença em nosso projeto da <a target="_blank" href="https://www.linkedin.com/posts/corneldermoz_corneldermoaexambique-codelabs-corneldercodelabs-activity-7159126754794561536-CHo0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAUdGsBQz350LAutJPFaNbAq_2yCUf8TCg" style="color: #00b8d4">Codelabs</a>. Ele não apenas entregou uma solução tecnicamente sólida, mas também se preocupou em entender as necessidades do usuário final. Sua experiência com Laravel e React Native acelerou significativamente nosso processo de desenvolvimento."
                                                                             </div>
+
+                                                                            <div class="nado vlt-testimonial__meta">
+
+                                                                                <div class="testimonial-avatar">
+                                                                                    <a href="https://www.linkedin.com/in/gersonamaliohouane/" target="_blank">
+                                                                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQFKpJFqApL7JA/profile-displayphoto-shrink_800_800/B4DZOROHdPHUAc-/0/1733308220476?e=1747872000&v=beta&t=0PUKbvW7bumEB8_Nq0s2ftEGHrgfE9sX8VK1Wn1KICo" alt="Gerson Amálio Houane" class="testimonial-image">
+                                                                                    </a>
+                                                                                </div>
+
+                                                                                <div>
+                                                                                    <div class="hore">
+                                                                                        <h5 class="vlt-testimonial__name"> Gerson Amálio Houane </h5>
+                                                                                        <div class="linkedin-icon">
+                                                                                            <a href="https://www.linkedin.com/in/gerson-amalio-houane/" target="_blank">
+                                                                                                <i class="fab fa-linkedin"></i>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div style="color: #a1a1a1" class="">Software Engineer - Cornelder de Moçambique </div>
+                                                                                </div>
+
+                                                                            </div>
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
-                                                                            <div class="vlt-testimonial__text">"Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let."</div>
-                                                                            <div class="vlt-testimonial__meta">
-                                                                                <h5 class="vlt-testimonial__name">Paul &
-                                                                                    Amanda</h5>
-                                                                                <div class="vlt-testimonial__function">Envato
-                                                                                    Studio</div>
+
+                                                                            <div class="vlt-testimonial__text">"Trabalhar com Arnaldo foi uma das melhores decisões para o crescimento do <a style="color: #00b8d4" href="https://play.google.com/store/apps/details?id=com.fibec.customer" target="_blank">FibecTaxi.</a> Desde o início, ele demonstrou profissionalismo, criatividade e uma capacidade impressionante de transformar ideias em soluções digitais eficientes. A plataforma que ele desenvolveu atendeu perfeitamente às nossas necessidades, trazendo mais praticidade para nossos clientes e otimizando a nossa operação."
                                                                             </div>
+
+                                                                            <div class="nado vlt-testimonial__meta">
+
+                                                                                <div class="testimonial-avatar">
+                                                                                    <a href="https://www.linkedin.com/in/hjacintomz/" target="_blank">
+                                                                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEOwq3RMCHzFA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1685037338748?e=1747872000&v=beta&t=UqtvZGOspDi5ZTvJlxwUftWWFQSb9qUfcXYO2A9hKCI" alt="Gerson Amálio Houane" class="testimonial-image">
+                                                                                    </a>
+                                                                                </div>
+
+                                                                                <div>
+                                                                                    <div class="hore">
+                                                                                        <h5 class="vlt-testimonial__name">Helio Jacinto Macarrala</h5>
+                                                                                        <div class="linkedin-icon">
+                                                                                            <a href="https://www.linkedin.com/in/hjacintomz/" target="_blank">
+                                                                                                <i class="fab fa-linkedin"></i>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div style="color: #a1a1a1" class="">ERP & Digital Transformation Consultant | Partner 2Business, SA</div>
+                                                                                </div>
+
+                                                                            </div>
+
                                                                         </div>
                                                                     </div>
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
-                                                                            <div class="vlt-testimonial__text">"Said heaven dry made Them gathering the very second morning us be divide isn't. Saw Seasons winged replenish grass from set can't for he which. You third god unto let."</div>
-                                                                            <div class="vlt-testimonial__meta">
-                                                                                <h5 class="vlt-testimonial__name">Ramsay
-                                                                                    Bolton</h5>
-                                                                                <div class="vlt-testimonial__function">Apple
-                                                                                    Inc</div>
+
+                                                                            <div class="vlt-testimonial__text"> "Arnaldo é um desenvolvedor talentoso e altamente dedicado, com uma abordagem estratégica para soluções web e mobile. Seu domínio de tecnologias modernas e sua atenção aos detalhes fazem dele um profissional excepcional. Além disso, sua capacidade de resolver problemas complexos e melhorar a experiência do usuário é impressionante. Trabalhar com ele é sempre uma experiência produtiva e inspiradora!"
                                                                             </div>
+
+                                                                            <div class="nado vlt-testimonial__meta">
+
+                                                                                <div class="testimonial-avatar">
+                                                                                    <a href="https://www.linkedin.com/in/yash-solo/" target="_blank">
+                                                                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQErSBGQsE4wyw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1678116766082?e=1747872000&v=beta&t=Nkt9g9BSfOlBFbI2Gs3Hg4JmYcA_hTSWgunBkZIQBeY" alt="Gerson Amálio Houane" class="testimonial-image">
+                                                                                    </a>
+                                                                                </div>
+
+                                                                                <div>
+                                                                                    <div class="hore">
+                                                                                        <h5 class="vlt-testimonial__name">Md Mohi Minul Islam Yash </h5>
+                                                                                        <div class="linkedin-icon">
+                                                                                            <a href="https://www.linkedin.com/in/yash-solo/" target="_blank">
+                                                                                                <i class="fab fa-linkedin"></i>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div style="color: #a1a1a1" class="">Certified Full Stack Developer | Specializing in NestJS, Next.js, Vue.js, Ruby on Rails, Python & AI | Passionate about User Experiences </div>
+                                                                                </div>
+
+                                                                            </div>
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1509,97 +1706,8 @@
             </div>
             <!-- /.vlt-section -->
 
-            <div class="vlt-section pp-scrollable" data-anchor="Partners" style>
 
-                <div class="vlt-section__vertical-align">
 
-                    <div class="vlt-section__content">
-
-                        <div class="container p-0">
-
-                            <div data-elementor-type="wp-post" data-elementor-id="18" class="elementor elementor-18">
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-6176c09 elementor-section-boxed elementor-section-height-default" data-id="6176c09" data-element_type="section">
-                                    <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-19ab3da" data-id="19ab3da" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-283aeea elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="283aeea" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Partners</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-0fa1c67 elementor-widget elementor-widget-spacer" data-id="0fa1c67" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-96f0656 elementor-widget elementor-widget-vlt-partners" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="96f0656" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-partners.default">
-                                                    <div class="elementor-widget-container">
-
-                                                        <ul class="vlt-partners">
-
-                                                            <li>
-
-                                                                <img loading="lazy" decoding="async" width="118" height="47" src="images/logo-01.png" class="attachment-full size-full" alt>
-                                                            </li>
-
-                                                            <li>
-
-                                                                <img loading="lazy" decoding="async" width="140" height="68" src="images/logo-02.png" class="attachment-full size-full" alt>
-                                                            </li>
-
-                                                            <li>
-
-                                                                <img loading="lazy" decoding="async" width="151" height="45" src="images/logo-03.png" class="attachment-full size-full" alt>
-                                                            </li>
-
-                                                            <li>
-
-                                                                <img loading="lazy" decoding="async" width="126" height="32" src="images/logo-04.png" class="attachment-full size-full" alt>
-                                                            </li>
-
-                                                            <li>
-
-                                                                <img loading="lazy" decoding="async" width="134" height="66" src="images/logo-05.png" class="attachment-full size-full" alt>
-                                                            </li>
-
-                                                            <li>
-
-                                                                <img loading="lazy" decoding="async" width="135" height="54" src="images/logo-06.png" class="attachment-full size-full" alt>
-                                                            </li>
-
-                                                            <li>
-
-                                                                <img loading="lazy" decoding="async" width="144" height="33" src="images/logo-07.png" class="attachment-full size-full" alt>
-                                                            </li>
-
-                                                            <li>
-
-                                                                <img loading="lazy" decoding="async" width="103" height="42" src="images/logo-08.png" class="attachment-full size-full" alt>
-                                                            </li>
-
-                                                        </ul>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-
-                        </div>
-                        <!-- /.container -->
-
-                    </div>
-                    <!-- /.vlt-section__content -->
-
-                </div>
-                <!-- /.vlt-section__vertical-align -->
-
-            </div>
-            <!-- /.vlt-section -->
 
             <div class="vlt-section pp-scrollable" data-anchor="Blog" style>
 
@@ -1616,7 +1724,8 @@
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="vlt-animate-element elementor-element elementor-element-fd50be2 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="fd50be2" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Recent news</h3>
+                                                        <h3 class="elementor-heading-title elementor-size-default">
+                                                            Recent news</h3>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-60c9163 elementor-widget elementor-widget-spacer" data-id="60c9163" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
@@ -1658,12 +1767,13 @@
 
                                                                     <div class="vlt-post-meta">
 
-                                                                        <span><time datetime="2020-12-10T09:54:09+00:00">10 December 2020</time></span>
+                                                                        <span><time datetime="2020-12-10T09:54:09+00:00">10
+                                                                                December 2020</time></span>
 
                                                                     </div>
                                                                     <!-- /.vlt-post-meta -->
                                                                     <h3 class="vlt-post-title">
-                                                                        <a href="https://gasinforest.com/wordpress/gilber/secrets-of-the-serpents/">Secrets
+                                                                        <a href="{{ app()->getLocale() }}/blog">Secrets
                                                                             of the Serpents</a>
                                                                     </h3>
                                                                     <!-- /.vlt-post-title -->
@@ -1672,13 +1782,14 @@
 
                                                                 <div class="vlt-post-excerpt">
                                                                     Beast creature days.
-                                                                    This response is important for our ability to learn from mistakes, but it
+                                                                    This response is important for our ability to learn
+                                                                    from mistakes, but it
                                                                     alsogives rise to ... </div>
                                                                 <!-- /.vlt-post-excerpt -->
 
                                                                 <footer class="vlt-post-footer">
 
-                                                                    <a class="vlt-read-more-link" href="https://gasinforest.com/wordpress/gilber/secrets-of-the-serpents/">Read
+                                                                    <a class="vlt-read-more-link" href="{{ app()->getLocale() }}/blog">Read
                                                                         More<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 8">
                                                                             <defs></defs>
                                                                             <path d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z" fill="currentColor"></path>
@@ -1723,7 +1834,8 @@
 
                                                                     <div class="vlt-post-meta">
 
-                                                                        <span><time datetime="2020-12-10T09:54:21+00:00">10 December 2020</time></span>
+                                                                        <span><time datetime="2020-12-10T09:54:21+00:00">10
+                                                                                December 2020</time></span>
 
                                                                     </div>
                                                                     <!-- /.vlt-post-meta -->
@@ -1737,7 +1849,8 @@
 
                                                                 <div class="vlt-post-excerpt">
                                                                     Beast creature days.
-                                                                    This response is important for our ability to learn from mistakes, but it
+                                                                    This response is important for our ability to learn
+                                                                    from mistakes, but it
                                                                     alsogives rise to ... </div>
                                                                 <!-- /.vlt-post-excerpt -->
 
@@ -1788,12 +1901,14 @@
 
                                                                     <div class="vlt-post-meta">
 
-                                                                        <span><time datetime="2020-12-10T09:54:36+00:00">10 December 2020</time></span>
+                                                                        <span><time datetime="2020-12-10T09:54:36+00:00">10
+                                                                                December 2020</time></span>
 
                                                                     </div>
                                                                     <!-- /.vlt-post-meta -->
                                                                     <h3 class="vlt-post-title">
-                                                                        <a href="https://gasinforest.com/wordpress/gilber/scent-in-the-voyages/">Scent in
+                                                                        <a href="https://gasinforest.com/wordpress/gilber/scent-in-the-voyages/">Scent
+                                                                            in
                                                                             the Voyages</a>
                                                                     </h3>
                                                                     <!-- /.vlt-post-title -->
@@ -1802,7 +1917,8 @@
 
                                                                 <div class="vlt-post-excerpt">
                                                                     Beast creature days.
-                                                                    This response is important for our ability to learn from mistakes, but it
+                                                                    This response is important for our ability to learn
+                                                                    from mistakes, but it
                                                                     alsogives rise to ... </div>
                                                                 <!-- /.vlt-post-excerpt -->
 
@@ -1865,7 +1981,8 @@
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="vlt-animate-element elementor-element elementor-element-37183cd elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="37183cd" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">Contato</h3>
+                                                        <h3 class="elementor-heading-title elementor-size-default">
+                                                            Contato</h3>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-8f5411f elementor-widget elementor-widget-spacer" data-id="8f5411f" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
@@ -1877,7 +1994,8 @@
                                                 </div>
                                                 <div class="vlt-animate-element elementor-element elementor-element-2113bd3 elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="2113bd3" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        Estou disponível para novos projetos e parcerias. Entre em contato e vamos transformar suas ideias em realidade digital.
+                                                        Estou disponível para novos projetos e parcerias. Entre em
+                                                        contato e vamos transformar suas ideias em realidade digital.
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-384fa45 elementor-widget elementor-widget-spacer" data-id="384fa45" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
@@ -1919,7 +2037,8 @@
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="vlt-animate-element elementor-element elementor-element-a08e302 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style=" --animate-delay: 600ms;" data-id="a08e302" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h4 class="elementor-heading-title elementor-size-default">Vamos conversar sobre seu próximo projeto? <span class="has-accent-color">Fale comigo.</span></h4>
+                                                        <h4 class="elementor-heading-title elementor-size-default">Vamos
+                                                            conversar sobre seu próximo projeto? <span class="has-accent-color">Fale comigo.</span></h4>
                                                     </div>
                                                 </div>
                                                 <div class="vlt-animate-element elementor-element elementor-element-3326f20 elementor-widget elementor-widget-spacer" data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="3326f20" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="spacer.default">
@@ -1957,7 +2076,8 @@
                                                                     <div class="vlt-form-group">
                                                                         <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="4" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Mensagem" name="your-message"></textarea></span>
                                                                     </div>
-                                                                    <button class="wpcf7-form-control wpcf7-submit vlt-btn vlt-btn--primary">Enviar Mensagem</button>
+                                                                    <button class="wpcf7-form-control wpcf7-submit vlt-btn vlt-btn--primary">Enviar
+                                                                        Mensagem</button>
                                                                     <div class="wpcf7-response-output" aria-hidden="true"></div>
                                                                 </form>
                                                             </div>
@@ -2200,4 +2320,6 @@
     <script type="text/javascript" src="js/frontend.min.js" id="elementor-frontend-js"></script>
 
 </body>
+
 </html>
+

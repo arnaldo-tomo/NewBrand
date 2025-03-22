@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Arnaldo Tomo - Engenheiro de Software especializado em Laravel e React Native. Desenvolvendo soluções tecnológicas inovadoras em Moçambique.">
-    <meta name="keywords" content="Arnaldo Tomo, Engenheiro de Software, Laravel, React Native, Desenvolvimento Web, Desenvolvimento Mobile, Moçambique, Programação, Full Stack Developer">
+    <meta name="description"
+        content="Arnaldo Tomo - Engenheiro de Software especializado em Laravel e React Native. Desenvolvendo soluções tecnológicas inovadoras em Moçambique.">
+    <meta name="keywords"
+        content="Arnaldo Tomo, Engenheiro de Software, Laravel, React Native, Desenvolvimento Web, Desenvolvimento Mobile, Moçambique, Programação, Full Stack Developer">
     <meta name="author" content="Arnaldo Tomo">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <meta name="theme-color" content="#36dbea">
@@ -23,7 +25,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.arnaldotomo.dev/">
     <meta property="og:title" content="Arnaldo Tomo | Engenheiro de Software">
-    <meta property="og:description" content="Desenvolvedor Full Stack especializado em Laravel e React Native, criando soluções tecnológicas inovadoras em Moçambique.">
+    <meta property="og:description"
+        content="Desenvolvedor Full Stack especializado em Laravel e React Native, criando soluções tecnológicas inovadoras em Moçambique.">
     <meta property="og:image" content="https://arnaldotomo.dev/images/profile-preview.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -33,7 +36,8 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.arnaldotomo.dev/">
     <meta property="twitter:title" content="Arnaldo Tomo | Engenheiro de Software">
-    <meta property="twitter:description" content="Desenvolvedor Full Stack especializado em Laravel e React Native, criando soluções tecnológicas inovadoras em Moçambique.">
+    <meta property="twitter:description"
+        content="Desenvolvedor Full Stack especializado em Laravel e React Native, criando soluções tecnológicas inovadoras em Moçambique.">
     <meta property="twitter:image" content="https://arnaldotomo.dev/images/profile-preview.jpg">
 
     <!-- Favicon -->
@@ -109,7 +113,9 @@
     <link rel="stylesheet" id="elementor-post-7-css" href="css/post-7.css" type="text/css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
     <script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
@@ -120,14 +126,14 @@
     </script>
     <script type="text/javascript" src="js/post-like.min.js" id="simple-likes-public-js-js"></script>
 
-    <meta name="generator" content="Elementor 3.26.3; settings: css_print_method-external, google_font-enabled, font_display-swap">
+    <meta name="generator"
+        content="Elementor 3.26.3; settings: css_print_method-external, google_font-enabled, font_display-swap">
     <style type="text/css">
         .recentcomments a {
             display: inline !important;
             padding: 0 !important;
             margin: 0 !important;
         }
-
     </style>
     <style>
         .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
@@ -150,7 +156,6 @@
                 background-image: none !important;
             }
         }
-
     </style>
     <style id="kirki-inline-styles">
         body {
@@ -307,13 +312,16 @@
         label {
             font-weight: 400;
         }
-
     </style>
 </head>
 
-<body class="home page-template page-template-template-fullpage-slider page-template-template-fullpage-slider-php page page-id-48 wp-embed-responsive no-mobile animsition elementor-default elementor-kit-7 elementor-page elementor-page-48">
+<body
+    class="home page-template page-template-template-fullpage-slider page-template-template-fullpage-slider-php page page-id-48 wp-embed-responsive no-mobile animsition elementor-default elementor-kit-7 elementor-page elementor-page-48">
 
-    <div class="vlt-fixed-socials"><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-twitter-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-instagram"></i></a></div>
+    <div class="vlt-fixed-socials"><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
+                class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#"
+            target="_blank"><i class="lnir-twitter-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1"
+            href="#" target="_blank"><i class="lnir-instagram"></i></a></div>
     {{-- header.blade.php - com links atualizados --}}
     <header class="vlt-header">
         <div class="vlt-navbar vlt-navbar--main vlt-navbar--transparent vlt-navbar--sticky">
@@ -328,26 +336,40 @@
                     <div class="container">
                         <nav class="vlt-default-menu__navigation">
                             <ul id="menu-onepage-menu" class="sf-menu sf-menu-onepage">
-                                <li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30" data-menuanchor="Home">
+                                <li id="menu-item-30"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"
+                                    data-menuanchor="Home">
                                     <a href="#Home">{{ __('menu.home') }}</a>
                                 </li>
-                                <li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31" data-menuanchor="About">
+                                <li id="menu-item-31"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"
+                                    data-menuanchor="About">
                                     <a href="#About">{{ __('menu.about') }}</a>
                                 </li>
-                                <li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32" data-menuanchor="Projects">
+                                <li id="menu-item-32"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"
+                                    data-menuanchor="Projects">
                                     <a href="#Projects">{{ __('menu.projects') }}</a>
                                 </li>
-                                <li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" data-menuanchor="Education">
+                                <li id="menu-item-33"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"
+                                    data-menuanchor="Education">
                                     <a href="#Education">{{ __('menu.education') }}</a>
                                 </li>
-                                <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34" data-menuanchor="Testimonials">
+                                <li id="menu-item-34"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"
+                                    data-menuanchor="Testimonials">
                                     <a href="#Testimonials">{{ __('menu.testimonials') }}</a>
                                 </li>
 
-                                <li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" data-menuanchor="Blog">
+                                <li id="menu-item-36"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"
+                                    data-menuanchor="Blog">
                                     <a href="#Blog">{{ __('menu.blog') }}</a>
                                 </li>
-                                <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" data-menuanchor="Contact">
+                                <li id="menu-item-37"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"
+                                    data-menuanchor="Contact">
                                     <a href="#Contact">{{ __('menu.contact') }}</a>
                                 </li>
                             </ul>
@@ -359,20 +381,25 @@
                         {{-- Seletor de idioma atualizado --}}
                         <div class="language-switcher">
                             @foreach(config('app.available_locales') as $localeCode => $languageName)
-                            <a href="{{ url($localeCode) }}" class="lang-link {{ app()->getLocale() == $localeCode ? 'active' : '' }}" title="{{ $languageName }}">
+                            <a href="{{ url($localeCode) }}"
+                                class="lang-link {{ app()->getLocale() == $localeCode ? 'active' : '' }}"
+                                title="{{ $languageName }}">
                                 {{ strtoupper($localeCode) }}
                             </a>
                             @endforeach
                         </div>
                         <nav class="vlt-navbar-contacts">
                             <ul id="menu-navbar-menu" class="menu">
-                                <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12">
+                                <li id="menu-item-12"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12">
                                     <a href="tel:+258846474687">(+258) 84 6474 687</a>
                                 </li>
                             </ul>
                         </nav>
                         <a class="vlt-menu-burger js-offcanvas-menu-open" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                                stroke-linejoin="round">
                                 <line x1="3" y1="12" x2="21" y2="12"></line>
                                 <line x1="3" y1="6" x2="21" y2="6"></line>
                                 <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -402,7 +429,8 @@
             <!-- /.vlt-language-switcher -->
 
             <a class="vlt-menu-burger vlt-menu-burger--opened js-offcanvas-menu-close" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="square"
+                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                     <defs></defs>
                     <path d="M18 6L6 18M6 6l12 12"></path>
                 </svg>
@@ -416,15 +444,23 @@
 
             <ul id="menu-onepage-menu-1" class="sf-menu sf-menu-onepage">
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30" data-menuanchor="Home">
-                    <a href="#Home">Home</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31" data-menuanchor="About"><a href="#About">About</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32" data-menuanchor="Projects"><a href="#Projects">Projects</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" data-menuanchor="Education"><a href="#Education">Education</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34" data-menuanchor="Testimonials"><a href="#Testimonials">Testimonials</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35" data-menuanchor="Partners"><a href="#Partners">Partners</a></li>
+                    <a href="#Home">Home</a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"
+                    data-menuanchor="About"><a href="#About">About</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"
+                    data-menuanchor="Projects"><a href="#Projects">Projects</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"
+                    data-menuanchor="Education"><a href="#Education">Education</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"
+                    data-menuanchor="Testimonials"><a href="#Testimonials">Testimonials</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"
+                    data-menuanchor="Partners"><a href="#Partners">Partners</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" data-menuanchor="Blog">
-                    <a href="#Blog">Blog</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" data-menuanchor="Contact"><a href="#Contact">Contact</a></li>
+                    <a href="#Blog">Blog</a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"
+                    data-menuanchor="Contact"><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
         <!-- /.vlt-offcanvas-menu__navigation -->
@@ -433,7 +469,11 @@
 
             <div class="vlt-offcanvas-menu__socials">
 
-                <a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-twitter-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-instagram"></i></a>
+                <a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
+                        class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1"
+                    href="#" target="_blank"><i class="lnir-twitter-original"></i></a><a
+                    class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
+                        class="lnir-instagram"></i></a>
             </div>
             <!-- /.vlt-offcanvas-menu__socials -->
 
@@ -473,11 +513,18 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="28" class="elementor elementor-28">
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-ac63f0c elementor-section-boxed elementor-section-height-default" data-id="ac63f0c" data-element_type="section" data-settings="{" background_background":"classic"}"="">
+                                <section
+                                    class="elementor-section elementor-top-section elementor-element elementor-element-ac63f0c elementor-section-boxed elementor-section-height-default"
+                                    data-id="ac63f0c" data-element_type="section" data-settings="{"
+                                    background_background":"classic"}"="">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8001a0a" data-id="8001a0a" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8001a0a"
+                                            data-id="8001a0a" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="elementor-element elementor-element-95bd625 elementor-widget elementor-widget-spacer" data-id="95bd625" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-95bd625 elementor-widget elementor-widget-spacer"
+                                                    data-id="95bd625" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
@@ -485,7 +532,10 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="elementor-element elementor-element-2f01fb8 elementor-widget elementor-widget-spacer" data-id="2f01fb8" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-2f01fb8 elementor-widget elementor-widget-spacer"
+                                                    data-id="2f01fb8" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
@@ -493,29 +543,44 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="elementor-element elementor-element-d219f36 elementor-widget elementor-widget-spacer" data-id="d219f36" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-d219f36 elementor-widget elementor-widget-spacer"
+                                                    data-id="d219f36" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-81c1dfc elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="81c1dfc" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-81c1dfc elementor-widget elementor-widget-html"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;"
+                                                    data-id="81c1dfc" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="html.default">
                                                     <div class="elementor-widget-container">
                                                         <h1 class="vlt-large-heading text-uppercase small-heading">
-                                                            Software <br> <span class="has-accent-color">engineer.</span>
+                                                            Software <br> <span
+                                                                class="has-accent-color">engineer.</span>
                                                         </h1>
 
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-6bdbcfa elementor-widget elementor-widget-spacer" data-id="6bdbcfa" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-6bdbcfa elementor-widget elementor-widget-spacer"
+                                                    data-id="6bdbcfa" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-6d17e11 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="6d17e11" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-6d17e11 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;"
+                                                    data-id="6d17e11" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
                                                         Não apenas construo aplicações - crio soluções que geram
                                                         resultados reais.</div>
@@ -594,7 +659,8 @@
 
                                             <div class="tech-categories">
                                                 <div class="category-tabs">
-                                                    <button class="tab-button active" data-tab="backend">Backend</button>
+                                                    <button class="tab-button active"
+                                                        data-tab="backend">Backend</button>
                                                     <button class="tab-button" data-tab="frontend">Frontend</button>
                                                     <button class="tab-button" data-tab="mobile">Mobile</button>
                                                     <button class="tab-button" data-tab="design">Design &
@@ -607,7 +673,8 @@
                                                         <div class="tech-cards">
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" alt="Laravel">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg"
+                                                                        alt="Laravel">
                                                                 </div>
                                                                 <h5>Laravel</h5>
                                                                 <div class="tech-dots">
@@ -635,7 +702,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+                                                                        alt="Node.js">
                                                                 </div>
                                                                 <h5>Node.js</h5>
                                                                 <div class="tech-dots">
@@ -649,7 +717,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg"
+                                                                        alt="Python">
                                                                 </div>
                                                                 <h5>Python</h5>
                                                                 <div class="tech-dots">
@@ -668,7 +737,8 @@
                                                         <div class="tech-cards">
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
+                                                                        alt="React">
                                                                 </div>
                                                                 <h5>React</h5>
                                                                 <div class="tech-dots">
@@ -682,7 +752,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+                                                                        alt="JavaScript">
                                                                 </div>
                                                                 <h5>JavaScript</h5>
                                                                 <div class="tech-dots">
@@ -696,7 +767,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg"
+                                                                        alt="Tailwind CSS">
                                                                 </div>
                                                                 <h5>Tailwind CSS</h5>
                                                                 <div class="tech-dots">
@@ -710,7 +782,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="Bootstrap">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg"
+                                                                        alt="Bootstrap">
                                                                 </div>
                                                                 <h5>Bootstrap</h5>
                                                                 <div class="tech-dots">
@@ -729,7 +802,8 @@
                                                         <div class="tech-cards">
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/react-native-1.svg" alt="React Native">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/react-native-1.svg"
+                                                                        alt="React Native">
                                                                 </div>
                                                                 <h5>React Native</h5>
                                                                 <div class="tech-dots">
@@ -743,7 +817,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/flutter.svg" alt="Flutter">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/flutter.svg"
+                                                                        alt="Flutter">
                                                                 </div>
                                                                 <h5>Flutter</h5>
                                                                 <div class="tech-dots">
@@ -757,7 +832,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://images.icon-icons.com/2389/PNG/512/expo_logo_icon_145293.png" alt="Swift">
+                                                                    <img src="https://images.icon-icons.com/2389/PNG/512/expo_logo_icon_145293.png"
+                                                                        alt="Swift">
                                                                 </div>
                                                                 <h5>Expo</h5>
                                                                 <div class="tech-dots">
@@ -776,7 +852,8 @@
                                                         <div class="tech-cards">
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
+                                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+                                                                        alt="Figma">
                                                                 </div>
                                                                 <h5>Figma</h5>
                                                                 <div class="tech-dots">
@@ -790,7 +867,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg"
+                                                                        alt="Git">
                                                                 </div>
                                                                 <h5>Git</h5>
                                                                 <div class="tech-dots">
@@ -804,7 +882,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/docker.svg"
+                                                                        alt="Docker">
                                                                 </div>
                                                                 <h5>Docker</h5>
                                                                 <div class="tech-dots">
@@ -818,7 +897,8 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="Firebase">
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg"
+                                                                        alt="Firebase">
                                                                 </div>
                                                                 <h5>Firebase</h5>
                                                                 <div class="tech-dots">
@@ -864,21 +944,32 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="24" class="elementor elementor-24">
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-d20eac0 elementor-section-boxed elementor-section-height-default" data-id="d20eac0" data-element_type="section">
+                                <section
+                                    class="elementor-section elementor-top-section elementor-element elementor-element-d20eac0 elementor-section-boxed elementor-section-height-default"
+                                    data-id="d20eac0" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7dcd8a4" data-id="7dcd8a4" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7dcd8a4"
+                                            data-id="7dcd8a4" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="elementor-element elementor-element-6ba92a3 elementor-widget elementor-widget-spacer" data-id="6ba92a3" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-6ba92a3 elementor-widget elementor-widget-spacer"
+                                                    data-id="6ba92a3" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-dca4088 elementor-widget elementor-widget-vlt-portfolio-slider" data-animation-name="fadeInUpSm" style data-id="dca4088" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-portfolio-slider.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-dca4088 elementor-widget elementor-widget-vlt-portfolio-slider"
+                                                    data-animation-name="fadeInUpSm" style data-id="dca4088"
+                                                    data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-portfolio-slider.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <div class="vlt-portfolio-slider" data-navigation-anchor=".vlt-portfolio-controls">
+                                                        <div class="vlt-portfolio-slider"
+                                                            data-navigation-anchor=".vlt-portfolio-controls">
 
                                                             <div class="swiper-container swiper">
 
@@ -886,28 +977,71 @@
 
                                                                     <div class="swiper-slide">
 
-                                                                        <article class="vlt-project post-59 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="images/fibec.png">
+                                                                        <article
+                                                                            class="vlt-project post-59 portfolio type-portfolio status-publish has-post-thumbnail hentry"
+                                                                            data-image="images/fibec.png">
 
-                                                                            <h3 class="vlt-project-title">Fibec Taxi<span class="has-accent-color">.</span>
+                                                                            <h3 class="vlt-project-title">Fibec
+                                                                                Taxi<span
+                                                                                    class="has-accent-color">.</span>
                                                                             </h3>
 
                                                                             <div class="vlt-project-excerpt">
 
-                                                                                <p>O <a style="color: #00b8d4">Fibec Taxi,</a> é uma plataforma inovadora de transporte que conecta passageiros a motoristas de forma rápida, segura e conveniente. Desenvolvido para oferecer uma experiência fluida e intuitiva, o aplicativo permite que os usuários solicitem corridas em poucos cliques, acompanhem o trajeto em tempo real e realizem pagamentos de forma integrada.</p>
-
+                                                                                <p>O <a style="color: #00b8d4">Fibec
+                                                                                        Taxi,</a> é uma plataforma
+                                                                                    inovadora de transporte que conecta
+                                                                                    passageiros a motoristas de forma
+                                                                                    rápida, segura e conveniente.
+                                                                                    Desenvolvido para oferecer uma
+                                                                                    experiência fluida e intuitiva, o
+                                                                                    aplicativo permite que os usuários
+                                                                                    solicitem corridas em poucos
+                                                                                    cliques, acompanhem o trajeto em
+                                                                                    tempo real e realizem pagamentos de
+                                                                                    forma integrada.</p>
+                                                                                <strong style="color: #00b8d4"
+                                                                                    class="text-uppercase">Principais
+                                                                                    Recursos:</strong>
                                                                                 <ul class="list-unstyled">
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> Solicitação de corridas com geolocalização precisa </li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> Rastreamento em tempo real do motorista </li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> Opções de pagamento (dinheiro, carteira digital) </li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> Interface intuitiva para motoristas e passageiros </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        Solicitação de corridas com
+                                                                                        geolocalização precisa </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        Rastreamento em tempo real do
+                                                                                        motorista </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        Opções de pagamento (dinheiro,
+                                                                                        carteira digital) </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        Interface intuitiva para
+                                                                                        motoristas e passageiros </li>
 
                                                                                 </ul>
                                                                                 <div class="nado">
-                                                                                    <a class="" href="https://play.google.com/store/apps/details?id=com.fibec.customer&hl=pt_PT" target="_blank">
-                                                                                        <img width="150" src="/images/splaystore.png">
+                                                                                    <a class=""
+                                                                                        href="https://play.google.com/store/apps/details?id=com.fibec.customer&hl=pt_PT"
+                                                                                        target="_blank">
+                                                                                        <img width="150"
+                                                                                            src="/images/splaystore.png">
                                                                                     </a>
-                                                                                    <a class="" href="https://apps.apple.com/us/app/fibec-taxi/id6450050623?l=pt-BR" target="_blank">
-                                                                                        <img width="150" src="/images/apple.png">
+                                                                                    <a class=""
+                                                                                        href="https://apps.apple.com/us/app/fibec-taxi/id6450050623?l=pt-BR"
+                                                                                        target="_blank">
+                                                                                        <img width="150"
+                                                                                            src="/images/apple.png">
                                                                                     </a>
 
                                                                                 </div>
@@ -921,18 +1055,94 @@
 
                                                                     <div class="swiper-slide">
 
-                                                                        <article class="vlt-project post-63 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="/images/mtaco.png">
+                                                                        <article
+                                                                            class="vlt-project post-63 portfolio type-portfolio status-publish has-post-thumbnail hentry"
+                                                                            data-image="/images/mtaco.png">
 
-                                                                            <h3 class="vlt-project-title">Meu Tako<span class="has-accent-color">.</span>
+                                                                            <h3 class="vlt-project-title">Meu Tako<span
+                                                                                    class="has-accent-color">.</span>
                                                                             </h3>
                                                                             <div class="vlt-project-excerpt">
 
-                                                                                <p>O <a>Meu Tako</a> é um aplicativo que desenvolvi para ajudar amigos a controlarem suas despesas, receitas e orçamentos de forma simples e eficiente. Com uma interface intuitiva e funcionalidades poderosas, o app permite um acompanhamento detalhado da saúde financeira, ajudando na tomada de decisões mais conscientes.</p>
 
+                                                                                <p>O <a style="color: #00b8d4">Meu
+                                                                                        Tako</a> é um aplicativo que
+                                                                                    desenvolvi para ajudar amigos a
+                                                                                    controlarem suas despesas, receitas
+                                                                                    e orçamentos de forma simples e
+                                                                                    eficiente. Com uma interface
+                                                                                    intuitiva e funcionalidades
+                                                                                    poderosas, o app permite um
+                                                                                    acompanhamento detalhado da saúde
+                                                                                    financeira, ajudando na tomada de
+                                                                                    decisões mais conscientes.</p>
+                                                                                <strong style="color: #00b8d4"
+                                                                                    class="text-uppercase">Principais
+                                                                                    Recursos:</strong>
+                                                                                <ul class="list-unstyled">
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        <strong>Cadastro de Despesas e
+                                                                                            Receitas</strong> – De
+                                                                                        maneira categorizada.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        <strong>Resumo Mensal</strong> -
+                                                                                        Visualize seus gastos e receitas
+                                                                                        agrupados por mês.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        <strong>Gráficos
+                                                                                            Interativos</strong> -
+                                                                                        Analise seus hábitos financeiros
+                                                                                        com gráficos.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        <strong>Objetivos
+                                                                                            Financeiros</strong> -
+                                                                                        Defina metas e acompanhe seu
+                                                                                        progresso.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        <strong>Sincronização na
+                                                                                            Nuvem</strong> - Acesse seus
+                                                                                        dados de qualquer dispositivo.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                        <strong>Notificações
+                                                                                            Inteligentes</strong> -
+                                                                                        Sobre vencimentos e dicas
+                                                                                        financeiras.
+
+                                                                                        .
+                                                                                    </li>
+
+
+                                                                                </ul>
                                                                             </div>
 
-                                                                            <a class="" href="https://play.google.com/store/apps/details?id=com.fibec.customer&hl=pt_PT" target="_blank">
-                                                                                <img width="150" src="/images/splaystore.png">
+                                                                            <a class=""
+                                                                                href="https://play.google.com/apps/internaltest/4701412020376274157"
+                                                                                target="_blank">
+                                                                                <img width="150"
+                                                                                    src="/images/splaystore.png">
                                                                             </a>
 
 
@@ -942,19 +1152,80 @@
 
                                                                     <div class="swiper-slide">
 
-                                                                        <article class="vlt-project post-64 portfolio type-portfolio status-publish has-post-thumbnail hentry" data-image="https://gasinforest.com/wordpress/gilber/wp-content/uploads/project-03.jpg">
+                                                                        <article
+                                                                            class="vlt-project post-64 portfolio type-portfolio status-publish has-post-thumbnail hentry"
+                                                                            data-image="/images/reflexoes.png">
 
-                                                                            <h3 class="vlt-project-title">Aesop<span class="has-accent-color">.</span>
+                                                                            <h3 class="vlt-project-title">Reflexões<span
+                                                                                    class="has-accent-color">.</span>
                                                                             </h3>
 
                                                                             <div class="vlt-project-excerpt">
 
-                                                                                <p>O <a>Meu Tako</a> é um aplicativo que desenvolvi para ajudar amigos a controlarem suas despesas, receitas e orçamentos de forma simples e eficiente. Com uma interface intuitiva e funcionalidades poderosas, o app permite um acompanhamento detalhado da saúde financeira, ajudando na tomada de decisões mais conscientes.</p>
+                                                                                <p>O <a
+                                                                                        style="color: #00b8d4">Reflexões</a>
+                                                                                    é um aplicativo criado para quem
+                                                                                    busca inspiração, motivação e
+                                                                                    pensamentos profundos para
+                                                                                    compartilhar no dia a dia. Com uma
+                                                                                    ampla coleção de frases organizadas
+                                                                                    por categorias, o app oferece
+                                                                                    mensagens para diferentes momentos e
+                                                                                    sentimentos, ajudando os usuários a
+                                                                                    expressarem suas emoções de forma
+                                                                                    criativa e impactante.</p>
+                                                                                <strong style="color: #00b8d4"
+                                                                                    class="text-uppercase">Principais
+                                                                                    Recursos:</strong>
+                                                                                <ul class="list-unstyled">
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                            Citações de motivação, amor, amizade, fé e muito mais.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                            Encontre frases para qualquer ocasião.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                            Crie frases personalizadas para redes sociais.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                            Poste diretamente no WhatsApp, Instagram, Facebook e outras plataformas.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                            Salve suas frases preferidas para acessar facilmente.
+                                                                                    </li>
+                                                                                    <li style="display: hidden"><i
+                                                                                            class="fa fa-check"
+                                                                                            aria-hidden="true"
+                                                                                            style="color: #00b8d4"></i>
+                                                                                            Receba uma frase inspiradora todos os dias.
 
+
+                                                                                    </li>
+
+
+                                                                                </ul>
                                                                             </div>
 
-                                                                            <a class="" href="https://play.google.com/store/apps/details?id=com.fibec.customer&hl=pt_PT" target="_blank">
-                                                                                <img width="150" src="/images/splaystore.png">
+                                                                            <a class=""
+                                                                                href="https://play.google.com/store/apps/details?id=com.fibec.customer&hl=pt_PT"
+                                                                                target="_blank">
+                                                                                <img width="150"
+                                                                                    src="/images/splaystore.png">
                                                                             </a>
 
                                                                         </article>
@@ -969,14 +1240,21 @@
 
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-f4906ce elementor-widget elementor-widget-spacer" data-id="f4906ce" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-f4906ce elementor-widget elementor-widget-spacer"
+                                                    data-id="f4906ce" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-761e3fb vlt-portfolio-controls elementor-widget elementor-widget-vlt-slider-controls" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="761e3fb" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-slider-controls.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-761e3fb vlt-portfolio-controls elementor-widget elementor-widget-vlt-slider-controls"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;"
+                                                    data-id="761e3fb" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-1">
@@ -987,25 +1265,34 @@
 
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-5f262fd vlt-portfolio-controls elementor-absolute elementor-widget elementor-widget-vlt-slider-controls" data-id="5f262fd" data-element_type="widget" data-settings="{" _position":"absolute","vlt_animated_widget_animation":"none"}"="" data-widget_type="vlt-slider-controls.default">
+                                                <div class="elementor-element elementor-element-5f262fd vlt-portfolio-controls elementor-absolute elementor-widget elementor-widget-vlt-slider-controls"
+                                                    data-id="5f262fd" data-element_type="widget" data-settings="{"
+                                                    _position":"absolute","vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-2">
 
                                                             <div class="vlt-swiper-button-prev">
 
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 45">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 45">
                                                                     <defs></defs>
-                                                                    <path fill="currentColor" fill-rule="evenodd" d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z" clip-rule="evenodd"></path>
+                                                                    <path fill="currentColor" fill-rule="evenodd"
+                                                                        d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z"
+                                                                        clip-rule="evenodd"></path>
                                                                 </svg>
 
                                                             </div>
 
                                                             <div class="vlt-swiper-button-next">
 
-                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 45">
+                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 24 45">
                                                                     <defs></defs>
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z" fill="currentColor"></path>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z"
+                                                                        fill="currentColor"></path>
                                                                 </svg>
 
                                                             </div>
@@ -1041,11 +1328,17 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="22" class="elementor elementor-22">
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-f357390 elementor-section-boxed elementor-section-height-default" data-id="f357390" data-element_type="section">
+                                <section
+                                    class="elementor-section elementor-top-section elementor-element elementor-element-f357390 elementor-section-boxed elementor-section-height-default"
+                                    data-id="f357390" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1de251a" data-id="1de251a" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1de251a"
+                                            data-id="1de251a" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="elementor-element elementor-element-d3ea8ed elementor-widget elementor-widget-spacer" data-id="d3ea8ed" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-d3ea8ed elementor-widget elementor-widget-spacer"
+                                                    data-id="d3ea8ed" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
@@ -1057,11 +1350,18 @@
                                     </div>
                                 </section>
 
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-7e459fc elementor-section-content-middle elementor-section-boxed elementor-section-height-default" data-id="7e459fc" data-element_type="section">
+                                <section
+                                    class="elementor-section elementor-top-section elementor-element elementor-element-7e459fc elementor-section-content-middle elementor-section-boxed elementor-section-height-default"
+                                    data-id="7e459fc" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-482f790" data-id="482f790" data-element_type="column">
+                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-482f790"
+                                            data-id="482f790" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-43eb7ac elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="43eb7ac" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-43eb7ac elementor-widget elementor-widget-heading"
+                                                    data-animation-name="fadeInUpSm" style data-id="43eb7ac"
+                                                    data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
                                                         <h3 class="elementor-heading-title elementor-size-default">
                                                             Education</h3>
@@ -1069,9 +1369,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1799464" data-id="1799464" data-element_type="column">
+                                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1799464"
+                                            data-id="1799464" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-35978a8 elementor-widget elementor-widget-vlt-button" data-animation-name="fadeInUpSm" style data-id="35978a8" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-button.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-35978a8 elementor-widget elementor-widget-vlt-button"
+                                                    data-animation-name="fadeInUpSm" style data-id="35978a8"
+                                                    data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-button.default">
                                                     <div class="elementor-widget-container">
 
                                                         <a class="vlt-btn vlt-btn--primary" role="button" href="#">
@@ -1086,21 +1391,32 @@
                                     </div>
                                 </section>
 
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-8bf7a06 elementor-section-boxed elementor-section-height-default" data-id="8bf7a06" data-element_type="section">
+                                <section
+                                    class="elementor-section elementor-top-section elementor-element elementor-element-8bf7a06 elementor-section-boxed elementor-section-height-default"
+                                    data-id="8bf7a06" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a5bcbde" data-id="a5bcbde" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a5bcbde"
+                                            data-id="a5bcbde" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="elementor-element elementor-element-d7ea4be elementor-widget elementor-widget-spacer" data-id="d7ea4be" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-d7ea4be elementor-widget elementor-widget-spacer"
+                                                    data-id="d7ea4be" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-67e92c9 elementor-widget elementor-widget-vlt-timeline-slider" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="67e92c9" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-timeline-slider.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-67e92c9 elementor-widget elementor-widget-vlt-timeline-slider"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;"
+                                                    data-id="67e92c9" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-timeline-slider.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <div class="vlt-timeline-slider" data-navigation-anchor=".vlt-timeline-anchor">
+                                                        <div class="vlt-timeline-slider"
+                                                            data-navigation-anchor=".vlt-timeline-anchor">
 
                                                             <div class="swiper-container swiper">
 
@@ -1109,16 +1425,25 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" style="border-radius: 5px" src="images/ucm.jpg" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="79" height="49"
+                                                                                        style="border-radius: 5px"
+                                                                                        src="images/ucm.jpg"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2019 - 2023</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Universidade Católica de
                                                                                         Moçambique</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Licenciatura em Engenharia
                                                                                             Informática com
                                                                                             especialização em
@@ -1131,15 +1456,23 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/phy1.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="78"
+                                                                                        src="images/phy1.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2023 - 2023</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Python Essentials</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Python Essentials 1 & 2 pela
                                                                                             Cisco Networking Academy,
                                                                                             cobrindo fundamentos de
@@ -1153,15 +1486,23 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/cyber.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="64"
+                                                                                        src="images/cyber.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Cyber Threat Management</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Gestão de ameaças
                                                                                             cibernéticas, análise de
                                                                                             riscos, estratégias de
@@ -1176,16 +1517,24 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/data.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="79" height="49"
+                                                                                        src="images/data.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Introduction to Data Science
                                                                                     </h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Fundamentos de ciência de
                                                                                             dados, análise estatística,
                                                                                             visualização de dados e
@@ -1199,15 +1548,23 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/EndpointSecurity.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="78"
+                                                                                        src="images/EndpointSecurity.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2014</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Endpoint Security</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Proteção de dispositivos
                                                                                             finais contra ameaças
                                                                                             cibernéticas, implementação
@@ -1221,15 +1578,23 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/hacher.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="64"
+                                                                                        src="images/hacher.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Ethical Hacker</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Técnicas éticas de hacking,
                                                                                             identificação de
                                                                                             vulnerabilidades, testes de
@@ -1244,15 +1609,23 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/I2CS__1_.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="79" height="49"
+                                                                                        src="images/I2CS__1_.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Introdução à Cibersegurança</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Princípios básicos de
                                                                                             segurança cibernética,
                                                                                             identificação de ameaças
@@ -1266,15 +1639,23 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/Intro2IoT.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="78"
+                                                                                        src="images/Intro2IoT.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2019</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Introduction to IoT</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Conceitos fundamentais da
                                                                                             Internet das Coisas,
                                                                                             arquitetura de sistemas IoT,
@@ -1287,15 +1668,23 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/js1.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="64"
+                                                                                        src="images/js1.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         JavaScript Essentials</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Fundamentos de JavaScript,
                                                                                             desenvolvimento web
                                                                                             front-end, manipulação do
@@ -1312,36 +1701,83 @@
 
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/js2.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="78"
+                                                                                        src="images/phy2.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
-                                                                                        2017 - 2018</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
-                                                                                        Envato</h5>
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
+                                                                                        Python Essentials 2</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
-                                                                                        <p>Rule bearing whales. Created
-                                                                                            gathering
-                                                                                            blessed, sixth likeness
-                                                                                            male. Over were which you'll
-                                                                                            so be make moveth made
-                                                                                            saw above.</p>
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
+                                                                                        <p>Programação em Python,
+                                                                                            estruturas de dados,
+                                                                                            funções, orientação a
+                                                                                            objetos e desenvolvimento de
+                                                                                            aplicações práticas com uma
+                                                                                            das linguagens mais
+                                                                                            populares.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/network.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="78"
+                                                                                        src="images/phy2.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
+                                                                                        TypeScript Essentials </h5>
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
+                                                                                        <p>Programação em typeScript,
+                                                                                            estruturas de dados,
+                                                                                            funções, orientação a
+                                                                                            objetos e desenvolvimento de
+                                                                                            aplicações práticas com uma
+                                                                                            das linguagens mais
+                                                                                            populares.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vlt-timeline-item">
+                                                                            <div class="row">
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="64"
+                                                                                        src="images/network.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
+                                                                                        2025</div>
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Network Defense</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Estratégias e técnicas para
                                                                                             proteger redes contra
                                                                                             ataques, detecção de
@@ -1357,15 +1793,23 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="79" height="49" src="images/NetworkDefense_v1_091721.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="79" height="49"
+                                                                                        src="images/NetworkDefense_v1_091721.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Network Defense</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Estratégias e técnicas para
                                                                                             proteger redes contra
                                                                                             ataques, detecção de
@@ -1378,15 +1822,23 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="78" src="images/phy2.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="78"
+                                                                                        src="images/phy2.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
-                                                                                        Python Essentials</h5>
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
+                                                                                        Python Essentials 1</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Programação em Python,
                                                                                             estruturas de dados,
                                                                                             funções, orientação a
@@ -1400,16 +1852,24 @@
                                                                         </div>
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img loading="lazy" decoding="async" width="78" height="64" src="images/safay.png" class="attachment-full size-full" alt></div>
+                                                                                <div class="col-xl-4"><img
+                                                                                        loading="lazy" decoding="async"
+                                                                                        width="78" height="64"
+                                                                                        src="images/safay.png"
+                                                                                        class="attachment-full size-full"
+                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__date">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__date">
                                                                                         2025</div>
-                                                                                    <h5 class="vlt-timeline-item__title">
+                                                                                    <h5
+                                                                                        class="vlt-timeline-item__title">
                                                                                         Digital Safety and Security
                                                                                         Awareness</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div class="vlt-timeline-item__text">
+                                                                                    <div
+                                                                                        class="vlt-timeline-item__text">
                                                                                         <p>Conceitos e práticas de
                                                                                             segurança digital, proteção
                                                                                             de dados pessoais,
@@ -1430,14 +1890,21 @@
 
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-f152810 elementor-widget elementor-widget-spacer" data-id="f152810" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-f152810 elementor-widget elementor-widget-spacer"
+                                                    data-id="f152810" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-c3f0bc0 vlt-timeline-anchor elementor-widget elementor-widget-vlt-slider-controls" data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="c3f0bc0" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-slider-controls.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-c3f0bc0 vlt-timeline-anchor elementor-widget elementor-widget-vlt-slider-controls"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;"
+                                                    data-id="c3f0bc0" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-1">
@@ -1448,25 +1915,34 @@
 
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-d445609 vlt-timeline-anchor elementor-absolute elementor-widget elementor-widget-vlt-slider-controls" data-id="d445609" data-element_type="widget" data-settings="{" _position":"absolute","vlt_animated_widget_animation":"none"}"="" data-widget_type="vlt-slider-controls.default">
+                                                <div class="elementor-element elementor-element-d445609 vlt-timeline-anchor elementor-absolute elementor-widget elementor-widget-vlt-slider-controls"
+                                                    data-id="d445609" data-element_type="widget" data-settings="{"
+                                                    _position":"absolute","vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-2">
 
                                                             <div class="vlt-swiper-button-prev">
 
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 45">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 45">
                                                                     <defs></defs>
-                                                                    <path fill="currentColor" fill-rule="evenodd" d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z" clip-rule="evenodd"></path>
+                                                                    <path fill="currentColor" fill-rule="evenodd"
+                                                                        d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z"
+                                                                        clip-rule="evenodd"></path>
                                                                 </svg>
 
                                                             </div>
 
                                                             <div class="vlt-swiper-button-next">
 
-                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 45">
+                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 24 45">
                                                                     <defs></defs>
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z" fill="currentColor"></path>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z"
+                                                                        fill="currentColor"></path>
                                                                 </svg>
 
                                                             </div>
@@ -1511,19 +1987,38 @@
 
                             <div data-elementor-type="wp-post" data-elementor-id="20" class="elementor elementor-20">
 
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-d38a1fa elementor-section-content-bottom elementor-section-boxed elementor-section-height-default" data-id="d38a1fa" data-element_type="section">
+                                <section
+                                    class="elementor-section elementor-top-section elementor-element elementor-element-d38a1fa elementor-section-content-bottom elementor-section-boxed elementor-section-height-default"
+                                    data-id="d38a1fa" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d87e80d" data-id="d87e80d" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d87e80d"
+                                            data-id="d87e80d" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-8eb0c0f elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style data-id="8eb0c0f" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-8eb0c0f elementor-widget elementor-widget-html"
+                                                    data-animation-name="fadeInUpSm" style data-id="8eb0c0f"
+                                                    data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="html.default">
 
                                                 </div>
 
-                                                <div class="vlt-animate-element elementor-element elementor-element-2faa764 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="2faa764" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-2faa764 elementor-widget elementor-widget-heading"
+                                                    data-animation-name="fadeInUpSm" style data-id="2faa764"
+                                                    data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default"> O que dizem sobre mim</h3>
-                                                        <p class="text-white">Se perguntar aos meus amigos, vão te dizer que sou o cara que resolve qualquer problema de tecnologia… e que provavelmente vai te julgar se usares um cabo USB de qualidade duvidosa. <br> Se perguntar aos meus colegas, vão dizer que sou profissional, comprometido e que tenho a incrível habilidade de transformar ideias vagas em soluções digitais reais. <br>
-                                                            Se perguntar à minha família… bem, eles ainda acham que "trabalho com computadores" é uma descrição suficiente.</p>
+                                                        <h3 class="elementor-heading-title elementor-size-default"> O
+                                                            que dizem sobre mim</h3>
+                                                        <p class="text-white">Se perguntar aos meus amigos, vão te dizer
+                                                            que sou o cara que resolve qualquer problema de tecnologia…
+                                                            e que provavelmente vai te julgar se usares um cabo USB de
+                                                            qualidade duvidosa. <br> Se perguntar aos meus colegas, vão
+                                                            dizer que sou profissional, comprometido e que tenho a
+                                                            incrível habilidade de transformar ideias vagas em soluções
+                                                            digitais reais. <br>
+                                                            Se perguntar à minha família… bem, eles ainda acham que
+                                                            "trabalho com computadores" é uma descrição suficiente.</p>
                                                         <br>
 
 
@@ -1531,25 +2026,35 @@
                                                     </div>
                                                 </div>
                                                 <div class="elementor-widget-container">
-                                                    <div class="has-accent-color"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 75" style="height: 75px;">
+                                                    <div class="has-accent-color"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 75 75" style="height: 75px;">
                                                             <defs></defs>
-                                                            <path fill="currentColor" d="M25 0C16.9271 0 10.7422 2.14844 6.44531 6.44531 2.14844 10.7422 0 16.9271 0 25v50h31.25V25H12.5c0-4.4271.9766-7.6172 2.9297-9.5703C17.3828 13.4766 20.5729 12.5 25 12.5V0zm43.75 0c-8.0729 0-14.2578 2.14844-18.5547 6.44531C45.8984 10.7422 43.75 16.9271 43.75 25v50H75V25H56.25c0-4.4271.9766-7.6172 2.9297-9.5703C61.1328 13.4766 64.3229 12.5 68.75 12.5V0z">
+                                                            <path fill="currentColor"
+                                                                d="M25 0C16.9271 0 10.7422 2.14844 6.44531 6.44531 2.14844 10.7422 0 16.9271 0 25v50h31.25V25H12.5c0-4.4271.9766-7.6172 2.9297-9.5703C17.3828 13.4766 20.5729 12.5 25 12.5V0zm43.75 0c-8.0729 0-14.2578 2.14844-18.5547 6.44531C45.8984 10.7422 43.75 16.9271 43.75 25v50H75V25H56.25c0-4.4271.9766-7.6172 2.9297-9.5703C61.1328 13.4766 64.3229 12.5 68.75 12.5V0z">
                                                             </path>
                                                         </svg>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f183c9b" data-id="f183c9b" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f183c9b"
+                                            data-id="f183c9b" data-element_type="column">
                                             <div class="elementor-widget-wrap">
                                             </div>
                                         </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-039d35e" data-id="039d35e" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-039d35e"
+                                            data-id="039d35e" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-372930a elementor-widget elementor-widget-vlt-testimonial-slider" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="372930a" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-testimonial-slider.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-372930a elementor-widget elementor-widget-vlt-testimonial-slider"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;"
+                                                    data-id="372930a" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-testimonial-slider.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <div class="vlt-testimonial-slider" data-navigation-anchor=".vlt-testimonial-controls">
+                                                        <div class="vlt-testimonial-slider"
+                                                            data-navigation-anchor=".vlt-testimonial-controls">
 
                                                             <div class="swiper-container swiper">
 
@@ -1558,27 +2063,49 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
 
-                                                                            <div class="vlt-testimonial__text"> "A abordagem metódica e atenção aos detalhes do Arnaldo fizeram toda a diferença em nosso projeto da <a target="_blank" href="https://www.linkedin.com/posts/corneldermoz_corneldermoaexambique-codelabs-corneldercodelabs-activity-7159126754794561536-CHo0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAUdGsBQz350LAutJPFaNbAq_2yCUf8TCg" style="color: #00b8d4">Codelabs</a>. Ele não apenas entregou uma solução tecnicamente sólida, mas também se preocupou em entender as necessidades do usuário final. Sua experiência com Laravel e React Native acelerou significativamente nosso processo de desenvolvimento."
+                                                                            <div class="vlt-testimonial__text"> "A
+                                                                                abordagem metódica e atenção aos
+                                                                                detalhes do Arnaldo fizeram toda a
+                                                                                diferença em nosso projeto da <a
+                                                                                    target="_blank"
+                                                                                    href="https://www.linkedin.com/posts/corneldermoz_corneldermoaexambique-codelabs-corneldercodelabs-activity-7159126754794561536-CHo0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAUdGsBQz350LAutJPFaNbAq_2yCUf8TCg"
+                                                                                    style="color: #00b8d4">Codelabs</a>.
+                                                                                Ele não apenas entregou uma solução
+                                                                                tecnicamente sólida, mas também se
+                                                                                preocupou em entender as necessidades do
+                                                                                usuário final. Sua experiência com
+                                                                                Laravel e React Native acelerou
+                                                                                significativamente nosso processo de
+                                                                                desenvolvimento."
                                                                             </div>
 
                                                                             <div class="nado vlt-testimonial__meta">
 
                                                                                 <div class="testimonial-avatar">
-                                                                                    <a href="https://www.linkedin.com/in/gersonamaliohouane/" target="_blank">
-                                                                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQFKpJFqApL7JA/profile-displayphoto-shrink_800_800/B4DZOROHdPHUAc-/0/1733308220476?e=1747872000&v=beta&t=0PUKbvW7bumEB8_Nq0s2ftEGHrgfE9sX8VK1Wn1KICo" alt="Gerson Amálio Houane" class="testimonial-image">
+                                                                                    <a href="https://www.linkedin.com/in/gersonamaliohouane/"
+                                                                                        target="_blank">
+                                                                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQFKpJFqApL7JA/profile-displayphoto-shrink_800_800/B4DZOROHdPHUAc-/0/1733308220476?e=1747872000&v=beta&t=0PUKbvW7bumEB8_Nq0s2ftEGHrgfE9sX8VK1Wn1KICo"
+                                                                                            alt="Gerson Amálio Houane"
+                                                                                            class="testimonial-image">
                                                                                     </a>
                                                                                 </div>
 
                                                                                 <div>
                                                                                     <div class="hore">
-                                                                                        <h5 class="vlt-testimonial__name"> Gerson Amálio Houane </h5>
+                                                                                        <h5
+                                                                                            class="vlt-testimonial__name">
+                                                                                            Gerson Amálio Houane </h5>
                                                                                         <div class="linkedin-icon">
-                                                                                            <a href="https://www.linkedin.com/in/gerson-amalio-houane/" target="_blank">
-                                                                                                <i class="fab fa-linkedin"></i>
+                                                                                            <a href="https://www.linkedin.com/in/gerson-amalio-houane/"
+                                                                                                target="_blank">
+                                                                                                <i
+                                                                                                    class="fab fa-linkedin"></i>
                                                                                             </a>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div style="color: #a1a1a1" class="">Software Engineer - Cornelder de Moçambique </div>
+                                                                                    <div style="color: #a1a1a1"
+                                                                                        class="">Software Engineer -
+                                                                                        Cornelder de Moçambique </div>
                                                                                 </div>
 
                                                                             </div>
@@ -1588,27 +2115,50 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
 
-                                                                            <div class="vlt-testimonial__text">"Trabalhar com Arnaldo foi uma das melhores decisões para o crescimento do <a style="color: #00b8d4" href="https://play.google.com/store/apps/details?id=com.fibec.customer" target="_blank">FibecTaxi.</a> Desde o início, ele demonstrou profissionalismo, criatividade e uma capacidade impressionante de transformar ideias em soluções digitais eficientes. A plataforma que ele desenvolveu atendeu perfeitamente às nossas necessidades, trazendo mais praticidade para nossos clientes e otimizando a nossa operação."
+                                                                            <div class="vlt-testimonial__text">
+                                                                                "Trabalhar com Arnaldo foi uma das
+                                                                                melhores decisões para o crescimento do
+                                                                                <a style="color: #00b8d4"
+                                                                                    href="https://play.google.com/store/apps/details?id=com.fibec.customer"
+                                                                                    target="_blank">FibecTaxi.</a> Desde
+                                                                                o início, ele demonstrou
+                                                                                profissionalismo, criatividade e uma
+                                                                                capacidade impressionante de transformar
+                                                                                ideias em soluções digitais eficientes.
+                                                                                A plataforma que ele desenvolveu atendeu
+                                                                                perfeitamente às nossas necessidades,
+                                                                                trazendo mais praticidade para nossos
+                                                                                clientes e otimizando a nossa operação."
                                                                             </div>
 
                                                                             <div class="nado vlt-testimonial__meta">
 
                                                                                 <div class="testimonial-avatar">
-                                                                                    <a href="https://www.linkedin.com/in/hjacintomz/" target="_blank">
-                                                                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEOwq3RMCHzFA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1685037338748?e=1747872000&v=beta&t=UqtvZGOspDi5ZTvJlxwUftWWFQSb9qUfcXYO2A9hKCI" alt="Gerson Amálio Houane" class="testimonial-image">
+                                                                                    <a href="https://www.linkedin.com/in/hjacintomz/"
+                                                                                        target="_blank">
+                                                                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEOwq3RMCHzFA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1685037338748?e=1747872000&v=beta&t=UqtvZGOspDi5ZTvJlxwUftWWFQSb9qUfcXYO2A9hKCI"
+                                                                                            alt="Gerson Amálio Houane"
+                                                                                            class="testimonial-image">
                                                                                     </a>
                                                                                 </div>
 
                                                                                 <div>
                                                                                     <div class="hore">
-                                                                                        <h5 class="vlt-testimonial__name">Helio Jacinto Macarrala</h5>
+                                                                                        <h5
+                                                                                            class="vlt-testimonial__name">
+                                                                                            Helio Jacinto Macarrala</h5>
                                                                                         <div class="linkedin-icon">
-                                                                                            <a href="https://www.linkedin.com/in/hjacintomz/" target="_blank">
-                                                                                                <i class="fab fa-linkedin"></i>
+                                                                                            <a href="https://www.linkedin.com/in/hjacintomz/"
+                                                                                                target="_blank">
+                                                                                                <i
+                                                                                                    class="fab fa-linkedin"></i>
                                                                                             </a>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div style="color: #a1a1a1" class="">ERP & Digital Transformation Consultant | Partner 2Business, SA</div>
+                                                                                    <div style="color: #a1a1a1"
+                                                                                        class="">ERP & Digital
+                                                                                        Transformation Consultant |
+                                                                                        Partner 2Business, SA</div>
                                                                                 </div>
 
                                                                             </div>
@@ -1618,27 +2168,51 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
 
-                                                                            <div class="vlt-testimonial__text"> "Arnaldo é um desenvolvedor talentoso e altamente dedicado, com uma abordagem estratégica para soluções web e mobile. Seu domínio de tecnologias modernas e sua atenção aos detalhes fazem dele um profissional excepcional. Além disso, sua capacidade de resolver problemas complexos e melhorar a experiência do usuário é impressionante. Trabalhar com ele é sempre uma experiência produtiva e inspiradora!"
+                                                                            <div class="vlt-testimonial__text"> "Arnaldo
+                                                                                é um desenvolvedor talentoso e altamente
+                                                                                dedicado, com uma abordagem estratégica
+                                                                                para soluções web e mobile. Seu domínio
+                                                                                de tecnologias modernas e sua atenção
+                                                                                aos detalhes fazem dele um profissional
+                                                                                excepcional. Além disso, sua capacidade
+                                                                                de resolver problemas complexos e
+                                                                                melhorar a experiência do usuário é
+                                                                                impressionante. Trabalhar com ele é
+                                                                                sempre uma experiência produtiva e
+                                                                                inspiradora!"
                                                                             </div>
 
                                                                             <div class="nado vlt-testimonial__meta">
 
                                                                                 <div class="testimonial-avatar">
-                                                                                    <a href="https://www.linkedin.com/in/yash-solo/" target="_blank">
-                                                                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQErSBGQsE4wyw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1678116766082?e=1747872000&v=beta&t=Nkt9g9BSfOlBFbI2Gs3Hg4JmYcA_hTSWgunBkZIQBeY" alt="Gerson Amálio Houane" class="testimonial-image">
+                                                                                    <a href="https://www.linkedin.com/in/yash-solo/"
+                                                                                        target="_blank">
+                                                                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQErSBGQsE4wyw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1678116766082?e=1747872000&v=beta&t=Nkt9g9BSfOlBFbI2Gs3Hg4JmYcA_hTSWgunBkZIQBeY"
+                                                                                            alt="Gerson Amálio Houane"
+                                                                                            class="testimonial-image">
                                                                                     </a>
                                                                                 </div>
 
                                                                                 <div>
                                                                                     <div class="hore">
-                                                                                        <h5 class="vlt-testimonial__name">Md Mohi Minul Islam Yash </h5>
+                                                                                        <h5
+                                                                                            class="vlt-testimonial__name">
+                                                                                            Md Mohi Minul Islam Yash
+                                                                                        </h5>
                                                                                         <div class="linkedin-icon">
-                                                                                            <a href="https://www.linkedin.com/in/yash-solo/" target="_blank">
-                                                                                                <i class="fab fa-linkedin"></i>
+                                                                                            <a href="https://www.linkedin.com/in/yash-solo/"
+                                                                                                target="_blank">
+                                                                                                <i
+                                                                                                    class="fab fa-linkedin"></i>
                                                                                             </a>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div style="color: #a1a1a1" class="">Certified Full Stack Developer | Specializing in NestJS, Next.js, Vue.js, Ruby on Rails, Python & AI | Passionate about User Experiences </div>
+                                                                                    <div style="color: #a1a1a1"
+                                                                                        class="">Certified Full Stack
+                                                                                        Developer | Specializing in
+                                                                                        NestJS, Next.js, Vue.js, Ruby on
+                                                                                        Rails, Python & AI | Passionate
+                                                                                        about User Experiences </div>
                                                                                 </div>
 
                                                                             </div>
@@ -1653,32 +2227,45 @@
 
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-6d71bd5 elementor-widget elementor-widget-spacer" data-id="6d71bd5" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-6d71bd5 elementor-widget elementor-widget-spacer"
+                                                    data-id="6d71bd5" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-3c9168c vlt-testimonial-controls elementor-widget elementor-widget-vlt-slider-controls" data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="3c9168c" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-slider-controls.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-3c9168c vlt-testimonial-controls elementor-widget elementor-widget-vlt-slider-controls"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;"
+                                                    data-id="3c9168c" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-slider-controls.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-slider-controls vlt-slider-controls--style-1">
 
                                                             <div class="vlt-swiper-button-prev">
 
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 45">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewBox="0 0 24 45">
                                                                     <defs></defs>
-                                                                    <path fill="currentColor" fill-rule="evenodd" d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z" clip-rule="evenodd"></path>
+                                                                    <path fill="currentColor" fill-rule="evenodd"
+                                                                        d="M1.36413 22.5795L24 43.9524l-.7271.6865L.272896 22.9223l.383716-.3623-.362754-.3367L23.0941.319721l.733.680233L1.36413 22.5795z"
+                                                                        clip-rule="evenodd"></path>
                                                                 </svg>
 
                                                             </div>
 
                                                             <div class="vlt-swiper-button-next">
 
-                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 45">
+                                                                <svg fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 24 45">
                                                                     <defs></defs>
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z" fill="currentColor"></path>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M22.6359 22.3728L0 1.00001.727101.313477 23.7271 22.0301l-.3837.3623.3627.3367L.905866 44.6327l-.732997-.6803L22.6359 22.3728z"
+                                                                        fill="currentColor"></path>
                                                                 </svg>
 
                                                             </div>
@@ -1718,17 +2305,27 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="16" class="elementor elementor-16">
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-6be2200 elementor-section-boxed elementor-section-height-default" data-id="6be2200" data-element_type="section">
+                                <section
+                                    class="elementor-section elementor-top-section elementor-element elementor-element-6be2200 elementor-section-boxed elementor-section-height-default"
+                                    data-id="6be2200" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-834ce09" data-id="834ce09" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-834ce09"
+                                            data-id="834ce09" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-fd50be2 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="fd50be2" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-fd50be2 elementor-widget elementor-widget-heading"
+                                                    data-animation-name="fadeInUpSm" style data-id="fd50be2"
+                                                    data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
                                                         <h3 class="elementor-heading-title elementor-size-default">
-                                                            Recent news</h3>
+                                                            Reflexões & Insights</h3>
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-60c9163 elementor-widget elementor-widget-spacer" data-id="60c9163" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-60c9163 elementor-widget elementor-widget-spacer"
+                                                    data-id="60c9163" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
@@ -1739,14 +2336,22 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-730389d elementor-section-boxed elementor-section-height-default" data-id="730389d" data-element_type="section">
+                                <section
+                                    class="elementor-section elementor-top-section elementor-element elementor-element-730389d elementor-section-boxed elementor-section-height-default"
+                                    data-id="730389d" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f1aef9c" data-id="f1aef9c" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f1aef9c"
+                                            data-id="f1aef9c" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-5482c3c elementor-widget elementor-widget-vlt-single-post" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="5482c3c" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-single-post.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-5482c3c elementor-widget elementor-widget-vlt-single-post"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;"
+                                                    data-id="5482c3c" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-single-post.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <article class="vlt-post vlt-post--masonry post-52 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
+                                                        <article
+                                                            class="vlt-post vlt-post--masonry post-52 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
 
                                                             <div class="vlt-post-border">
                                                                 <span class="top"></span>
@@ -1757,7 +2362,10 @@
 
                                                             <div class="vlt-post-media">
 
-                                                                <img loading="lazy" decoding="async" width="800" height="432" src="images/single-post-03.jpg" class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image" alt>
+                                                                <img loading="lazy" decoding="async" width="800"
+                                                                    height="432" src="images/blog1.webp"
+                                                                    class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image"
+                                                                    alt>
                                                             </div>
                                                             <!-- /.vlt-post-thumbnail -->
 
@@ -1767,32 +2375,34 @@
 
                                                                     <div class="vlt-post-meta">
 
-                                                                        <span><time datetime="2020-12-10T09:54:09+00:00">10
+                                                                        <span><time
+                                                                                datetime="2020-12-10T09:54:09+00:00">10
                                                                                 December 2020</time></span>
 
                                                                     </div>
                                                                     <!-- /.vlt-post-meta -->
-                                                                    <h3 class="vlt-post-title">
-                                                                        <a href="{{ app()->getLocale() }}/blog">Secrets
-                                                                            of the Serpents</a>
-                                                                    </h3>
+                                                                    <h6 class="vlt-post-title">
+                                                                        <a href="##">O Futuro do Desenvol..</a>
+                                                                    </h6>
                                                                     <!-- /.vlt-post-title -->
                                                                 </header>
                                                                 <!-- /.vlt-post-header -->
 
                                                                 <div class="vlt-post-excerpt">
-                                                                    Beast creature days.
-                                                                    This response is important for our ability to learn
-                                                                    from mistakes, but it
-                                                                    alsogives rise to ... </div>
+                                                                    O desenvolvimento web está em constante evolução, e novas tecnologias surgem a cada ano....</div>
                                                                 <!-- /.vlt-post-excerpt -->
 
                                                                 <footer class="vlt-post-footer">
 
-                                                                    <a class="vlt-read-more-link" href="{{ app()->getLocale() }}/blog">Read
-                                                                        More<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 8">
+                                                                    <a class="vlt-read-more-link"
+                                                                        href="#">Read
+                                                                        More<svg fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 16 8">
                                                                             <defs></defs>
-                                                                            <path d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z" fill="currentColor"></path>
+                                                                            <path
+                                                                                d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z"
+                                                                                fill="currentColor"></path>
                                                                         </svg></a>
                                                                     <!-- /.vlt-read-more-link -->
                                                                 </footer>
@@ -1808,12 +2418,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a7b9f24" data-id="a7b9f24" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a7b9f24"
+                                            data-id="a7b9f24" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-772e13e elementor-widget elementor-widget-vlt-single-post" data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;" data-id="772e13e" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-single-post.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-772e13e elementor-widget elementor-widget-vlt-single-post"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;"
+                                                    data-id="772e13e" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-single-post.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <article class="vlt-post vlt-post--masonry post-54 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
+                                                        <article
+                                                            class="vlt-post vlt-post--masonry post-54 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
 
                                                             <div class="vlt-post-border">
                                                                 <span class="top"></span>
@@ -1824,7 +2440,10 @@
 
                                                             <div class="vlt-post-media">
 
-                                                                <img loading="lazy" decoding="async" width="800" height="432" src="images/single-post-02.jpg" class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image" alt>
+                                                                <img loading="lazy" decoding="async" width="800"
+                                                                    height="432" src="images/blog2.jpg"
+                                                                    class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image"
+                                                                    alt>
                                                             </div>
                                                             <!-- /.vlt-post-thumbnail -->
 
@@ -1834,32 +2453,35 @@
 
                                                                     <div class="vlt-post-meta">
 
-                                                                        <span><time datetime="2020-12-10T09:54:21+00:00">10
+                                                                        <span><time
+                                                                                datetime="2020-12-10T09:54:21+00:00">10
                                                                                 December 2020</time></span>
 
                                                                     </div>
                                                                     <!-- /.vlt-post-meta -->
                                                                     <h3 class="vlt-post-title">
-                                                                        <a href="https://gasinforest.com/wordpress/gilber/the-stone-of-the-flames/">The
-                                                                            Stone of the Flames</a>
+                                                                        <a
+                                                                            href="#">Como um Desenvolvedor..?</a>
                                                                     </h3>
                                                                     <!-- /.vlt-post-title -->
                                                                 </header>
                                                                 <!-- /.vlt-post-header -->
 
                                                                 <div class="vlt-post-excerpt">
-                                                                    Beast creature days.
-                                                                    This response is important for our ability to learn
-                                                                    from mistakes, but it
-                                                                    alsogives rise to ... </div>
+                                                                    screver código é apenas parte do trabalho. Um bom desenvolvedor precisa ser produtivo s...</div>
                                                                 <!-- /.vlt-post-excerpt -->
 
                                                                 <footer class="vlt-post-footer">
 
-                                                                    <a class="vlt-read-more-link" href="https://gasinforest.com/wordpress/gilber/the-stone-of-the-flames/">Read
-                                                                        More<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 8">
+                                                                    <a class="vlt-read-more-link"
+                                                                        href="#">Read
+                                                                        More<svg fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 16 8">
                                                                             <defs></defs>
-                                                                            <path d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z" fill="currentColor"></path>
+                                                                            <path
+                                                                                d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z"
+                                                                                fill="currentColor"></path>
                                                                         </svg></a>
                                                                     <!-- /.vlt-read-more-link -->
                                                                 </footer>
@@ -1875,12 +2497,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c569992" data-id="c569992" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c569992"
+                                            data-id="c569992" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-07bd1ec elementor-widget elementor-widget-vlt-single-post" data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="07bd1ec" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-single-post.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-07bd1ec elementor-widget elementor-widget-vlt-single-post"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;"
+                                                    data-id="07bd1ec" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-single-post.default">
                                                     <div class="elementor-widget-container">
 
-                                                        <article class="vlt-post vlt-post--masonry post-57 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
+                                                        <article
+                                                            class="vlt-post vlt-post--masonry post-57 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
 
                                                             <div class="vlt-post-border">
                                                                 <span class="top"></span>
@@ -1891,7 +2519,10 @@
 
                                                             <div class="vlt-post-media">
 
-                                                                <img loading="lazy" decoding="async" width="800" height="366" src="images/single-post-01.jpg" class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image" alt>
+                                                                <img loading="lazy" decoding="async" width="800"
+                                                                    height="366" src="images/blog3.png"
+                                                                    class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image"
+                                                                    alt>
                                                             </div>
                                                             <!-- /.vlt-post-thumbnail -->
 
@@ -1901,33 +2532,35 @@
 
                                                                     <div class="vlt-post-meta">
 
-                                                                        <span><time datetime="2020-12-10T09:54:36+00:00">10
+                                                                        <span><time
+                                                                                datetime="2020-12-10T09:54:36+00:00">10
                                                                                 December 2020</time></span>
 
                                                                     </div>
                                                                     <!-- /.vlt-post-meta -->
                                                                     <h3 class="vlt-post-title">
-                                                                        <a href="https://gasinforest.com/wordpress/gilber/scent-in-the-voyages/">Scent
-                                                                            in
-                                                                            the Voyages</a>
+                                                                        <a
+                                                                            href="#">React Native vs Flutter</a>
                                                                     </h3>
                                                                     <!-- /.vlt-post-title -->
                                                                 </header>
                                                                 <!-- /.vlt-post-header -->
 
                                                                 <div class="vlt-post-excerpt">
-                                                                    Beast creature days.
-                                                                    This response is important for our ability to learn
-                                                                    from mistakes, but it
-                                                                    alsogives rise to ... </div>
+                                                                    Se estás a desenvolver uma aplicação mobile, provavelmente já te perguntaste: React Native ou Flutter? </div>
                                                                 <!-- /.vlt-post-excerpt -->
 
                                                                 <footer class="vlt-post-footer">
 
-                                                                    <a class="vlt-read-more-link" href="https://gasinforest.com/wordpress/gilber/scent-in-the-voyages/">Read
-                                                                        More<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 8">
+                                                                    <a class="vlt-read-more-link"
+                                                                        href="#">Read
+                                                                        More<svg fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 16 8">
                                                                             <defs></defs>
-                                                                            <path d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z" fill="currentColor"></path>
+                                                                            <path
+                                                                                d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z"
+                                                                                fill="currentColor"></path>
                                                                         </svg></a>
                                                                     <!-- /.vlt-read-more-link -->
                                                                 </footer>
@@ -1975,110 +2608,189 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="14" class="elementor elementor-14">
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-7040837 elementor-section-boxed elementor-section-height-default" data-id="7040837" data-element_type="section">
+                                <section
+                                    class="elementor-section elementor-top-section elementor-element elementor-element-7040837 elementor-section-boxed elementor-section-height-default"
+                                    data-id="7040837" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f531030" data-id="f531030" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f531030"
+                                            data-id="f531030" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-37183cd elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style data-id="37183cd" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-37183cd elementor-widget elementor-widget-heading"
+                                                    data-animation-name="fadeInUpSm" style data-id="37183cd"
+                                                    data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
                                                         <h3 class="elementor-heading-title elementor-size-default">
                                                             Contato</h3>
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-8f5411f elementor-widget elementor-widget-spacer" data-id="8f5411f" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-8f5411f elementor-widget elementor-widget-spacer"
+                                                    data-id="8f5411f" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-2113bd3 elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;" data-id="2113bd3" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-2113bd3 elementor-widget elementor-widget-text-editor"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;"
+                                                    data-id="2113bd3" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
                                                         Estou disponível para novos projetos e parcerias. Entre em
                                                         contato e vamos transformar suas ideias em realidade digital.
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-384fa45 elementor-widget elementor-widget-spacer" data-id="384fa45" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-384fa45 elementor-widget elementor-widget-spacer"
+                                                    data-id="384fa45" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-49f9886 elementor-widget elementor-widget-html" data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;" data-id="49f9886" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="html.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-49f9886 elementor-widget elementor-widget-html"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;"
+                                                    data-id="49f9886" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="html.default">
                                                     <div class="elementor-widget-container">
                                                         <address>Maputo, Moçambique</address>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-f53ef89 elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 400ms;" data-id="f53ef89" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-f53ef89 elementor-widget elementor-widget-text-editor"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 400ms;"
+                                                    data-id="f53ef89" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
                                                         <a href="tel:+258846474687">+258 84 647 4687</a>
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-b615013 elementor-widget elementor-widget-spacer" data-id="b615013" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"none"}"="" data-widget_type="spacer.default">
+                                                <div class="elementor-element elementor-element-b615013 elementor-widget elementor-widget-spacer"
+                                                    data-id="b615013" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"none"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-03f231b elementor-widget elementor-widget-text-editor" data-animation-name="fadeInUpSm" style=" --animate-delay: 500ms;" data-id="03f231b" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="text-editor.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-03f231b elementor-widget elementor-widget-text-editor"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 500ms;"
+                                                    data-id="03f231b" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
                                                         <a href="mailto:arnaldotomo@gmail.com">arnaldotomo@gmail.com</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0115a12" data-id="0115a12" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0115a12"
+                                            data-id="0115a12" data-element_type="column">
                                             <div class="elementor-widget-wrap">
                                             </div>
                                         </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9ebccc3" data-id="9ebccc3" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9ebccc3"
+                                            data-id="9ebccc3" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-a08e302 elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style=" --animate-delay: 600ms;" data-id="a08e302" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-a08e302 elementor-widget elementor-widget-heading"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 600ms;"
+                                                    data-id="a08e302" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
                                                         <h4 class="elementor-heading-title elementor-size-default">Vamos
-                                                            conversar sobre seu próximo projeto? <span class="has-accent-color">Fale comigo.</span></h4>
+                                                            conversar sobre seu próximo projeto? <span
+                                                                class="has-accent-color">Fale comigo.</span></h4>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-3326f20 elementor-widget elementor-widget-spacer" data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="3326f20" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="spacer.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-3326f20 elementor-widget elementor-widget-spacer"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;"
+                                                    data-id="3326f20" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="spacer.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-spacer">
                                                             <div class="elementor-spacer-inner"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="vlt-animate-element elementor-element elementor-element-061dfff elementor-widget elementor-widget-vlt-contact-form-7" data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;" data-id="061dfff" data-element_type="widget" data-settings="{" vlt_animated_widget_animation":"fadeinupsm"}"="" data-widget_type="vlt-contact-form-7.default">
+                                                <div class="vlt-animate-element elementor-element elementor-element-061dfff elementor-widget elementor-widget-vlt-contact-form-7"
+                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 700ms;"
+                                                    data-id="061dfff" data-element_type="widget" data-settings="{"
+                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
+                                                    data-widget_type="vlt-contact-form-7.default">
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-contact-form-7">
 
-                                                            <div class="wpcf7 no-js" id="wpcf7-f184-o1" lang="en-US" dir="ltr" data-wpcf7-id="184">
+                                                            <div class="wpcf7 no-js" id="wpcf7-f184-o1" lang="en-US"
+                                                                dir="ltr" data-wpcf7-id="184">
                                                                 <div class="screen-reader-response">
-                                                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                                                    <p role="status" aria-live="polite"
+                                                                        aria-atomic="true"></p>
                                                                     <ul></ul>
                                                                 </div>
-                                                                <form action="/wordpress/gilber/#wpcf7-f184-o1" method="post" class="wpcf7-form init demo" aria-label="Contact form" novalidate="novalidate" data-status="init">
+                                                                <form action="#"
+                                                                    method="post" class="wpcf7-form init demo"
+                                                                    aria-label="Contact form" novalidate="novalidate"
+                                                                    data-status="init">
                                                                     <div style="display: none;">
                                                                         <input type="hidden" name="_wpcf7" value="184">
-                                                                        <input type="hidden" name="_wpcf7_version" value="6.0.2">
-                                                                        <input type="hidden" name="_wpcf7_locale" value="en_US">
-                                                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f184-o1">
-                                                                        <input type="hidden" name="_wpcf7_container_post" value="0">
-                                                                        <input type="hidden" name="_wpcf7_posted_data_hash" value>
+                                                                        <input type="hidden" name="_wpcf7_version"
+                                                                            value="6.0.2">
+                                                                        <input type="hidden" name="_wpcf7_locale"
+                                                                            value="en_US">
+                                                                        <input type="hidden" name="_wpcf7_unit_tag"
+                                                                            value="wpcf7-f184-o1">
+                                                                        <input type="hidden"
+                                                                            name="_wpcf7_container_post" value="0">
+                                                                        <input type="hidden"
+                                                                            name="_wpcf7_posted_data_hash" value>
                                                                     </div>
                                                                     <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Seu Nome" value type="text" name="your-name"></span>
+                                                                        <span class="wpcf7-form-control-wrap"
+                                                                            data-name="your-name"><input size="40"
+                                                                                maxlength="400"
+                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                aria-required="true"
+                                                                                aria-invalid="false"
+                                                                                placeholder="Seu Nome" value type="text"
+                                                                                name="your-name"></span>
                                                                     </div>
                                                                     <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Seu Email" value type="email" name="your-email"></span>
+                                                                        <span class="wpcf7-form-control-wrap"
+                                                                            data-name="your-email"><input size="40"
+                                                                                maxlength="400"
+                                                                                class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                                                                                aria-required="true"
+                                                                                aria-invalid="false"
+                                                                                placeholder="Seu Email" value
+                                                                                type="email" name="your-email"></span>
                                                                     </div>
                                                                     <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="4" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Mensagem" name="your-message"></textarea></span>
+                                                                        <span class="wpcf7-form-control-wrap"
+                                                                            data-name="your-message"><textarea cols="40"
+                                                                                rows="4" maxlength="2000"
+                                                                                class="wpcf7-form-control wpcf7-textarea"
+                                                                                aria-invalid="false"
+                                                                                placeholder="Mensagem"
+                                                                                name="your-message"></textarea></span>
                                                                     </div>
-                                                                    <button class="wpcf7-form-control wpcf7-submit vlt-btn vlt-btn--primary">Enviar
+                                                                    <button
+                                                                        class="wpcf7-form-control wpcf7-submit vlt-btn vlt-btn--primary">Enviar
                                                                         Mensagem</button>
-                                                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                                                    <div class="wpcf7-response-output"
+                                                                        aria-hidden="true"></div>
                                                                 </form>
                                                             </div>
 
@@ -2153,7 +2865,8 @@
     <link rel="stylesheet" id="elementor-post-28-css" href="css/post-28.css" type="text/css" media="all">
     <link rel="stylesheet" id="widget-spacer-css" href="css/widget-spacer.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="widget-heading-css" href="css/widget-heading.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="widget-text-editor-css" href="css/widget-text-editor.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="widget-text-editor-css" href="css/widget-text-editor.min.css" type="text/css"
+        media="all">
     <link rel="stylesheet" id="elementor-post-26-css" href="css/post-26.css" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-post-24-css" href="css/post-24.css" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-post-22-css" href="css/post-22.css" type="text/css" media="all">
@@ -2186,7 +2899,8 @@
     <script type="text/javascript" id="gt_widget_script_80322897-js-before">
 
     </script>
-    <script src="js/float.js" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/wordpress/gilber/" data-gt-orig-domain="gasinforest.com" data-gt-widget-id="80322897" defer></script>
+    <script src="js/float.js" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/wordpress/gilber/"
+        data-gt-orig-domain="gasinforest.com" data-gt-widget-id="80322897" defer></script>
     <script type="text/javascript" src="js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
     <script type="text/javascript" src="js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
     <script type="text/javascript" src="js/core.min.js" id="jquery-ui-core-js"></script>
@@ -2322,4 +3036,3 @@
 </body>
 
 </html>
-

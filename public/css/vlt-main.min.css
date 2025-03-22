@@ -2541,18 +2541,23 @@ ul[class^="wp-block"] {
 }
 .vlt-slider-controls--style-2 .vlt-swiper-button-next:focus,
 .vlt-slider-controls--style-2 .vlt-swiper-button-prev:focus {
-  outline: 0;
+  outline: 100;
+  /* box-shadow: 5px 5px 15px rgba(119, 241, 248, 0.727);  */
 }
 .vlt-slider-controls--style-2 .vlt-swiper-button-next:hover,
 .vlt-slider-controls--style-2 .vlt-swiper-button-prev:hover {
-  color: #fff;
+  color: #37dbea;
+  /* box-shadow: 5px 5px 15px rgba(119, 241, 248, 0.727);  */
 }
 .vlt-slider-controls--style-2 .vlt-swiper-button-next svg,
 .vlt-slider-controls--style-2 .vlt-swiper-button-prev svg {
-  height: 2.5rem;
+  height: 3rem;
+  color: #37dbea;
+
 }
 .vlt-slider-controls--style-2 .vlt-swiper-button-prev {
   left: -6.25rem;
+
 }
 .vlt-slider-controls--style-2 .vlt-swiper-button-next {
   right: -6.25rem;

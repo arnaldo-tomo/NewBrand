@@ -346,8 +346,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toaste
     const devToast = document.getElementById('dev-toast');
     const closeToast = document.getElementById('close-toast');
-    const techTracker = document.getElementById('tech-tracker');
-    const privacyModal = document.getElementById('privacy-modal');
+    // const techTracker = document.getElementById('tech-tracker');
+    // const privacyModal = document.getElementById('privacy-modal');
     const closePrivacyModal = document.getElementById('close-privacy-modal');
     
     // Mostrar o toast em todas as visitas após um curto atraso

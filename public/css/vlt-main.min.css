@@ -1641,9 +1641,9 @@ ul[class^="wp-block"] {
 }
 .vlt-project-excerpt {
   font-size: 0.9375rem;
-  max-width: 24.375rem;
-  margin-top: 2.5rem;
-  margin-bottom: 4.6875rem;
+  max-width: 35rem;
+  /* margin-top: 2rem; */
+  /* margin-bottom: 4rem; */
   color: rgba(255, 255, 255, 0.6);
 }
 .vlt-is--single-product .vlt-main .vlt-product-hero-title {

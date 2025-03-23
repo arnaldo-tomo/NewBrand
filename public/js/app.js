@@ -503,4 +503,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+
+    // Cache force refresh
+    function forceRefresh() {
+        window.location.reload(true);
+      }
 });

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){const n=document.querySelector(".lang-dropdown");document.querySelector(".lang-dropdown-btn").addEventListener("click",function(t){t.preventDefault(),n.classList.toggle("active")}),document.addEventListener("click",function(t){n.contains(t.target)||n.classList.remove("active")})});

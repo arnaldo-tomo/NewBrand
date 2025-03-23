@@ -21,9 +21,12 @@
     <meta property="og:locale:alternate" content="es_ES" />
     {{-- og --}}
 
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.arnaldotomo.dev/">
+    <meta property="og:url" content="https://arnaldotomo.dev/">
     <meta property="og:title" content="Arnaldo Tomo | Engenheiro de Software">
     <meta property="og:description"
         content="Desenvolvedor Full Stack especializado em Laravel e React Native, criando soluções tecnológicas inovadoras em Moçambique.">
@@ -34,7 +37,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.arnaldotomo.dev/">
+    <meta property="twitter:url" content="https://arnaldotomo.dev/">
     <meta property="twitter:title" content="Arnaldo Tomo | Engenheiro de Software">
     <meta property="twitter:description"
         content="Desenvolvedor Full Stack especializado em Laravel e React Native, criando soluções tecnológicas inovadoras em Moçambique.">
@@ -48,7 +51,7 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.arnaldotomo.dev/">
+    <link rel="canonical" href="https://arnaldotomo.dev/">
 
     <!-- Preconnect to resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +64,7 @@
             , "@type": "Person"
             , "name": "Arnaldo Tomo"
             , "jobTitle": "Engenheiro de Software"
-            , "url": "https://www.arnaldotomo.dev"
+            , "url": "https://arnaldotomo.dev"
             , "image": "/https://arnaldotomo.dev/images/profile-preview.jpg"
             , "sameAs": [
                 "https://www.linkedin.com/in/arnaldo-tomo"
@@ -96,9 +99,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
-    <link rel="stylesheet" id="contact-form-7-css" href="css/styles.css" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-theme-style-css" href="css/style_1.css" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-gilroy-font-css" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="contact-form-7-css" href="css/styles.css?v=1.1" type="text/css" media="all">
+    <link rel="stylesheet" id="vlt-theme-style-css" href="css/style_1.css?v=1.1" type="text/css" media="all">
+    <link rel="stylesheet" id="vlt-gilroy-font-css" href="css/style.css?v=1.1" type="text/css" media="all">
     <link rel="stylesheet" id="LineIcons-css" href="css/LineIcons.css" type="text/css" media="all">
     <link rel="stylesheet" id="bootstrap-css" href="css/bootstrap.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="animate-css" href="css/animate.min.css" type="text/css" media="all">
@@ -107,7 +110,7 @@
     <link rel="stylesheet" id="pagepiling-css" href="css/jquery.pagepiling.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="superfish-css" href="css/superfish.css" type="text/css" media="all">
     <link rel="stylesheet" id="swiper-css" href="css/swiper.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-main-css-css" href="css/vlt-main.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="vlt-main-css-css" href="css/vlt-main.min.css?v=1.1" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-frontend-css" href="css/frontend.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-post-7-css" href="css/post-7.css" type="text/css" media="all">
@@ -379,6 +382,7 @@
                 <div class="vlt-navbar-inner--right">
                     <div class="d-flex align-items-center">
                         {{-- Seletor de idioma atualizado --}}
+                        
                         <div class="language-switcher">
                             @foreach(config('app.available_locales') as $localeCode => $languageName)
                             <a href="{{ url($localeCode) }}"
@@ -420,77 +424,50 @@
 
     <div class="vlt-offcanvas-menu">
 
-        <div class="vlt-offcanvas-menu__header">
-
-            <div class="vlt-language-switcher">
-
-                <div class="gtranslate_wrapper" id="gt-wrapper-80322897"></div>
-            </div>
-            <!-- /.vlt-language-switcher -->
-
-            <a class="vlt-menu-burger vlt-menu-burger--opened js-offcanvas-menu-close" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="square"
-                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                    <defs></defs>
-                    <path d="M18 6L6 18M6 6l12 12"></path>
-                </svg>
-            </a>
-            <!-- /.vlt-menu-burger -->
-
-        </div>
-        <!-- /.vlt-offcanvas-menu__header -->
-
         <nav class="vlt-offcanvas-menu__navigation">
 
             <ul id="menu-onepage-menu-1" class="sf-menu sf-menu-onepage">
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30" data-menuanchor="Home">
-                    <a href="#Home">Home</a>
+                    <a href="#Home">{{ __('menu.home') }}</a>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"
-                    data-menuanchor="About"><a href="#About">About</a></li>
+                    data-menuanchor="About"><a href="#About">{{ __('menu.about') }}</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"
-                    data-menuanchor="Projects"><a href="#Projects">Projects</a></li>
+                    data-menuanchor="Projects"><a href="#Projects">{{ __('menu.projects') }}</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"
-                    data-menuanchor="Education"><a href="#Education">Education</a></li>
+                    data-menuanchor="Education"><a href="#Education">{{ __('menu.education') }}</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"
-                    data-menuanchor="Testimonials"><a href="#Testimonials">Testimonials</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"
-                    data-menuanchor="Partners"><a href="#Partners">Partners</a></li>
+                    data-menuanchor="Testimonials"><a href="#Testimonials">{{ __('menu.testimonials') }}</a></li>
+          
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" data-menuanchor="Blog">
-                    <a href="#Blog">Blog</a>
+                    <a href="#Blog">{{ __('menu.blog') }}</a>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"
-                    data-menuanchor="Contact"><a href="#Contact">Contact</a></li>
+                    data-menuanchor="Contact"><a href="#Contact">{{ __('menu.contact') }}</a></li>
             </ul>
         </nav>
-        <!-- /.vlt-offcanvas-menu__navigation -->
+
 
         <div class="vlt-offcanvas-menu__footer">
 
             <div class="vlt-offcanvas-menu__socials">
 
-                <a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
-                        class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1"
-                    href="#" target="_blank"><i class="lnir-twitter-original"></i></a><a
-                    class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
-                        class="lnir-instagram"></i></a>
+                <a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i lass="lnir-facebook-filled"></i></a>
+                <a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-github-original"></i></a>
+                <a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i class="lnir-instagram"></i></a>
             </div>
-            <!-- /.vlt-offcanvas-menu__socials -->
 
             <div class="vlt-offcanvas-menu__copyright">
-                <p>© 2020 Copiright.<br>All rights
-                    reserved.</p>
+                <p>© 2020 Copiright.<br>All rights reserved.</p>
             </div>
-            <!-- /.vlt-offcanvas-menu__copyright -->
+
 
         </div>
-        <!-- /.vlt-offcanvas-menu__footer -->
+
 
     </div>
-    <!-- /.vlt-offcanvas-menu -->
 
     <div class="vlt-site-overlay"></div>
-    <!-- /.vlt-site-overlay -->
     <main class="vlt-main">
 
         <div class="vlt-fullpage-slider" data-loop-top data-loop-bottom data-speed="0">
@@ -508,15 +485,14 @@
                             <img src="images/home-mobile.jpg" alt="background" loading="lazy">
 
                         </div>
-                        <!-- /.vlt-section__ken-burn-background -->
+
 
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="28" class="elementor elementor-28">
                                 <section
                                     class="elementor-section elementor-top-section elementor-element elementor-element-ac63f0c elementor-section-boxed elementor-section-height-default"
-                                    data-id="ac63f0c" data-element_type="section" data-settings="{"
-                                    background_background":"classic"}"="">
+                                    data-id="ac63f0c" data-element_type="section" data-settings="{" background_background":"classic"}"="">
                                     <div class="elementor-container elementor-column-gap-extended">
                                         <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8001a0a"
                                             data-id="8001a0a" data-element_type="column">
@@ -560,8 +536,7 @@
                                                     data-widget_type="html.default">
                                                     <div class="elementor-widget-container">
                                                         <h1 class="vlt-large-heading text-uppercase small-heading">
-                                                            Software <br> <span
-                                                                class="has-accent-color">engineer.</span>
+                                                            {!! __('messages.software_engineer') !!}
                                                         </h1>
 
                                                     </div>
@@ -581,9 +556,9 @@
                                                     data-id="6d17e11" data-element_type="widget" data-settings="{"
                                                     vlt_animated_widget_animation":"fadeinupsm"}"=""
                                                     data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container">
-                                                        Não apenas construo aplicações - crio soluções que geram
-                                                        resultados reais.</div>
+                                                    <div class="elementor-widget-container"> 
+                                                        {{ __('messages.tagline') }}
+                                                        </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -592,16 +567,16 @@
                             </div>
 
                         </div>
-                        <!-- /.container -->
+
 
                     </div>
-                    <!-- /.vlt-section__content -->
+
 
                 </div>
-                <!-- /.vlt-section__vertical-align -->
+
 
             </div>
-            <!-- /.vlt-section -->
+
 
             <div class="vlt-section pp-scrollable" data-anchor="About" style>
 
@@ -612,25 +587,22 @@
                         <div class="container p-0">
 
                             <div data-elementor-type="wp-post" data-elementor-id="26" class="elementor elementor-26">
-                                <!-- Seção de experiência atualizada -->
+                          
                                 <section class="experience-section">
                                     <div class="blur-background"></div>
                                     <div class="container">
-                                        <!-- Grid principal: Sobre + Contador -->
+                                  
                                         <div class="experience-grid">
-                                            <!-- Coluna de texto/sobre mim -->
+                                   
                                             <div class="about-column">
-                                                <h2 class="section-title">Sobre Mim</h2>
-                                                <div class="about-content">
-                                                    <p>Engenheiro de software que transforma conceitos em código.
-                                                        Desenvolvo soluções inovadoras que resolvem problemas reais para
-                                                        empresas e ONGs em Moçambique.</p>
-                                                    <p>Especializado em criar experiências digitais completas, do
-                                                        backend ao frontend, com foco em performance e usabilidade.</p>
-                                                </div>
+                                            <h2 class="section-title">{!! __('messages.about_title') !!}</h2>
+                                            <div class="about-content">
+                                                <p>{!! __('messages.about_paragraph_1') !!}</p>
+                                                <p>{!! __('messages.about_paragraph_2') !!}</p>
                                             </div>
+                                        </div>
 
-                                            <!-- Coluna do contador criativo -->
+                                       
                                             <div class="counter-column">
                                                 <div class="experience-counter">
                                                     <div class="counter-digits">
@@ -643,10 +615,10 @@
                                                             <span></span>
                                                         </div>
                                                         <div class="counter-labels">
-                                                            <span class="counter-label">Anos</span>
-                                                            <span class="counter-value">Experiência</span>
-                                                            <span class="counter-sublabel">Desenvolvendo</span>
-                                                            <span class="counter-sublabel">Soluções</span>
+                                                            <span class="counter-label">{!! __('messages.years') !!}</span>
+                                                            <span class="counter-value">{!! __('messages.experience') !!}</span>
+                                                            <span class="counter-sublabel">{!! __('messages.developing') !!}</span>
+                                                            <span class="counter-sublabel">{!! __('messages.solutions') !!}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -655,16 +627,14 @@
 
                                         <!-- Stack Tecnológico -->
                                         <div class="tech-stack-section">
-                                            <h3 class="tech-stack-title">Stack Tecnológico</h3>
+                                            <h3 class="tech-stack-title">{!! __('messages.tech_stack_title') !!}</h3>
 
                                             <div class="tech-categories">
                                                 <div class="category-tabs">
-                                                    <button class="tab-button active"
-                                                        data-tab="backend">Backend</button>
+                                                    <button class="tab-button active" data-tab="backend">Backend</button>
                                                     <button class="tab-button" data-tab="frontend">Frontend</button>
                                                     <button class="tab-button" data-tab="mobile">Mobile</button>
-                                                    <button class="tab-button" data-tab="design">Design &
-                                                        DevOps</button>
+                                                    <button class="tab-button" data-tab="design">Design &  DevOps</button>
                                                 </div>
 
                                                 <div class="tech-tabs-content">
@@ -988,47 +958,13 @@
 
                                                                             <div class="vlt-project-excerpt">
 
-                                                                                <p>O <a style="color: #00b8d4">Fibec
-                                                                                        Taxi,</a> é uma plataforma
-                                                                                    inovadora de transporte que conecta
-                                                                                    passageiros a motoristas de forma
-                                                                                    rápida, segura e conveniente.
-                                                                                    Desenvolvido para oferecer uma
-                                                                                    experiência fluida e intuitiva, o
-                                                                                    aplicativo permite que os usuários
-                                                                                    solicitem corridas em poucos
-                                                                                    cliques, acompanhem o trajeto em
-                                                                                    tempo real e realizem pagamentos de
-                                                                                    forma integrada.</p>
-                                                                                <strong style="color: #00b8d4"
-                                                                                    class="text-uppercase">Principais
-                                                                                    Recursos:</strong>
+                                                                                <p>{!! __('messages.fibec_taxi_description') !!}</p>
+                                                                                <strong style="color: #00b8d4" class="text-uppercase">{!! __('messages.main_features') !!}</strong>
                                                                                 <ul class="list-unstyled">
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        Solicitação de corridas com
-                                                                                        geolocalização precisa </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        Rastreamento em tempo real do
-                                                                                        motorista </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        Opções de pagamento (dinheiro,
-                                                                                        carteira digital) </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        Interface intuitiva para
-                                                                                        motoristas e passageiros </li>
-
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_1') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_2') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_3') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_4') !!}</li>
                                                                                 </ul>
                                                                                 <div class="nado">
                                                                                     <a class=""
@@ -1057,85 +993,24 @@
 
                                                                         <article
                                                                             class="vlt-project post-63 portfolio type-portfolio status-publish has-post-thumbnail hentry"
-                                                                            data-image="/images/mtaco.png">
+                                                                            data-image="https://arnaldotomo.dev/public/mtaco.png">
 
                                                                             <h3 class="vlt-project-title">Meu Tako<span
                                                                                     class="has-accent-color">.</span>
                                                                             </h3>
                                                                             <div class="vlt-project-excerpt">
 
-
-                                                                                <p>O <a style="color: #00b8d4">Meu
-                                                                                        Tako</a> é um aplicativo que
-                                                                                    desenvolvi para ajudar amigos a
-                                                                                    controlarem suas despesas, receitas
-                                                                                    e orçamentos de forma simples e
-                                                                                    eficiente. Com uma interface
-                                                                                    intuitiva e funcionalidades
-                                                                                    poderosas, o app permite um
-                                                                                    acompanhamento detalhado da saúde
-                                                                                    financeira, ajudando na tomada de
-                                                                                    decisões mais conscientes.</p>
-                                                                                <strong style="color: #00b8d4"
-                                                                                    class="text-uppercase">Principais
-                                                                                    Recursos:</strong>
+                                                                                <p>{!! __('messages.meu_tako_description') !!}</p>
+                                                                                <strong style="color: #00b8d4" class="text-uppercase">{!! __('messages.main_features') !!}</strong>
                                                                                 <ul class="list-unstyled">
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        <strong>Cadastro de Despesas e
-                                                                                            Receitas</strong> – De
-                                                                                        maneira categorizada.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        <strong>Resumo Mensal</strong> -
-                                                                                        Visualize seus gastos e receitas
-                                                                                        agrupados por mês.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        <strong>Gráficos
-                                                                                            Interativos</strong> -
-                                                                                        Analise seus hábitos financeiros
-                                                                                        com gráficos.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        <strong>Objetivos
-                                                                                            Financeiros</strong> -
-                                                                                        Defina metas e acompanhe seu
-                                                                                        progresso.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        <strong>Sincronização na
-                                                                                            Nuvem</strong> - Acesse seus
-                                                                                        dados de qualquer dispositivo.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                        <strong>Notificações
-                                                                                            Inteligentes</strong> -
-                                                                                        Sobre vencimentos e dicas
-                                                                                        financeiras.
-
-                                                                                        .
-                                                                                    </li>
-
-
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_1') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_2') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_3') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_4') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_5') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_6') !!}</li>
                                                                                 </ul>
+                                             
                                                                             </div>
 
                                                                             <a class=""
@@ -1154,7 +1029,7 @@
 
                                                                         <article
                                                                             class="vlt-project post-64 portfolio type-portfolio status-publish has-post-thumbnail hentry"
-                                                                            data-image="/images/reflexoes.png">
+                                                                            data-image="/images/Reflexoes.png">
 
                                                                             <h3 class="vlt-project-title">Reflexões<span
                                                                                     class="has-accent-color">.</span>
@@ -1162,63 +1037,18 @@
 
                                                                             <div class="vlt-project-excerpt">
 
-                                                                                <p>O <a
-                                                                                        style="color: #00b8d4">Reflexões</a>
-                                                                                    é um aplicativo criado para quem
-                                                                                    busca inspiração, motivação e
-                                                                                    pensamentos profundos para
-                                                                                    compartilhar no dia a dia. Com uma
-                                                                                    ampla coleção de frases organizadas
-                                                                                    por categorias, o app oferece
-                                                                                    mensagens para diferentes momentos e
-                                                                                    sentimentos, ajudando os usuários a
-                                                                                    expressarem suas emoções de forma
-                                                                                    criativa e impactante.</p>
-                                                                                <strong style="color: #00b8d4"
-                                                                                    class="text-uppercase">Principais
-                                                                                    Recursos:</strong>
+                                                                                <p>{!! __('messages.reflexoes_description') !!}</p>
+                                                                                <strong style="color: #00b8d4" class="text-uppercase">{!! __('messages.main_features') !!}</strong>
                                                                                 <ul class="list-unstyled">
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                            Citações de motivação, amor, amizade, fé e muito mais.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                            Encontre frases para qualquer ocasião.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                            Crie frases personalizadas para redes sociais.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                            Poste diretamente no WhatsApp, Instagram, Facebook e outras plataformas.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                            Salve suas frases preferidas para acessar facilmente.
-                                                                                    </li>
-                                                                                    <li style="display: hidden"><i
-                                                                                            class="fa fa-check"
-                                                                                            aria-hidden="true"
-                                                                                            style="color: #00b8d4"></i>
-                                                                                            Receba uma frase inspiradora todos os dias.
-
-
-                                                                                    </li>
-
-
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_1') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_2') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_3') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_4') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_5') !!}</li>
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_6') !!}</li>
                                                                                 </ul>
+                                                                           
+                                                                                
                                                                             </div>
 
                                                                             <a class=""
@@ -1444,12 +1274,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Licenciatura em Engenharia
-                                                                                            Informática com
-                                                                                            especialização em
-                                                                                            desenvolvimento de software,
-                                                                                            sistemas de informação e
-                                                                                            redes de computadores.</p>
+                                                                                        <p>{!! __('messages.education') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1473,13 +1298,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Python Essentials 1 & 2 pela
-                                                                                            Cisco Networking Academy,
-                                                                                            cobrindo fundamentos de
-                                                                                            programação Python,
-                                                                                            estruturas de dados, e
-                                                                                            desenvolvimento de
-                                                                                            aplicações.</p>
+                                                                                        <p>{!! __('messages.python_course') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1503,12 +1322,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Gestão de ameaças
-                                                                                            cibernéticas, análise de
-                                                                                            riscos, estratégias de
-                                                                                            mitigação e resposta a
-                                                                                            incidentes de segurança em
-                                                                                            ambientes digitais.</p>
+                                                                                        <p>{!! __('messages.cybersecurity_skills') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1535,13 +1349,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Fundamentos de ciência de
-                                                                                            dados, análise estatística,
-                                                                                            visualização de dados e
-                                                                                            introdução a técnicas de
-                                                                                            machine learning para
-                                                                                            extrair insights valiosos.
-                                                                                        </p>
+                                                                                        <p>{!! __('messages.data_science_skills') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1565,13 +1373,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Proteção de dispositivos
-                                                                                            finais contra ameaças
-                                                                                            cibernéticas, implementação
-                                                                                            de políticas de segurança e
-                                                                                            gerenciamento de
-                                                                                            vulnerabilidades em
-                                                                                            endpoints.</p>
+                                                                                        <p>{!! __('messages.endpoint_security') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1594,13 +1396,7 @@
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>Técnicas éticas de hacking,
-                                                                                            identificação de
-                                                                                            vulnerabilidades, testes de
-                                                                                            penetração e métodos de
-                                                                                            proteção de sistemas contra
-                                                                                            invasões maliciosas.</p>
+                                                                                        class="vlt-timeline-item__text"><p>{!! __('messages.ethical_hacking') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1626,13 +1422,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Princípios básicos de
-                                                                                            segurança cibernética,
-                                                                                            identificação de ameaças
-                                                                                            digitais, técnicas de
-                                                                                            proteção de dados e melhores
-                                                                                            práticas para segurança
-                                                                                            online.</p>
+                                                                                        <p>{!! __('messages.cybersecurity_basics') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1656,12 +1446,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Conceitos fundamentais da
-                                                                                            Internet das Coisas,
-                                                                                            arquitetura de sistemas IoT,
-                                                                                            protocolos de comunicação e
-                                                                                            desenvolvimento de soluções
-                                                                                            conectadas.</p>
+                                                                                        <p>{!! __('messages.iot_fundamentals') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1685,12 +1470,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Fundamentos de JavaScript,
-                                                                                            desenvolvimento web
-                                                                                            front-end, manipulação do
-                                                                                            DOM e criação de aplicações
-                                                                                            web interativas e dinâmicas.
-                                                                                        </p>
+                                                                                        <p>{!! __('messages.javascript_fundamentals') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1718,13 +1498,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Programação em Python,
-                                                                                            estruturas de dados,
-                                                                                            funções, orientação a
-                                                                                            objetos e desenvolvimento de
-                                                                                            aplicações práticas com uma
-                                                                                            das linguagens mais
-                                                                                            populares.</p>
+                                                                                        <p>{!! __('messages.python_programming') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1748,13 +1522,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Programação em typeScript,
-                                                                                            estruturas de dados,
-                                                                                            funções, orientação a
-                                                                                            objetos e desenvolvimento de
-                                                                                            aplicações práticas com uma
-                                                                                            das linguagens mais
-                                                                                            populares.</p>
+                                                                                        <p>{!! __('messages.typescript_programming') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1778,12 +1546,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Estratégias e técnicas para
-                                                                                            proteger redes contra
-                                                                                            ataques, detecção de
-                                                                                            intrusões, configuração de
-                                                                                            firewalls e proteção da
-                                                                                            infraestrutura de rede.</p>
+                                                                                        <p>{!! __('messages.network_security') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1810,12 +1573,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Estratégias e técnicas para
-                                                                                            proteger redes contra
-                                                                                            ataques, detecção de
-                                                                                            intrusões, configuração de
-                                                                                            firewalls e proteção da
-                                                                                            infraestrutura de rede.</p>
+                                                                                        <p>{!! __('messages.network_security') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1839,13 +1597,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Programação em Python,
-                                                                                            estruturas de dados,
-                                                                                            funções, orientação a
-                                                                                            objetos e desenvolvimento de
-                                                                                            aplicações práticas com uma
-                                                                                            das linguagens mais
-                                                                                            populares.</p>
+                                                                                        <p>{!! __('messages.python_programming') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1870,12 +1622,7 @@
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>Conceitos e práticas de
-                                                                                            segurança digital, proteção
-                                                                                            de dados pessoais,
-                                                                                            privacidade online e medidas
-                                                                                            de prevenção contra ameaças
-                                                                                            digitais modernas.</p>
+                                                                                        <p>{!! __('messages.digital_security') !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -2008,21 +1755,8 @@
                                                     vlt_animated_widget_animation":"fadeinupsm"}"=""
                                                     data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default"> O
-                                                            que dizem sobre mim</h3>
-                                                        <p class="text-white">Se perguntar aos meus amigos, vão te dizer
-                                                            que sou o cara que resolve qualquer problema de tecnologia…
-                                                            e que provavelmente vai te julgar se usares um cabo USB de
-                                                            qualidade duvidosa. <br> Se perguntar aos meus colegas, vão
-                                                            dizer que sou profissional, comprometido e que tenho a
-                                                            incrível habilidade de transformar ideias vagas em soluções
-                                                            digitais reais. <br>
-                                                            Se perguntar à minha família… bem, eles ainda acham que
-                                                            "trabalho com computadores" é uma descrição suficiente.</p>
-                                                        <br>
-
-
-                                                        </p>
+                                                        <h3 class="elementor-heading-title elementor-size-default">{!! __('messages.testimonials_title') !!}</h3>
+                                                        <p class="text-white">{!! __('messages.testimonials_description') !!}</p>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-widget-container">
@@ -2063,21 +1797,7 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
 
-                                                                            <div class="vlt-testimonial__text"> "A
-                                                                                abordagem metódica e atenção aos
-                                                                                detalhes do Arnaldo fizeram toda a
-                                                                                diferença em nosso projeto da <a
-                                                                                    target="_blank"
-                                                                                    href="https://www.linkedin.com/posts/corneldermoz_corneldermoaexambique-codelabs-corneldercodelabs-activity-7159126754794561536-CHo0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAUdGsBQz350LAutJPFaNbAq_2yCUf8TCg"
-                                                                                    style="color: #00b8d4">Codelabs</a>.
-                                                                                Ele não apenas entregou uma solução
-                                                                                tecnicamente sólida, mas também se
-                                                                                preocupou em entender as necessidades do
-                                                                                usuário final. Sua experiência com
-                                                                                Laravel e React Native acelerou
-                                                                                significativamente nosso processo de
-                                                                                desenvolvimento."
-                                                                            </div>
+                                                                            <div class="vlt-testimonial__text">{!! __('messages.codelabs_testimonial') !!}</div>
 
                                                                             <div class="nado vlt-testimonial__meta">
 
@@ -2115,21 +1835,7 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
 
-                                                                            <div class="vlt-testimonial__text">
-                                                                                "Trabalhar com Arnaldo foi uma das
-                                                                                melhores decisões para o crescimento do
-                                                                                <a style="color: #00b8d4"
-                                                                                    href="https://play.google.com/store/apps/details?id=com.fibec.customer"
-                                                                                    target="_blank">FibecTaxi.</a> Desde
-                                                                                o início, ele demonstrou
-                                                                                profissionalismo, criatividade e uma
-                                                                                capacidade impressionante de transformar
-                                                                                ideias em soluções digitais eficientes.
-                                                                                A plataforma que ele desenvolveu atendeu
-                                                                                perfeitamente às nossas necessidades,
-                                                                                trazendo mais praticidade para nossos
-                                                                                clientes e otimizando a nossa operação."
-                                                                            </div>
+                                                                            <div class="vlt-testimonial__text">{!! __('messages.fibec_taxi_testimonial') !!}</div>
 
                                                                             <div class="nado vlt-testimonial__meta">
 
@@ -2168,19 +1874,7 @@
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
 
-                                                                            <div class="vlt-testimonial__text"> "Arnaldo
-                                                                                é um desenvolvedor talentoso e altamente
-                                                                                dedicado, com uma abordagem estratégica
-                                                                                para soluções web e mobile. Seu domínio
-                                                                                de tecnologias modernas e sua atenção
-                                                                                aos detalhes fazem dele um profissional
-                                                                                excepcional. Além disso, sua capacidade
-                                                                                de resolver problemas complexos e
-                                                                                melhorar a experiência do usuário é
-                                                                                impressionante. Trabalhar com ele é
-                                                                                sempre uma experiência produtiva e
-                                                                                inspiradora!"
-                                                                            </div>
+                                                                            <div class="vlt-testimonial__text">{!! __('messages.general_testimonial') !!}</div>
 
                                                                             <div class="nado vlt-testimonial__meta">
 
@@ -2622,7 +2316,8 @@
                                                     data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
                                                         <h3 class="elementor-heading-title elementor-size-default">
-                                                            Contato</h3>
+                                                            {{ __('menu.contact') }}
+                                                            </h3>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-8f5411f elementor-widget elementor-widget-spacer"
@@ -2640,10 +2335,7 @@
                                                     data-id="2113bd3" data-element_type="widget" data-settings="{"
                                                     vlt_animated_widget_animation":"fadeinupsm"}"=""
                                                     data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container">
-                                                        Estou disponível para novos projetos e parcerias. Entre em
-                                                        contato e vamos transformar suas ideias em realidade digital.
-                                                    </div>
+                                                    <div class="elementor-widget-container">{!! __('messages.availability') !!}</div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-384fa45 elementor-widget elementor-widget-spacer"
                                                     data-id="384fa45" data-element_type="widget" data-settings="{"
@@ -3021,12 +2713,7 @@
                 , "lightbox_title_src": "title"
                 , "lightbox_description_src": "description"
             }
-            , "post": {
-                "id": 48
-                , "title": "Gilber%20%E2%80%93%20Personal%20CV%2FResume%20WordPress%20Theme"
-                , "excerpt": ""
-                , "featuredImage": false
-            }
+          
         };
         /* ]]> */
 

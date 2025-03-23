@@ -1,11 +1,11 @@
 <?php
 return [
-    'home' => 'Início',
+    'home' => 'Branch Main',
     'about' => 'Sobre',
     'projects' => 'Projetos',
     'education' => 'Educação',
     'testimonials' => 'Depoimentos',
     'partners' => 'Parceiros',
-    'blog' => 'Blog',
+    'blog' => 'Insights',
     'contact' => 'Contacto',
 ];

@@ -10,10 +10,30 @@
             <a href="{{ route('dashboard') }}" class="mr-5 flex items-center space-x-2" wire:navigate>
                 <x-app-logo />
             </a>
-
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="home" :href="route('visitors.analytics')" :current="request()->routeIs('visitors.analytics')" wire:navigate>{{ __('Visitantes') }}</flux:navlist.item>
+                    <flux:navlist.item icon="home" :href="route('portfolio.projects')" :current="request()->routeIs('portfolio.projects')" wire:navigate>{{ __('Projetos') }}</flux:navlist.item>
+                    <flux:navlist.item icon="envelope" :href="route('contacts.index')" :current="request()->routeIs('contacts.index')" wire:navigate>{{ __('Mensagens') }}</flux:navlist.item>
+                </flux:navlist.group>
+
+                <flux:navlist.group :heading="__('Conteúdo')" class="grid">
+                    <flux:navlist.item icon="document-text" :href="route('blog.posts')" :current="request()->routeIs('blog.posts')" wire:navigate>{{ __('Blog') }}</flux:navlist.item>
+                    <flux:navlist.item icon="folder" :href="route('portfolio.categories')" :current="request()->routeIs('portfolio.categories')" wire:navigate>{{ __('Categorias') }}</flux:navlist.item>
+                    <flux:navlist.item icon="photo" :href="route('media.library')" :current="request()->routeIs('media.library')" wire:navigate>{{ __('Mídia') }}</flux:navlist.item>
+                </flux:navlist.group>
+
+                <flux:navlist.group :heading="__('Performance')" class="grid">
+                    <flux:navlist.item icon="chart-bar" :href="route('site.performance')" :current="request()->routeIs('site.performance')" wire:navigate>{{ __('Métricas') }}</flux:navlist.item>
+                    <flux:navlist.item icon="home" :href="route('seo.dashboard')" :current="request()->routeIs('seo.dashboard')" wire:navigate>{{ __('SEO') }}</flux:navlist.item>
+                    <flux:navlist.item icon="shield-check" :href="route('security.overview')" :current="request()->routeIs('security.overview')" wire:navigate>{{ __('Segurança') }}</flux:navlist.item>
+                </flux:navlist.group>
+
+                <flux:navlist.group :heading="__('Configurações')" class="grid">
+                    <flux:navlist.item icon="user" :href="route('settings.profile')" :current="request()->routeIs('settings.profile')" wire:navigate>{{ __('Perfil') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cog" :href="route('settings.general')" :current="request()->routeIs('settings.general')" wire:navigate>{{ __('Geral') }}</flux:navlist.item>
+                    <flux:navlist.item icon="key" :href="route('api.tokens')" :current="request()->routeIs('api.tokens')" wire:navigate>{{ __('API Keys') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 

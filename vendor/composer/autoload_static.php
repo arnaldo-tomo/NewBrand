@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit326722d5460f937123577e0b4c082802
+class ComposerStaticInit1010b285511e9f0cef24db77cf6a0523
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -342,8 +342,8 @@ class ComposerStaticInit326722d5460f937123577e0b4c082802
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -391,8 +391,8 @@ class ComposerStaticInit326722d5460f937123577e0b4c082802
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri',
-            1 => __DIR__ . '/..' . '/league/uri-interfaces',
+            0 => __DIR__ . '/..' . '/league/uri-interfaces',
+            1 => __DIR__ . '/..' . '/league/uri',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -546,9 +546,12 @@ class ComposerStaticInit326722d5460f937123577e0b4c082802
         'App\\Http\\Middleware\\SetLocale' => __DIR__ . '/../..' . '/app/Http/Middleware/SetLocale.php',
         'App\\Livewire\\Actions\\Logout' => __DIR__ . '/../..' . '/app/Livewire/Actions/Logout.php',
         'App\\Livewire\\Auth\\Register' => __DIR__ . '/../..' . '/app/Livewire/Auth/Register.php',
+        'App\\Livewire\\Forms\\LoginForm' => __DIR__ . '/../..' . '/app/Livewire/Forms/LoginForm.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\VoltServiceProvider' => __DIR__ . '/../..' . '/app/Providers/VoltServiceProvider.php',
+        'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
+        'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -6887,9 +6890,11 @@ class ComposerStaticInit326722d5460f937123577e0b4c082802
         'Tests\\Feature\\Auth\\EmailVerificationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/EmailVerificationTest.php',
         'Tests\\Feature\\Auth\\PasswordConfirmationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/PasswordConfirmationTest.php',
         'Tests\\Feature\\Auth\\PasswordResetTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/PasswordResetTest.php',
+        'Tests\\Feature\\Auth\\PasswordUpdateTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/PasswordUpdateTest.php',
         'Tests\\Feature\\Auth\\RegistrationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/RegistrationTest.php',
         'Tests\\Feature\\DashboardTest' => __DIR__ . '/../..' . '/tests/Feature/DashboardTest.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
+        'Tests\\Feature\\ProfileTest' => __DIR__ . '/../..' . '/tests/Feature/ProfileTest.php',
         'Tests\\Feature\\Settings\\PasswordUpdateTest' => __DIR__ . '/../..' . '/tests/Feature/Settings/PasswordUpdateTest.php',
         'Tests\\Feature\\Settings\\ProfileUpdateTest' => __DIR__ . '/../..' . '/tests/Feature/Settings/ProfileUpdateTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
@@ -6942,9 +6947,9 @@ class ComposerStaticInit326722d5460f937123577e0b4c082802
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit326722d5460f937123577e0b4c082802::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit326722d5460f937123577e0b4c082802::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit326722d5460f937123577e0b4c082802::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1010b285511e9f0cef24db77cf6a0523::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1010b285511e9f0cef24db77cf6a0523::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit1010b285511e9f0cef24db77cf6a0523::$classMap;
 
         }, null, ClassLoader::class);
     }

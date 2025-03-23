@@ -1,10 +1,41 @@
+<?php
 
-<!-- HTML permanece o mesmo -->
+use App\Models\User;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
+use Livewire\Attributes\Layout;
+use Livewire\Volt\Component;
+
+new #[Layout('components.layouts.auth')] class extends Component {
+    public string $name = '';
+    public string $email = '';
+    public string $password = '';
+    public string $password_confirmation = '';
+
+    /**
+     * Handle an incoming registration request.
+     */
+    public function register(): void
+    {
+        $validated = $this->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
+            'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
+        ]);
+
+        $validated['password'] = Hash::make($validated['password']);
+
+        event(new Registered(($user = User::create($validated))));
+
+        Auth::login($user);
+
+        $this->redirectIntended(route('dashboard', absolute: false), navigate: true);
+    }
+}; ?>
 
 <div class="flex flex-col gap-6">
-    <button type="button" wire:click="testMethod" class="px-4 py-2 bg-gray-200">
-        Test Livewire
-    </button>
     <x-auth-header :title="__('Create an account')" :description="__('Enter your details below to create your account')" />
 
     <!-- Session Status -->
@@ -13,15 +44,14 @@
     <form wire:submit="register" class="flex flex-col gap-6">
         <!-- Name -->
         <flux:input
-    wire:model="name"
-    :label="__('Name')"
-    type="text"
-    required
-    autofocus
-    autocomplete="name"
-    :placeholder="__('Full name')"
-/>
-@error('name') <div class="mt-1 text-red-500">{{ $message }}</div> @enderror
+            wire:model="name"
+            :label="__('Name')"
+            type="text"
+            required
+            autofocus
+            autocomplete="name"
+            :placeholder="__('Full name')"
+        />
 
         <!-- Email Address -->
         <flux:input
@@ -53,20 +83,14 @@
             :placeholder="__('Confirm password')"
         />
 
-        @if (session()->has('message'))
-    <div class="p-4 mb-4 text-green-900 bg-green-100">
-        {{ session('message') }}
-    </div>
-@endif
-
         <div class="flex items-center justify-end">
-            <button type="submit" class="w-full px-4 py-2 text-white bg-blue-500 rounded">
+            <flux:button type="submit" variant="primary" class="w-full">
                 {{ __('Create account') }}
-            </button>
+            </flux:button>
         </div>
     </form>
 
-    <div class="space-x-1 text-sm text-center text-zinc-600">
+    <div class="space-x-1 text-center text-sm text-zinc-600 dark:text-zinc-400">
         {{ __('Already have an account?') }}
         <flux:link :href="route('login')" wire:navigate>{{ __('Log in') }}</flux:link>
     </div>

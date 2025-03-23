@@ -322,9 +322,9 @@
     class="home page-template page-template-template-fullpage-slider page-template-template-fullpage-slider-php page page-id-48 wp-embed-responsive no-mobile animsition elementor-default elementor-kit-7 elementor-page elementor-page-48">
 
     <div class="vlt-fixed-socials"><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
-                class="lnir-facebook-filled"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#"
-            target="_blank"><i class="lnir-twitter-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1"
-            href="#" target="_blank"><i class="lnir-instagram"></i></a></div>
+                class="lnir-linkedin"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#"
+            target="_blank"><i class="lnir-github-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1"
+            href="https://www.instagram.com/arnaldo_tomo/" target="_blank"><i class="lnir-instagram"></i></a></div>
     {{-- header.blade.php - com links atualizados --}}
     <header class="vlt-header">
         <div class="vlt-navbar vlt-navbar--main vlt-navbar--transparent vlt-navbar--sticky">

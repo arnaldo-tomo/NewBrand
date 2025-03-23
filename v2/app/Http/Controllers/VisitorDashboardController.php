@@ -137,4 +137,5 @@ class VisitorDashboardController extends Controller
             'visitantesPorHora'
         ));
     }
+
 }

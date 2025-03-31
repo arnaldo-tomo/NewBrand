@@ -14,7 +14,7 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\ApiTokenController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
-
+use Request;
 
 
 Route::get('/', function () {
@@ -38,6 +38,15 @@ Route::group([
 
 });
 
+Route::View('entrar','verify-pin');
+Route::post('/verification.pin.verify', function (Request $request) {
+return Request::all();
+    $request->authenticate();
+
+    $request->session()->regenerate();
+
+    return redirect()->intended(route('dashboard', absolute: false));
+})->name('verification.pin.verify');
 // Rota para mudar de idioma
 Route::get('language/{newLocale}', function ($newLocale) {
     // Verifica se o idioma solicitado está disponível
@@ -136,5 +145,12 @@ Route::delete('/api/tokens/{token}', [ApiTokenController::class, 'destroy'])->na
 });
 
 Route::post('/visitor-tracking', [VisitorTrackingController::class, 'store'])->name('visitor.tracking.store');
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
 require __DIR__.'/auth.php';

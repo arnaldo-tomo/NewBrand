@@ -49,7 +49,7 @@
   .language-switcher {
     margin-right: 10px;
   }
-  
+
   .language-switcher .lang-link {
     padding: 3px 6px;
     font-size: 12px;
@@ -502,16 +502,16 @@ form.submitting .wpcf7-spinner {
     :root {
         --panel-width: 320px;
     }
-    
+
     .tech-tracker {
         bottom: 20px;
         right: 20px;
     }
-    
+
     .info-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .features-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -670,19 +670,19 @@ form.submitting .wpcf7-spinner {
     .popup-header h2 {
         font-size: 18px;
     }
-    
+
     .popup-body p {
         font-size: 14px;
     }
-    
+
     .feature-item {
         font-size: 11px;
     }
-    
+
     .feature-item i {
         font-size: 20px;
     }
-    
+
     .primary-button, .secondary-button {
         padding: 10px 20px;
         font-size: 14px;
@@ -762,7 +762,7 @@ form.submitting .wpcf7-spinner {
         right: 20px;
         max-width: none;
     }
-    
+
     .toast-icon {
         font-size: 20px;
     }
@@ -1146,19 +1146,19 @@ form.submitting .wpcf7-spinner {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .tech-cards {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .digit {
         font-size: 140px;
     }
-    
+
     .counter-label, .counter-value {
         font-size: 24px;
     }
-    
+
     .counter-sublabel {
         font-size: 16px;
     }
@@ -1168,11 +1168,11 @@ form.submitting .wpcf7-spinner {
     .experience-section {
         padding: 60px 0;
     }
-    
+
     .tech-cards {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .digit {
         font-size: 120px;
     }
@@ -1182,15 +1182,15 @@ form.submitting .wpcf7-spinner {
     .digit {
         font-size: 100px;
     }
-    
+
     .counter-separator span {
         height: 50px;
     }
-    
+
     .counter-label, .counter-value {
         font-size: 20px;
     }
-    
+
     .tech-cards {
         grid-template-columns: 1fr;
     }
@@ -1530,11 +1530,11 @@ form.submitting .wpcf7-spinner {
         align-items: flex-start;
         gap: 20px;
     }
-    
+
     .certification-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1544,16 +1544,16 @@ form.submitting .wpcf7-spinner {
     .certification-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .timeline-content {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .institution-logo {
         align-self: center;
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
@@ -1575,19 +1575,19 @@ form.submitting .wpcf7-spinner {
     padding: 0; /* Remove padding extra */
     line-height: -50; /* Ajusta altura da linha */
   }
-  
+
   @media (max-width: 768px) {
     .small-heading {
       font-size: 3rem !important;
     }
   }
-  
+
   @media (max-width: 480px) {
     .small-heading {
       font-size: 5rem !important;
     }
   }
-  
+
 
 
   /* comentarios */
@@ -1691,7 +1691,7 @@ form.submitting .wpcf7-spinner {
     flex: auto;
     display: flex;
 }
-  
+
 .hore{
     flex: auto;
     display: flex;

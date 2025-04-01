@@ -38,14 +38,35 @@ Route::group([
 
 });
 
-Route::View('entrar','verify-pin');
+Route::View('me','verify-pin');
+
+
 Route::post('/verification.pin.verify', function (Request $request) {
-return Request::all();
-    $request->authenticate();
+   // Capturar o array 'totp' da requisição
+   $totpArray = $request->input('totp');
 
-    $request->session()->regenerate();
+   // Verificar se o array existe e tem 6 elementos
+   if (!$totpArray || $totpArray=== 6474687) {
+       return back()->withErrors(['totp' => 'The TOTP code must be 6 digits.']);
+   }
 
-    return redirect()->intended(route('dashboard', absolute: false));
+   // Juntar os dígitos em uma string única
+   $totpCode = implode('', $totpArray);
+
+   // Validar que o código contém apenas números
+   if (!ctype_digit($totpCode)) {
+       return back()->withErrors(['totp' => 'The TOTP code must contain only numbers.']);
+   }
+
+   if($totpCode==="6474687"){
+
+
+       $request->authenticate();
+
+       $request->session()->regenerate();
+
+       return redirect()->intended(route('dashboard', absolute: false));
+    }
 })->name('verification.pin.verify');
 // Rota para mudar de idioma
 Route::get('language/{newLocale}', function ($newLocale) {

@@ -12,9 +12,10 @@ use App\Http\Controllers\SeoController;
 use App\Http\Controllers\SecurityController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\ApiTokenController;
+use App\Http\Controllers\auth_otp;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
-use Request;
+
 
 
 Route::get('/', function () {
@@ -40,34 +41,7 @@ Route::group([
 
 Route::View('me','verify-pin');
 
-
-Route::post('/verification.pin.verify', function (Request $request) {
-   // Capturar o array 'totp' da requisição
-   $totpArray = $request->input('totp');
-
-   // Verificar se o array existe e tem 6 elementos
-   if (!$totpArray || $totpArray=== 6474687) {
-       return back()->withErrors(['totp' => 'The TOTP code must be 6 digits.']);
-   }
-
-   // Juntar os dígitos em uma string única
-   $totpCode = implode('', $totpArray);
-
-   // Validar que o código contém apenas números
-   if (!ctype_digit($totpCode)) {
-       return back()->withErrors(['totp' => 'The TOTP code must contain only numbers.']);
-   }
-
-   if($totpCode==="6474687"){
-
-
-       $request->authenticate();
-
-       $request->session()->regenerate();
-
-       return redirect()->intended(route('dashboard', absolute: false));
-    }
-})->name('verification.pin.verify');
+Route::post('/verification.pin.verify', [auth_otp::class,'auth'])->name('verification.pin.verify');
 // Rota para mudar de idioma
 Route::get('language/{newLocale}', function ($newLocale) {
     // Verifica se o idioma solicitado está disponível

@@ -92,12 +92,6 @@
                                     </div>
                                 @enderror
 
-                                @error('totp')
-                                <div class="p-3 mt-3 text-sm text-white bg-red-600 rounded-lg">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-
                                 <div class="mt-6 space-y-3">
                                     <button type="submit"
                                         class="flex items-center justify-center w-full px-4 py-3 text-base font-medium text-white transition-all border border-transparent rounded-lg shadow-sm bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2">

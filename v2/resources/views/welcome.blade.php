@@ -386,9 +386,8 @@
 
                         <div class="language-switcher">
                             @foreach(config('app.available_locales') as $localeCode => $languageName)
-                            <a href="{{ url($localeCode) }}"
-                                class="lang-link {{ app()->getLocale() == $localeCode ? 'active' : '' }}"
-                                title="{{ $languageName }}">
+                            
+                            <a href="{{ url($localeCode) }}"  class="lang-link {{ app()->getLocale() == $localeCode ? 'active' : '' }}"  title="{{ $languageName }}">
                                 {{ strtoupper($localeCode) }}
                             </a>
                             @endforeach
@@ -723,10 +722,10 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/typescript-2.svg"
                                                                         alt="JavaScript">
                                                                 </div>
-                                                                <h5>JavaScript</h5>
+                                                                <h5>TypeScript</h5>
                                                                 <div class="tech-dots">
                                                                     <span class="dot filled"></span>
                                                                     <span class="dot filled"></span>
@@ -803,7 +802,7 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://images.icon-icons.com/2389/PNG/512/expo_logo_icon_145293.png"
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/expo-1.svg"
                                                                         alt="Swift">
                                                                 </div>
                                                                 <h5>Expo</h5>

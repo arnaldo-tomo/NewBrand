@@ -56,7 +56,9 @@
 
                                 <div class="flex items-center justify-between mt-4">
                                     <label class="block text-sm font-medium text-gray-700">TOTP Code</label>
-                                    <span id="timer" class="font-medium text-cyan-600"></span>
+                                    @if(!session('pin'))
+                                    <span id="timer" class="font-medium text-cyan-600 animate-ping "></span>
+                                    @endif
                                 </div>
 
                                 <div class="flex justify-between gap-x-2 sm:gap-x-3">
@@ -86,11 +88,11 @@
                                         placeholder="•">
                                 </div>
 
-                                @error('totp')
-                                    <div class="p-3 mt-3 text-sm text-white bg-red-600 rounded-lg">
-                                        {{ $message }}
+                                @if(session('pin'))
+                                    <div class="p-3 mt-3 text-sm text-white bg-rose-900/50 animate-pulse rounded-lg">
+                                       {{session('pin')}}
                                     </div>
-                                @enderror
+                                @endif
 
                                 <div class="mt-6 space-y-3">
                                     <button type="submit"

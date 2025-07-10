@@ -105,9 +105,8 @@ class VisitorDashboardController extends Controller
             ->avg();
 
         // Últimos visitantes
-        $ultimosVisitantes = VisitorTracking::orderByDesc('created_at')
-            ->limit(10)
-            ->get();
+     $ultimosVisitantes = VisitorTracking::latest()
+        ->paginate(15);
 
         // Visitantes por hora do dia
         $visitantesPorHora = VisitorTracking::select(

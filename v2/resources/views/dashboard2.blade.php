@@ -200,5 +200,6 @@
             <canvas id="recursosChart"></canvas>
         </div>
     </div>
+    
     </div>
 </x-layouts.app>

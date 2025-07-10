@@ -15,7 +15,7 @@ use App\Http\Controllers\ApiTokenController;
 use App\Http\Controllers\auth_otp;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
-
+use App\Models\Project;
 
 
 Route::get('/', function () {
@@ -23,14 +23,18 @@ Route::get('/', function () {
 });
 
 // Rotas com prefixo de idioma
-Route::group([
-    'prefix' => '{locale}',
-    'where' => ['locale' => 'en|pt'], // Define explicitamente os idiomas permitidos
+Route::group([  'prefix' => '{locale}', 'where' => ['locale' => 'en|pt'], // Define explicitamente os idiomas permitidos
      'middleware' => \App\Http\Middleware\SetLocale::class,
 ], function () {
+
+
     // Página inicial
     Route::get('/', function () {
-        return view('welcome');
+        $projects = Project::where('is_active', true)
+        ->orderBy('order')
+        ->get();
+
+        return view('welcome',compact('projects'));
     })->name('home');
 
     Route::get('/blog', function () {
@@ -39,7 +43,9 @@ Route::group([
 
 });
 
-Route::View('me','verify-pin');
+Route::get('me',function(){
+    return view('verify-pin');
+})->name('me');
 
 Route::post('/verification.pin.verify', [auth_otp::class,'auth'])->name('verification.pin.verify');
 // Rota para mudar de idioma

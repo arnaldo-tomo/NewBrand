@@ -330,16 +330,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Atualizar hora do servidor
-    setInterval(function() {
-        const now = new Date();
-        document.getElementById('server-time').textContent = now.toLocaleTimeString();
-    }, 1000);
+    const serverTimeElem = document.getElementById('server-time');
+    if (serverTimeElem) {
+        setInterval(function() {
+            const now = new Date();
+            serverTimeElem.textContent = now.toLocaleTimeString();
+        }, 1000);
+    }
 
     // Inicialização
-    updatePageTime();
+    if (timeOnPageElem) updatePageTime();
 
     // Se o site estiver sendo visualizado, inicializa as detecções básicas
-    if (!tracker.classList.contains('collapsed')) {
+    if (tracker && !tracker.classList.contains('collapsed')) {
         refreshData();
     }
 
@@ -353,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const closePrivacyModal = document.getElementById('close-privacy-modal');
 
     // Mostrar o toast em todas as visitas após um curto atraso
-    setTimeout(() => {
+    if (devToast) setTimeout(() => {
         devToast.classList.add('visible');
     }, 1500);
 
@@ -436,13 +439,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Fechar o toast quando o botão de fechar é clicado
-    closeToast.addEventListener('click', () => {
+    if (closeToast) closeToast.addEventListener('click', () => {
         devToast.classList.remove('visible');
         startTechInspectorDemo();
     });
 
     // Fechar automaticamente após 10 segundos e iniciar demo
-    setTimeout(() => {
+    if (devToast) setTimeout(() => {
         if (devToast.classList.contains('visible')) {
             devToast.classList.remove('visible');
             startTechInspectorDemo();
@@ -450,14 +453,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 10000);
 
     // Adicional: fechar o modal de privacidade ao pressionar ESC
-    document.addEventListener('keydown', function(event) {
+    if (privacyModal) document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && privacyModal.classList.contains('visible')) {
             privacyModal.classList.remove('visible');
         }
     });
 
     // Adicional: fechar o modal de privacidade ao clicar fora dele
-    privacyModal.addEventListener('click', function(event) {
+    if (privacyModal) privacyModal.addEventListener('click', function(event) {
         if (event.target === privacyModal) {
             privacyModal.classList.remove('visible');
         }

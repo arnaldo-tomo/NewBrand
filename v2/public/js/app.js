@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const timeOnPageElem = document.getElementById('time-on-page');
 
     // Gestão de estado
-    toggle.addEventListener('click', function() {
+    if (toggle) toggle.addEventListener('click', function() {
         tracker.classList.toggle('collapsed');
         localStorage.setItem('tracker-state', tracker.classList.contains('collapsed') ? 'collapsed' : 'expanded');
         if (!tracker.classList.contains('collapsed')) {
@@ -19,22 +19,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    closeBtn.addEventListener('click', function() {
+    if (closeBtn) closeBtn.addEventListener('click', function() {
         tracker.classList.add('collapsed');
         localStorage.setItem('tracker-state', 'collapsed');
     });
 
-    refreshBtn.addEventListener('click', refreshData);
+    if (refreshBtn) refreshBtn.addEventListener('click', refreshData);
 
     // Restaurar estado
-    const savedState = localStorage.getItem('tracker-state');
-    if (savedState === 'expanded') {
-        tracker.classList.remove('collapsed');
-        setTimeout(refreshData, 500);
+    if (tracker) {
+        const savedState = localStorage.getItem('tracker-state');
+        if (savedState === 'expanded') {
+            tracker.classList.remove('collapsed');
+            setTimeout(refreshData, 500);
+        }
     }
 
     // Função para atualizar todos os dados
-    function refreshData() {
+    window.refreshData = function() {
         detectBrowserInfo();
         detectSystemInfo();
         detectConnectionInfo();
@@ -45,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Informações do navegador
-    function detectBrowserInfo() {
+    window.detectBrowserInfo = function() {
         const ua = navigator.userAgent;
 
         // Detectar navegador
@@ -103,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Informações do sistema
-    function detectSystemInfo() {
+    window.detectSystemInfo = function() {
         const ua = navigator.userAgent;
 
         // Sistema operacional
@@ -169,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Atualizar informação da bateria
-    function updateBatteryStatus() {
+    window.updateBatteryStatus = function() {
         const batteryStatusElem = document.getElementById('battery-status');
 
         if (navigator.getBattery) {
@@ -195,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Informações de conexão
-    function detectConnectionInfo() {
+    window.detectConnectionInfo = function() {
         // Tipo de conexão
         if (navigator.connection) {
             document.getElementById('connection-type').textContent = navigator.connection.effectiveType || "Desconhecido";
@@ -232,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
     // Detecção de recursos do navegador
-    function detectFeatures() {
+    window.detectFeatures = function() {
         // WebGL
         try {
             const canvas = document.createElement('canvas');
@@ -287,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Localização aproximada (baseada em IP)
-    function detectLocationInfo() {
+    window.detectLocationInfo = function() {
         fetch('https://ipapi.co/json/')
             .then(response => response.json())
             .then(data => {
@@ -304,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Atualizar tamanho da viewport
-    function updateViewportSize() {
+    window.updateViewportSize = function() {
         const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
         document.getElementById('viewport-size').textContent = `${width}x${height}`;
@@ -550,20 +552,6 @@ function setupTracking() {
     }, 15000);
 }
 
-// Atualiza todos os dados do visitante
-function refreshData() {
-    console.log('Iniciando detecção de dados...');
-
-    try { detectBrowserInfo(); } catch (e) { console.error('Erro browser:', e); }
-    try { detectSystemInfo(); } catch (e) { console.error('Erro sistema:', e); }
-    try { detectConnectionInfo(); } catch (e) { console.error('Erro conexão:', e); }
-    try { detectFeatures(); } catch (e) { console.error('Erro recursos:', e); }
-    try { detectLocationInfo(); } catch (e) { console.error('Erro localização:', e); }
-    try { updateViewportSize(); } catch (e) { console.error('Erro viewport:', e); }
-    try { updateBatteryStatus(); } catch (e) { console.error('Erro bateria:', e); }
-
-    console.log('Processo de detecção concluído');
-}
 
 // Coleta todos os dados para enviar ao servidor
 function collectTrackingData() {

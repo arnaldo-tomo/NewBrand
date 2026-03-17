@@ -322,10 +322,13 @@
 <body
     class="home page-template page-template-template-fullpage-slider page-template-template-fullpage-slider-php page page-id-48 wp-embed-responsive no-mobile animsition elementor-default elementor-kit-7 elementor-page elementor-page-48">
 
-    <div class="vlt-fixed-socials"><a class="vlt-social-icon vlt-social-icon--style-1" href="#" target="_blank"><i
-                class="lnir-linkedin"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="#"
-            target="_blank"><i class="lnir-github-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1"
-            href="https://www.instagram.com/arnaldo_tomo/" target="_blank"><i class="lnir-instagram"></i></a></div>
+
+    <div class="vlt-fixed-socials">
+        <a class="vlt-social-icon vlt-social-icon--style-1" href="https://linkedin.com/in/arnaldo-tomo" target="_blank"><i
+                class="lnir-linkedin"></i></a><a class="vlt-social-icon vlt-social-icon--style-1" href="https://github.com/arnaldo-tomo"
+            target="_blank">
+                    <i class="lnir-github-original"></i></a><a class="vlt-social-icon vlt-social-icon--style-1"
+            href="https://instagram.com/arnaldo_tomo/" target="_blank"><i class="lnir-instagram"></i></a></div>
     {{-- header.blade.php - com links atualizados --}}
     <header class="vlt-header">
         <div class="vlt-navbar vlt-navbar--main vlt-navbar--transparent vlt-navbar--sticky">
@@ -386,8 +389,9 @@
 
                         <div class="language-switcher">
                             @foreach(config('app.available_locales') as $localeCode => $languageName)
-                            
-                            <a href="{{ url($localeCode) }}"  class="lang-link {{ app()->getLocale() == $localeCode ? 'active' : '' }}"  title="{{ $languageName }}">
+                            <a href="{{ url($localeCode) }}"
+                                class="lang-link {{ app()->getLocale() == $localeCode ? 'active' : '' }}"
+                                title="{{ $languageName }}">
                                 {{ strtoupper($localeCode) }}
                             </a>
                             @endforeach
@@ -722,10 +726,10 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/typescript-2.svg"
+                                                                    <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
                                                                         alt="JavaScript">
                                                                 </div>
-                                                                <h5>TypeScript</h5>
+                                                                <h5>JavaScript</h5>
                                                                 <div class="tech-dots">
                                                                     <span class="dot filled"></span>
                                                                     <span class="dot filled"></span>
@@ -802,7 +806,7 @@
 
                                                             <div class="tech-card">
                                                                 <div class="tech-icon">
-                                                                    <img src="https://cdn.worldvectorlogo.com/logos/expo-1.svg"
+                                                                    <img src="https://images.icon-icons.com/2389/PNG/512/expo_logo_icon_145293.png"
                                                                         alt="Swift">
                                                                 </div>
                                                                 <h5>Expo</h5>
@@ -945,122 +949,44 @@
 
                                                                 <div class="swiper-wrapper">
 
+                                                                    @foreach($projects as $project)
                                                                     <div class="swiper-slide">
 
                                                                         <article
-                                                                            class="vlt-project post-59 portfolio type-portfolio status-publish has-post-thumbnail hentry"
-                                                                            data-image="images/fibec.png">
+                                                                            class="vlt-project portfolio type-portfolio status-publish has-post-thumbnail hentry"
+                                                                            data-image="{{ $project->image ? (Str::startsWith($project->image, 'http') ? $project->image : asset($project->image)) : '' }}">
 
-                                                                            <h3 class="vlt-project-title">Fibec
-                                                                                Taxi<span
-                                                                                    class="has-accent-color">.</span>
-                                                                            </h3>
+                                                                            <h3 class="vlt-project-title">{{ $project->title }}<span class="has-accent-color">.</span></h3>
 
                                                                             <div class="vlt-project-excerpt">
 
-                                                                                <p>{!! __('messages.fibec_taxi_description') !!}</p>
+                                                                                <p>{!! $project->description !!}</p>
+                                                                                @if($project->features && count($project->features) > 0)
                                                                                 <strong style="color: #00b8d4" class="text-uppercase">{!! __('messages.main_features') !!}</strong>
                                                                                 <ul class="list-unstyled">
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_1') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_2') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_3') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_4') !!}</li>
+                                                                                    @foreach($project->features as $feature)
+                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {{ $feature }}</li>
+                                                                                    @endforeach
                                                                                 </ul>
+                                                                                @endif
                                                                                 <div class="nado">
-                                                                                    <a class=""
-                                                                                        href="https://play.google.com/store/apps/details?id=com.fibec.customer&hl=pt_PT"
-                                                                                        target="_blank">
-                                                                                        <img width="150"
-                                                                                            src="/images/splaystore.png">
+                                                                                    @if($project->playstore_link)
+                                                                                    <a href="{{ $project->playstore_link }}" target="_blank">
+                                                                                        <img width="150" src="/images/splaystore.png">
                                                                                     </a>
-                                                                                    <a class=""
-                                                                                        href="https://apps.apple.com/us/app/fibec-taxi/id6450050623?l=pt-BR"
-                                                                                        target="_blank">
-                                                                                        <img width="150"
-                                                                                            src="/images/apple.png">
+                                                                                    @endif
+                                                                                    @if($project->appstore_link)
+                                                                                    <a href="{{ $project->appstore_link }}" target="_blank">
+                                                                                        <img width="150" src="/images/apple.png">
                                                                                     </a>
-
+                                                                                    @endif
                                                                                 </div>
                                                                             </div>
 
-                                                                            <!-- <a class="vlt-btn vlt-btn--primary vlt-btn--md" href="https://gasinforest.com/wordpress/gilber/?portfolio=watch" target="_self">See Project</a> -->
-
                                                                         </article>
 
                                                                     </div>
-
-                                                                    <div class="swiper-slide">
-
-                                                                        <article
-                                                                            class="vlt-project post-63 portfolio type-portfolio status-publish has-post-thumbnail hentry"
-                                                                            data-image="https://arnaldotomo.dev/public/mtaco.png">
-
-                                                                            <h3 class="vlt-project-title">Meu Tako<span
-                                                                                    class="has-accent-color">.</span>
-                                                                            </h3>
-                                                                            <div class="vlt-project-excerpt">
-
-                                                                                <p>{!! __('messages.meu_tako_description') !!}</p>
-                                                                                <strong style="color: #00b8d4" class="text-uppercase">{!! __('messages.main_features') !!}</strong>
-                                                                                <ul class="list-unstyled">
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_1') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_2') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_3') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_4') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_5') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_6') !!}</li>
-                                                                                </ul>
-
-                                                                            </div>
-
-                                                                            <a class=""
-                                                                                href="https://play.google.com/apps/internaltest/4701412020376274157"
-                                                                                target="_blank">
-                                                                                <img width="150"
-                                                                                    src="/images/splaystore.png">
-                                                                            </a>
-
-
-                                                                        </article>
-
-                                                                    </div>
-
-                                                                    <div class="swiper-slide">
-
-                                                                        <article
-                                                                            class="vlt-project post-64 portfolio type-portfolio status-publish has-post-thumbnail hentry"
-                                                                            data-image="/images/Reflexoes.png">
-
-                                                                            <h3 class="vlt-project-title">Reflexões<span
-                                                                                    class="has-accent-color">.</span>
-                                                                            </h3>
-
-                                                                            <div class="vlt-project-excerpt">
-
-                                                                                <p>{!! __('messages.reflexoes_description') !!}</p>
-                                                                                <strong style="color: #00b8d4" class="text-uppercase">{!! __('messages.main_features') !!}</strong>
-                                                                                <ul class="list-unstyled">
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_1') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_2') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_3') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_4') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_5') !!}</li>
-                                                                                    <li style="display: hidden"><i class="fa fa-check" aria-hidden="true" style="color: #00b8d4"></i> {!! __('messages.feature_6') !!}</li>
-                                                                                </ul>
-
-
-                                                                            </div>
-
-                                                                            <a class=""
-                                                                                href="https://play.google.com/store/apps/details?id=com.arnaldotomo.reflexoes"
-                                                                                target="_blank">
-                                                                                <img width="150"
-                                                                                    src="/images/splaystore.png">
-                                                                            </a>
-
-                                                                        </article>
-
-                                                                    </div>
+                                                                    @endforeach
 
                                                                 </div>
 
@@ -1252,382 +1178,33 @@
 
                                                                 <div class="swiper-wrapper">
 
+                                                                    @foreach($education->chunk(3) as $slide)
                                                                     <div class="swiper-slide">
+                                                                        @foreach($slide as $item)
                                                                         <div class="vlt-timeline-item">
                                                                             <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="79" height="49"
-                                                                                        style="border-radius: 5px"
-                                                                                        src="images/ucm.jpg"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
                                                                                 <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2019 - 2023</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Universidade Católica de
-                                                                                        Moçambique</h5>
+                                                                                    @if($item->logo)
+                                                                                    <img loading="lazy" decoding="async" width="79" height="49" style="border-radius: 5px"
+                                                                                        src="{{ Str::startsWith($item->logo, 'http') ? $item->logo : asset($item->logo) }}"
+                                                                                        alt="{{ $item->title }}">
+                                                                                    @endif
+                                                                                </div>
+                                                                                <div class="col-xl-4">
+                                                                                    <div class="vlt-timeline-item__date">{{ $item->period }}</div>
+                                                                                    <h5 class="vlt-timeline-item__title">{{ $item->title }}</h5>
                                                                                 </div>
                                                                                 <div class="col-xl-4">
                                                                                     <div
                                                                                         class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.education') !!}</p>
+                                                                                        <p>{!! $item->description !!}</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="78"
-                                                                                        src="images/phy1.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2023 - 2023</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Python Essentials</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.python_course') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="64"
-                                                                                        src="images/cyber.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Cyber Threat Management</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.cybersecurity_skills') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                                                                                                @endforeach
                                                                     </div>
-                                                                    <div class="swiper-slide">
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="79" height="49"
-                                                                                        src="images/data.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Introduction to Data Science
-                                                                                    </h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.data_science_skills') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="78"
-                                                                                        src="images/EndpointSecurity.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2014</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Endpoint Security</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.endpoint_security') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="64"
-                                                                                        src="images/hacher.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Ethical Hacker</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text"><p>{!! __('messages.ethical_hacking') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="79" height="49"
-                                                                                        src="images/I2CS__1_.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Introdução à Cibersegurança</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.cybersecurity_basics') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="78"
-                                                                                        src="images/Intro2IoT.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2019</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Introduction to IoT</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.iot_fundamentals') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="64"
-                                                                                        src="images/js1.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        JavaScript Essentials</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.javascript_fundamentals') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="swiper-slide">
-
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="78"
-                                                                                        src="images/phy2.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Python Essentials 2</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.python_programming') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="78"
-                                                                                        src="images/phy2.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        TypeScript Essentials </h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.typescript_programming') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="64"
-                                                                                        src="images/network.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Network Defense</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.network_security') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="swiper-slide">
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="79" height="49"
-                                                                                        src="images/NetworkDefense_v1_091721.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Network Defense</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.network_security') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="78"
-                                                                                        src="images/phy2.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Python Essentials 1</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.python_programming') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="vlt-timeline-item">
-                                                                            <div class="row">
-                                                                                <div class="col-xl-4"><img
-                                                                                        loading="lazy" decoding="async"
-                                                                                        width="78" height="64"
-                                                                                        src="images/safay.png"
-                                                                                        class="attachment-full size-full"
-                                                                                        alt></div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__date">
-                                                                                        2025</div>
-                                                                                    <h5
-                                                                                        class="vlt-timeline-item__title">
-                                                                                        Digital Safety and Security
-                                                                                        Awareness</h5>
-                                                                                </div>
-                                                                                <div class="col-xl-4">
-                                                                                    <div
-                                                                                        class="vlt-timeline-item__text">
-                                                                                        <p>{!! __('messages.digital_security') !!}</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                    @endforeach
 
                                                                 </div>
 
@@ -1794,133 +1371,49 @@
 
                                                                 <div class="swiper-wrapper">
 
+                                                                    @foreach($testimonials as $testimonial)
                                                                     <div class="swiper-slide">
                                                                         <div class="vlt-testimonial">
 
-                                                                            <div class="vlt-testimonial__text">{!! __('messages.codelabs_testimonial') !!}</div>
+                                                                            <div class="vlt-testimonial__text">{!! $testimonial->content !!}</div>
 
                                                                             <div class="nado vlt-testimonial__meta">
 
                                                                                 <div class="testimonial-avatar">
-                                                                                    <a href="https://www.linkedin.com/in/gersonamaliohouane/"
-                                                                                        target="_blank">
-                                                                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQFKpJFqApL7JA/profile-displayphoto-shrink_800_800/B4DZOROHdPHUAc-/0/1733308220476?e=1747872000&v=beta&t=0PUKbvW7bumEB8_Nq0s2ftEGHrgfE9sX8VK1Wn1KICo"
-                                                                                            alt="Gerson Amálio Houane"
-                                                                                            class="testimonial-image">
+                                                                                    @if($testimonial->linkedin_url)
+                                                                                    <a href="{{ $testimonial->linkedin_url }}" target="_blank">
+                                                                                    @endif
+                                                                                        <img src="{{ $testimonial->avatar ? asset($testimonial->avatar) : '' }}" alt="{{ $testimonial->name }}" class="testimonial-image">
+                                                                                    @if($testimonial->linkedin_url)
                                                                                     </a>
+                                                                                    @endif
                                                                                 </div>
 
                                                                                 <div>
                                                                                     <div class="hore">
-                                                                                        <h5
-                                                                                            class="vlt-testimonial__name">
-                                                                                            Gerson Amálio Houane </h5>
+                                                                                        <h5 class="vlt-testimonial__name">{{ $testimonial->name }}</h5>
+                                                                                        @if($testimonial->linkedin_url)
                                                                                         <div class="linkedin-icon">
-                                                                                            <a href="https://www.linkedin.com/in/gerson-amalio-houane/"
-                                                                                                target="_blank">
-                                                                                                <i
-                                                                                                    class="fab fa-linkedin"></i>
+                                                                                            <a href="{{ $testimonial->linkedin_url }}" target="_blank">
+                                                                                                <i class="fab fa-linkedin"></i>
                                                                                             </a>
                                                                                         </div>
+                                                                                        @endif
                                                                                     </div>
-                                                                                    <div style="color: #a1a1a1"
-                                                                                        class="">Software Engineer -
-                                                                                        Cornelder de Moçambique </div>
+                                                                                    <div style="color: #a1a1a1">{{ $testimonial->title }}</div>
                                                                                 </div>
 
                                                                             </div>
 
                                                                         </div>
                                                                     </div>
-                                                                    <div class="swiper-slide">
-                                                                        <div class="vlt-testimonial">
-
-                                                                            <div class="vlt-testimonial__text">{!! __('messages.fibec_taxi_testimonial') !!}</div>
-
-                                                                            <div class="nado vlt-testimonial__meta">
-
-                                                                                <div class="testimonial-avatar">
-                                                                                    <a href="https://www.linkedin.com/in/hjacintomz/"
-                                                                                        target="_blank">
-                                                                                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEOwq3RMCHzFA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1685037338748?e=1747872000&v=beta&t=UqtvZGOspDi5ZTvJlxwUftWWFQSb9qUfcXYO2A9hKCI"
-                                                                                            alt="Gerson Amálio Houane"
-                                                                                            class="testimonial-image">
-                                                                                    </a>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <div class="hore">
-                                                                                        <h5
-                                                                                            class="vlt-testimonial__name">
-                                                                                            Helio Jacinto Macarrala</h5>
-                                                                                        <div class="linkedin-icon">
-                                                                                            <a href="https://www.linkedin.com/in/hjacintomz/"
-                                                                                                target="_blank">
-                                                                                                <i
-                                                                                                    class="fab fa-linkedin"></i>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div style="color: #a1a1a1"
-                                                                                        class="">ERP & Digital
-                                                                                        Transformation Consultant |
-                                                                                        Partner 2Business, SA</div>
-                                                                                </div>
-
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <div class="vlt-testimonial">
-
-                                                                            <div class="vlt-testimonial__text">{!! __('messages.general_testimonial') !!}</div>
-
-                                                                            <div class="nado vlt-testimonial__meta">
-
-                                                                                <div class="testimonial-avatar">
-                                                                                    <a href="https://www.linkedin.com/in/yash-solo/"
-                                                                                        target="_blank">
-                                                                                        <img src="https://media.licdn.com/dms/image/v2/D5603AQErSBGQsE4wyw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1678116766082?e=1747872000&v=beta&t=Nkt9g9BSfOlBFbI2Gs3Hg4JmYcA_hTSWgunBkZIQBeY"
-                                                                                            alt="Gerson Amálio Houane"
-                                                                                            class="testimonial-image">
-                                                                                    </a>
-                                                                                </div>
-
-                                                                                <div>
-                                                                                    <div class="hore">
-                                                                                        <h5
-                                                                                            class="vlt-testimonial__name">
-                                                                                            Md Mohi Minul Islam Yash
-                                                                                        </h5>
-                                                                                        <div class="linkedin-icon">
-                                                                                            <a href="https://www.linkedin.com/in/yash-solo/"
-                                                                                                target="_blank">
-                                                                                                <i
-                                                                                                    class="fab fa-linkedin"></i>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div style="color: #a1a1a1"
-                                                                                        class="">Certified Full Stack
-                                                                                        Developer | Specializing in
-                                                                                        NestJS, Next.js, Vue.js, Ruby on
-                                                                                        Rails, Python & AI | Passionate
-                                                                                        about User Experiences </div>
-                                                                                </div>
-
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
+                                                                    @endforeach
                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
                                                             </div>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
                                                 <div class="elementor-element elementor-element-6d71bd5 elementor-widget elementor-widget-spacer"
                                                     data-id="6d71bd5" data-element_type="widget" data-settings="{"
                                                     vlt_animated_widget_animation":"none"}"=""

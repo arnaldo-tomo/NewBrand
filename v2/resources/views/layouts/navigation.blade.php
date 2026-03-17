@@ -21,9 +21,21 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="px-4 py-2 text-white hover:text-white  jetbrains-mono {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                         <i class="fas fa-chart-line mr-2"></i>{{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('education.index')" :active="request()->routeIs('education.index')" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
+                        <i class="fas fa-graduation-cap mr-2"></i>{{ __('Education') }}
+                    </x-nav-link>
                     
-                    <x-nav-link href="#" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
+                    <x-nav-link :href="route('projects.manage')" :active="request()->routeIs('projects.manage')" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
                         <i class="fas fa-code mr-2"></i>{{ __('Projects') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('testimonials.manage')" :active="request()->routeIs('testimonials.manage')" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
+                        <i class="fas fa-comment-dots mr-2"></i>{{ __('Testimonials') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('skills.manage')" :active="request()->routeIs('skills.manage')" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
+                        <i class="fas fa-tools mr-2"></i>{{ __('Skills') }}
                     </x-nav-link>
                     
                     <x-nav-link href="#" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">

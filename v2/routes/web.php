@@ -30,11 +30,23 @@ Route::group([  'prefix' => '{locale}', 'where' => ['locale' => 'en|pt'], // Def
 
     // Página inicial
     Route::get('/', function () {
-        $projects = Project::where('is_active', true)
+        $projects = \App\Models\Project::where('is_active', true)
         ->orderBy('order')
         ->get();
 
-        return view('welcome',compact('projects'));
+        $education = \App\Models\Education::where('is_active', true)
+        ->orderBy('order')
+        ->get();
+
+        $testimonials = \App\Models\Testimonial::where('is_active', true)
+        ->orderBy('order')
+        ->get();
+
+        $skills = \App\Models\Skill::where('is_active', true)
+        ->orderBy('order')
+        ->get();
+
+        return view('welcome', compact('projects', 'education', 'testimonials', 'skills'));
     })->name('home');
 
     Route::get('/blog', function () {
@@ -94,6 +106,18 @@ Route::post('/portfolio/projetos', [PortfolioController::class, 'store'])->name(
 Route::get('/portfolio/projetos/{project}/editar', [PortfolioController::class, 'edit'])->name('portfolio.projects.edit');
 Route::put('/portfolio/projetos/{project}', [PortfolioController::class, 'update'])->name('portfolio.projects.update');
 Route::delete('/portfolio/projetos/{project}', [PortfolioController::class, 'destroy'])->name('portfolio.projects.destroy');
+
+// Educação
+Volt::route('/portfolio/educacao', 'education.index')->name('education.index');
+
+// Projetos
+Volt::route('/portfolio/projects-manage', 'projects.index')->name('projects.manage');
+
+// Testemunhos
+Volt::route('/portfolio/testimonials-manage', 'testimonials.index')->name('testimonials.manage');
+
+// Skills
+Volt::route('/portfolio/skills-manage', 'skills.index')->name('skills.manage');
 
 // Categorias do Portfólio
 Route::get('/portfolio/categorias', [PortfolioController::class, 'categories'])->name('portfolio.categories');

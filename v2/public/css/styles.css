@@ -270,6 +270,26 @@ form.submitting .wpcf7-spinner {
     transform: scale(1.08);
     box-shadow: 0 6px 24px rgba(0, 184, 212, 0.5), 0 0 0 1px rgba(0,184,212,0.3);
 }
+.tech-tracker-toggle::after {
+    content: 'Pegada Digital';
+    position: absolute;
+    bottom: 54px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10,15,28,0.9);
+    color: rgba(255,255,255,0.85);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+.tech-tracker-toggle:hover::after { opacity: 1; }
 
 .tech-tracker:not(.collapsed) .tech-tracker-toggle {
     transform: rotate(45deg);

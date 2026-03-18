@@ -1,26 +1,46 @@
 <style>
-  /* ── Botão de apresentação ── */
+  /* ── Botão de apresentação — alinhado à esquerda do WhatsApp ── */
   .ap-btn {
     position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    bottom: 30px;
+    right: 166px; /* 98 (wa) + 48 (wa width) + 10 (gap) + 10 = 166 */
     z-index: 9990;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background: rgba(10,15,28,0.7);
-    border: 1px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(10px);
+    background: rgba(10,15,28,0.75);
+    border: 1px solid rgba(255,255,255,0.14);
+    backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s ease;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.6);
   }
-  .ap-btn:hover { background: rgba(0,184,212,0.2); border-color: rgba(0,184,212,0.4); color: #00b8d4; transform: translateY(-50%) scale(1.1); }
+  .ap-btn:hover { background: rgba(0,184,212,0.2); border-color: rgba(0,184,212,0.4); color: #00b8d4; transform: scale(1.1); }
   .ap-btn.ap-active { background: rgba(0,184,212,0.25); border-color: rgba(0,184,212,0.6); color: #00b8d4; }
+
+  /* Tooltip */
+  .ap-btn::after {
+    content: 'Apresentação';
+    position: absolute;
+    bottom: 54px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10,15,28,0.9);
+    color: rgba(255,255,255,0.85);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  .ap-btn:hover::after { opacity: 1; }
 
   /* ── Barra de progresso ── */
   .ap-progress-wrap {

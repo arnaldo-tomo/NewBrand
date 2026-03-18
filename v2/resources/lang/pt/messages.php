@@ -54,6 +54,13 @@ return [
     'fibec_taxi_testimonial' => '"Trabalhar com Arnaldo foi uma das melhores decisões para o crescimento do <a style="color: #00b8d4" href="https://play.google.com/store/apps/details?id=com.fibec.customer" target="_blank">FibecTaxi.</a> Desde o início, ele demonstrou profissionalismo, criatividade e uma capacidade impressionante de transformar ideias em soluções digitais eficientes. A plataforma que ele desenvolveu atendeu perfeitamente às nossas necessidades, trazendo mais praticidade para nossos clientes e otimizando a nossa operação."',
     'general_testimonial' => '"Arnaldo é um desenvolvedor talentoso e altamente dedicado, com uma abordagem estratégica para soluções web e mobile. Seu domínio de tecnologias modernas e sua atenção aos detalhes fazem dele um profissional excepcional. Além disso, sua capacidade de resolver problemas complexos e melhorar a experiência do utilizador é impressionante. Trabalhar com ele é sempre uma experiência produtiva e inspiradora!"',
     'availability' => 'Estou disponível para novos projetos e parcerias. Entre em contato e vamos transformar suas ideias em realidade digital.',
-    
+
+    // Secção Packages
+    'packages_title' => 'Packages Open Source',
+    'packages_description' => 'Bibliotecas open-source criadas para acelerar o desenvolvimento em Laravel, com foco em produtividade, código limpo e utilidade real.',
+    'packages_on_packagist' => 'Ver no Packagist',
+    'packages_view_github' => 'GitHub',
+    'packages_install' => 'Instalar',
+
 
 ];

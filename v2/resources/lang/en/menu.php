@@ -7,5 +7,6 @@ return [
     'testimonials' => 'Testimonials',
     'partners' => 'Partners',
     'blog' => 'Insights',
+    'packages' => 'Packages',
     'contact' => 'Contact',
 ];

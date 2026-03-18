@@ -1,116 +1,125 @@
-<nav x-data="{ open: false, profileOpen: false }" class="bg-gray-900 border-b pt-2 pb-3 position-absolute zoom-in fixed-top border-gray-800">
-    <!-- CSS para JetBrains Mono -->
-  
-    
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-12">
-            <div class="flex">
+<nav x-data="{ open: false, portfolioOpen: false }" class="bg-gray-900 border-b border-gray-800 fixed-top" style="position:fixed;top:0;left:0;right:0;z-index:1000;">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-14 items-center">
+
+            <!-- Left: Logo + Links -->
+            <div class="flex items-center gap-1">
+
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}" class="flex items-center">
-                        <div class="text-sky-400 font-bold text-xl">
-                            <img src="{{ asset('images/logo.webp') }}" alt="App Logo" class="">
-                        </div>
+                <a href="{{ route('dashboard') }}" class="flex items-center mr-4">
+                    <img src="{{ asset('images/logo.webp') }}" alt="Logo" class="h-8">
+                </a>
 
-                    </a>
+                <!-- Dashboard -->
+                <a href="{{ route('dashboard') }}"
+                   class="nav-link jetbrains-mono {{ request()->routeIs('dashboard') ? 'nav-link-active' : '' }}">
+                    <i class="fas fa-chart-line mr-1.5 text-xs"></i>Dashboard
+                </a>
+
+                <!-- Portfolio Dropdown -->
+                <div class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" @click.away="open = false"
+                            class="nav-link jetbrains-mono flex items-center gap-1
+                                   {{ request()->routeIs('education.index','projects.manage','testimonials.manage','skills.manage') ? 'nav-link-active' : '' }}">
+                        <i class="fas fa-layer-group mr-1.5 text-xs"></i>Portfolio
+                        <svg class="h-3 w-3 ml-1 transition-transform" :class="{'rotate-180': open}" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+
+                    <div x-show="open"
+                         x-transition:enter="transition ease-out duration-150"
+                         x-transition:enter-start="opacity-0 translate-y-1"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-100"
+                         x-transition:leave-start="opacity-100"
+                         x-transition:leave-end="opacity-0"
+                         class="absolute left-0 mt-1 w-52 rounded-lg shadow-xl bg-gray-800 border border-gray-700 py-1 z-50 jetbrains-mono">
+
+                        <a href="{{ route('projects.manage') }}"
+                           class="dropdown-link {{ request()->routeIs('projects.manage') ? 'dropdown-link-active' : '' }}">
+                            <i class="fas fa-code w-4"></i>Projects
+                        </a>
+                        <a href="{{ route('education.index') }}"
+                           class="dropdown-link {{ request()->routeIs('education.index') ? 'dropdown-link-active' : '' }}">
+                            <i class="fas fa-graduation-cap w-4"></i>Education
+                        </a>
+                        <a href="{{ route('testimonials.manage') }}"
+                           class="dropdown-link {{ request()->routeIs('testimonials.manage') ? 'dropdown-link-active' : '' }}">
+                            <i class="fas fa-comment-dots w-4"></i>Testimonials
+                        </a>
+                        <a href="{{ route('skills.manage') }}"
+                           class="dropdown-link {{ request()->routeIs('skills.manage') ? 'dropdown-link-active' : '' }}">
+                            <i class="fas fa-tools w-4"></i>Skills
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-0 sm:-my-px sm:ms-8 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="px-4 py-2 text-white hover:text-white  jetbrains-mono {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                        <i class="fas fa-chart-line mr-2"></i>{{ __('Dashboard') }}
-                    </x-nav-link>
+                <!-- Ver Site -->
+                <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" target="_blank"
+                   class="nav-link jetbrains-mono">
+                    <i class="fas fa-globe mr-1.5 text-xs"></i>Ver Site
+                    <i class="fas fa-external-link-alt ml-1 text-xs opacity-50"></i>
+                </a>
 
-                    <x-nav-link :href="route('education.index')" :active="request()->routeIs('education.index')" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
-                        <i class="fas fa-graduation-cap mr-2"></i>{{ __('Education') }}
-                    </x-nav-link>
-                    
-                    <x-nav-link :href="route('projects.manage')" :active="request()->routeIs('projects.manage')" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
-                        <i class="fas fa-code mr-2"></i>{{ __('Projects') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('testimonials.manage')" :active="request()->routeIs('testimonials.manage')" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
-                        <i class="fas fa-comment-dots mr-2"></i>{{ __('Testimonials') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('skills.manage')" :active="request()->routeIs('skills.manage')" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
-                        <i class="fas fa-tools mr-2"></i>{{ __('Skills') }}
-                    </x-nav-link>
-                    
-                    <x-nav-link href="#" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
-                        <i class="fas fa-terminal mr-2"></i>{{ __('Terminal') }}
-                    </x-nav-link>
-                    
-                    <x-nav-link href="#" class="px-4 py-2 text-gray-300 hover:text-white nav-item jetbrains-mono">
-                        <i class="fas fa-puzzle-piece mr-2"></i>{{ __('Components') }}
-                    </x-nav-link>
-                </div>
             </div>
 
-            <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <!-- GitHub Icon -->
-                <a href="#" class="text-gray-400 hover:text-white px-3">
-                    <i class="fab fa-github text-xl"></i>
+            <!-- Right: GitHub + Bell + User -->
+            <div class="flex items-center gap-2">
+
+                <!-- GitHub -->
+                <a href="https://github.com/arnaldotomo" target="_blank"
+                   class="p-2 text-gray-400 hover:text-white rounded-lg hover:bg-gray-800 transition">
+                    <i class="fab fa-github text-lg"></i>
                 </a>
-                
-                <!-- Notification Bell -->
-                <div class="relative px-3">
-                    <button class="text-gray-400 hover:text-white">
-                        <i class="fas fa-bell text-xl"></i>
-                    </button>
-                </div>
-                
-                <!-- Profile dropdown - usando Alpine.js -->
+
+                <!-- Notifications -->
+                <button class="p-2 text-gray-400 hover:text-white rounded-lg hover:bg-gray-800 transition relative">
+                    <i class="fas fa-bell text-lg"></i>
+                </button>
+
+                <!-- User Dropdown -->
                 <div class="relative" x-data="{ open: false }">
-                    <button @click="open = !open" class="inline-flex items-center px-4   text-sm leading-4 font-medium rounded-md text-gray-300  hover:text-white focus:outline-none transition ease-in-out duration-150 jetbrains-mono">
-                        <div class="flex items-center">
-                            <div class="h-8 w-8 rounded-full bg-sky-500 flex items-center justify-center text-white font-semibold mr-2">
-                                {{ substr(Auth::user()->name, 0, 1) }}
-                            </div>
-                            <div>{{ Auth::user()->name }}</div>
+                    <button @click="open = !open" @click.away="open = false"
+                            class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800 transition jetbrains-mono text-sm">
+                        <div class="h-7 w-7 rounded-full bg-sky-500 flex items-center justify-center text-white font-bold text-xs">
+                            {{ substr(Auth::user()->name, 0, 1) }}
                         </div>
-
-                        <div class="ms-1">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
+                        <span class="hidden md:block">{{ Auth::user()->name }}</span>
+                        <svg class="h-3 w-3 transition-transform" :class="{'rotate-180': open}" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
                     </button>
-                    
-                    <!-- Dropdown Menu -->
-                    <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-48 rounded-md shadow-lg code-bg border border-gray-700 text-gray-300 jetbrains-mono z-50"
-                         x-transition:enter="transition ease-out duration-200"
-                         x-transition:enter-start="transform opacity-0 scale-95"
-                         x-transition:enter-end="transform opacity-100 scale-100"
-                         x-transition:leave="transition ease-in duration-75"
-                         x-transition:leave-start="transform opacity-100 scale-100"
-                         x-transition:leave-end="transform opacity-0 scale-95">
-                        <div class="py-1">
-                            <div class="px-4 py-2 text-xs text-gray-500 border-b border-gray-700">
-                                <span class="text-sky-400">user</span>@<span class="text-green-400">devdash</span>:~$
-                            </div>
-                            
-                            <a href="{{ route('profile.edit') }}" class="block dropdown-item text-gray-300 hover:text-white px-4 py-2">
-                                <i class="fas fa-user-circle mr-2"></i>{{ __('Profile') }}
-                            </a>
-                            
-                            <a href="#" class="block dropdown-item text-gray-300 hover:text-white px-4 py-2">
-                                <i class="fas fa-cog mr-2"></i>{{ __('Settings') }}
-                            </a>
-                            
-                            <a href="#" class="block dropdown-item text-gray-300 hover:text-white px-4 py-2">
-                                <i class="fas fa-code-branch mr-2"></i>{{ __('My Repositories') }}
-                            </a>
 
-                            <!-- Authentication -->
+                    <div x-show="open"
+                         x-transition:enter="transition ease-out duration-150"
+                         x-transition:enter-start="opacity-0 translate-y-1"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-100"
+                         x-transition:leave-start="opacity-100"
+                         x-transition:leave-end="opacity-0"
+                         class="absolute right-0 mt-1 w-52 rounded-lg shadow-xl bg-gray-800 border border-gray-700 py-1 z-50 jetbrains-mono">
+
+                        <div class="px-4 py-2 text-xs text-gray-500 border-b border-gray-700">
+                            <span class="text-sky-400">{{ Auth::user()->name }}</span>
+                            <div class="text-gray-600 truncate">{{ Auth::user()->email }}</div>
+                        </div>
+
+                        <a href="{{ route('profile.edit') }}" class="dropdown-link">
+                            <i class="fas fa-user-circle w-4"></i>Profile
+                        </a>
+                        <a href="{{ route('settings.profile') }}" class="dropdown-link">
+                            <i class="fas fa-cog w-4"></i>Settings
+                        </a>
+
+                        <div class="border-t border-gray-700 mt-1 pt-1">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <a href="{{ route('logout') }}"
                                    onclick="event.preventDefault(); this.closest('form').submit();"
-                                   class="block dropdown-item text-gray-300 hover:text-white border-t border-gray-700 px-4 py-2">
-                                    <i class="fas fa-sign-out-alt mr-2"></i>{{ __('Log Out') }}
+                                   class="dropdown-link text-red-400 hover:text-red-300">
+                                    <i class="fas fa-sign-out-alt w-4"></i>Log Out
                                 </a>
                             </form>
                         </div>
@@ -118,83 +127,98 @@
                 </div>
             </div>
 
-            <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:bg-gray-800 focus:text-white transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            <!-- Mobile hamburger -->
+            <div class="flex items-center sm:hidden">
+                <button @click="open = !open" class="p-2 text-gray-400 hover:text-white rounded-lg">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path :class="{'hidden': open}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path :class="{'hidden': !open}" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden bg-gray-900">
-        <div class="pt-4 pb-3 space-y-2">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
-                class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-300 jetbrains-mono hover:text-white">
-                <i class="fas fa-chart-line mr-2"></i>{{ __('Dashboard') }}
-            </x-responsive-nav-link>
-            
-            <x-responsive-nav-link href="#" 
-                class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-300 jetbrains-mono hover:text-white">
-                <i class="fas fa-code mr-2"></i>{{ __('Projects') }}
-            </x-responsive-nav-link>
-            
-            <x-responsive-nav-link href="#" 
-                class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-300 jetbrains-mono hover:text-white">
-                <i class="fas fa-terminal mr-2"></i>{{ __('Terminal') }}
-            </x-responsive-nav-link>
-            
-            <x-responsive-nav-link href="#" 
-                class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-300 jetbrains-mono hover:text-white">
-                <i class="fas fa-puzzle-piece mr-2"></i>{{ __('Components') }}
-            </x-responsive-nav-link>
-        </div>
-
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-700">
-            <div class="px-4 flex items-center">
-                <div class="h-10 w-10 rounded-full bg-sky-500 flex items-center justify-center text-white font-semibold mr-3">
-                    {{ substr(Auth::user()->name, 0, 1) }}
-                </div>
-                <div>
-                    <div class="font-medium text-base text-white jetbrains-mono">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-400 jetbrains-mono">{{ Auth::user()->email }}</div>
-                </div>
-            </div>
-
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')"
-                    class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-300 jetbrains-mono hover:text-white">
-                    <i class="fas fa-user-circle mr-2"></i>{{ __('Profile') }}
-                </x-responsive-nav-link>
-                
-                <x-responsive-nav-link href="#"
-                    class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-300 jetbrains-mono hover:text-white">
-                    <i class="fas fa-cog mr-2"></i>{{ __('Settings') }}
-                </x-responsive-nav-link>
-
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault(); this.closest('form').submit();"
-                            class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-300 jetbrains-mono hover:text-white">
-                        <i class="fas fa-sign-out-alt mr-2"></i>{{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-            </div>
+    <!-- Mobile menu -->
+    <div :class="{'block': open, 'hidden': !open}" class="hidden sm:hidden bg-gray-800 border-t border-gray-700 px-4 py-3 space-y-1 jetbrains-mono">
+        <a href="{{ route('dashboard') }}" class="mobile-link {{ request()->routeIs('dashboard') ? 'mobile-link-active' : '' }}">
+            <i class="fas fa-chart-line w-5"></i>Dashboard
+        </a>
+        <a href="{{ route('projects.manage') }}" class="mobile-link">
+            <i class="fas fa-code w-5"></i>Projects
+        </a>
+        <a href="{{ route('education.index') }}" class="mobile-link">
+            <i class="fas fa-graduation-cap w-5"></i>Education
+        </a>
+        <a href="{{ route('testimonials.manage') }}" class="mobile-link">
+            <i class="fas fa-comment-dots w-5"></i>Testimonials
+        </a>
+        <a href="{{ route('skills.manage') }}" class="mobile-link">
+            <i class="fas fa-tools w-5"></i>Skills
+        </a>
+        <div class="border-t border-gray-700 pt-3 mt-3">
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();"
+                   class="mobile-link text-red-400">
+                    <i class="fas fa-sign-out-alt w-5"></i>Log Out
+                </a>
+            </form>
         </div>
     </div>
 </nav>
 
-
+<style>
+    .nav-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        color: #9ca3af;
+        transition: all 0.15s ease;
+        white-space: nowrap;
+    }
+    .nav-link:hover {
+        color: #fff;
+        background-color: rgba(255,255,255,0.06);
+    }
+    .nav-link-active {
+        color: #38bdf8;
+        background-color: rgba(56,189,248,0.1);
+    }
+    .dropdown-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        color: #d1d5db;
+        transition: all 0.15s ease;
+    }
+    .dropdown-link:hover {
+        background-color: rgba(255,255,255,0.05);
+        color: #fff;
+    }
+    .dropdown-link-active {
+        color: #38bdf8;
+        background-color: rgba(56,189,248,0.08);
+    }
+    .mobile-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: #d1d5db;
+        transition: all 0.15s ease;
+    }
+    .mobile-link:hover { background-color: rgba(255,255,255,0.05); color: #fff; }
+    .mobile-link-active { color: #38bdf8; background-color: rgba(56,189,248,0.08); }
+</style>
 
 <!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!-- Alpine.js (para interatividade) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Alpine.js -->
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>

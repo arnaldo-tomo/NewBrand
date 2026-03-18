@@ -54,37 +54,12 @@ return [
     'fibec_taxi_testimonial' => '"Working with Arnaldo was one of the best decisions for the growth of <a style="color: #00b8d4" href="https://play.google.com/store/apps/details?id=com.fibec.customer" target="_blank">FibecTaxi.</a> From the start, he demonstrated professionalism, creativity, and an impressive ability to turn ideas into efficient digital solutions. The platform he developed perfectly met our needs, bringing more convenience to our customers and optimizing our operations."',
         'general_testimonial' => '"Arnaldo is a talented and highly dedicated developer with a strategic approach to web and mobile solutions. His mastery of modern technologies and attention to detail make him an exceptional professional. Moreover, his ability to solve complex problems and enhance user experience is impressive. Working with him is always a productive and inspiring experience!"',
         'availability' => 'I am available for new projects and partnerships. Get in touch, and let’s turn your ideas into digital reality.',
-           // Section des Packages
-    'packages_title' => 'Mes Packages Laravel',
-    'packages_description' => 'Solutions open-source développées pour faciliter et accélérer le développement d\'applications Laravel, en mettant l\'accent sur la productivité et la qualité du code.',
-    'packages_count' => 'Packages',
-    'packages_published' => 'Publiés',
-    'packages_open_source' => 'Open Source',
-    'packages_laravel' => 'Laravel',
-    'packages_showcase_title' => 'Vitrine des Packages',
-
-    // AutoSchema
-    'autoschema_description' => 'Automatise la création de schémas de base de données Laravel avec l\'intelligence artificielle. Génère des migrations, des modèles et des seeders automatiquement à partir de descriptions simples.',
-    'autoschema_feature_1_title' => 'Génération Auto',
-    'autoschema_feature_1_desc' => 'Crée migrations et modèles automatiquement',
-    'autoschema_feature_2_title' => 'Relations Intelligentes',
-    'autoschema_feature_2_desc' => 'Détecte et crée les relations entre tables',
-    'autoschema_feature_3_title' => 'Interface CLI',
-    'autoschema_feature_3_desc' => 'Commandes simples via terminal',
-
-    // LusoPhone
-    'lusophone_description' => 'Bibliothèque complète pour la validation et le formatage des numéros de téléphone des pays lusophones. Support natif pour le Brésil, le Portugal, l\'Angola, le Mozambique et d\'autres pays.',
-    'lusophone_feature_1_title' => 'Validation Avancée',
-    'lusophone_feature_1_desc' => 'Valide les numéros par pays et opérateur',
-    'lusophone_feature_2_title' => 'Pays Lusophones',
-    'lusophone_feature_2_desc' => 'Support complet pour la CPLP',
-    'lusophone_feature_3_title' => 'Intégration Laravel',
-    'lusophone_feature_3_desc' => 'Règles de validation prêtes à utiliser',
-
-    // Statistiques
-    'downloads' => 'Téléchargements',
-    'stars' => 'Étoiles',
-    'forks' => 'Forks',
+           // Packages Section
+    'packages_title' => 'Open Source Packages',
+    'packages_description' => 'Open-source libraries built to speed up Laravel development with a focus on productivity, clean code, and real-world utility.',
+    'packages_on_packagist' => 'View on Packagist',
+    'packages_view_github' => 'GitHub',
+    'packages_install' => 'Install',
 
 
 ];

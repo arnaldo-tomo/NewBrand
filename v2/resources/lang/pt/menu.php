@@ -7,5 +7,6 @@ return [
     'testimonials' => 'Depoimentos',
     'partners' => 'Parceiros',
     'blog' => 'Insights',
+    'packages' => 'Packages',
     'contact' => 'Contacto',
 ];

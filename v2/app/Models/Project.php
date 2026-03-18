@@ -16,6 +16,7 @@ class Project extends Model
         'image',
         'playstore_link',
         'appstore_link',
+        'website_url',
         'features',
         'order',
         'is_active'

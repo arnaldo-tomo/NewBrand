@@ -316,6 +316,182 @@
         label {
             font-weight: 400;
         }
+
+        /* Blog e Packages: responsivo em mobile */
+        @media (max-width: 768px) {
+            .blog-page,
+            .pkg-page {
+                flex-direction: column !important;
+                gap: 16px !important;
+            }
+            .blog-page > div,
+            .pkg-page > div {
+                flex: none !important;
+                width: 100% !important;
+            }
+        }
+
+        /* === #8 Scroll Indicator === */
+        .scroll-indicator-wrap {
+            position: absolute;
+            bottom: 2.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            z-index: 10;
+            animation: si-fadeIn 1s ease 2.2s both;
+            pointer-events: none;
+        }
+        .scroll-indicator {
+            width: 22px;
+            height: 36px;
+            border: 1.5px solid rgba(255,255,255,0.28);
+            border-radius: 11px;
+            position: relative;
+        }
+        .scroll-indicator-wheel {
+            width: 4px;
+            height: 7px;
+            background: #00b8d4;
+            border-radius: 2px;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: si-wheel 1.8s ease infinite;
+        }
+        .scroll-indicator-label {
+            font-size: 8px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.28);
+            font-family: 'Poppins', sans-serif;
+        }
+        @keyframes si-wheel {
+            0%  { top: 5px; opacity: 1; }
+            75% { top: 18px; opacity: 0; }
+            100%{ top: 5px; opacity: 0; }
+        }
+        @keyframes si-fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        @media (max-width: 768px) { .scroll-indicator-wrap { display: none; } }
+
+        /* === #10 Blog Skeleton === */
+        .skeleton-card {
+            flex: 1;
+            min-width: 0;
+            height: 280px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            overflow: hidden;
+            position: relative;
+        }
+        .skeleton-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent 30%, rgba(255,255,255,0.04) 50%, transparent 70%);
+            background-size: 200% 100%;
+            animation: sk-shimmer 1.4s ease infinite;
+        }
+        @keyframes sk-shimmer {
+            0%   { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        #blog-real-content { animation: si-fadeIn2 0.5s ease both; }
+        @keyframes si-fadeIn2 {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+
+        /* === #9 Copy tooltip === */
+        .copy-tooltip {
+            position: absolute;
+            bottom: calc(100% + 6px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,184,212,0.92);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            letter-spacing: 0.04em;
+            pointer-events: none;
+            z-index: 100;
+            animation: ct-pop 0.2s ease;
+        }
+        .copy-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid transparent;
+            border-top-color: rgba(0,184,212,0.92);
+        }
+        @keyframes ct-pop {
+            from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+            to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        .copy-contact { cursor: pointer; position: relative; }
+
+        /* === #6 Availability badge === */
+        .avail-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(22,163,74,0.1);
+            border: 1px solid rgba(22,163,74,0.28);
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #4ade80;
+            letter-spacing: 0.03em;
+            margin-bottom: 1rem;
+        }
+        .avail-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4ade80;
+            animation: avail-pulse 2s ease infinite;
+            flex-shrink: 0;
+        }
+        @keyframes avail-pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(74,222,128,0.5); }
+            70%  { box-shadow: 0 0 0 6px rgba(74,222,128,0); }
+            100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+        }
+
+        /* === #5 Tech stack badges === */
+        .pkg-stack-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 0.6rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+        .pkg-stack-badge.laravel {
+            background: rgba(255,79,61,0.12);
+            border: 1px solid rgba(255,79,61,0.25);
+            color: #ff614d;
+        }
+        .pkg-stack-badge.php {
+            background: rgba(97,129,255,0.12);
+            border: 1px solid rgba(97,129,255,0.25);
+            color: #7c8fff;
+        }
     </style>
 </head>
 
@@ -372,7 +548,12 @@
                                 <li id="menu-item-36"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"
                                     data-menuanchor="Blog">
-                                    <a href="#Blog">{{ __('menu.blog') }}</a>
+                                    <a href="#Blog" style="position:relative;">{{ __('menu.blog') }}<span style="position:absolute;top:18px;right:-10px;display:inline-flex;align-items:center;justify-content:center;background:#00b8d479;color:#fff;font-size:0.55rem;font-weight:700;min-width:16px;height:16px;padding:0 4px;border-radius:20px;line-height:1;">{{ count($posts) }}</span></a>
+                                </li>
+                                <li id="menu-item-38"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"
+                                    data-menuanchor="Packages">
+                                    <a href="#Packages" style="position:relative;">{{ __('menu.packages') }}<span style="position:absolute;top:18px;right:-10px;display:inline-flex;align-items:center;justify-content:center;background:#00b8d47b;color:#fff;font-size:0.55rem;font-weight:700;min-width:16px;height:16px;padding:0 4px;border-radius:20px;line-height:1;">{{ count($packages) }}</span></a>
                                 </li>
                                 <li id="menu-item-37"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"
@@ -383,9 +564,10 @@
                         </nav>
                     </div>
                 </div>
+
                 <div class="vlt-navbar-inner--right">
                     <div class="d-flex align-items-center">
-                        {{-- Seletor de idioma atualizado --}}
+                        {{-- Seletor de idioma actualizado --}}
 
                         <div class="language-switcher">
                             @foreach(config('app.available_locales') as $localeCode => $languageName)
@@ -415,6 +597,7 @@
                         </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </header>
@@ -444,7 +627,10 @@
                     data-menuanchor="Testimonials"><a href="#Testimonials">{{ __('menu.testimonials') }}</a></li>
 
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" data-menuanchor="Blog">
-                    <a href="#Blog">{{ __('menu.blog') }}</a>
+                    <a href="#Blog" style="position:relative;">{{ __('menu.blog') }}<span style="position:absolute;top:-8px;right:-10px;display:inline-flex;align-items:center;justify-content:center;background:#00b8d4;color:#fff;font-size:0.55rem;font-weight:700;min-width:16px;height:16px;padding:0 4px;border-radius:20px;line-height:1;">{{ count($posts) }}</span></a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38" data-menuanchor="Packages">
+                    <a href="#Packages" style="position:relative;">{{ __('menu.packages') }}<span style="position:absolute;top:-8px;right:-10px;display:inline-flex;align-items:center;justify-content:center;background:#00b8d4;color:#fff;font-size:0.55rem;font-weight:700;min-width:16px;height:16px;padding:0 4px;border-radius:20px;line-height:1;">{{ count($packages) }}</span></a>
                 </li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"
                     data-menuanchor="Contact"><a href="#Contact">{{ __('menu.contact') }}</a></li>
@@ -462,7 +648,7 @@
             </div>
 
             <div class="vlt-offcanvas-menu__copyright">
-                <p>© 2020 Copiright.<br>All rights reserved.</p>
+                <p>© {{ date('Y') }} Copiright.<br>All rights reserved.</p>
             </div>
 
 
@@ -575,6 +761,13 @@
 
                     </div>
 
+                    {{-- #8 Scroll Indicator --}}
+                    <div class="scroll-indicator-wrap">
+                        <div class="scroll-indicator">
+                            <div class="scroll-indicator-wheel"></div>
+                        </div>
+                        <span class="scroll-indicator-label">Scroll</span>
+                    </div>
 
                 </div>
 
@@ -978,6 +1171,20 @@
                                                                                     @if($project->appstore_link)
                                                                                     <a href="{{ $project->appstore_link }}" target="_blank">
                                                                                         <img width="150" src="/images/apple.png">
+                                                                                    </a>
+                                                                                    @endif
+                                                                                    @if(!empty($project->website_url))
+                                                                                    <a href="{{ $project->website_url }}" target="_blank" rel="noopener"
+                                                                                       style="display:inline-flex;align-items:center;gap:6px;margin-top:0.75rem;
+                                                                                              padding:0.45rem 1rem;border-radius:6px;font-size:0.75rem;font-weight:500;
+                                                                                              border:1px solid rgba(0,184,212,0.4);background:rgba(0,184,212,0.1);
+                                                                                              color:#00b8d4;text-decoration:none;transition:all 0.2s;letter-spacing:0.04em;"
+                                                                                       onmouseover="this.style.background='rgba(0,184,212,0.2)';this.style.borderColor='rgba(0,184,212,0.7)'"
+                                                                                       onmouseout="this.style.background='rgba(0,184,212,0.1)';this.style.borderColor='rgba(0,184,212,0.4)'">
+                                                                                        <svg style="width:13px;height:13px;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                                                                        </svg>
+                                                                                        Visitar Site
                                                                                     </a>
                                                                                     @endif
                                                                                 </div>
@@ -1491,281 +1698,157 @@
 
                         <div class="container p-0">
 
-                            <div data-elementor-type="wp-post" data-elementor-id="16" class="elementor elementor-16">
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-6be2200 elementor-section-boxed elementor-section-height-default"
-                                    data-id="6be2200" data-element_type="section">
+                            <div class="elementor elementor-16">
+                                <section class="elementor-section elementor-top-section elementor-section-boxed">
                                     <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-834ce09"
-                                            data-id="834ce09" data-element_type="column">
+                                        <div class="elementor-column elementor-col-100 elementor-top-column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-fd50be2 elementor-widget elementor-widget-heading"
-                                                    data-animation-name="fadeInUpSm" style data-id="fd50be2"
-                                                    data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="heading.default">
+                                                <div class="vlt-animate-element elementor-widget elementor-widget-heading" data-animation-name="fadeInUpSm" style>
                                                     <div class="elementor-widget-container">
-                                                        <h3 class="elementor-heading-title elementor-size-default">
-                                                            Reflexões & Insights</h3>
+                                                        <h3 class="elementor-heading-title elementor-size-default">Reflexões &amp; Insights</h3>
                                                     </div>
                                                 </div>
-                                                <div class="elementor-element elementor-element-60c9163 elementor-widget elementor-widget-spacer"
-                                                    data-id="60c9163" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"none"}"=""
-                                                    data-widget_type="spacer.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-spacer">
-                                                            <div class="elementor-spacer-inner"></div>
+                                                <div class="elementor-widget elementor-widget-spacer">
+                                                    <div class="elementor-widget-container"><div class="elementor-spacer"><div class="elementor-spacer-inner"></div></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="elementor-section elementor-top-section elementor-section-boxed">
+                                    <div class="elementor-container elementor-column-gap-extended">
+
+                                        @if(count($posts) > 0)
+                                        @php $blogPages = array_chunk($posts, 3); $totalBlogPages = count($blogPages); @endphp
+
+                                        {{-- #10 Skeleton loading --}}
+                                        <div id="blog-skeleton-wrap" style="width:100%;display:flex;gap:24px;">
+                                            <div class="skeleton-card"></div>
+                                            <div class="skeleton-card"></div>
+                                            <div class="skeleton-card"></div>
+                                        </div>
+
+                                        <div id="blog-real-content" style="display:none;width:100%;position:relative;">
+
+                                            {{-- Pages --}}
+                                            @foreach($blogPages as $pageIdx => $pagePosts)
+                                            <div class="blog-page" data-page="{{ $pageIdx }}"
+                                                 style="{{ $pageIdx === 0 ? 'display:flex;' : 'display:none;' }} gap:24px; align-items:stretch;">
+                                                @foreach($pagePosts as $post)
+                                                <div style="flex:1;min-width:0;">
+                                                    <article class="vlt-post vlt-post--masonry" style="height:100%;display:flex;flex-direction:column;">
+                                                        <div class="vlt-post-border">
+                                                            <span class="top"></span>
+                                                            <span class="right"></span>
+                                                            <span class="bottom"></span>
+                                                            <span class="left"></span>
                                                         </div>
-                                                    </div>
+                                                        <div class="vlt-post-content" style="padding:1.75rem;flex:1;display:flex;flex-direction:column;opacity:1;">
+                                                            <header class="vlt-post-header" style="margin-bottom:1rem;">
+                                                                <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.85rem;font-size:0.75rem;color:rgba(255,255,255,0.5);">
+                                                                    <time>{{ $post['date'] }}</time>
+                                                                    <span style="opacity:0.4;">·</span>
+                                                                    <span style="display:inline-flex;align-items:center;gap:3px;">
+                                                                        <svg style="width:10px;height:10px" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 0a11.9 11.9 0 0 0-11.9 11.9c0 6.57 5.33 11.9 11.9 11.9 6.58 0 11.9-5.33 11.9-11.9A11.9 11.9 0 0 0 13.54 0zm4.22 17.7l-1.23.7-4.26-7.38V5.1h1.42v5.35l4.07 7.25z"/></svg>
+                                                                        Medium
+                                                                    </span>
+                                                                </div>
+                                                                <h6 class="vlt-post-title" style="font-size:0.95rem;line-height:1.45;margin:0;font-weight:500;">
+                                                                    <a href="{{ $post['link'] }}" target="_blank" rel="noopener">{{ Str::limit($post['title'], 65) }}</a>
+                                                                </h6>
+                                                            </header>
+                                                            <div style="font-size:0.8rem;line-height:1.65;color:rgba(255,255,255,0.55);flex:1;">{{ $post['excerpt'] }}</div>
+                                                            <footer class="vlt-post-footer" style="margin-top:1.25rem;">
+                                                                <a class="vlt-read-more-link" href="{{ $post['link'] }}" target="_blank" rel="noopener" style="font-size:0.82rem;">
+                                                                    Read More
+                                                                    <svg fill="none" viewBox="0 0 16 8" style="height:8px;margin-left:8px;"><path d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z" fill="currentColor"/></svg>
+                                                                </a>
+                                                            </footer>
+                                                        </div>
+                                                    </article>
                                                 </div>
+                                                @endforeach
+                                                {{-- Fill empty slots if last page has < 3 posts --}}
+                                                @for($e = count($pagePosts); $e < 3; $e++)
+                                                <div style="flex:1;min-width:0;"></div>
+                                                @endfor
                                             </div>
+                                            @endforeach
+
+                                            {{-- Controls (only if more than 1 page) --}}
+                                            @if($totalBlogPages > 1)
+                                            <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:1.75rem;">
+                                                <button id="blog-prev"
+                                                    style="width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);
+                                                           background:rgba(255,255,255,0.04);color:#fff;cursor:pointer;
+                                                           display:flex;align-items:center;justify-content:center;
+                                                           transition:all 0.2s;opacity:0.3;pointer-events:none;">
+                                                    <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                                                </button>
+
+                                                <div id="blog-dots" style="display:flex;gap:8px;align-items:center;">
+                                                    @for($d = 0; $d < $totalBlogPages; $d++)
+                                                    <span class="blog-dot" data-page="{{ $d }}"
+                                                          style="display:inline-block;width:{{ $d === 0 ? 18 : 6 }}px;height:6px;
+                                                                 border-radius:3px;background:#fff;cursor:pointer;
+                                                                 opacity:{{ $d === 0 ? 1 : 0.3 }};transition:all 0.3s;"></span>
+                                                    @endfor
+                                                </div>
+
+                                                <button id="blog-next"
+                                                    style="width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);
+                                                           background:rgba(255,255,255,0.04);color:#fff;cursor:pointer;
+                                                           display:flex;align-items:center;justify-content:center;
+                                                           transition:all 0.2s;">
+                                                    <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                                                </button>
+                                            </div>
+
+                                            <script>
+                                            (function() {
+                                                var pages   = document.querySelectorAll('.blog-page');
+                                                var dots    = document.querySelectorAll('.blog-dot');
+                                                var prev    = document.getElementById('blog-prev');
+                                                var next    = document.getElementById('blog-next');
+                                                var total   = pages.length;
+                                                var current = 0;
+
+                                                function go(n) {
+                                                    pages[current].style.display = 'none';
+                                                    current = n;
+                                                    pages[current].style.display = 'flex';
+
+                                                    dots.forEach(function(d, i) {
+                                                        d.style.opacity = i === current ? '1' : '0.3';
+                                                        d.style.width   = i === current ? '18px' : '6px';
+                                                    });
+
+                                                    prev.style.opacity       = current === 0 ? '0.3' : '1';
+                                                    prev.style.pointerEvents = current === 0 ? 'none' : 'auto';
+                                                    next.style.opacity       = current >= total - 1 ? '0.3' : '1';
+                                                    next.style.pointerEvents = current >= total - 1 ? 'none' : 'auto';
+                                                }
+
+                                                prev.addEventListener('click', function() { if (current > 0) go(current - 1); });
+                                                next.addEventListener('click', function() { if (current < total - 1) go(current + 1); });
+                                                dots.forEach(function(d) {
+                                                    d.addEventListener('click', function() { go(+this.dataset.page); });
+                                                });
+                                            })();
+                                            </script>
+                                            @endif
+
                                         </div>
+
+                                        @else
+                                        <div style="width:100%;text-align:center;padding:3rem 0;">
+                                            <a href="https://medium.com/@arnaldotomo" target="_blank" rel="noopener" style="color:#00b8d4;">Read articles on Medium →</a>
+                                        </div>
+                                        @endif
+
                                     </div>
-                                </section>
-                                <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-730389d elementor-section-boxed elementor-section-height-default"
-                                    data-id="730389d" data-element_type="section">
-                                    <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f1aef9c"
-                                            data-id="f1aef9c" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-5482c3c elementor-widget elementor-widget-vlt-single-post"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 100ms;"
-                                                    data-id="5482c3c" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-single-post.default">
-                                                    <div class="elementor-widget-container">
-
-                                                        <article
-                                                            class="vlt-post vlt-post--masonry post-52 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
-
-                                                            <div class="vlt-post-border">
-                                                                <span class="top"></span>
-                                                                <span class="right"></span>
-                                                                <span class="bottom"></span>
-                                                                <span class="left"></span>
-                                                            </div>
-
-                                                            <div class="vlt-post-media">
-
-                                                                <img loading="lazy" decoding="async" width="800"
-                                                                    height="432" src="images/blog1.webp"
-                                                                    class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image"
-                                                                    alt>
-                                                            </div>
-                                                            <!-- /.vlt-post-thumbnail -->
-
-                                                            <div class="vlt-post-content">
-
-                                                                <header class="vlt-post-header">
-
-                                                                    <div class="vlt-post-meta">
-
-                                                                        <span><time
-                                                                                datetime="2020-12-10T09:54:09+00:00">10
-                                                                                December 2020</time></span>
-
-                                                                    </div>
-                                                                    <!-- /.vlt-post-meta -->
-                                                                    <h6 class="vlt-post-title">
-                                                                        <a href="##">O Futuro do Desenvol..</a>
-                                                                    </h6>
-                                                                    <!-- /.vlt-post-title -->
-                                                                </header>
-                                                                <!-- /.vlt-post-header -->
-
-                                                                <div class="vlt-post-excerpt">
-                                                                    O desenvolvimento web está em constante evolução, e novas tecnologias surgem a cada ano....</div>
-                                                                <!-- /.vlt-post-excerpt -->
-
-                                                                <footer class="vlt-post-footer">
-
-                                                                    <a class="vlt-read-more-link"
-                                                                        href="#">Read
-                                                                        More<svg fill="none"
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            viewBox="0 0 16 8">
-                                                                            <defs></defs>
-                                                                            <path
-                                                                                d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z"
-                                                                                fill="currentColor"></path>
-                                                                        </svg></a>
-                                                                    <!-- /.vlt-read-more-link -->
-                                                                </footer>
-                                                                <!-- /.vlt-post-footer -->
-
-                                                            </div>
-                                                            <!-- /.vlt-post-content -->
-
-                                                        </article>
-                                                        <!-- /.vlt-post -->
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-a7b9f24"
-                                            data-id="a7b9f24" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-772e13e elementor-widget elementor-widget-vlt-single-post"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 200ms;"
-                                                    data-id="772e13e" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-single-post.default">
-                                                    <div class="elementor-widget-container">
-
-                                                        <article
-                                                            class="vlt-post vlt-post--masonry post-54 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
-
-                                                            <div class="vlt-post-border">
-                                                                <span class="top"></span>
-                                                                <span class="right"></span>
-                                                                <span class="bottom"></span>
-                                                                <span class="left"></span>
-                                                            </div>
-
-                                                            <div class="vlt-post-media">
-
-                                                                <img loading="lazy" decoding="async" width="800"
-                                                                    height="432" src="images/blog2.jpg"
-                                                                    class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image"
-                                                                    alt>
-                                                            </div>
-                                                            <!-- /.vlt-post-thumbnail -->
-
-                                                            <div class="vlt-post-content">
-
-                                                                <header class="vlt-post-header">
-
-                                                                    <div class="vlt-post-meta">
-
-                                                                        <span><time
-                                                                                datetime="2020-12-10T09:54:21+00:00">10
-                                                                                December 2020</time></span>
-
-                                                                    </div>
-                                                                    <!-- /.vlt-post-meta -->
-                                                                    <h3 class="vlt-post-title">
-                                                                        <a
-                                                                            href="#">Como um Desenvolvedor..?</a>
-                                                                    </h3>
-                                                                    <!-- /.vlt-post-title -->
-                                                                </header>
-                                                                <!-- /.vlt-post-header -->
-
-                                                                <div class="vlt-post-excerpt">
-                                                                    screver código é apenas parte do trabalho. Um bom desenvolvedor precisa ser produtivo s...</div>
-                                                                <!-- /.vlt-post-excerpt -->
-
-                                                                <footer class="vlt-post-footer">
-
-                                                                    <a class="vlt-read-more-link"
-                                                                        href="#">Read
-                                                                        More<svg fill="none"
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            viewBox="0 0 16 8">
-                                                                            <defs></defs>
-                                                                            <path
-                                                                                d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z"
-                                                                                fill="currentColor"></path>
-                                                                        </svg></a>
-                                                                    <!-- /.vlt-read-more-link -->
-                                                                </footer>
-                                                                <!-- /.vlt-post-footer -->
-
-                                                            </div>
-                                                            <!-- /.vlt-post-content -->
-
-                                                        </article>
-                                                        <!-- /.vlt-post -->
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c569992"
-                                            data-id="c569992" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="vlt-animate-element elementor-element elementor-element-07bd1ec elementor-widget elementor-widget-vlt-single-post"
-                                                    data-animation-name="fadeInUpSm" style=" --animate-delay: 300ms;"
-                                                    data-id="07bd1ec" data-element_type="widget" data-settings="{"
-                                                    vlt_animated_widget_animation":"fadeinupsm"}"=""
-                                                    data-widget_type="vlt-single-post.default">
-                                                    <div class="elementor-widget-container">
-
-                                                        <article
-                                                            class="vlt-post vlt-post--masonry post-57 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-follow tag-photography">
-
-                                                            <div class="vlt-post-border">
-                                                                <span class="top"></span>
-                                                                <span class="right"></span>
-                                                                <span class="bottom"></span>
-                                                                <span class="left"></span>
-                                                            </div>
-
-                                                            <div class="vlt-post-media">
-
-                                                                <img loading="lazy" decoding="async" width="800"
-                                                                    height="366" src="images/blog3.png"
-                                                                    class="attachment-gilber-800x600 size-gilber-800x600 wp-post-image"
-                                                                    alt>
-                                                            </div>
-                                                            <!-- /.vlt-post-thumbnail -->
-
-                                                            <div class="vlt-post-content">
-
-                                                                <header class="vlt-post-header">
-
-                                                                    <div class="vlt-post-meta">
-
-                                                                        <span><time
-                                                                                datetime="2020-12-10T09:54:36+00:00">10
-                                                                                December 2020</time></span>
-
-                                                                    </div>
-                                                                    <!-- /.vlt-post-meta -->
-                                                                    <h3 class="vlt-post-title">
-                                                                        <a
-                                                                            href="#">React Native vs Flutter</a>
-                                                                    </h3>
-                                                                    <!-- /.vlt-post-title -->
-                                                                </header>
-                                                                <!-- /.vlt-post-header -->
-
-                                                                <div class="vlt-post-excerpt">
-                                                                    Se estás a desenvolver uma aplicação mobile, provavelmente já te perguntaste: React Native ou Flutter? </div>
-                                                                <!-- /.vlt-post-excerpt -->
-
-                                                                <footer class="vlt-post-footer">
-
-                                                                    <a class="vlt-read-more-link"
-                                                                        href="#">Read
-                                                                        More<svg fill="none"
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            viewBox="0 0 16 8">
-                                                                            <defs></defs>
-                                                                            <path
-                                                                                d="M15.3536 4.35355c.1952-.19526.1952-.51184 0-.7071L12.1716.464466c-.1953-.195262-.5119-.195262-.7071 0-.1953.195262-.1953.511845 0 .707104L14.2929 4l-2.8284 2.82843c-.1953.19526-.1953.51184 0 .7071.1952.19527.5118.19527.7071 0l3.182-3.18198zM0 4.5h15v-1H0v1z"
-                                                                                fill="currentColor"></path>
-                                                                        </svg></a>
-                                                                    <!-- /.vlt-read-more-link -->
-                                                                </footer>
-                                                                <!-- /.vlt-post-footer -->
-
-                                                            </div>
-                                                            <!-- /.vlt-post-content -->
-
-                                                        </article>
-                                                        <!-- /.vlt-post -->
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
+                                </section>                            </div>
 
                         </div>
                         <!-- /.container -->
@@ -1779,6 +1862,208 @@
             </div>
             <!-- /.vlt-section -->
 
+            <div class="vlt-section pp-scrollable" data-anchor="Packages" style>
+
+                <div class="vlt-section__vertical-align">
+                    <div class="vlt-section__content">
+                        <div class="container p-0">
+
+                            {{-- Header --}}
+                            <div class="vlt-animate-element" data-animation-name="fadeInUpSm" style="margin-bottom:2.5rem;">
+                                <h3 class="elementor-heading-title elementor-size-default" style="margin-bottom:0.6rem;">
+                                    {{ __("messages.packages_title") }}
+                                </h3>
+                                <p style="color:rgba(255,255,255,0.45);font-size:0.85rem;line-height:1.6;max-width:520px;margin:0;">
+                                    {{ __("messages.packages_description") }}
+                                </p>
+                            </div>
+
+                            @if(count($packages) > 0)
+                            @php $pkgPages = array_chunk($packages, 3); $totalPkgPages = count($pkgPages); @endphp
+
+                            <div style="position:relative;">
+
+                                @foreach($pkgPages as $pageIdx => $pagePackages)
+                                <div class="pkg-page" data-page="{{ $pageIdx }}"
+                                     style="{{ $pageIdx === 0 ? 'display:flex;' : 'display:none;' }}gap:20px;align-items:stretch;">
+
+                                    @foreach($pagePackages as $pkg)
+                                    @php
+                                        $pkgShortName = explode('/', $pkg['name'])[1] ?? $pkg['name'];
+                                        $pkgVendor    = explode('/', $pkg['name'])[0] ?? '';
+                                        $packagistUrl = 'https://packagist.org/packages/' . $pkg['name'];
+                                        $composerCmd  = 'composer require ' . $pkg['name'];
+                                        $pkgDownloads = $pkg['downloads'] ?? null;
+                                        $pkgStars     = $pkg['stars'] ?? null;
+                                        $copyId       = 'copy-' . Str::slug($pkg['name']);
+                                    @endphp
+                                    <div style="flex:1;min-width:0;">
+                                        <div class="vlt-post vlt-post--masonry" style="height:100%;display:flex;flex-direction:column;">
+                                            <div class="vlt-post-border">
+                                                <span class="top"></span><span class="right"></span>
+                                                <span class="bottom"></span><span class="left"></span>
+                                            </div>
+                                            <div class="vlt-post-content" style="padding:1.5rem;flex:1;display:flex;flex-direction:column;opacity:1;">
+
+                                                {{-- Vendor --}}
+                                                <div style="font-size:0.65rem;color:rgba(255,255,255,0.3);letter-spacing:0.08em;
+                                                            text-transform:uppercase;margin-bottom:0.35rem;">{{ $pkgVendor }}</div>
+
+                                                {{-- Package name --}}
+                                                <div style="font-size:0.98rem;font-weight:600;color:#fff;
+                                                            line-height:1.3;margin-bottom:0.5rem;">{{ $pkgShortName }}</div>
+
+                                                {{-- #5 Tech stack badges --}}
+                                                <div style="display:flex;gap:5px;margin-bottom:0.75rem;">
+                                                    <span class="pkg-stack-badge laravel">
+                                                        <svg style="width:9px;height:9px;" viewBox="0 0 50 52" fill="currentColor"><path d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.812.812 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.031-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.209.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.022.055-.047.088-.065h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.018.059.043.088.065.026.02.055.037.078.06.028.028.048.061.072.093.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.067zm-1.574 10.729V13.12l-3.869 2.231-5.342 3.071v9.172zM38.652 24.611l5.34-3.076 3.868-2.221-9.208-5.301-9.21 5.302 9.21 5.296zM28.25 43.888v-9.16l-5.275 3.035-15.069 8.638 20.344 11.714zM1.602 7.719v31.53l20.343 11.716V19.435L1.602 7.719zm8.008-5.994L9.61 1.726.4 6.333l9.21 5.302 9.208-5.302-9.208-4.608zm4.344 29.812l5.342-3.071V19.29l-9.21-5.302v9.17zm15.054-8.677l-9.208-5.302-9.21 5.302 9.21 5.3zm-9.61 16.333l5.276-3.035 3.934-2.27-9.21-5.3-9.208 5.3 9.208 5.305z"/></svg>
+                                                        Laravel
+                                                    </span>
+                                                    <span class="pkg-stack-badge php">
+                                                        <svg style="width:9px;height:9px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.25 16.518l-4.5.001.875-4.483h1.862c.891 0 1.375-.285 1.455-.854.031-.221-.019-.363-.15-.426-.132-.065-.471-.096-1.021-.092l-1.922.001.845-4.33h6.077l-.378 1.894H12.24a4.6 4.6 0 00-.609.027c-.311.044-.544.14-.697.29-.153.149-.236.32-.248.513-.016.232.066.399.244.502.179.102.493.153.944.153h.672c.924 0 1.578.147 1.961.441.383.294.529.78.438 1.456-.092.676-.386 1.248-.882 1.716-.497.468-1.121.76-1.872.876-.406.064-.882.096-1.431.096H10.42l-.244 1.219.571.001zm7.012 0h-1.74l.245-1.22h-.571c-.549 0-1.025-.032-1.431-.096-.751-.116-1.375-.408-1.872-.876-.496-.468-.79-1.04-.882-1.716-.091-.676.055-1.162.438-1.456.383-.294 1.037-.441 1.961-.441h.672c.451 0 .765-.051.944-.153.178-.103.26-.27.244-.502-.012-.193-.095-.364-.248-.513-.153-.15-.386-.246-.697-.29a4.6 4.6 0 00-.609-.027h-1.653l.378-1.894H18.7l-.845 4.33-1.922-.001c-.55-.004-.889.027-1.021.092-.131.063-.181.205-.15.426.08.569.564.854 1.455.854h1.862l-.875 4.483h-1.443z"/></svg>
+                                                        PHP
+                                                    </span>
+                                                </div>
+
+                                                {{-- Stats row --}}
+                                                @if($pkgDownloads !== null || $pkgStars !== null)
+                                                <div style="display:flex;gap:1rem;margin-bottom:0.9rem;">
+                                                    @if($pkgDownloads !== null)
+                                                    <span style="display:inline-flex;align-items:center;gap:4px;font-size:0.68rem;color:rgba(255,255,255,0.4);">
+                                                        <svg style="width:10px;height:10px" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v7.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 10.586V3a1 1 0 011-1zm-7 14a1 1 0 100 2h14a1 1 0 100-2H3z"/></svg>
+                                                        {{ number_format($pkgDownloads) }}
+                                                    </span>
+                                                    @endif
+                                                    @if($pkgStars)
+                                                    <span style="display:inline-flex;align-items:center;gap:4px;font-size:0.68rem;color:rgba(255,255,255,0.4);">
+                                                        <svg style="width:10px;height:10px" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                        {{ number_format($pkgStars) }}
+                                                    </span>
+                                                    @endif
+                                                </div>
+                                                @endif
+
+                                                {{-- Description --}}
+                                                <p style="font-size:0.78rem;line-height:1.65;color:rgba(255,255,255,0.5);
+                                                          flex:1;margin:0 0 1.1rem;">{{ Str::limit($pkg['description'] ?? '', 120) }}</p>
+
+                                                {{-- Composer command + copy --}}
+                                                <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.07);border-radius:6px;
+                                                            padding:0.55rem 0.75rem;margin-bottom:1rem;
+                                                            display:flex;align-items:center;gap:0.5rem;">
+                                                    <svg style="width:10px;height:10px;flex-shrink:0;color:rgba(255,255,255,0.25)" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"/>
+                                                    </svg>
+                                                    <code id="{{ $copyId }}"
+                                                          style="font-size:0.65rem;color:#86efac;font-family:'JetBrains Mono',monospace;
+                                                                 white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;">{{ $composerCmd }}</code>
+                                                    <button onclick="copyCmd('{{ $copyId }}', this)"
+                                                            title="Copy"
+                                                            style="flex-shrink:0;background:none;border:none;color:rgba(255,255,255,0.35);
+                                                                   cursor:pointer;padding:0;line-height:1;transition:color 0.2s;"
+                                                            onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">
+                                                        <svg style="width:13px;height:13px;" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path d="M8 2a2 2 0 00-2 2v1H5a2 2 0 00-2 2v9a2 2 0 002 2h8a2 2 0 002-2v-1h1a2 2 0 002-2V5a2 2 0 00-2-2H9a2 2 0 00-2 2v1H6V4a1 1 0 011-1h6a1 1 0 011 1v1h1V4a2 2 0 00-2-2H8zm1 4h4a1 1 0 011 1v8a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h1v1a1 1 0 001 1h2a1 1 0 001-1V6z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+
+                                                {{-- Buttons --}}
+                                                <div style="display:flex;gap:0.5rem;">
+                                                    <a href="{{ $packagistUrl }}" target="_blank" rel="noopener"
+                                                       style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:5px;
+                                                              padding:0.45rem 0.6rem;border-radius:6px;font-size:0.7rem;font-weight:500;
+                                                              border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);
+                                                              color:#d1d5db;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
+                                                       onmouseover="this.style.borderColor='rgba(255,255,255,0.25)';this.style.background='rgba(255,255,255,0.08)'"
+                                                       onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.background='rgba(255,255,255,0.04)'">
+                                                        {{-- Packagist official logo --}}
+                                                        <svg style="width:13px;height:13px;flex-shrink:0;" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M255.99 60.12L32 183.68v144.64l224 123.56 224-123.56V183.68L255.99 60.12zM64 204.93L256 100.43l192 104.5v.5L256 309.93 64 205.43v-.5zm0 123.28l176 97.02v-97.5L64 231.5v96.71zm224 97.02l176-97.02V231.5L288 327.73v97.5z"/>
+                                                        </svg>
+                                                        Packagist
+                                                    </a>
+                                                    @if(!empty($pkg['repository']))
+                                                    <a href="{{ $pkg['repository'] }}" target="_blank" rel="noopener"
+                                                       style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:5px;
+                                                              padding:0.45rem 0.6rem;border-radius:6px;font-size:0.7rem;font-weight:500;
+                                                              border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);
+                                                              color:#d1d5db;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
+                                                       onmouseover="this.style.borderColor='rgba(255,255,255,0.25)';this.style.background='rgba(255,255,255,0.08)'"
+                                                       onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.background='rgba(255,255,255,0.04)'">
+                                                        {{-- GitHub SVG --}}
+                                                        <svg style="width:12px;height:12px;flex-shrink:0;" viewBox="0 0 24 24" fill="currentColor">
+                                                            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                                                        </svg>
+                                                        GitHub
+                                                    </a>
+                                                    @endif
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+
+                                    @for($e = count($pagePackages); $e < 3; $e++)
+                                    <div style="flex:1;min-width:0;"></div>
+                                    @endfor
+                                </div>
+                                @endforeach
+
+                                @if($totalPkgPages > 1)
+                                <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:1.75rem;">
+                                    <button id="pkg-prev"
+                                        style="width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);
+                                               background:rgba(255,255,255,0.04);color:#fff;cursor:pointer;
+                                               display:flex;align-items:center;justify-content:center;transition:all 0.2s;
+                                               opacity:0.3;pointer-events:none;">
+                                        <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                                    </button>
+                                    <div style="display:flex;gap:8px;align-items:center;">
+                                        @for($d = 0; $d < $totalPkgPages; $d++)
+                                        <span class="pkg-dot" data-page="{{ $d }}"
+                                              style="display:inline-block;width:{{ $d===0?18:6 }}px;height:6px;border-radius:3px;
+                                                     background:#fff;cursor:pointer;opacity:{{ $d===0?1:0.3 }};transition:all 0.3s;"></span>
+                                        @endfor
+                                    </div>
+                                    <button id="pkg-next"
+                                        style="width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);
+                                               background:rgba(255,255,255,0.04);color:#fff;cursor:pointer;
+                                               display:flex;align-items:center;justify-content:center;transition:all 0.2s;">
+                                        <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                                    </button>
+                                </div>
+                                <script>
+                                (function(){
+                                    var pages=document.querySelectorAll('.pkg-page'),
+                                        dots=document.querySelectorAll('.pkg-dot'),
+                                        prev=document.getElementById('pkg-prev'),
+                                        next=document.getElementById('pkg-next'),
+                                        total=pages.length, cur=0;
+                                    function go(n){
+                                        pages[cur].style.display='none'; cur=n; pages[cur].style.display='flex';
+                                        dots.forEach(function(d,i){ d.style.opacity=i===cur?'1':'0.3'; d.style.width=i===cur?'18px':'6px'; });
+                                        prev.style.opacity=cur===0?'0.3':'1'; prev.style.pointerEvents=cur===0?'none':'auto';
+                                        next.style.opacity=cur>=total-1?'0.3':'1'; next.style.pointerEvents=cur>=total-1?'none':'auto';
+                                    }
+                                    prev.addEventListener('click',function(){ if(cur>0) go(cur-1); });
+                                    next.addEventListener('click',function(){ if(cur<total-1) go(cur+1); });
+                                    dots.forEach(function(d){ d.addEventListener('click',function(){ go(+this.dataset.page); }); });
+                                })();
+                                </script>
+                                @endif
+
+                            </div>
+                            @endif
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.vlt-section (Packages) -->
+
             <div class="vlt-section pp-scrollable" data-anchor="Contact" style>
 
                 <div class="vlt-section__vertical-align">
@@ -1787,7 +2072,7 @@
 
                         <div class="vlt-section__ken-burn-background">
 
-                            <img src="images/contact.png" alt="background" loading="lazy">
+                            <img src="/contatc.svg" alt="background" loading="lazy">
 
                         </div>
                         <!-- /.vlt-section__ken-burn-background -->
@@ -1828,7 +2113,13 @@
                                                     data-id="2113bd3" data-element_type="widget" data-settings="{"
                                                     vlt_animated_widget_animation":"fadeinupsm"}"=""
                                                     data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container">{!! __('messages.availability') !!}</div>
+                                                    <div class="elementor-widget-container">
+                                                        <div class="avail-badge">
+                                                            <span class="avail-dot"></span>
+                                                            Disponível para novos projetos
+                                                        </div>
+                                                        {!! __('messages.availability') !!}
+                                                    </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-384fa45 elementor-widget elementor-widget-spacer"
                                                     data-id="384fa45" data-element_type="widget" data-settings="{"
@@ -1855,7 +2146,7 @@
                                                     vlt_animated_widget_animation":"fadeinupsm"}"=""
                                                     data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        <a href="tel:+258846474687">+258 84 647 4687</a>
+                                                        <a href="tel:+258846474687" class="copy-contact" data-copy="+258 84 647 4687" onclick="copyContact(this,event)">+258 84 647 4687</a>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-b615013 elementor-widget elementor-widget-spacer"
@@ -1874,7 +2165,7 @@
                                                     vlt_animated_widget_animation":"fadeinupsm"}"=""
                                                     data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        <a href="mailto:arnaldotomo@gmail.com">arnaldotomo@gmail.com</a>
+                                                        <a href="mailto:contacto@arnaldotomo.dev" class="copy-contact" data-copy="contacto@arnaldotomo.dev" onclick="copyContact(this,event)">contacto@arnaldotomo.dev</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1917,68 +2208,29 @@
                                                     <div class="elementor-widget-container">
 
                                                         <div class="vlt-contact-form-7">
-
-                                                            <div class="wpcf7 no-js" id="wpcf7-f184-o1" lang="en-US"
-                                                                dir="ltr" data-wpcf7-id="184">
-                                                                <div class="screen-reader-response">
-                                                                    <p role="status" aria-live="polite"
-                                                                        aria-atomic="true"></p>
-                                                                    <ul></ul>
+                                                            <form id="portfolio-contact-form" novalidate>
+                                                                @csrf
+                                                                <div class="vlt-form-group">
+                                                                    <input type="text" name="name" id="cf-name"
+                                                                        class="wpcf7-form-control wpcf7-text"
+                                                                        placeholder="Seu Nome" required maxlength="120">
                                                                 </div>
-                                                                <form action="#"
-                                                                    method="post" class="wpcf7-form init demo"
-                                                                    aria-label="Contact form" novalidate="novalidate"
-                                                                    data-status="init">
-                                                                    <div style="display: none;">
-                                                                        <input type="hidden" name="_wpcf7" value="184">
-                                                                        <input type="hidden" name="_wpcf7_version"
-                                                                            value="6.0.2">
-                                                                        <input type="hidden" name="_wpcf7_locale"
-                                                                            value="en_US">
-                                                                        <input type="hidden" name="_wpcf7_unit_tag"
-                                                                            value="wpcf7-f184-o1">
-                                                                        <input type="hidden"
-                                                                            name="_wpcf7_container_post" value="0">
-                                                                        <input type="hidden"
-                                                                            name="_wpcf7_posted_data_hash" value>
-                                                                    </div>
-                                                                    <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap"
-                                                                            data-name="your-name"><input size="40"
-                                                                                maxlength="400"
-                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                aria-required="true"
-                                                                                aria-invalid="false"
-                                                                                placeholder="Seu Nome" value type="text"
-                                                                                name="your-name"></span>
-                                                                    </div>
-                                                                    <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap"
-                                                                            data-name="your-email"><input size="40"
-                                                                                maxlength="400"
-                                                                                class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                                                aria-required="true"
-                                                                                aria-invalid="false"
-                                                                                placeholder="Seu Email" value
-                                                                                type="email" name="your-email"></span>
-                                                                    </div>
-                                                                    <div class="vlt-form-group">
-                                                                        <span class="wpcf7-form-control-wrap"
-                                                                            data-name="your-message"><textarea cols="40"
-                                                                                rows="4" maxlength="2000"
-                                                                                class="wpcf7-form-control wpcf7-textarea"
-                                                                                aria-invalid="false"
-                                                                                placeholder="Mensagem"
-                                                                                name="your-message"></textarea></span>
-                                                                    </div>
-                                                                    <button
-                                                                        class="wpcf7-form-control wpcf7-submit vlt-btn vlt-btn--primary">Enviar
-                                                                        Mensagem</button>
-                                                                    <div class="wpcf7-response-output"
-                                                                        aria-hidden="true"></div>
-                                                                </form>
-                                                            </div>
-
+                                                                <div class="vlt-form-group">
+                                                                    <input type="email" name="email" id="cf-email"
+                                                                        class="wpcf7-form-control wpcf7-email"
+                                                                        placeholder="Seu Email" required maxlength="200">
+                                                                </div>
+                                                                <div class="vlt-form-group">
+                                                                    <textarea name="message" id="cf-message" rows="4"
+                                                                        class="wpcf7-form-control wpcf7-textarea"
+                                                                        placeholder="Mensagem" required maxlength="3000"></textarea>
+                                                                </div>
+                                                                <button type="submit" id="cf-submit"
+                                                                    class="wpcf7-form-control wpcf7-submit vlt-btn vlt-btn--primary">
+                                                                    <span id="cf-btn-text">Enviar Mensagem</span>
+                                                                </button>
+                                                                <div id="cf-response" style="margin-top:14px;font-size:13px;display:none;padding:12px 16px;border-radius:6px;"></div>
+                                                            </form>
                                                         </div>
 
                                                     </div>
@@ -2212,6 +2464,144 @@
 
     </script>
     <script type="text/javascript" src="js/frontend.min.js" id="elementor-frontend-js"></script>
+
+    <script>
+        document.querySelectorAll('.tab-button').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-button').forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+                document.getElementById(btn.dataset.tab + '-tab').classList.add('active');
+            });
+        });
+    </script>
+
+    <script>
+    function copyCmd(id, btn) {
+        var text = document.getElementById(id).textContent.trim();
+        navigator.clipboard.writeText(text).then(function() {
+            var orig = btn.innerHTML;
+            btn.innerHTML = '<svg style="width:13px;height:13px" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>';
+            btn.style.color = '#86efac';
+            setTimeout(function() { btn.innerHTML = orig; btn.style.color = 'rgba(255,255,255,0.35)'; }, 1500);
+        });
+    }
+    </script>
+
+    {{-- Contact form AJAX --}}
+    <script>
+    (function () {
+        var form   = document.getElementById('portfolio-contact-form');
+        var btn    = document.getElementById('cf-submit');
+        var btnTxt = document.getElementById('cf-btn-text');
+        var resp   = document.getElementById('cf-response');
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            var name    = document.getElementById('cf-name').value.trim();
+            var email   = document.getElementById('cf-email').value.trim();
+            var message = document.getElementById('cf-message').value.trim();
+
+            if (!name || !email || !message) {
+                showResp('Por favor preencha todos os campos.', false);
+                return;
+            }
+
+            btn.disabled = true;
+            btnTxt.textContent = 'A enviar…';
+
+            var formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('message', message);
+            formData.append('_token', document.querySelector('input[name="_token"]') ?
+                document.querySelector('input[name="_token"]').value :
+                '{{ csrf_token() }}');
+
+            fetch('{{ route("contact.send") }}', {
+                method: 'POST',
+                headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}', 'Accept': 'application/json' },
+                body: formData,
+            })
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+                if (data.success) {
+                    form.reset();
+                    showResp('✓ Mensagem enviada! Verifique o seu email — enviámos uma confirmação.', true);
+                } else {
+                    var msg = data.errors ? Object.values(data.errors).flat().join(' ') : 'Ocorreu um erro. Tente novamente.';
+                    showResp(msg, false);
+                }
+            })
+            .catch(function () {
+                showResp('Falha na ligação. Verifique a internet e tente novamente.', false);
+            })
+            .finally(function () {
+                btn.disabled = false;
+                btnTxt.textContent = 'Enviar Mensagem';
+            });
+        });
+
+        function showResp(msg, ok) {
+            resp.textContent = msg;
+            resp.style.display = 'block';
+            resp.style.background = ok ? 'rgba(74,222,128,0.08)' : 'rgba(239,68,68,0.08)';
+            resp.style.border     = ok ? '1px solid rgba(74,222,128,0.25)' : '1px solid rgba(239,68,68,0.25)';
+            resp.style.color      = ok ? '#4ade80' : '#f87171';
+        }
+    })();
+    </script>
+
+    {{-- #9 Copy contact function --}}
+    <script>
+    function copyContact(el, e) {
+        e.preventDefault();
+        var text = el.getAttribute('data-copy');
+        if (!navigator.clipboard) {
+            // fallback
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            showCopyTooltip(el);
+            return;
+        }
+        navigator.clipboard.writeText(text).then(function() {
+            showCopyTooltip(el);
+        });
+    }
+    function showCopyTooltip(el) {
+        var old = el.querySelector('.copy-tooltip');
+        if (old) old.remove();
+        var tip = document.createElement('span');
+        tip.className = 'copy-tooltip';
+        tip.textContent = 'Copiado!';
+        el.appendChild(tip);
+        setTimeout(function() { tip.remove(); }, 1800);
+    }
+    </script>
+
+    {{-- #10 Blog skeleton reveal --}}
+    <script>
+    (function() {
+        var sk = document.getElementById('blog-skeleton-wrap');
+        var real = document.getElementById('blog-real-content');
+        if (sk && real) {
+            setTimeout(function() {
+                sk.style.display = 'none';
+                real.style.display = 'block';
+            }, 750);
+        }
+    })();
+    </script>
+
+    {{-- Hackher: Sua Pegada Digital — carregado após todos os outros scripts --}}
+    <script src="{{ asset('js/hackher-detect.js') }}"></script>
 
 </body>
 

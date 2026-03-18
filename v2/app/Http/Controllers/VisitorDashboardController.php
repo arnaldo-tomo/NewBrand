@@ -104,9 +104,34 @@ class VisitorDashboardController extends Controller
             ->filter()
             ->avg();
 
-        // Últimos visitantes
-     $ultimosVisitantes = VisitorTracking::latest()
-        ->paginate(15);
+        // Últimos visitantes com filtros
+        $filtro = request('filtro', 'todos');
+        $search = request('search', '');
+
+        $query = VisitorTracking::latest();
+
+        if ($search) {
+            $query->where(function($q) use ($search) {
+                $q->where('location', 'like', "%$search%")
+                  ->orWhere('ip_address', 'like', "%$search%")
+                  ->orWhere('browser_info', 'like', "%$search%")
+                  ->orWhere('device_type', 'like', "%$search%")
+                  ->orWhere('os_info', 'like', "%$search%");
+            });
+        }
+
+        if ($filtro === 'localizacao') {
+            $query->whereNotNull('location')->where('location', '!=', '');
+        } elseif ($filtro === 'dispositivo') {
+            $query->whereNotNull('device_type')->where('device_type', '!=', '');
+        } elseif ($filtro === 'browser') {
+            $query->whereNotNull('browser_info')->where('browser_info', '!=', '');
+        } elseif ($filtro === 'mobile') {
+            $query->where('device_type', 'like', '%Mobile%')
+                  ->orWhere('device_type', 'like', '%Smartphone%');
+        }
+
+        $ultimosVisitantes = $query->paginate(10)->withQueryString();
 
         // Visitantes por hora do dia
         $visitantesPorHora = VisitorTracking::select(

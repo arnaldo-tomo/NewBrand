@@ -13,6 +13,8 @@ use App\Http\Controllers\SecurityController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\ApiTokenController;
 use App\Http\Controllers\auth_otp;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use App\Models\Project;
@@ -46,7 +48,67 @@ Route::group([  'prefix' => '{locale}', 'where' => ['locale' => 'en|pt'], // Def
         ->orderBy('order')
         ->get();
 
-        return view('welcome', compact('projects', 'education', 'testimonials', 'skills'));
+        // Medium blog posts (cached 2 hours)
+        $posts = Cache::remember('medium_posts', 7200, function () {
+            try {
+                $response = Http::timeout(6)
+                    ->withHeaders(['User-Agent' => 'Mozilla/5.0 (compatible; portfolio-feed/1.0)'])
+                    ->get('https://medium.com/feed/@arnaldotomo');
+                if ($response->successful()) {
+                    $xml = simplexml_load_string($response->body(), 'SimpleXMLElement', LIBXML_NOCDATA);
+                    $ns  = $xml->channel->item[0]?->getNamespaces(true) ?? [];
+                    $items = [];
+                    foreach ($xml->channel->item as $item) {
+                        $html = '';
+                        if (isset($ns['content'])) {
+                            $c = $item->children($ns['content']);
+                            $html = (string) ($c->encoded ?? '');
+                        }
+                        $excerpt = strip_tags($html);
+                        $excerpt = preg_replace('/\s+/', ' ', trim($excerpt));
+                        $items[] = [
+                            'title'   => (string) $item->title,
+                            'link'    => (string) $item->link,
+                            'date'    => date('d M Y', strtotime((string) $item->pubDate)),
+                            'excerpt' => mb_substr($excerpt, 0, 180) . '...',
+                        ];
+                    }
+                    return $items; // all posts, carousel handles pagination
+                }
+            } catch (\Exception $e) {}
+            return [];
+        });
+
+        // Packagist packages sorted by total downloads (cached 6 hours)
+        $packages = Cache::remember('packagist_packages', 21600, function () {
+            try {
+                $response = Http::timeout(6)->get('https://packagist.org/users/arnaldo-tomo/packages.json');
+                if ($response->successful()) {
+                    $packages = $response->json('packages', []);
+                    // Fetch download stats for each package
+                    foreach ($packages as &$pkg) {
+                        try {
+                            $stats = Http::timeout(5)->get('https://packagist.org/packages/' . $pkg['name'] . '.json');
+                            if ($stats->successful()) {
+                                $data = $stats->json('package', []);
+                                $pkg['downloads'] = $data['downloads']['total'] ?? 0;
+                                $pkg['stars']     = $data['github_stars'] ?? 0;
+                            }
+                        } catch (\Exception $e) {
+                            $pkg['downloads'] = 0;
+                            $pkg['stars']     = 0;
+                        }
+                    }
+                    unset($pkg);
+                    // Sort by most downloaded
+                    usort($packages, fn($a, $b) => ($b['downloads'] ?? 0) - ($a['downloads'] ?? 0));
+                    return $packages;
+                }
+            } catch (\Exception $e) {}
+            return [];
+        });
+
+        return view('welcome', compact('projects', 'education', 'testimonials', 'skills', 'posts', 'packages'));
     })->name('home');
 
     Route::get('/blog', function () {
@@ -170,6 +232,7 @@ Route::delete('/api/tokens/{token}', [ApiTokenController::class, 'destroy'])->na
 });
 
 Route::post('/visitor-tracking', [VisitorTrackingController::class, 'store'])->name('visitor.tracking.store');
+Route::post('/contact/send', [\App\Http\Controllers\ContactController::class, 'send'])->name('contact.send');
 
 
 Route::middleware('auth')->group(function () {

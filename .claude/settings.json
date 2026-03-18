@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(php -r \":*)"
+      "Bash(php -r \":*)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:packagist.org)",
+      "Bash(python3 -:*)"
     ]
   }
 }

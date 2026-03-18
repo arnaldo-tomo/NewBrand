@@ -20,6 +20,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @livewireStyles
         <style>
             @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
             
@@ -93,9 +94,10 @@
             @endisset
 
             <!-- Page Content -->
-            <main>
+            <main class="pt-14">
                 {{ $slot }}
             </main>
         </div>
+        @livewireScripts
     </body>
 </html>

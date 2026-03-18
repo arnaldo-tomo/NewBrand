@@ -1,56 +1,65 @@
 <?php
 
 use App\Models\Project;
-use function Livewire\Volt\{state, mount, on, layout};
+use function Livewire\Volt\{state, mount, layout};
 
 layout('layouts.app');
 
 state([
-    'projects' => [],
-    'editing' => null,
-    'title' => '',
-    'description' => '',
-    'image' => '',
-    'playstore_link' => '',
+    'projects'      => [],
+    'editingId'     => null,   // só guarda o ID, nunca o model
+    'title'         => '',
+    'description'   => '',
+    'image'         => '',
+    'playstore_link'=> '',
     'appstore_link' => '',
-    'features' => [],
-    'newFeature' => '',
-    'order' => 0,
-    'is_active' => true,
-    'showModal' => false,
+    'features'      => [],
+    'newFeature'    => '',
+    'order'         => 0,
+    'is_active'     => true,
+    'showModal'     => false,
+    'successMsg'    => '',
 ]);
 
 mount(function () {
-    $this->loadProjects();
+    $this->projects = Project::orderBy('order')->get();
 });
 
-$loadProjects = function () {
-    $this->projects = Project::orderBy('order')->get();
-};
-
 $openCreateModal = function () {
-    $this->reset(['editing', 'title', 'description', 'image', 'playstore_link', 'appstore_link', 'features', 'newFeature', 'order', 'is_active']);
-    $this->features = [];
-    $this->is_active = true;
-    $this->showModal = true;
+    $this->resetValidation();
+    $this->editingId     = null;
+    $this->title         = '';
+    $this->description   = '';
+    $this->image         = '';
+    $this->playstore_link= '';
+    $this->appstore_link = '';
+    $this->features      = [];
+    $this->newFeature    = '';
+    $this->order         = 0;
+    $this->is_active     = true;
+    $this->successMsg    = '';
+    $this->showModal     = true;
 };
 
-$edit = function (Project $project) {
-    $this->editing = $project;
-    $this->title = $project->title;
-    $this->description = $project->description;
-    $this->image = $project->image;
-    $this->playstore_link = $project->playstore_link;
-    $this->appstore_link = $project->appstore_link;
-    $this->features = $project->features ?? [];
-    $this->order = $project->order;
-    $this->is_active = $project->is_active;
-    $this->showModal = true;
+$edit = function ($id) {
+    $project = Project::findOrFail($id);
+    $this->resetValidation();
+    $this->editingId     = $project->id;
+    $this->title         = $project->title;
+    $this->description   = $project->description ?? '';
+    $this->image         = $project->image ?? '';
+    $this->playstore_link= $project->playstore_link ?? '';
+    $this->appstore_link = $project->appstore_link ?? '';
+    $this->features      = $project->features ?? [];
+    $this->order         = $project->order ?? 0;
+    $this->is_active     = (bool) $project->is_active;
+    $this->successMsg    = '';
+    $this->showModal     = true;
 };
 
 $addFeature = function () {
-    if ($this->newFeature) {
-        $this->features[] = $this->newFeature;
+    if (trim($this->newFeature)) {
+        $this->features[] = trim($this->newFeature);
         $this->newFeature = '';
     }
 };
@@ -61,44 +70,56 @@ $removeFeature = function ($index) {
 };
 
 $save = function () {
-    $validated = $this->validate([
-        'title' => 'required|string|max:255',
-        'description' => 'required|string',
-        'image' => 'nullable|string',
-        'playstore_link' => 'nullable|url',
-        'appstore_link' => 'nullable|url',
-        'features' => 'nullable|array',
-        'order' => 'nullable|integer',
-        'is_active' => 'boolean',
+    $data = $this->validate([
+        'title'         => 'required|string|max:255',
+        'description'   => 'required|string',
+        'image'         => 'nullable|string',
+        'playstore_link'=> 'nullable|url|max:500',
+        'appstore_link' => 'nullable|url|max:500',
+        'features'      => 'nullable|array',
+        'order'         => 'nullable|integer',
+        'is_active'     => 'boolean',
     ]);
 
-    if ($this->editing) {
-        $this->editing->update($validated);
+    // converter strings vazias em null
+    $data['playstore_link'] = $data['playstore_link'] ?: null;
+    $data['appstore_link']  = $data['appstore_link']  ?: null;
+    $data['image']          = $data['image']          ?: null;
+
+    if ($this->editingId) {
+        Project::findOrFail($this->editingId)->update($data);
+        $this->successMsg = 'Projeto atualizado com sucesso!';
     } else {
-        Project::create($validated);
+        Project::create($data);
+        $this->successMsg = 'Projeto criado com sucesso!';
     }
 
+    $this->projects = Project::orderBy('order')->get();
     $this->showModal = false;
-    $this->loadProjects();
-    $this->dispatch('notify', 'Project saved successfully!');
 };
 
 $delete = function ($id) {
-    Project::find($id)->delete();
-    $this->loadProjects();
+    Project::findOrFail($id)->delete();
+    $this->projects = Project::orderBy('order')->get();
 };
 
 ?>
 
-<div class="bg-gray-900 min-h-screen py-8">
+<div class="bg-gray-900 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="space-y-6">
             <div class="flex justify-between items-center">
                 <h2 class="text-2xl font-bold text-white">Manage Projects</h2>
                 <button wire:click="openCreateModal" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg transition-colors">
-                    Add New Project
+                    + Add New Project
                 </button>
             </div>
+
+            @if($successMsg)
+            <div class="bg-green-900/50 border border-green-700 text-green-300 px-4 py-3 rounded-lg flex items-center gap-2">
+                <i class="fas fa-check-circle"></i> {{ $successMsg }}
+            </div>
+            @endif
 
             <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
                 <table class="min-w-full divide-y divide-gray-700">
@@ -132,8 +153,8 @@ $delete = function ($id) {
                                     </span>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <button wire:click="edit({{ $project->id }})" class="text-sky-400 hover:text-sky-300 mr-3">Edit</button>
-                                    <button wire:click="delete({{ $project->id }})" wire:confirm="Are you sure?" class="text-red-400 hover:text-red-300">Delete</button>
+                                    <button wire:click="edit({{ $project->id }})" class="text-sky-400 hover:text-sky-300 mr-3">Editar</button>
+                                    <button wire:click="delete({{ $project->id }})" wire:confirm="Tens a certeza que queres apagar?" class="text-red-400 hover:text-red-300">Apagar</button>
                                 </td>
                             </tr>
                         @endforeach
@@ -151,20 +172,24 @@ $delete = function ($id) {
                             <form wire:submit.prevent="save">
                                 <div class="px-6 py-4 border-b border-gray-700">
                                     <h3 class="text-lg font-medium text-white" id="modal-title">
-                                        {{ $editing ? 'Edit Project' : 'Add New Project' }}
+                                        {{ $editingId ? 'Editar Projeto' : 'Novo Projeto' }}
                                     </h3>
                                 </div>
                                 <div class="px-6 py-4 grid grid-cols-2 gap-6">
                                     <div class="space-y-4">
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-400">Title</label>
-                                            <input type="text" wire:model="title" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500">
-                                            @error('title') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
+                                            <label class="block text-sm font-medium text-gray-400">Título *</label>
+                                            <input type="text" wire:model="title"
+                                                class="mt-1 block w-full bg-gray-700 border rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500 px-3 py-2
+                                                       {{ $errors->has('title') ? 'border-red-500' : 'border-gray-600' }}">
+                                            @error('title') <p class="text-red-400 text-xs mt-1"><i class="fas fa-exclamation-circle mr-1"></i>{{ $message }}</p> @enderror
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-400">Description (HTML allowed)</label>
-                                            <textarea wire:model="description" rows="5" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500"></textarea>
-                                            @error('description') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
+                                            <label class="block text-sm font-medium text-gray-400">Descrição * <span class="text-gray-500">(HTML permitido)</span></label>
+                                            <textarea wire:model="description" rows="5"
+                                                class="mt-1 block w-full bg-gray-700 border rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500 px-3 py-2
+                                                       {{ $errors->has('description') ? 'border-red-500' : 'border-gray-600' }}"></textarea>
+                                            @error('description') <p class="text-red-400 text-xs mt-1"><i class="fas fa-exclamation-circle mr-1"></i>{{ $message }}</p> @enderror
                                         </div>
                                         <div class="grid grid-cols-2 gap-4">
                                             <div>
@@ -177,18 +202,25 @@ $delete = function ($id) {
                                             </div>
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-400">Image URL / Background</label>
-                                            <input type="text" wire:model="image" placeholder="images/project.png" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500">
+                                            <label class="block text-sm font-medium text-gray-400">Imagem (URL ou caminho)</label>
+                                            <input type="text" wire:model="image" placeholder="images/project.png"
+                                                class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500 px-3 py-2">
                                         </div>
                                     </div>
                                     <div class="space-y-4">
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-400">Play Store Link</label>
-                                            <input type="text" wire:model="playstore_link" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500">
+                                            <label class="block text-sm font-medium text-gray-400">Link Play Store</label>
+                                            <input type="text" wire:model="playstore_link" placeholder="https://play.google.com/..."
+                                                class="mt-1 block w-full bg-gray-700 border rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500 px-3 py-2
+                                                       {{ $errors->has('playstore_link') ? 'border-red-500' : 'border-gray-600' }}">
+                                            @error('playstore_link') <p class="text-red-400 text-xs mt-1"><i class="fas fa-exclamation-circle mr-1"></i>{{ $message }}</p> @enderror
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-gray-400">App Store Link</label>
-                                            <input type="text" wire:model="appstore_link" class="mt-1 block w-full bg-gray-700 border-gray-600 rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500">
+                                            <label class="block text-sm font-medium text-gray-400">Link App Store</label>
+                                            <input type="text" wire:model="appstore_link" placeholder="https://apps.apple.com/..."
+                                                class="mt-1 block w-full bg-gray-700 border rounded-md shadow-sm text-white focus:ring-sky-500 focus:border-sky-500 px-3 py-2
+                                                       {{ $errors->has('appstore_link') ? 'border-red-500' : 'border-gray-600' }}">
+                                            @error('appstore_link') <p class="text-red-400 text-xs mt-1"><i class="fas fa-exclamation-circle mr-1"></i>{{ $message }}</p> @enderror
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-400">Features</label>

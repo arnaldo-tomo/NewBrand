@@ -3,17 +3,16 @@
 
 
     <!-- Dashboard Page -->
-<div class="bg-gray-900 min-h-screen">
-    <!-- Navbar já implementado anteriormente -->
-    <div class="px-[12%] pt-3" >
-        <h2 class="font-semibold text-xl text-gray-200 ">
-            Dashboard
-        </h2>
-        <p class="mt-1 text-sm text-zinc-400">Análise detalhada dos visitantes.</p>
-    </div>
-    <!-- Main Content -->
-    <div class="px-6 py-8">
-        <div class="max-w-7xl mx-auto">
+<div class="bg-gray-900 min-h-screen pt-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Page Header -->
+        <div class="py-6 border-b border-gray-800 mb-8">
+            <h2 class="font-semibold text-xl text-gray-200 jetbrains-mono">Dashboard</h2>
+            <p class="mt-1 text-sm text-zinc-400">Análise detalhada dos visitantes.</p>
+        </div>
+
+        <!-- Main Content -->
             <!-- Header -->
             <div class="flex justify-between items-center mb-8">
                 <h1 class="text-white text-2xl font-medium">Análise de Visitantes</h1>
@@ -292,16 +291,61 @@
 
 <!-- Últimos Visitantes com Layout Otimizado -->
 <!-- Últimos Visitantes com Paginação -->
-<div class="bg-gray-800 rounded-lg p-6 mb-8">
-    <div class="flex justify-between items-center mb-6">
-        <h3 class="text-white text-lg font-medium">Últimos Visitantes</h3>
-        <div class="flex items-center space-x-4">
-            <span class="text-gray-400 text-sm">{{ $ultimosVisitantes->count() }} de {{ $totalVisitantes }} visitantes</span>
-            <a href="#" class="text-sky-400 text-sm hover:underline">Ver todos</a>
+<div class="bg-gray-800 rounded-lg mb-8">
+
+    <!-- Header -->
+    <div class="px-6 pt-6 pb-4 border-b border-gray-700">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+                <h3 class="text-white text-lg font-medium">Últimos Visitantes</h3>
+                <p class="text-gray-400 text-sm mt-0.5">
+                    {{ $ultimosVisitantes->total() }} visitantes no total
+                </p>
+            </div>
+            <!-- Search -->
+            <form method="GET" action="{{ request()->url() }}" class="flex items-center gap-2">
+                <input type="hidden" name="filtro" value="{{ request('filtro', 'todos') }}">
+                <div class="relative">
+                    <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xs"></i>
+                    <input type="text" name="search" value="{{ request('search') }}"
+                           placeholder="Pesquisar IP, país, browser..."
+                           class="bg-gray-700 text-gray-200 text-sm rounded-lg pl-8 pr-4 py-2 border border-gray-600 focus:outline-none focus:border-sky-500 w-64">
+                </div>
+                <button type="submit" class="px-3 py-2 bg-sky-600 text-white rounded-lg text-sm hover:bg-sky-700 transition">
+                    <i class="fas fa-search"></i>
+                </button>
+                @if(request('search'))
+                <a href="{{ request()->url() }}?filtro={{ request('filtro','todos') }}" class="px-3 py-2 bg-gray-700 text-gray-300 rounded-lg text-sm hover:bg-gray-600 transition">
+                    <i class="fas fa-times"></i>
+                </a>
+                @endif
+            </form>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex gap-1 mt-4 flex-wrap">
+            @php
+                $tabs = [
+                    'todos'       => ['label' => 'Todos',        'icon' => 'fa-users'],
+                    'localizacao' => ['label' => 'Localização',  'icon' => 'fa-map-marker-alt'],
+                    'dispositivo' => ['label' => 'Dispositivo',  'icon' => 'fa-laptop'],
+                    'mobile'      => ['label' => 'Mobile',       'icon' => 'fa-mobile-alt'],
+                    'browser'     => ['label' => 'Navegador',    'icon' => 'fa-globe'],
+                ];
+                $filtroAtual = request('filtro', 'todos');
+            @endphp
+            @foreach($tabs as $key => $tab)
+            <a href="{{ request()->url() }}?filtro={{ $key }}{{ request('search') ? '&search='.urlencode(request('search')) : '' }}"
+               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all
+                      {{ $filtroAtual === $key ? 'bg-sky-600 text-white' : 'bg-gray-700 text-gray-400 hover:bg-gray-600 hover:text-white' }}">
+                <i class="fas {{ $tab['icon'] }}"></i>
+                {{ $tab['label'] }}
+            </a>
+            @endforeach
         </div>
     </div>
 
-    <div class="overflow-x-auto">
+    <div class="overflow-x-auto px-6 py-4">
         <table class="min-w-full">
             <thead>
                 <tr class="border-b border-gray-700">
@@ -687,32 +731,49 @@
     </div>
 
 
-    <!-- Paginação Manual Simples (já que não há paginação no backend) -->
-    <div class="mt-6 flex items-center justify-between border-t border-gray-700 pt-6">
-        <div class="flex-1 flex justify-between sm:hidden">
-            <button class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-gray-700 border border-gray-600 cursor-default rounded-md">
-                Anterior
-            </button>
-            <button class="ml-3 relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-gray-700 border border-gray-600 cursor-default rounded-md">
-                Próximo
-            </button>
-        </div>
+    <!-- Paginação -->
+    <div class="px-6 py-4 border-t border-gray-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-400">
+            A mostrar
+            <span class="text-white font-medium">{{ $ultimosVisitantes->firstItem() ?? 0 }}–{{ $ultimosVisitantes->lastItem() ?? 0 }}</span>
+            de
+            <span class="text-white font-medium">{{ $ultimosVisitantes->total() }}</span>
+            visitantes
+        </p>
 
-        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-            <div>
-                <p class="text-sm text-gray-400">
-                    Mostrando os
-                    <span class="font-medium text-white">{{ $ultimosVisitantes->count() }}</span>
-                    visitantes mais recentes de
-                    <span class="font-medium text-white">{{ $totalVisitantes }}</span>
-                    total
-                </p>
-            </div>
-            <div>
-                <a href="#" class="px-4 py-2 bg-sky-600 text-white rounded-md hover:bg-sky-700 transition-colors text-sm">
-                    Ver todos os visitantes
+        <div class="flex items-center gap-1">
+            {{-- Anterior --}}
+            @if($ultimosVisitantes->onFirstPage())
+                <span class="px-3 py-1.5 rounded-lg bg-gray-700 text-gray-600 text-sm cursor-not-allowed">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+            @else
+                <a href="{{ $ultimosVisitantes->previousPageUrl() }}"
+                   class="px-3 py-1.5 rounded-lg bg-gray-700 text-gray-300 hover:bg-gray-600 text-sm transition">
+                    <i class="fas fa-chevron-left"></i>
                 </a>
-            </div>
+            @endif
+
+            {{-- Páginas --}}
+            @foreach($ultimosVisitantes->getUrlRange(max(1, $ultimosVisitantes->currentPage()-2), min($ultimosVisitantes->lastPage(), $ultimosVisitantes->currentPage()+2)) as $page => $url)
+                @if($page == $ultimosVisitantes->currentPage())
+                    <span class="px-3 py-1.5 rounded-lg bg-sky-600 text-white text-sm font-medium">{{ $page }}</span>
+                @else
+                    <a href="{{ $url }}" class="px-3 py-1.5 rounded-lg bg-gray-700 text-gray-300 hover:bg-gray-600 text-sm transition">{{ $page }}</a>
+                @endif
+            @endforeach
+
+            {{-- Próximo --}}
+            @if($ultimosVisitantes->hasMorePages())
+                <a href="{{ $ultimosVisitantes->nextPageUrl() }}"
+                   class="px-3 py-1.5 rounded-lg bg-gray-700 text-gray-300 hover:bg-gray-600 text-sm transition">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            @else
+                <span class="px-3 py-1.5 rounded-lg bg-gray-700 text-gray-600 text-sm cursor-not-allowed">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            @endif
         </div>
     </div>
 </div>
@@ -732,7 +793,6 @@ document.addEventListener('keydown', function(e) {
 </script>
 
 
-        </div>
     </div>
 </div>
 

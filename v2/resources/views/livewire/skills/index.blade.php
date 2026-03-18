@@ -72,7 +72,7 @@ $delete = function ($id) {
 
 ?>
 
-<div class="bg-gray-900 min-h-screen py-8">
+<div class="bg-gray-900 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="space-y-6">
             <div class="flex justify-between items-center">

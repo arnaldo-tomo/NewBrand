@@ -52,8 +52,11 @@
         var anchor = sections[idx];
         if (!anchor) { stopPresentation(); return; }
 
-        if (typeof $.fn.pagepiling !== 'undefined') {
+        if (typeof $.fn.pagepiling !== 'undefined' && typeof $.fn.pagepiling.moveTo === 'function') {
             $.fn.pagepiling.moveTo(anchor);
+        } else {
+            // fallback: hash change que o pagepiling escuta
+            window.location.hash = anchor;
         }
 
         document.getElementById('ap-section-indicator').textContent =

@@ -648,7 +648,6 @@
 
     @include('components.hackher')
     @include('components.whatsapp')
-    @include('components.autopresent')
 
     @include('components.toaste')
 
@@ -2654,29 +2653,31 @@
     <script src="{{ asset('js/app.js') }}?v={{ filemtime(public_path('js/app.js')) }}"></script>
     {{-- Hackher: Sua Pegada Digital — carregado após todos os outros scripts --}}
     <script src="{{ asset('js/hackher-detect.js') }}?v={{ filemtime(public_path('js/hackher-detect.js')) }}"></script>
-    {{-- Spotify widget — no fim para garantir DOM completo --}}
+    {{-- Autopresent e Spotify — no fim para garantir pagepiling já inicializado --}}
+    @include('components.autopresent')
     @include('components.spotify')
 
     <script>
-        // Fix: navegar para a secção correta ao carregar com hash (#Education, #About, etc.)
+        // Navegar para hash apenas quando vem de link externo (document.referrer diferente)
+        // Evita renavegar para a última secção visitada quando o pagepiling escreveu o hash
         (function () {
             var hash = window.location.hash;
             if (!hash) return;
+
+            // Se o referrer for o próprio site (mesma origem), o pagepiling já gere a posição
+            var sameOrigin = document.referrer && document.referrer.indexOf(window.location.origin) === 0;
+            if (sameOrigin) return;
+
             var anchor = hash.replace('#', '');
 
             function goToAnchor() {
-                if (typeof $.fn.pagepiling !== 'undefined') {
+                if (typeof $.fn.pagepiling !== 'undefined' && typeof $.fn.pagepiling.moveTo === 'function') {
                     $.fn.pagepiling.moveTo(anchor);
                 }
             }
 
-            // Tenta após animsition (500ms) + margem de segurança
             setTimeout(goToAnchor, 700);
-
-            // Também escuta o evento do preloader se disponível
-            $(window).on('vlt.preloader_done', function () {
-                setTimeout(goToAnchor, 100);
-            });
+            $(window).on('vlt.preloader_done', function () { setTimeout(goToAnchor, 100); });
         })();
     </script>
 

@@ -500,6 +500,20 @@
             70%  { box-shadow: 0 0 0 6px rgba(74,222,128,0); }
             100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
         }
+        .avail-badge.avail-busy {
+            background: rgba(234,179,8,0.1);
+            border-color: rgba(234,179,8,0.28);
+            color: #facc15;
+        }
+        .avail-badge.avail-busy .avail-dot {
+            background: #facc15;
+            animation: busy-pulse 2s ease infinite;
+        }
+        @keyframes busy-pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(250,204,21,0.5); }
+            70%  { box-shadow: 0 0 0 6px rgba(250,204,21,0); }
+            100% { box-shadow: 0 0 0 0 rgba(250,204,21,0); }
+        }
 
         /* === #5 Tech stack badges === */
         .pkg-stack-badge {
@@ -633,6 +647,9 @@
     </header>
 
     @include('components.hackher')
+    @include('components.whatsapp')
+    @include('components.autopresent')
+    @include('components.spotify')
 
     @include('components.toaste')
 
@@ -2144,9 +2161,14 @@
                                                     vlt_animated_widget_animation":"fadeinupsm"}"=""
                                                     data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
-                                                        <div class="avail-badge">
+                                                        @php
+                                                            $availStatus = cache()->rememberForever('availability_status', fn() =>
+                                                                \Illuminate\Support\Facades\DB::table('site_settings')->where('key','availability_status')->value('value') ?? 'available'
+                                                            );
+                                                        @endphp
+                                                        <div class="avail-badge {{ $availStatus === 'busy' ? 'avail-busy' : '' }}">
                                                             <span class="avail-dot"></span>
-                                                            Disponível para novos projetos
+                                                            {{ $availStatus === 'busy' ? 'Em projecto — contacto disponível' : 'Disponível para novos projetos' }}
                                                         </div>
                                                         {!! __('messages.availability') !!}
                                                     </div>

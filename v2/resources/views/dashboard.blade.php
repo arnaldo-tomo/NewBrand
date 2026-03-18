@@ -38,6 +38,27 @@
                 </div>
             </div>
 
+            <!-- Toggle Disponibilidade -->
+            @php
+                $availStatus = \Illuminate\Support\Facades\DB::table('site_settings')->where('key','availability_status')->value('value') ?? 'available';
+            @endphp
+            <div class="bg-gray-800 rounded-lg p-4 mb-6 flex items-center justify-between border border-gray-700">
+                <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 rounded-full {{ $availStatus === 'available' ? 'bg-green-400' : 'bg-yellow-400' }}" id="avail-dot-dash"></div>
+                    <div>
+                        <p class="text-white font-medium text-sm">Estado do Portfólio</p>
+                        <p class="text-gray-400 text-xs" id="avail-label-dash">
+                            {{ $availStatus === 'available' ? '✅ Disponível para novos projetos' : '🟡 Em projecto — contacto disponível' }}
+                        </p>
+                    </div>
+                </div>
+                <button id="avail-toggle-btn" onclick="toggleAvailability()"
+                    class="px-4 py-2 rounded-lg text-sm font-medium transition-colors
+                    {{ $availStatus === 'available' ? 'bg-yellow-500 hover:bg-yellow-600 text-gray-900' : 'bg-green-500 hover:bg-green-600 text-gray-900' }}">
+                    {{ $availStatus === 'available' ? 'Marcar Em Projecto' : 'Marcar Disponível' }}
+                </button>
+            </div>
+
             <!-- Métricas Principais -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <!-- Total de Visitantes -->
@@ -1092,6 +1113,32 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 });
+</script>
+
+<script>
+function toggleAvailability() {
+    const btn = document.getElementById('avail-toggle-btn');
+    const dot = document.getElementById('avail-dot-dash');
+    const label = document.getElementById('avail-label-dash');
+    btn.disabled = true;
+    btn.textContent = 'A actualizar...';
+
+    fetch('/api/availability/toggle', {
+        method: 'POST',
+        headers: { 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content, 'Content-Type': 'application/json' }
+    })
+    .then(r => r.json())
+    .then(d => {
+        const isAvail = d.status === 'available';
+        dot.className = 'w-3 h-3 rounded-full ' + (isAvail ? 'bg-green-400' : 'bg-yellow-400');
+        label.textContent = isAvail ? '✅ Disponível para novos projetos' : '🟡 Em projecto — contacto disponível';
+        btn.textContent = isAvail ? 'Marcar Em Projecto' : 'Marcar Disponível';
+        btn.className = btn.className.replace(isAvail ? 'bg-green-500 hover:bg-green-600' : 'bg-yellow-500 hover:bg-yellow-600', '')
+                                     .trim() + (isAvail ? ' bg-yellow-500 hover:bg-yellow-600' : ' bg-green-500 hover:bg-green-600');
+        btn.disabled = false;
+    })
+    .catch(() => { btn.disabled = false; btn.textContent = 'Erro — tente novamente'; });
+}
 </script>
 
 <!-- Depois incluir o script do gráfico -->

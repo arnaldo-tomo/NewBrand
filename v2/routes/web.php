@@ -231,8 +231,25 @@ Route::put('/api/tokens/{token}', [ApiTokenController::class, 'update'])->name('
 Route::delete('/api/tokens/{token}', [ApiTokenController::class, 'destroy'])->name('api.tokens.destroy');
 });
 
+// Disponibilidade — toggle no dashboard
+Route::post('/api/availability/toggle', function () {
+    $current = \Illuminate\Support\Facades\DB::table('site_settings')->where('key', 'availability_status')->value('value');
+    $new = $current === 'available' ? 'busy' : 'available';
+    \Illuminate\Support\Facades\DB::table('site_settings')->updateOrInsert(
+        ['key' => 'availability_status'],
+        ['value' => $new, 'updated_at' => now()]
+    );
+    cache()->forget('availability_status');
+    return response()->json(['status' => $new]);
+})->middleware('auth')->name('api.availability.toggle');
+
 Route::post('/visitor-tracking', [VisitorTrackingController::class, 'store'])->name('visitor.tracking.store');
 Route::post('/contact/send', [\App\Http\Controllers\ContactController::class, 'send'])->name('contact.send');
+
+// Spotify
+Route::get('/api/spotify/now-playing', [\App\Http\Controllers\SpotifyController::class, 'nowPlaying'])->name('spotify.now-playing');
+Route::get('/spotify/auth', [\App\Http\Controllers\SpotifyController::class, 'auth'])->middleware('auth')->name('spotify.auth');
+Route::get('/spotify/callback', [\App\Http\Controllers\SpotifyController::class, 'callback'])->name('spotify.callback');
 
 // Proxy de geolocalização — evita bloqueios de CSP/CORS no browser
 Route::get('/api/geo', function () {

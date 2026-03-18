@@ -234,6 +234,21 @@ Route::delete('/api/tokens/{token}', [ApiTokenController::class, 'destroy'])->na
 Route::post('/visitor-tracking', [VisitorTrackingController::class, 'store'])->name('visitor.tracking.store');
 Route::post('/contact/send', [\App\Http\Controllers\ContactController::class, 'send'])->name('contact.send');
 
+// Proxy de geolocalização — evita bloqueios de CSP/CORS no browser
+Route::get('/api/geo', function () {
+    try {
+        $data = Http::timeout(5)->get('https://ipwho.is/')->json();
+        if (!empty($data['success'])) {
+            return response()->json([
+                'city'    => $data['city']    ?? '?',
+                'country' => $data['country'] ?? '?',
+                'isp'     => $data['connection']['isp'] ?? $data['connection']['org'] ?? '—',
+            ]);
+        }
+    } catch (\Exception $e) {}
+    return response()->json(['city' => '?', 'country' => '?', 'isp' => '—'], 200);
+})->name('api.geo');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -97,28 +97,18 @@
             }).catch(function () { set('battery-status', 'N/A'); });
         } else { set('battery-status', 'N/A'); }
 
-        /* Geolocation via IP */
+        /* Geolocation via proxy local (evita CSP/CORS) */
         set('visitor-location', 'Detectando...');
         set('visitor-isp', 'Detectando...');
-        fetch('https://ipwho.is/')
+        fetch('/api/geo')
             .then(function (r) { return r.json(); })
             .then(function (d) {
-                if (!d || !d.success) throw new Error('fail');
                 set('visitor-location', (d.city || '?') + ', ' + (d.country || '?'));
-                set('visitor-isp', d.connection && d.connection.org ? d.connection.org : (d.org || '—'));
+                set('visitor-isp', d.isp || '—');
             })
             .catch(function () {
-                // fallback
-                fetch('https://ipapi.co/json/')
-                    .then(function (r) { return r.json(); })
-                    .then(function (d) {
-                        set('visitor-location', (d.city || '?') + ', ' + (d.country_name || '?'));
-                        set('visitor-isp', d.org || '—');
-                    })
-                    .catch(function () {
-                        set('visitor-location', 'N/D');
-                        set('visitor-isp', 'N/D');
-                    });
+                set('visitor-location', 'N/D');
+                set('visitor-isp', 'N/D');
             });
 
         /* Browser features */

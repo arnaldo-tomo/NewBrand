@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /dashboard
+Disallow: /settings
+Disallow: /me
+
+Sitemap: https://arnaldotomo.dev/sitemap.xml

@@ -53,48 +53,82 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://arnaldotomo.dev/">
+    <link rel="sitemap" type="application/xml" href="https://arnaldotomo.dev/sitemap.xml">
 
     <!-- Preconnect to resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Cores tecnológicas (dados estruturados para SEO) -->
+    <!-- Schema: WebSite (activa Sitelinks no Google) -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org"
-            , "@type": "Person"
-            , "name": "Arnaldo Tomo"
-            , "jobTitle": "Engenheiro de Software"
-            , "url": "https://arnaldotomo.dev"
-            , "image": "/https://arnaldotomo.dev/images/profile-preview.jpg"
-            , "sameAs": [
-                "https://www.linkedin.com/in/arnaldo-tomo"
-                , "https://github.com/arnaldo-tomo"
-                , "https://twitter.com/arnaldotomo"
-            ]
-            , "worksFor": {
-                "@type": "Organization"
-                , "name": "Web Solutions Developer"
-            }
-            , "knowsAbout": ["Laravel", "React Native", "JavaScript", "PHP", "Python", "UX/UI Design", "Cybersecurity"]
-            , "alumniOf": "Dintell - Beyond Technology. Intelligence."
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Arnaldo Tomo",
+        "alternateName": "Arnaldo Tomo - Software Engineer",
+        "url": "https://arnaldotomo.dev",
+        "description": "Portfólio de Arnaldo Tomo — Software Engineer especializado em Laravel e React Native, Moçambique.",
+        "inLanguage": ["pt", "en"],
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://arnaldotomo.dev/en#{search_term_string}",
+            "query-input": "required name=search_term_string"
         }
-
+    }
     </script>
 
-    <!-- Dados estruturados para seu portfólio de projetos -->
+    <!-- Schema: Person -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org"
-            , "@type": "CreativeWork"
-            , "author": {
-                "@type": "Person"
-                , "name": "Arnaldo Tomo"
-            }
-            , "name": "Portfólio de Projetos"
-            , "description": "Coleção de projetos de desenvolvimento web e mobile por Arnaldo Tomo, incluindo sistemas de PHC, ERP , financeiras."
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Arnaldo Tomo",
+        "givenName": "Arnaldo",
+        "familyName": "Tomo",
+        "jobTitle": "Software Engineer",
+        "description": "Software Engineer especializado em Laravel, React Native e desenvolvimento Full Stack. Baseado em Maputo, Moçambique.",
+        "url": "https://arnaldotomo.dev",
+        "image": "https://arnaldotomo.dev/images/profile-preview.jpg",
+        "email": "contacto@arnaldotomo.dev",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Maputo",
+            "addressCountry": "MZ"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/arnaldo-tomo",
+            "https://github.com/arnaldo-tomo",
+            "https://twitter.com/arnaldotomo",
+            "https://medium.com/@arnaldotomo",
+            "https://packagist.org/users/arnaldo-tomo"
+        ],
+        "knowsAbout": ["Laravel", "React Native", "JavaScript", "PHP", "Python", "Full Stack Development", "Mobile Development"],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Software Engineer",
+            "occupationLocation": { "@type": "Country", "name": "Mozambique" },
+            "skills": "Laravel, React Native, PHP, JavaScript, Python"
         }
+    }
+    </script>
 
+    <!-- Schema: SiteNavigationElement (gera Sitelinks) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Navegação do Portfólio",
+        "itemListElement": [
+            { "@type": "SiteLinksSearchBox", "url": "https://arnaldotomo.dev/en" },
+            { "@type": "ListItem", "position": 1, "name": "Sobre Mim",   "url": "https://arnaldotomo.dev/en#About"     },
+            { "@type": "ListItem", "position": 2, "name": "Projectos",   "url": "https://arnaldotomo.dev/en#Projects"  },
+            { "@type": "ListItem", "position": 3, "name": "Formação",    "url": "https://arnaldotomo.dev/en#Education" },
+            { "@type": "ListItem", "position": 4, "name": "Blog",        "url": "https://arnaldotomo.dev/en#Blog"      },
+            { "@type": "ListItem", "position": 5, "name": "Pacotes",     "url": "https://arnaldotomo.dev/en#Packages"  },
+            { "@type": "ListItem", "position": 6, "name": "Contacto",    "url": "https://arnaldotomo.dev/en#Contact"   }
+        ]
+    }
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

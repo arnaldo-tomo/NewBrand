@@ -1759,17 +1759,35 @@ form.submitting .wpcf7-spinner {
 
   /* ── Mobile global fixes ── */
   @media (max-width: 1024px) {
-    /* Esconder footer copyright no mobile — já está no menu lateral */
+    /* Esconder footer copyright no mobile */
     .vlt-footer { display: none !important; }
 
-    /* Padding lateral nas secções para o texto não tocar nas bordas */
+    /* Padding lateral para o texto não tocar nas bordas */
     .vlt-section__content .elementor-widget-container,
     .vlt-section__content .elementor-widget-text-editor { padding: 0 16px; }
 
-    /* Education timeline — col-xl-4 só funciona em XL, forçar flex no mobile */
-    .vlt-timeline-item .row { display: flex; flex-wrap: wrap; gap: 8px; }
-    .vlt-timeline-item .col-xl-4 { width: 100%; padding: 0; }
-    .vlt-timeline-item .col-xl-4:first-child { width: auto; }
+    /* Reduzir spacers do Elementor no mobile — criam espaço branco excessivo */
+    .elementor-spacer-inner { height: 20px !important; min-height: 20px !important; }
+
+    /* Education timeline — corrigir row com margem negativa que corta o conteúdo */
+    .vlt-timeline-item .row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .vlt-timeline-item .col-xl-4 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+    }
+    /* Logo inline com data no mobile */
+    .vlt-timeline-item .col-xl-4:first-child {
+      width: auto !important;
+      flex: 0 0 auto !important;
+      max-width: none !important;
+      margin-bottom: 8px;
+    }
   }
 
   /* comentarios */

@@ -359,6 +359,19 @@
                 flex: none !important;
                 width: 100% !important;
             }
+
+            /* Padding lateral no container p-0 — evita conteúdo colado às bordas */
+            [data-anchor="Packages"] .container.p-0,
+            [data-anchor="Blog"] .container.p-0 {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+
+            /* Título e descrição da secção Packages */
+            [data-anchor="Packages"] .elementor-heading-title {
+                font-size: 1.8rem !important;
+                line-height: 1.2 !important;
+            }
         }
 
         /* === #8 Scroll Indicator === */

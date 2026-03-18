@@ -2317,7 +2317,7 @@
 
         <div class="vlt-footer-copyright">
 
-            <p>2022 {{date('Y')}} © Arnaldo Tomo.</p>
+            <p>2022 - {{date('Y')}} © Arnaldo Tomo.</p>
         </div>
         <!-- /.vlt-footer-copyright -->
 

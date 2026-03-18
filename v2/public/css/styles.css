@@ -1678,25 +1678,45 @@ form.submitting .wpcf7-spinner {
 
 .small-heading {
     font-size: 5rem !important;
-    letter-spacing: -3px; /* Reduz espaço entre as letras */
-    margin: -20px 0; /* Ajusta espaçamento superior e inferior */
-    padding: 0; /* Remove padding extra */
-    line-height: -50; /* Ajusta altura da linha */
+    letter-spacing: -3px;
+    margin: -20px 0;
+    padding: 0;
+    line-height: 1.05;
   }
 
   @media (max-width: 768px) {
     .small-heading {
-      font-size: 3rem !important;
+      font-size: 2.8rem !important;
+      letter-spacing: -1px;
+      margin: -10px 0;
     }
   }
 
   @media (max-width: 480px) {
     .small-heading {
-      font-size: 5rem !important;
+      font-size: 2.2rem !important;
+      letter-spacing: -0.5px;
+      margin: -8px 0;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .small-heading {
+      font-size: 1.9rem !important;
     }
   }
 
 
+
+  /* ── Mobile global fixes ── */
+  @media (max-width: 1024px) {
+    /* Esconder footer copyright no mobile — já está no menu lateral */
+    .vlt-footer { display: none !important; }
+
+    /* Padding lateral nas secções para o texto não tocar nas bordas */
+    .vlt-section__content .elementor-widget-container,
+    .vlt-section__content .elementor-widget-text-editor { padding: 0 16px; }
+  }
 
   /* comentarios */
   /* Estilos adicionais para a seção de testemunhos */

@@ -3,10 +3,10 @@
   .ap-btn {
     position: fixed;
     bottom: 30px;
-    right: 126px; /* 78 (wa right) + 38 (wa width) + 10 (gap) */
+    right: 110px; /* 70 (wa right) + 32 (wa width) + 8 (gap) */
     z-index: 9990;
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background: rgba(10,15,28,0.75);
     border: 1px solid rgba(255,255,255,0.14);
@@ -25,7 +25,7 @@
   .ap-btn::after {
     content: 'Apresentação';
     position: absolute;
-    bottom: 44px;
+    bottom: 38px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(10,15,28,0.9);
@@ -89,14 +89,14 @@
 <!-- Botão play/stop -->
 <button class="ap-btn" id="ap-btn" title="Modo de Apresentação" onclick="togglePresentation()">
   <!-- Ícone: ecrã de apresentação (idle) -->
-  <svg id="ap-icon-play" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <svg id="ap-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <rect x="2" y="3" width="20" height="14" rx="2"/>
     <polyline points="8,21 12,17 16,21"/>
     <line x1="12" y1="17" x2="12" y2="3"/>
     <polygon points="10,8 14,10 10,12" fill="currentColor" stroke="none"/>
   </svg>
   <!-- Ícone: parar -->
-  <svg id="ap-icon-stop" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+  <svg id="ap-icon-stop" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
     <rect x="2" y="3" width="20" height="14" rx="2"/>
     <polyline points="8,21 12,17 16,21"/>
     <rect x="9" y="7" width="6" height="6" rx="1" fill="currentColor" stroke="none"/>

@@ -1,7 +1,7 @@
 <style>
   .sp-widget {
     position: fixed;
-    bottom: 82px;
+    bottom: 72px;
     right: 30px;
     z-index: 9997;
     width: 268px;
@@ -89,10 +89,10 @@
   /* ── Docked: pill compacta na linha dos botões quando o modal abre ── */
   .sp-widget.sp-docked {
     bottom: 30px !important;
-    right: 174px !important; /* 126 (ap-right) + 38 (ap-width) + 10 (gap) */
+    right: 150px !important; /* 110 (ap-right) + 32 (ap-width) + 8 (gap) */
     width: 162px !important;
-    height: 38px !important;
-    border-radius: 19px !important;
+    height: 32px !important;
+    border-radius: 16px !important;
     padding: 0 10px !important;
     gap: 8px !important;
     overflow: hidden !important;

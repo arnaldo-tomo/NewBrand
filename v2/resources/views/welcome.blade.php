@@ -229,11 +229,19 @@
 
         ::-webkit-scrollbar {
             background-color: #161616;
-            width: 5px;
+            width: 4px;
+            height: 4px;
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: #cf000f;
+            background-color: #00b8d4;
+            border-radius: 4px;
+        }
+
+        /* Esconder scrollbars no mobile */
+        @media (max-width: 1024px) {
+            ::-webkit-scrollbar { display: none; }
+            * { scrollbar-width: none; -ms-overflow-style: none; }
         }
 
         .vlt-header .vlt-navbar-logo img {

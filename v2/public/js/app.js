@@ -488,7 +488,20 @@ document.addEventListener('DOMContentLoaded', function() {
         privacyModal.classList.add('visible');
         playSound('modal-in');
     }
-    // Toaste
+
+    // Fechar modal (listeners centralizados aqui para evitar problemas com CSP)
+    var closePrivacyBtn = document.getElementById('close-privacy-modal');
+    if (closePrivacyBtn) closePrivacyBtn.addEventListener('click', function () {
+        if (privacyModal) privacyModal.classList.remove('visible');
+    });
+    if (privacyModal) privacyModal.addEventListener('click', function (e) {
+        if (e.target === privacyModal || (e.target.classList && e.target.classList.contains('pm-backdrop'))) {
+            privacyModal.classList.remove('visible');
+        }
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && privacyModal) privacyModal.classList.remove('visible');
+    });
 
 
       // Tab switching functionality

@@ -155,13 +155,9 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
     <script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-    <script type="text/javascript" id="simple-likes-public-js-js-extra">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    </script>
     <script type="text/javascript" src="js/post-like.min.js" id="simple-likes-public-js-js"></script>
 
     <meta name="generator"
@@ -2634,8 +2630,9 @@
     })();
     </script>
 
+    <script src="{{ asset('js/app.js') }}?v={{ filemtime(public_path('js/app.js')) }}"></script>
     {{-- Hackher: Sua Pegada Digital — carregado após todos os outros scripts --}}
-    <script src="{{ asset('js/hackher-detect.js') }}"></script>
+    <script src="{{ asset('js/hackher-detect.js') }}?v={{ filemtime(public_path('js/hackher-detect.js')) }}"></script>
 
     <script>
         // Fix: navegar para a secção correta ao carregar com hash (#Education, #About, etc.)

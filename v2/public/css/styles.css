@@ -1273,35 +1273,46 @@ form.submitting .wpcf7-spinner {
 }
 
 @media (max-width: 767px) {
-    .experience-section {
-        padding: 60px 0;
-    }
+    .experience-section { padding: 60px 0; }
 
     .tech-cards {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
-    .digit {
-        font-size: 120px;
-    }
+    .tech-card { padding: 14px 10px; }
+
+    .tech-icon { width: 38px; height: 38px; margin-bottom: 10px; }
+
+    .tech-card h5 { font-size: 12px; margin: 0 0 7px; }
+
+    .tab-button { font-size: 12px; padding: 5px 13px; }
+
+    .category-tabs { gap: 8px; margin-bottom: 18px; }
+
+    .digit { font-size: 120px; }
 }
 
 @media (max-width: 480px) {
-    .digit {
-        font-size: 100px;
-    }
+    .digit { font-size: 100px; }
 
-    .counter-separator span {
-        height: 50px;
-    }
+    .counter-separator span { height: 50px; }
 
-    .counter-label, .counter-value {
-        font-size: 20px;
-    }
+    .counter-label, .counter-value { font-size: 20px; }
 
+    /* Manter 2 colunas mesmo em ecrãs pequenos */
     .tech-cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
+
+    .tech-card { padding: 12px 8px; }
+
+    .tech-icon { width: 32px; height: 32px; margin-bottom: 8px; }
+
+    .tech-card h5 { font-size: 11px; }
+
+    .tab-button { font-size: 11px; padding: 4px 10px; }
 }
 
 /* Anos de expereci  */

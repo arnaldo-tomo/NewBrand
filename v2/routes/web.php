@@ -252,6 +252,52 @@ Route::get('/spotify/auth', [\App\Http\Controllers\SpotifyController::class, 'au
 Route::get('/spotify/callback', [\App\Http\Controllers\SpotifyController::class, 'callback'])->name('spotify.callback');
 
 // Proxy de geolocalização — evita bloqueios de CSP/CORS no browser
+Route::get('/api/weather', function (\Illuminate\Http\Request $request) {
+    $ip = $request->ip();
+
+    // IPs locais → usar Beira como fallback
+    $isLocal = in_array($ip, ['127.0.0.1', '::1']) || str_starts_with($ip, '192.168.') || str_starts_with($ip, '10.');
+
+    $cacheKey = 'weather_' . ($isLocal ? 'beira' : md5($ip));
+
+    $data = Cache::remember($cacheKey, 1800, function () use ($ip, $isLocal) {
+        // 1. Obter coordenadas via IP
+        if ($isLocal) {
+            $lat = -19.84; $lon = 34.84; $city = 'Beira';
+        } else {
+            try {
+                $geo = Http::timeout(4)->get("https://ipwho.is/{$ip}")->json();
+                if (empty($geo['success'])) return null;
+                $lat  = $geo['latitude'];
+                $lon  = $geo['longitude'];
+                $city = $geo['city'] ?? ($geo['country'] ?? '?');
+            } catch (\Exception $e) { return null; }
+        }
+
+        // 2. Buscar tempo para essas coordenadas
+        try {
+            $w = Http::timeout(5)->get('https://api.open-meteo.com/v1/forecast', [
+                'latitude'  => $lat,
+                'longitude' => $lon,
+                'current'   => 'temperature_2m,weather_code',
+                'timezone'  => 'auto',
+            ])->json();
+        } catch (\Exception $e) { return null; }
+
+        if (empty($w['current'])) return null;
+
+        return [
+            'temp' => round($w['current']['temperature_2m']),
+            'code' => $w['current']['weather_code'],
+            'city' => $city,
+        ];
+    });
+
+    if (!$data) return response()->json(['ok' => false]);
+
+    return response()->json(['ok' => true] + $data);
+})->name('api.weather');
+
 Route::get('/api/geo', function () {
     try {
         $data = Http::timeout(5)->get('https://ipwho.is/')->json();

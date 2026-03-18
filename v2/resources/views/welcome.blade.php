@@ -374,11 +374,15 @@
             z-index: 10;
             animation: si-fadeIn 1s ease 2.2s both;
             pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .scroll-indicator-wrap.si-hidden {
+            opacity: 0 !important;
         }
         .scroll-indicator {
             width: 22px;
             height: 36px;
-            border: 1.5px solid rgba(255,255,255,0.28);
+            border: 1.5px solid rgba(255,255,255,0.65);
             border-radius: 11px;
             position: relative;
         }
@@ -397,7 +401,7 @@
             font-size: 8px;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.28);
+            color: rgba(255,255,255,0.7);
             font-family: 'Poppins', sans-serif;
         }
         @keyframes si-wheel {
@@ -2653,9 +2657,10 @@
     <script src="{{ asset('js/app.js') }}?v={{ filemtime(public_path('js/app.js')) }}"></script>
     {{-- Hackher: Sua Pegada Digital — carregado após todos os outros scripts --}}
     <script src="{{ asset('js/hackher-detect.js') }}?v={{ filemtime(public_path('js/hackher-detect.js')) }}"></script>
-    {{-- Autopresent e Spotify — no fim para garantir pagepiling já inicializado --}}
+    {{-- Autopresent, Spotify e Weather — no fim para garantir pagepiling já inicializado --}}
     @include('components.autopresent')
     @include('components.spotify')
+    @include('components.weather')
 
     <script>
         // Navegar para hash apenas quando vem de link externo (document.referrer diferente)

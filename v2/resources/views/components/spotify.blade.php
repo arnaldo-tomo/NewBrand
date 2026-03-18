@@ -1,8 +1,8 @@
 <style>
   .sp-widget {
     position: fixed;
-    bottom: 28px;
-    right: 28px;
+    bottom: 92px;
+    left: 28px;
     z-index: 9998;
     width: 260px;
     background: rgba(10,15,28,0.88);
@@ -128,6 +128,7 @@
         fetch('/api/spotify/now-playing')
             .then(function (r) { return r.json(); })
             .then(function (d) {
+                console.log('[Spotify]', d);
                 if (!d.playing) { widget.classList.remove('sp-visible'); return; }
 
                 titleEl.textContent  = d.title;

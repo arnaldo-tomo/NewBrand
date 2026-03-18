@@ -131,24 +131,25 @@
     }
     </script>
 
+    @php $cv = floor(time() / 3600); @endphp
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-
-    <link rel="stylesheet" id="contact-form-7-css" href="css/styles.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-theme-style-css" href="css/style_1.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-gilroy-font-css" href="css/style.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="LineIcons-css" href="css/LineIcons.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="bootstrap-css" href="css/bootstrap.min.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="animate-css" href="css/animate.min.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="animsition-css" href="css/animsition.min.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="fancybox-css" href="css/jquery.fancybox.min.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="pagepiling-css" href="css/jquery.pagepiling.min.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="superfish-css" href="css/superfish.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="swiper-css" href="css/swiper.min.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-main-css-css" href="css/vlt-main.min.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="elementor-frontend-css" href="css/frontend.min.css?v=1.2" type="text/css" media="all">
-    <link rel="stylesheet" id="elementor-post-7-css" href="css/post-7.css?v=1.2" type="text/css" media="all">
+    <link rel="stylesheet" id="contact-form-7-css" href="css/styles.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="vlt-theme-style-css" href="css/style_1.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="vlt-gilroy-font-css" href="css/style.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="LineIcons-css" href="css/LineIcons.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="bootstrap-css" href="css/bootstrap.min.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="animate-css" href="css/animate.min.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="animsition-css" href="css/animsition.min.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="fancybox-css" href="css/jquery.fancybox.min.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="pagepiling-css" href="css/jquery.pagepiling.min.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="superfish-css" href="css/superfish.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="swiper-css" href="css/swiper.min.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="vlt-main-css-css" href="css/vlt-main.min.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" href="css/frontend.min.css?v={{ $cv }}" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-post-7-css" href="css/post-7.css?v={{ $cv }}" type="text/css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link

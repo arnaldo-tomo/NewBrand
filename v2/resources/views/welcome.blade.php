@@ -2637,6 +2637,29 @@
     {{-- Hackher: Sua Pegada Digital — carregado após todos os outros scripts --}}
     <script src="{{ asset('js/hackher-detect.js') }}"></script>
 
+    <script>
+        // Fix: navegar para a secção correta ao carregar com hash (#Education, #About, etc.)
+        (function () {
+            var hash = window.location.hash;
+            if (!hash) return;
+            var anchor = hash.replace('#', '');
+
+            function goToAnchor() {
+                if (typeof $.fn.pagepiling !== 'undefined') {
+                    $.fn.pagepiling.moveTo(anchor);
+                }
+            }
+
+            // Tenta após animsition (500ms) + margem de segurança
+            setTimeout(goToAnchor, 700);
+
+            // Também escuta o evento do preloader se disponível
+            $(window).on('vlt.preloader_done', function () {
+                setTimeout(goToAnchor, 100);
+            });
+        })();
+    </script>
+
 </body>
 
 </html>

@@ -252,13 +252,13 @@
 </div>
 
 <script>
+  // O modal é controlado pelo app.js (sequência: toast → scanner → modal)
+  // Aqui apenas registamos os listeners de fecho
   document.addEventListener('DOMContentLoaded', function () {
-    if (window.innerWidth <= 1024) return;
     var modal = document.getElementById('privacy-modal');
     var btn   = document.getElementById('close-privacy-modal');
-    setTimeout(function () { if (modal) modal.classList.add('visible'); }, 1800);
     if (btn) btn.addEventListener('click', function () { modal.classList.remove('visible'); });
     if (modal) modal.addEventListener('click', function (e) { if (e.target === modal || e.target.classList.contains('pm-backdrop')) modal.classList.remove('visible'); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') modal.classList.remove('visible'); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') modal && modal.classList.remove('visible'); });
   });
 </script>

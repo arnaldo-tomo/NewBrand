@@ -348,123 +348,136 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // Toaste
-    const devToast = document.getElementById('dev-toast');
-    const closeToast = document.getElementById('close-toast');
-    const techTracker = document.getElementById('tech-tracker');
-    const privacyModal = document.getElementById('privacy-modal');
-    const closePrivacyModal = document.getElementById('close-privacy-modal');
+    // ─── Sequência: Toast → Scanner → Modal ───────────────────────────────────
+    const devToast      = document.getElementById('dev-toast');
+    const closeToast    = document.getElementById('close-toast');
+    const techTracker   = document.getElementById('tech-tracker');
+    const privacyModal  = document.getElementById('privacy-modal');
 
-    // Mostrar o toast em todas as visitas após um curto atraso
-    if (devToast) setTimeout(() => {
-        devToast.classList.add('visible');
-    }, 1500);
+    // Desktop-only — não executa em mobile
+    if (window.innerWidth <= 1024) return;
 
-    // Função para iniciar a demonstração do Tech Inspector
-    function startTechInspectorDemo() {
-        // Pequeno atraso antes de iniciar a demonstração
-        setTimeout(() => {
-            if (techTracker) {
-                // Expandir o Tech Inspector
-                techTracker.classList.remove('collapsed');
+    // ── Web Audio helpers ──────────────────────────────────────────────────────
+    const audioCtx = window.AudioContext ? new AudioContext() : null;
 
-                // Chamar a função de atualização de dados se disponível
-                if (typeof refreshData === 'function') {
-                    refreshData();
-                } else if (window.refreshData) {
-                    window.refreshData();
-                }
+    function playSound(type) {
+        if (!audioCtx) return;
+        const now = audioCtx.currentTime;
 
-                // Rolar através das seções
-                setTimeout(() => {
-                    const trackerBody = document.querySelector('.tracker-body');
-                    if (trackerBody) {
-                        // Animação de rolagem suave
-                        let scrollPosition = 0;
-                        const maxScroll = trackerBody.scrollHeight - trackerBody.clientHeight;
-                        const scrollStep = 2;
-                        const scrollInterval = 20;
+        if (type === 'toast-in') {
+            // Ping suave ascendente
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain); gain.connect(audioCtx.destination);
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(440, now);
+            osc.frequency.exponentialRampToValueAtTime(880, now + 0.18);
+            gain.gain.setValueAtTime(0.18, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+            osc.start(now); osc.stop(now + 0.45);
+        }
 
-                        const scrollAnimation = setInterval(() => {
-                            if (scrollPosition >= maxScroll) {
-                                clearInterval(scrollAnimation);
+        if (type === 'toast-out') {
+            // Ping descendente suave
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain); gain.connect(audioCtx.destination);
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(660, now);
+            osc.frequency.exponentialRampToValueAtTime(330, now + 0.22);
+            gain.gain.setValueAtTime(0.12, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+            osc.start(now); osc.stop(now + 0.35);
+        }
 
-                                // Rolar de volta ao topo após alguns segundos
-                                setTimeout(() => {
-                                    // Animação de rolagem de volta ao topo
-                                    let currentPosition = trackerBody.scrollTop;
-                                    const scrollBackStep = 4;
-                                    const scrollBackInterval = 10;
+        if (type === 'scanner-in') {
+            // Beep tech sequencial
+            [0, 0.12, 0.24].forEach((delay, i) => {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain); gain.connect(audioCtx.destination);
+                osc.type = 'square';
+                osc.frequency.setValueAtTime(440 + i * 110, now + delay);
+                gain.gain.setValueAtTime(0.06, now + delay);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 0.1);
+                osc.start(now + delay); osc.stop(now + delay + 0.1);
+            });
+        }
 
-                                    const scrollBackAnimation = setInterval(() => {
-                                        if (currentPosition <= 0) {
-                                            clearInterval(scrollBackAnimation);
-
-                                            // Fechar o Tech Inspector após um breve intervalo
-                                            setTimeout(() => {
-                                                techTracker.classList.add('collapsed');
-
-                                                // Mostrar o modal de privacidade após o fechamento
-                                                setTimeout(() => {
-                                                    showPrivacyImpactModal();
-                                                }, 1000);
-                                            }, 1000);
-                                        } else {
-                                            currentPosition -= scrollBackStep;
-                                            trackerBody.scrollTop = currentPosition;
-                                        }
-                                    }, scrollBackInterval);
-                                }, 3000);
-                            } else {
-                                scrollPosition += scrollStep;
-                                trackerBody.scrollTop = scrollPosition;
-                            }
-                        }, scrollInterval);
-                    }
-                }, 1000);
-            }
-        }, 500);
+        if (type === 'modal-in') {
+            // Acorde suave
+            [261, 329, 392].forEach((freq, i) => {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain); gain.connect(audioCtx.destination);
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, now + i * 0.06);
+                gain.gain.setValueAtTime(0.1, now + i * 0.06);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.06 + 0.6);
+                osc.start(now + i * 0.06); osc.stop(now + i * 0.06 + 0.6);
+            });
+        }
     }
 
-    // Função para mostrar o modal de impacto de privacidade
-    function showPrivacyImpactModal() {
-        privacyModal.classList.add('visible');
-    }
-
-    // Fechar o modal de privacidade quando o botão é clicado
-    if (closePrivacyModal) {
-        closePrivacyModal.addEventListener('click', () => {
-            privacyModal.classList.remove('visible');
-        });
-    }
-
-    // Fechar o toast quando o botão de fechar é clicado
-    if (closeToast) closeToast.addEventListener('click', () => {
+    // ── 1. TOAST ───────────────────────────────────────────────────────────────
+    function dismissToast(then) {
+        if (!devToast) return;
+        playSound('toast-out');
         devToast.classList.remove('visible');
-        startTechInspectorDemo();
+        setTimeout(then, 600);
+    }
+
+    if (devToast) {
+        setTimeout(() => {
+            devToast.classList.add('visible');
+            playSound('toast-in');
+
+            // Animação de atenção 1.2s após aparecer
+            setTimeout(() => {
+                devToast.classList.add('attention');
+                devToast.addEventListener('animationend', () => {
+                    devToast.classList.remove('attention');
+                }, { once: true });
+            }, 1200);
+
+        }, 1500);
+    }
+
+    // Fechar manualmente
+    if (closeToast) closeToast.addEventListener('click', () => {
+        dismissToast(startScanner);
     });
 
-    // Fechar automaticamente após 10 segundos e iniciar demo
+    // Auto-fechar após 9 s
     if (devToast) setTimeout(() => {
         if (devToast.classList.contains('visible')) {
-            devToast.classList.remove('visible');
-            startTechInspectorDemo();
+            dismissToast(startScanner);
         }
-    }, 10000);
+    }, 9000);
 
-    // Adicional: fechar o modal de privacidade ao pressionar ESC
-    if (privacyModal) document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && privacyModal.classList.contains('visible')) {
-            privacyModal.classList.remove('visible');
-        }
-    });
+    // ── 2. SCANNER ─────────────────────────────────────────────────────────────
+    function startScanner() {
+        if (!techTracker) { startModal(); return; }
 
-    // Adicional: fechar o modal de privacidade ao clicar fora dele
-    if (privacyModal) privacyModal.addEventListener('click', function(event) {
-        if (event.target === privacyModal) {
-            privacyModal.classList.remove('visible');
-        }
-    });
+        setTimeout(() => {
+            techTracker.classList.remove('collapsed');
+            playSound('scanner-in');
+            if (window.hackherDetect) window.hackherDetect();
+
+            // Auto-fechar scanner e abrir modal
+            setTimeout(() => {
+                techTracker.classList.add('collapsed');
+                setTimeout(startModal, 900);
+            }, 7000);
+        }, 400);
+    }
+
+    // ── 3. MODAL ───────────────────────────────────────────────────────────────
+    function startModal() {
+        if (!privacyModal) return;
+        privacyModal.classList.add('visible');
+        playSound('modal-in');
+    }
     // Toaste
 
 

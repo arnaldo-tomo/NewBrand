@@ -839,6 +839,23 @@ form.submitting .wpcf7-spinner {
     .dev-toast { display: none; }
 }
 
+/* Toast attention animations */
+@keyframes toast-shake {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    15%      { transform: translateY(-4px) rotate(-1.5deg); }
+    30%      { transform: translateY(0)   rotate(1.5deg); }
+    45%      { transform: translateY(-3px) rotate(-1deg); }
+    60%      { transform: translateY(0)   rotate(1deg); }
+    75%      { transform: translateY(-2px) rotate(-0.5deg); }
+}
+@keyframes toast-glow-pulse {
+    0%,100% { box-shadow: 0 20px 40px rgba(0,0,0,0.45), 0 1px 0 rgba(255,255,255,0.05) inset, 0 0 0 0 rgba(0,184,212,0); }
+    50%     { box-shadow: 0 20px 40px rgba(0,0,0,0.45), 0 1px 0 rgba(255,255,255,0.05) inset, 0 0 0 10px rgba(0,184,212,0.12); }
+}
+.dev-toast.attention {
+    animation: toast-shake 0.55s ease, toast-glow-pulse 1.2s ease 0.55s 3;
+}
+
 /* Toaste */
 
 

@@ -1763,8 +1763,7 @@ form.submitting .wpcf7-spinner {
     .vlt-footer { display: none !important; }
 
     /* Padding lateral para o texto não tocar nas bordas */
-    .vlt-section__content .elementor-widget-container,
-    .vlt-section__content .elementor-widget-text-editor { padding: 0 16px; }
+    .vlt-section__content .elementor-widget-container { padding: 0 16px; }
 
     /* Reduzir spacers do Elementor no mobile — criam espaço branco excessivo */
     .elementor-spacer-inner { height: 20px !important; min-height: 20px !important; }

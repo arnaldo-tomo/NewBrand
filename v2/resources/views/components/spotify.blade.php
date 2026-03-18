@@ -1,25 +1,56 @@
 <style>
   .sp-widget {
     position: fixed;
-    bottom: 92px;
+    bottom: 82px;
     right: 30px;
     z-index: 9997;
-    width: 270px;
-    background: rgba(8,12,24,0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(30,215,96,0.25);
-    border-radius: 14px;
+    width: 268px;
+    /* Liquid glass */
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+    backdrop-filter: blur(28px) saturate(180%) brightness(1.1);
+    -webkit-backdrop-filter: blur(28px) saturate(180%) brightness(1.1);
+    border-radius: 16px;
     padding: 11px 13px;
     align-items: center;
     gap: 11px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    box-shadow:
+      0 8px 32px rgba(0,0,0,0.45),
+      inset 0 1px 0 rgba(255,255,255,0.14),
+      inset 0 -1px 0 rgba(255,255,255,0.04),
+      0 0 0 1px rgba(30,215,96,0.18);
     opacity: 0;
     visibility: hidden;
     transform: translateY(8px);
-    transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease;
-    /* Usar flex sempre — controlo por opacity/visibility */
+    transition:
+      opacity 0.35s ease,
+      visibility 0.35s ease,
+      transform 0.35s ease,
+      bottom 0.48s cubic-bezier(0.34, 1.56, 0.64, 1),
+      right 0.48s cubic-bezier(0.34, 1.56, 0.64, 1),
+      width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      border-radius 0.4s ease,
+      padding 0.4s ease;
     display: flex;
+    overflow: hidden;
+  }
+  /* Gradient border via pseudo-element */
+  .sp-widget::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(30,215,96,0.55) 0%, rgba(120,180,255,0.25) 50%, rgba(30,215,96,0.15) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: sp-shimmer 4s linear infinite;
+  }
+  @keyframes sp-shimmer {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   .sp-widget.sp-on {
     opacity: 1 !important;
@@ -55,6 +86,32 @@
   .sp-ext { color: rgba(255,255,255,0.28); flex-shrink: 0; transition: color 0.2s; }
   .sp-ext:hover { color: #1ed760; }
 
+  /* ── Docked: pill compacta na linha dos botões quando o modal abre ── */
+  .sp-widget.sp-docked {
+    bottom: 30px !important;
+    right: 174px !important; /* 126 (ap-right) + 38 (ap-width) + 10 (gap) */
+    width: 162px !important;
+    height: 38px !important;
+    border-radius: 19px !important;
+    padding: 0 10px !important;
+    gap: 8px !important;
+    overflow: hidden !important;
+    align-items: center !important;
+    transform: translateY(0) !important;
+  }
+  .sp-widget.sp-docked::before { border-radius: 19px; }
+  .sp-widget.sp-docked .sp-cover,
+  .sp-widget.sp-docked .sp-cover-ph {
+    width: 24px !important; height: 24px !important;
+    border-radius: 5px !important;
+  }
+  .sp-widget.sp-docked .sp-cover-ph svg { width: 13px !important; height: 13px !important; }
+  .sp-widget.sp-docked .sp-label,
+  .sp-widget.sp-docked .sp-artist,
+  .sp-widget.sp-docked .sp-prog,
+  .sp-widget.sp-docked .sp-ext { display: none !important; }
+  .sp-widget.sp-docked .sp-title { font-size: 10px !important; line-height: 1.2 !important; }
+
   @media (max-width: 1024px) { .sp-widget { display: none !important; } }
 </style>
 
@@ -78,67 +135,4 @@
   </a>
 </div>
 
-<script>
-(function () {
-    var _cover  = null; // URL da capa em uso
-
-    function setText(id, val) {
-        var el = document.getElementById(id);
-        if (el) el.textContent = val;
-    }
-
-    function spFetch() {
-        fetch('/api/spotify/now-playing')
-            .then(function(r) { return r.json(); })
-            .then(function(d) {
-                try {
-                    var widget = document.getElementById('sp-widget');
-                    console.log('[SP] widget el:', widget, '| playing:', d && d.playing);
-                    if (!widget) return;
-
-                    if (!d || !d.playing) { widget.classList.remove('sp-on'); return; }
-
-                    setText('sp-titleEl',  d.title  || '—');
-                    setText('sp-artistEl', d.artist || '—');
-
-                    var lnk = document.getElementById('sp-linkEl');
-                    if (lnk) lnk.href = d.url || '#';
-
-                    if (d.duration > 0) {
-                        var prog = document.getElementById('sp-progEl');
-                        if (prog) prog.style.width = ((d.progress / d.duration) * 100).toFixed(1) + '%';
-                    }
-
-                    if (d.cover && d.cover !== _cover) {
-                        _cover = d.cover;
-                        var coverEl = document.getElementById('sp-coverEl');
-                        if (coverEl && coverEl.parentNode) {
-                            var img = new Image();
-                            img.className = 'sp-cover';
-                            img.id = 'sp-coverEl';
-                            img.alt = '';
-                            img.src = d.cover;
-                            coverEl.parentNode.replaceChild(img, coverEl);
-                        }
-                    }
-
-                    console.log('[SP] adding sp-on class');
-                    widget.classList.add('sp-on');
-                    console.log('[SP] classes now:', widget.className);
-                } catch(err) {
-                    console.error('[SP] erro no update:', err);
-                }
-            })
-            .catch(function(e) { console.error('[SP] fetch erro:', e); });
-    }
-
-    // Iniciar após DOM estar pronto
-    function init() { spFetch(); setInterval(spFetch, 30000); }
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
-})();
-</script>
+<script src="/js/spotify-widget.js?v=<?= filemtime(public_path('js/spotify-widget.js')) ?>"></script>

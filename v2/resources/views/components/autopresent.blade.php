@@ -3,10 +3,10 @@
   .ap-btn {
     position: fixed;
     bottom: 30px;
-    right: 166px; /* 98 (wa) + 48 (wa width) + 10 (gap) + 10 = 166 */
+    right: 126px; /* 78 (wa right) + 38 (wa width) + 10 (gap) */
     z-index: 9990;
-    width: 48px;
-    height: 48px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     background: rgba(10,15,28,0.75);
     border: 1px solid rgba(255,255,255,0.14);
@@ -25,7 +25,7 @@
   .ap-btn::after {
     content: 'Apresentação';
     position: absolute;
-    bottom: 54px;
+    bottom: 44px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(10,15,28,0.9);
@@ -88,11 +88,18 @@
 
 <!-- Botão play/stop -->
 <button class="ap-btn" id="ap-btn" title="Modo de Apresentação" onclick="togglePresentation()">
-  <svg id="ap-icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M8 5v14l11-7z"/>
+  <!-- Ícone: ecrã de apresentação (idle) -->
+  <svg id="ap-icon-play" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="3" width="20" height="14" rx="2"/>
+    <polyline points="8,21 12,17 16,21"/>
+    <line x1="12" y1="17" x2="12" y2="3"/>
+    <polygon points="10,8 14,10 10,12" fill="currentColor" stroke="none"/>
   </svg>
-  <svg id="ap-icon-stop" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-    <rect x="6" y="6" width="12" height="12" rx="2"/>
+  <!-- Ícone: parar -->
+  <svg id="ap-icon-stop" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+    <rect x="2" y="3" width="20" height="14" rx="2"/>
+    <polyline points="8,21 12,17 16,21"/>
+    <rect x="9" y="7" width="6" height="6" rx="1" fill="currentColor" stroke="none"/>
   </svg>
 </button>
 
@@ -104,82 +111,4 @@
 <!-- Indicador de secção actual -->
 <div class="ap-section-indicator" id="ap-section-indicator"></div>
 
-<script>
-(function () {
-    var INTERVAL   = 6000; // ms por secção
-    var sections   = ['Home', 'About', 'Projects', 'Education', 'Blog', 'Packages', 'Contact'];
-    var labels     = { Home: 'Início', About: 'Sobre', Projects: 'Projetos', Education: 'Educação', Blog: 'Blog', Packages: 'Packages', Contact: 'Contacto' };
-    var current    = 0;
-    var timer      = null;
-    var progTimer  = null;
-    var running    = false;
-
-    window.togglePresentation = function () {
-        running ? stopPresentation() : startPresentation();
-    };
-
-    function startPresentation() {
-        running = true;
-        document.getElementById('ap-btn').classList.add('ap-active');
-        document.getElementById('ap-icon-play').style.display = 'none';
-        document.getElementById('ap-icon-stop').style.display = 'block';
-        document.getElementById('ap-progress-wrap').classList.add('ap-visible');
-        document.getElementById('ap-section-indicator').classList.add('ap-visible');
-
-        // Detectar secção actual
-        var anchors = document.querySelectorAll('.pp-section[data-anchor]');
-        current = 0;
-        anchors.forEach(function (s, i) {
-            if (!s.classList.contains('pp-scrollable')) return;
-            if (s.getBoundingClientRect().top < window.innerHeight / 2) current = i;
-        });
-
-        goTo(current);
-        document.addEventListener('keydown', onEsc);
-    }
-
-    function stopPresentation() {
-        running = false;
-        clearTimeout(timer);
-        clearInterval(progTimer);
-        document.getElementById('ap-btn').classList.remove('ap-active');
-        document.getElementById('ap-icon-play').style.display = 'block';
-        document.getElementById('ap-icon-stop').style.display = 'none';
-        document.getElementById('ap-progress-wrap').classList.remove('ap-visible');
-        document.getElementById('ap-section-indicator').classList.remove('ap-visible');
-        var bar = document.getElementById('ap-progress-bar');
-        bar.style.transition = 'none'; bar.style.width = '0%';
-        document.removeEventListener('keydown', onEsc);
-    }
-
-    function goTo(idx) {
-        if (!running) return;
-        var anchor = sections[idx];
-        if (!anchor) { stopPresentation(); return; }
-
-        // Navegar
-        if (typeof $.fn.pagepiling !== 'undefined') {
-            $.fn.pagepiling.moveTo(anchor);
-        }
-
-        // Actualizar indicador
-        document.getElementById('ap-section-indicator').textContent = (idx + 1) + ' / ' + sections.length + '  ·  ' + (labels[anchor] || anchor);
-
-        // Barra de progresso
-        var bar = document.getElementById('ap-progress-bar');
-        bar.style.transition = 'none'; bar.style.width = '0%';
-        setTimeout(function () {
-            bar.style.transition = 'width ' + INTERVAL + 'ms linear';
-            bar.style.width = '100%';
-        }, 30);
-
-        // Próxima secção
-        timer = setTimeout(function () {
-            current = (idx + 1) % sections.length;
-            goTo(current);
-        }, INTERVAL);
-    }
-
-    function onEsc(e) { if (e.key === 'Escape') stopPresentation(); }
-})();
-</script>
+<script src="/js/autopresent.js?v=<?= filemtime(public_path('js/autopresent.js')) ?>"></script>

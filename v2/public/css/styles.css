@@ -1737,7 +1737,7 @@ form.submitting .wpcf7-spinner {
     .small-heading {
       font-size: 2.8rem !important;
       letter-spacing: -1px;
-      margin: -10px 0;
+      margin: 10px 0 -10px 0;
     }
   }
 
@@ -1745,7 +1745,7 @@ form.submitting .wpcf7-spinner {
     .small-heading {
       font-size: 2.2rem !important;
       letter-spacing: -0.5px;
-      margin: -8px 0;
+      margin: 12px 0 -8px 0;
     }
   }
 

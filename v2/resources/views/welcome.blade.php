@@ -649,7 +649,6 @@
     @include('components.hackher')
     @include('components.whatsapp')
     @include('components.autopresent')
-    @include('components.spotify')
 
     @include('components.toaste')
 
@@ -2655,6 +2654,8 @@
     <script src="{{ asset('js/app.js') }}?v={{ filemtime(public_path('js/app.js')) }}"></script>
     {{-- Hackher: Sua Pegada Digital — carregado após todos os outros scripts --}}
     <script src="{{ asset('js/hackher-detect.js') }}?v={{ filemtime(public_path('js/hackher-detect.js')) }}"></script>
+    {{-- Spotify widget — no fim para garantir DOM completo --}}
+    @include('components.spotify')
 
     <script>
         // Fix: navegar para a secção correta ao carregar com hash (#Education, #About, etc.)

@@ -100,15 +100,25 @@
         /* Geolocation via IP */
         set('visitor-location', 'Detectando...');
         set('visitor-isp', 'Detectando...');
-        fetch('https://ipapi.co/json/')
+        fetch('https://ipwho.is/')
             .then(function (r) { return r.json(); })
             .then(function (d) {
-                set('visitor-location', (d.city || '?') + ', ' + (d.country_name || '?'));
-                set('visitor-isp', d.org || '—');
+                if (!d || !d.success) throw new Error('fail');
+                set('visitor-location', (d.city || '?') + ', ' + (d.country || '?'));
+                set('visitor-isp', d.connection && d.connection.org ? d.connection.org : (d.org || '—'));
             })
             .catch(function () {
-                set('visitor-location', 'N/D');
-                set('visitor-isp', 'N/D');
+                // fallback
+                fetch('https://ipapi.co/json/')
+                    .then(function (r) { return r.json(); })
+                    .then(function (d) {
+                        set('visitor-location', (d.city || '?') + ', ' + (d.country_name || '?'));
+                        set('visitor-isp', d.org || '—');
+                    })
+                    .catch(function () {
+                        set('visitor-location', 'N/D');
+                        set('visitor-isp', 'N/D');
+                    });
             });
 
         /* Browser features */

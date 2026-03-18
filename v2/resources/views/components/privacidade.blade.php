@@ -18,6 +18,7 @@
   .pm-backdrop {
     position: absolute;
     inset: 0;
+    z-index: 0;
     background: rgba(4, 8, 18, 0.7);
     backdrop-filter: blur(12px) saturate(140%);
     -webkit-backdrop-filter: blur(12px) saturate(140%);
@@ -25,6 +26,7 @@
 
   .pm-card {
     position: relative;
+    z-index: 1;
     width: 420px;
     background: rgba(12, 18, 32, 0.65);
     backdrop-filter: blur(28px) saturate(180%);

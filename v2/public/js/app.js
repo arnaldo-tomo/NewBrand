@@ -358,10 +358,20 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.innerWidth <= 1024) return;
 
     // ── Web Audio helpers ──────────────────────────────────────────────────────
-    const audioCtx = window.AudioContext ? new AudioContext() : null;
+    let audioCtx = null;
+    try { audioCtx = (window.AudioContext || window.webkitAudioContext) ? new (window.AudioContext || window.webkitAudioContext)() : null; } catch(e) {}
+
+    // Desbloquear áudio após primeira interação do utilizador
+    function unlockAudio() {
+        if (audioCtx && audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+    }
+    document.addEventListener('click', unlockAudio, { once: true });
+    document.addEventListener('touchend', unlockAudio, { once: true });
 
     function playSound(type) {
-        if (!audioCtx) return;
+        if (!audioCtx || audioCtx.state === 'suspended') return;
         const now = audioCtx.currentTime;
 
         if (type === 'toast-in') {

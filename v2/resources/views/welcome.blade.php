@@ -134,9 +134,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
-    <link rel="stylesheet" id="contact-form-7-css" href="css/styles.css?v=1.1" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-theme-style-css" href="css/style_1.css?v=1.1" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-gilroy-font-css" href="css/style.css?v=1.1" type="text/css" media="all">
+    <link rel="stylesheet" id="contact-form-7-css" href="css/styles.css?v=1.2" type="text/css" media="all">
+    <link rel="stylesheet" id="vlt-theme-style-css" href="css/style_1.css?v=1.2" type="text/css" media="all">
+    <link rel="stylesheet" id="vlt-gilroy-font-css" href="css/style.css?v=1.2" type="text/css" media="all">
     <link rel="stylesheet" id="LineIcons-css" href="css/LineIcons.css" type="text/css" media="all">
     <link rel="stylesheet" id="bootstrap-css" href="css/bootstrap.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="animate-css" href="css/animate.min.css" type="text/css" media="all">
@@ -145,7 +145,7 @@
     <link rel="stylesheet" id="pagepiling-css" href="css/jquery.pagepiling.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="superfish-css" href="css/superfish.css" type="text/css" media="all">
     <link rel="stylesheet" id="swiper-css" href="css/swiper.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="vlt-main-css-css" href="css/vlt-main.min.css?v=1.1" type="text/css" media="all">
+    <link rel="stylesheet" id="vlt-main-css-css" href="css/vlt-main.min.css?v=1.2" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-frontend-css" href="css/frontend.min.css" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-post-7-css" href="css/post-7.css" type="text/css" media="all">
@@ -2317,7 +2317,7 @@
 
         <div class="vlt-footer-copyright">
 
-            <p>© Arnaldo Tomo.</p>
+            <p>2022 {{date('Y')}} © Arnaldo Tomo.</p>
         </div>
         <!-- /.vlt-footer-copyright -->
 

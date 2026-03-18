@@ -14,7 +14,8 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        // Confiar em todos os proxies (Cloudflare, etc.) para obter o IP real do visitante
+        $middleware->trustProxies(at: '*');
         $middleware->append(SetLocale::class);
         $middleware->append(BlockDetectionBots::class);
         $middleware->append(MinifyHtml::class);

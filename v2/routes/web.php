@@ -253,7 +253,8 @@ Route::get('/spotify/callback', [\App\Http\Controllers\SpotifyController::class,
 
 // Proxy de geolocalização — evita bloqueios de CSP/CORS no browser
 Route::get('/api/weather', function (\Illuminate\Http\Request $request) {
-    $ip = $request->ip();
+    // CF-Connecting-IP tem o IP real quando atrás do Cloudflare
+    $ip = $request->header('CF-Connecting-IP') ?? $request->ip();
 
     // IPs locais → usar Beira como fallback
     $isLocal = in_array($ip, ['127.0.0.1', '::1']) || str_starts_with($ip, '192.168.') || str_starts_with($ip, '10.');
@@ -298,9 +299,10 @@ Route::get('/api/weather', function (\Illuminate\Http\Request $request) {
     return response()->json(['ok' => true] + $data);
 })->name('api.weather');
 
-Route::get('/api/geo', function () {
+Route::get('/api/geo', function (\Illuminate\Http\Request $request) {
     try {
-        $data = Http::timeout(5)->get('https://ipwho.is/')->json();
+        $ip   = $request->header('CF-Connecting-IP') ?? $request->ip();
+        $data = Http::timeout(5)->get("https://ipwho.is/{$ip}")->json();
         if (!empty($data['success'])) {
             return response()->json([
                 'city'    => $data['city']    ?? '?',

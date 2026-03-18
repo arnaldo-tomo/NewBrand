@@ -1660,28 +1660,66 @@ form.submitting .wpcf7-spinner {
 }
 
 @media (max-width: 767px) {
+    .education-section { padding: 40px 0; }
+
+    .section-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+
+    .section-title { font-size: 26px; }
+
     .certification-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
-    .timeline-content {
-        flex-direction: column;
-        gap: 15px;
-    }
+    .certification-card { padding: 14px; }
 
-    .institution-logo {
-        align-self: center;
-    }
+    .certification-img { height: 80px; margin-bottom: 10px; }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
+    .certification-title { font-size: 13px; }
+
+    .timeline-content { flex-direction: column; gap: 12px; padding: 14px; }
+
+    .institution-logo { align-self: flex-start; width: 56px; height: 56px; }
+
+    .education-degree { font-size: 15px; }
+
+    .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+    .skill-category { padding: 14px; }
+
+    .category-name { font-size: 13px; }
+
+    .skill-name { font-size: 12px; }
+
+    .skill-icon { width: 26px; height: 26px; }
 }
 
 @media (max-width: 480px) {
+    /* Manter 2 colunas nas certificações */
     .certification-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
+
+    .certification-img { height: 65px; }
+
+    .certification-title { font-size: 11px; }
+
+    .certification-provider, .certification-date { font-size: 10px; }
+
+    /* Timeline mais compacta */
+    .timeline-item { padding-left: 20px; }
+
+    .timeline-content { padding: 10px; gap: 10px; }
+
+    .institution-logo { width: 46px; height: 46px; }
+
+    .education-degree { font-size: 14px; }
+
+    .education-description { font-size: 12px; }
+
+    /* Skills em 1 coluna em ecrãs muito pequenos */
+    .skills-grid { grid-template-columns: 1fr; }
 }
 
 
@@ -1727,6 +1765,11 @@ form.submitting .wpcf7-spinner {
     /* Padding lateral nas secções para o texto não tocar nas bordas */
     .vlt-section__content .elementor-widget-container,
     .vlt-section__content .elementor-widget-text-editor { padding: 0 16px; }
+
+    /* Education timeline — col-xl-4 só funciona em XL, forçar flex no mobile */
+    .vlt-timeline-item .row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .vlt-timeline-item .col-xl-4 { width: 100%; padding: 0; }
+    .vlt-timeline-item .col-xl-4:first-child { width: auto; }
   }
 
   /* comentarios */

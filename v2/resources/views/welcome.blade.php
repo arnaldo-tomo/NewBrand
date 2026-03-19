@@ -741,7 +741,7 @@
 
                         <div class="vlt-section__ken-burn-background has-mobile-image">
 
-                            <img src="images/home.png" alt="background" loading="lazy">
+                            <img src="/bg.webp" alt="background" loading="lazy">
 
                             <img src="images/home-mobile.jpg" alt="background" loading="lazy">
 
